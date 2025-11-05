@@ -36,49 +36,12 @@ namespace GymManagementSystem
                 if (login.AuthenticateUser(TB_username.Text.Trim(), TB_password.Text.Trim()))
                 {
                     MessageBox.Show("Login Successful.", "Success");
-                    //string acctype = login.GetAccType(TB_username.Text.Trim(), TB_password.Text.Trim());
                     string acctype = login.CurrentUser.AccType;
                     TB_username.Clear();
                     TB_password.Clear();
-
-                    switch (acctype)
-                    {
-                        case "ADMIN":
-                            mainForm = new MainForm();
-                            mainForm.Show();
-                            FormProvider.Login.Hide();
-
-                            mainForm.label1.Text = acctype;
-                            break;
-
-                        case "RECEPTIONIST":
-                            //recepView = new RecepView();
-                            //recepView.Show();
-                            FormProvider.Login.Hide();
-
-                            mainForm = new MainForm();
-                            mainForm.Show();
-
-                            mainForm.label1.Text = acctype;
-
-                            break;
-
-                        case "COACH":
-                            //coachView = new CoachView();
-                            //coachView.Show();
-                            FormProvider.Login.Hide();
-
-                            mainForm = new MainForm();
-                            mainForm.Show();
-
-                            mainForm.label1.Text = acctype;
-
-                            break;
-
-                        default:
-                            throw new Exception();
-                    }
-
+                    mainForm = new MainForm(acctype);
+                    mainForm.Show();
+                    FormProvider.Login.Hide();
                 }
                 else
                 {
