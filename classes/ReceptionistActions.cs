@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    public  class Coach : User
+    public class ReceptionistActions
     {
 
     }

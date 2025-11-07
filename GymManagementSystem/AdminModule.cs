@@ -43,11 +43,22 @@ namespace GymManagementSystem
             mainForm.label2.Text = "Accounts";
 
             mainForm.panel3.Visible = false;
+            mainForm.label3.Text = "Ban";
+
             mainForm.panel4.Visible = false;
+            mainForm.label4.Text = "Expenses";
+
             mainForm.panel5.Visible = false;
+            mainForm.label5.Text = "Sales";
+
             mainForm.panel6.Visible = false;
+            mainForm.label6.Text = "Payroll";
+
             mainForm.panel7.Visible = false;
+            mainForm.label7.Text = "Cost";
+
             mainForm.panel8.Visible = false;
+            mainForm.label8.Text = "Inventory";
         }
 
         public static void DashboardButtonClick(MainForm mainForm)
@@ -72,6 +83,77 @@ namespace GymManagementSystem
             mainForm.panel6.Visible = false;
             mainForm.panel7.Visible = false;
             mainForm.panel8.Visible = false;
+        }
+
+        public static void BanButtonClick(MainForm mainForm)
+        {
+            mainForm.panel1.Visible = false;
+            mainForm.panel2.Visible = false;
+            mainForm.panel3.Visible = true;
+            mainForm.panel4.Visible = false;
+            mainForm.panel5.Visible = false;
+            mainForm.panel6.Visible = false;
+            mainForm.panel7.Visible = false;
+            mainForm.panel8.Visible = false;
+        }
+
+        public static void ExpensesButtonClick(MainForm mainForm)
+        {
+            mainForm.panel1.Visible = false;
+            mainForm.panel2.Visible = false;
+            mainForm.panel3.Visible = false;
+            mainForm.panel4.Visible = true;
+            mainForm.panel5.Visible = false;
+            mainForm.panel6.Visible = false;
+            mainForm.panel7.Visible = false;
+            mainForm.panel8.Visible = false;
+        }
+
+        public static void SalesButtonClick(MainForm mainForm)
+        {
+            mainForm.panel1.Visible = false;
+            mainForm.panel2.Visible = false;
+            mainForm.panel3.Visible = false;
+            mainForm.panel4.Visible = false;
+            mainForm.panel5.Visible = true;
+            mainForm.panel6.Visible = false;
+            mainForm.panel7.Visible = false;
+            mainForm.panel8.Visible = false;
+        }
+        public static void PayrollButtonClick(MainForm mainForm)
+        {
+            mainForm.panel1.Visible = false;
+            mainForm.panel2.Visible = false;
+            mainForm.panel3.Visible = false;
+            mainForm.panel4.Visible = false;
+            mainForm.panel5.Visible = false;
+            mainForm.panel6.Visible = true;
+            mainForm.panel7.Visible = false;
+            mainForm.panel8.Visible = false;
+        }
+
+        public static void CostButtonClick(MainForm mainForm)
+        {
+            mainForm.panel1.Visible = false;
+            mainForm.panel2.Visible = false;
+            mainForm.panel3.Visible = false;
+            mainForm.panel4.Visible = false;
+            mainForm.panel5.Visible = false;
+            mainForm.panel6.Visible = false;
+            mainForm.panel7.Visible = true;
+            mainForm.panel8.Visible = false;
+        }
+
+        public static void EquipmentButtonClick(MainForm mainForm)
+        {
+            mainForm.panel1.Visible = false;
+            mainForm.panel2.Visible = false;
+            mainForm.panel3.Visible = false;
+            mainForm.panel4.Visible = false;
+            mainForm.panel5.Visible = false;
+            mainForm.panel6.Visible = false;
+            mainForm.panel7.Visible = false;
+            mainForm.panel8.Visible = true;
         }
     }
 }

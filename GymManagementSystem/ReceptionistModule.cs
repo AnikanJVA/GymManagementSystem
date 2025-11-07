@@ -33,7 +33,7 @@ namespace GymManagementSystem
             mainForm.button5.Text = "Payment Transactions";
             mainForm.button5.Visible = true;
 
-            mainForm.button6.Text = "Inventory Managemnet";
+            mainForm.button6.Text = "Equipment Inventory";
             mainForm.button6.Visible = true;
 
             mainForm.button7.Text = "Damaged Equipment";
@@ -53,22 +53,96 @@ namespace GymManagementSystem
             mainForm.label2.Text = "Members";
 
             mainForm.panel3.Visible = false;
+            mainForm.label3.Text = "Check in";
+
             mainForm.panel4.Visible = false;
+            mainForm.label4.Text = "Coaching";
+
             mainForm.panel5.Visible = false;
+            mainForm.label5.Text = "Payment";
+
             mainForm.panel6.Visible = false;
+            mainForm.label6.Text = "equipment";
+
             mainForm.panel7.Visible = false;
+            mainForm.label7.Text = "damaged";
         }
 
         public static void DashboardButtonClick(MainForm mainForm)
         {
             mainForm.panel1.Visible = true;
             mainForm.panel2.Visible = false;
+            mainForm.panel3.Visible = false;
+            mainForm.panel4.Visible = false;
+            mainForm.panel5.Visible = false;
+            mainForm.panel6.Visible = false;
+            mainForm.panel7.Visible = false;
         }
 
         public static void MemberMgmtButtonClick(MainForm mainForm)
         {
             mainForm.panel1.Visible = false;
             mainForm.panel2.Visible = true;
+            mainForm.panel3.Visible = false;
+            mainForm.panel4.Visible = false;
+            mainForm.panel5.Visible = false;
+            mainForm.panel6.Visible = false;
+            mainForm.panel7.Visible = false;
+        }
+
+        public static void CheckInButtonClick(MainForm mainForm)
+        {
+            mainForm.panel1.Visible = false;
+            mainForm.panel2.Visible = false;
+            mainForm.panel3.Visible = true;
+            mainForm.panel4.Visible = false;
+            mainForm.panel5.Visible = false;
+            mainForm.panel6.Visible = false;
+            mainForm.panel7.Visible = false;
+        }
+
+        public static void CoachingButtonClick(MainForm mainForm)
+        {
+            mainForm.panel1.Visible = false;
+            mainForm.panel2.Visible = false;
+            mainForm.panel3.Visible = false;
+            mainForm.panel4.Visible = true;
+            mainForm.panel5.Visible = false;
+            mainForm.panel6.Visible = false;
+            mainForm.panel7.Visible = false;
+        }
+
+        public static void PaymentButtonClick(MainForm mainForm)
+        {
+            mainForm.panel1.Visible = false;
+            mainForm.panel2.Visible = false;
+            mainForm.panel3.Visible = false;
+            mainForm.panel4.Visible = false;
+            mainForm.panel5.Visible = true;
+            mainForm.panel6.Visible = false;
+            mainForm.panel7.Visible = false;
+        }
+
+        public static void EquipmentButtonClick(MainForm mainForm)
+        {
+            mainForm.panel1.Visible = false;
+            mainForm.panel2.Visible = false;
+            mainForm.panel3.Visible = false;
+            mainForm.panel4.Visible = false;
+            mainForm.panel5.Visible = false;
+            mainForm.panel6.Visible = true;
+            mainForm.panel7.Visible = false;
+        }
+
+        public static void DamagedButtonClick(MainForm mainForm)
+        {
+            mainForm.panel1.Visible = false;
+            mainForm.panel2.Visible = false;
+            mainForm.panel3.Visible = false;
+            mainForm.panel4.Visible = false;
+            mainForm.panel5.Visible = false;
+            mainForm.panel6.Visible = false;
+            mainForm.panel7.Visible = true;
         }
     }
 }

@@ -8,15 +8,15 @@ namespace ClassLibrary
 {
     public class User
     {
-        private long id;
+        private long userID;
         private string username;
         private string accType;
         private string status;
 
-        public long Id 
+        public long UserID 
         {
-            get { return id; } 
-            set { id = value; } 
+            get { return userID; } 
+            set { userID = value; } 
         }
 
         public string Username

@@ -60,7 +60,7 @@ namespace classes
                     MySqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        user.Id = Convert.ToInt64(reader["UserID"].ToString());
+                        user.UserID = Convert.ToInt64(reader["UserID"].ToString());
                         user.Username = username;
                         user.AccType = reader["AccType"].ToString();
                         user.Status = reader["Status"].ToString();

@@ -67,5 +67,70 @@ namespace GymManagementSystem
                 ReceptionistModule.MemberMgmtButtonClick(this);
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (accType == "ADMIN")
+            {
+                AdminModule.BanButtonClick(this);
+            }
+            else if (accType == "RECEPTIONIST")
+            {
+                ReceptionistModule.CheckInButtonClick(this);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (accType == "ADMIN")
+            {
+                AdminModule.ExpensesButtonClick(this);
+            }
+            else if (accType == "RECEPTIONIST")
+            {
+                ReceptionistModule.CoachingButtonClick(this);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (accType == "ADMIN")
+            {
+                AdminModule.SalesButtonClick(this);
+            }
+            else if (accType == "RECEPTIONIST")
+            {
+                ReceptionistModule.PaymentButtonClick(this);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (accType == "ADMIN")
+            {
+                AdminModule.PayrollButtonClick(this);
+            }
+            else if (accType == "RECEPTIONIST")
+            {
+                ReceptionistModule.EquipmentButtonClick(this);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (accType == "ADMIN")
+            {
+                AdminModule.CostButtonClick(this);
+            }
+            else if (accType == "RECEPTIONIST")
+            {
+                ReceptionistModule.DamagedButtonClick(this);
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            AdminModule.EquipmentButtonClick(this);
+        }
     }
 }
