@@ -91,6 +91,33 @@ namespace ClassLibrary
             }
         }
 
+        
+        public static DataTable GetStaffTable() // to fix: include record from users table 
+        {
+            DataTable table = new DataTable();
+
+            string query = @"SELECT
+                                s.staffID,
+                                s.UserID,
+                                s.lastName,
+                                s.firstName,
+                                s.middleName,
+                                s.DoB,
+                                s.Sex,
+                                s.contactNumber,
+                                s.email,
+                                s.schedule,
+                                s.positionID
+                            FROM
+                                staffs s";
+            using (MySqlCommand cmd = new MySqlCommand(query, connection))
+            using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+            {
+                adapter.Fill(table);
+                return table;
+            }
+        }
+
         public static long GetCategoryName(string categoryName)
         {
             string selectQuery = "SELECT categoryID FROM equipmentcategories WHERE categoryName = @categoryName";

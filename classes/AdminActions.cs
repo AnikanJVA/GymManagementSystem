@@ -59,25 +59,25 @@ namespace ClassLibrary
             }
         }
 
+
         
-         
-        public bool UpdateEquipment(int equipmentID,
+            public static bool UpdateEquipment(
                                     string equipmentName,
                                     string brand,
                                     string model,
-                                    int categoryID,
+                                    string category,
                                     double cost,
                                     int quantity,
-                                    string condition)
+                                    string equipmentCondition)
+
+        
         {
             string checkQuery = @"SELECT COUNT(*) AS DuplicateCount
-                          FROM equipment 
-                          WHERE equipmentName = @equipmentName 
-                          AND equipmentID <> @equipmentID"; 
+                          FROM equipments
+                          WHERE EquipmentName = @equipmentName "; 
 
             using (MySqlCommand checkCmd = new MySqlCommand(checkQuery, connection))
             {
-                checkCmd.Parameters.AddWithValue("@equipmentID", equipmentID);
                 checkCmd.Parameters.AddWithValue("@equipmentName", equipmentName);
 
                 if (Convert.ToInt32(checkCmd.ExecuteScalar()) > 0)
@@ -85,29 +85,36 @@ namespace ClassLibrary
                     return false;
                 }
             }
+            long categoryID = Database.GetCategoryName(category);
 
-            string updateQuery = @"UPDATE equipment SET 
+            string updateQuery = @"UPDATE equipments SET 
                            equipmentName = @equipmentName,
                            brand = @brand,
                            model = @model,
                            categoryID = @categoryID,
                            cost = @cost,
                            quantity = @quantity,
-                           condition = @condition
-                           WHERE equipmentID = @equipmentID";
+                           equipmentCondition = @equipmentCondition
+                           WHERE equipmentName = @equipmentName";
 
             using (MySqlCommand updateCmd = new MySqlCommand(updateQuery, connection))
             {
-                updateCmd.Parameters.AddWithValue("@equipmentID", equipmentID);
                 updateCmd.Parameters.AddWithValue("@equipmentName", equipmentName);
                 updateCmd.Parameters.AddWithValue("@brand", brand);
                 updateCmd.Parameters.AddWithValue("@model", model);
                 updateCmd.Parameters.AddWithValue("@categoryID", categoryID);
                 updateCmd.Parameters.AddWithValue("@cost", cost);
                 updateCmd.Parameters.AddWithValue("@quantity", quantity);
-                updateCmd.Parameters.AddWithValue("@condition", condition);
-
-                return updateCmd.ExecuteNonQuery() > 0;
+                updateCmd.Parameters.AddWithValue("@equipmentCondition", equipmentCondition);
+                try
+                {
+                    return updateCmd.ExecuteNonQuery() > 0;
+                }
+                catch (MySqlException ex)
+                {
+                    Trace.WriteLine("++++++++++++ ERROR CODE: " + ex.Message);
+                }
+                return false;
             }
         }
         public bool BanMember(int memberID)
@@ -303,37 +310,41 @@ namespace ClassLibrary
 
         public static bool AddStaff(string username,
                                      string password,
-                                     string emailAddress,
-                                     string address,
-                                     string email,
-                                     string schedule,
-                                     string contactNumber,
+                                     string accType,
                                      string firstName,
                                      string middleName,
                                      string lastName,
-                                     string positionName,
-                                     float baseSalary,
-                                     double hourlyRate)
+                                     string dob,
+                                     string sex,
+                                     string contactNumber,
+                                     string email,
+                                     string address,
+                                     string schedule,
+                                     string positionName)
         {
-            string accType = "RECEPTIONIST";
-
             string checkQuery = @"SELECT COUNT(*) FROM users u
-                              LEFT JOIN staffs r ON u.UserID = r.UserID
-                              WHERE 
-                              (u.username = @username AND u.accType = @accType)
-                              OR u.emailAddress = @emailAddress
-                              OR u.contactNumber = @contactNumber";
+                                  WHERE username = @username";
 
             using (MySqlCommand checkCmd = new MySqlCommand(checkQuery, connection))
             {
                 checkCmd.Parameters.AddWithValue("@username", username);
-                checkCmd.Parameters.AddWithValue("@accType", accType);
-                checkCmd.Parameters.AddWithValue("@emailAddress", emailAddress ?? (object)DBNull.Value);
+
+                if (Convert.ToInt32(checkCmd.ExecuteScalar()) > 0)
+                {
+                    return false;
+                }
+            }
+
+            checkQuery = @"SELECT COUNT(*) FROM staffs
+                            WHERE 
+                            email = @email OR contactNumber = @contactNumber";
+            using (MySqlCommand checkCmd = new MySqlCommand(checkQuery, connection))
+            {
+                checkCmd.Parameters.AddWithValue("@email", email);
                 checkCmd.Parameters.AddWithValue("@contactNumber", contactNumber);
 
                 if (Convert.ToInt32(checkCmd.ExecuteScalar()) > 0)
                 {
-
                     return false;
                 }
             }
@@ -342,11 +353,10 @@ namespace ClassLibrary
 
             try
             {
-
                 string userInsert = @"INSERT INTO users 
                                   (username, password, accType)
                                   VALUES 
-                                  (@username, @password, @accType)";
+                                  (@username, SHA2(@password, 256), @accType)";
 
                 using (MySqlCommand userCmd = new MySqlCommand(userInsert, connection, transaction))
                 {
@@ -360,19 +370,23 @@ namespace ClassLibrary
                 long positionID = Database.GetPositionID(positionName);
 
                 string staffInsert = @"INSERT INTO staffs 
-                                          (userId, firstName, middleName, lastName,contactNumber, email, schedule, positionID)
-                                          VALUES 
-                                          (LAST_INSERT_ID(), @firstName, @middleName, @lastName, @email, @schedule, @positionID)";
+                                    (userId, firstName, middleName, lastName, dob, sex, contactNumber, email, address, schedule, positionID)
+                                    VALUES 
+                                    (LAST_INSERT_ID(), @firstName, @middleName, @lastName, @dob, @sex, @contactNumber, @email, @address, @schedule, @positionID)";
 
-                using (MySqlCommand recCmd = new MySqlCommand(staffInsert, connection, transaction))
+                using (MySqlCommand staffCmd = new MySqlCommand(staffInsert, connection, transaction))
                 {
-                    recCmd.Parameters.AddWithValue("@firstName", firstName);
-                    recCmd.Parameters.AddWithValue("@middleName", middleName);
-                    recCmd.Parameters.AddWithValue("@lastName", lastName);
-                    recCmd.Parameters.AddWithValue("@contactNumber", contactNumber);
-                    recCmd.Parameters.AddWithValue("@email", string.IsNullOrWhiteSpace(emailAddress) ? (object)DBNull.Value : email);
-                    recCmd.Parameters.AddWithValue("@schedule", schedule);
-                    recCmd.ExecuteNonQuery();
+                    staffCmd.Parameters.AddWithValue("@firstName", firstName);
+                    staffCmd.Parameters.AddWithValue("@middleName", middleName);
+                    staffCmd.Parameters.AddWithValue("@lastName", lastName);
+                    staffCmd.Parameters.AddWithValue("@dob", dob);
+                    staffCmd.Parameters.AddWithValue("@sex", sex);
+                    staffCmd.Parameters.AddWithValue("@contactNumber", contactNumber);
+                    staffCmd.Parameters.AddWithValue("@email", email);
+                    staffCmd.Parameters.AddWithValue("@address", address);
+                    staffCmd.Parameters.AddWithValue("@schedule", schedule);
+                    staffCmd.Parameters.AddWithValue("@positionID", positionID);
+                    staffCmd.ExecuteNonQuery();
                 }
 
                 transaction.Commit();
@@ -380,7 +394,6 @@ namespace ClassLibrary
             }
             catch (Exception ex)
             {
-
                 transaction.Rollback();
                 Console.WriteLine("Error: " + ex.Message);
                 return false;

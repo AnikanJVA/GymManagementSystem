@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 08, 2025 at 03:55 PM
+-- Generation Time: Nov 09, 2025 at 12:29 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -92,7 +92,10 @@ INSERT INTO `equipments` (`equipmentID`, `equipmentName`, `brand`, `model`, `cat
 (2, 'Power Rack XL', 'IronForce', 'PR-XL', 2, 850.00, 3, 'Good'),
 (3, 'Hex Dumbbell Set', 'HeavyLift', 'HD-300', 3, 250.75, 10, 'Fair'),
 (4, 'asdf', 'cell', '2982938', 3, 299.00, 24, 'Good'),
-(5, 'Dumbell 15 pounds', 'Duracell', 'DB-100', 3, 300.00, 4, 'Good');
+(5, 'Dumbell 15 pounds', 'Duracell', 'DB-100', 3, 300.00, 4, 'Good'),
+(6, 'james', 'bayot', '1999', 3, 150.00, 1, 'LAGTIK JAPON BISAN T'),
+(7, 'james2', 'bayot', '1999', 3, 150.00, 1, 'LAGTIK JAPON BISAN T'),
+(8, 'james3', 'bayot', '1999', 3, 150.00, 1, 'LAGTIK JAPON BISAN T');
 
 -- --------------------------------------------------------
 
@@ -226,6 +229,13 @@ CREATE TABLE `positions` (
   `hourlyRate` decimal(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `positions`
+--
+
+INSERT INTO `positions` (`positionID`, `positionName`, `baseSalary`, `hourlyRate`) VALUES
+(1, 'Receptionist', 22240.00, 110.00);
+
 -- --------------------------------------------------------
 
 --
@@ -275,8 +285,8 @@ CREATE TABLE `sessions` (
 CREATE TABLE `staffattendance` (
   `attendanceID` bigint(20) NOT NULL,
   `staffID` bigint(20) DEFAULT NULL,
-  `timeIn` datetime DEFAULT NULL,
-  `timeOut` datetime DEFAULT NULL
+  `dateTime` datetime DEFAULT NULL,
+  `logType` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -295,9 +305,17 @@ CREATE TABLE `staffs` (
   `Sex` varchar(10) DEFAULT NULL,
   `contactNumber` varchar(20) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
+  `address` text DEFAULT NULL,
   `schedule` varchar(20) DEFAULT NULL,
   `positionID` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `staffs`
+--
+
+INSERT INTO `staffs` (`staffID`, `UserID`, `lastName`, `firstName`, `middleName`, `DoB`, `Sex`, `contactNumber`, `email`, `address`, `schedule`, `positionID`) VALUES
+(2, 4, 'Smith', 'John', 'A.', '1990-05-15', 'Male', '09123456789', 'john.smith@gym.com', 'davao city', 'M, T, W, Th, F,', 1);
 
 -- --------------------------------------------------------
 
@@ -320,7 +338,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`UserID`, `username`, `password`, `accType`, `status`) VALUES
 (1, 'admin', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'ADMIN', 'ACTIVE'),
 (2, 're', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'RECEPTIONIST', 'ACTIVE'),
-(3, 'co', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'COACH', 'ACTIVE');
+(3, 'co', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'COACH', 'ACTIVE'),
+(4, 'tryRE', '123', 'RECEPTIONIST', 'ACTIVE');
 
 --
 -- Indexes for dumped tables
@@ -469,7 +488,7 @@ ALTER TABLE `equipmentcategories`
 -- AUTO_INCREMENT for table `equipments`
 --
 ALTER TABLE `equipments`
-  MODIFY `equipmentID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `equipmentID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `expenses`
@@ -511,7 +530,7 @@ ALTER TABLE `payroll`
 -- AUTO_INCREMENT for table `positions`
 --
 ALTER TABLE `positions`
-  MODIFY `positionID` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `positionID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `sales`
@@ -541,13 +560,13 @@ ALTER TABLE `staffattendance`
 -- AUTO_INCREMENT for table `staffs`
 --
 ALTER TABLE `staffs`
-  MODIFY `staffID` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `staffID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UserID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `UserID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
