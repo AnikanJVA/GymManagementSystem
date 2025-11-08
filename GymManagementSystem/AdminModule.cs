@@ -1,6 +1,11 @@
-﻿using System;
+﻿using ClassLibrary;
+using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Management.Instrumentation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -154,6 +159,50 @@ namespace GymManagementSystem
             mainForm.panel6.Visible = false;
             mainForm.panel7.Visible = false;
             mainForm.panel8.Visible = true;
+
+            // textboxes and labels
+            mainForm.textBox1_panel8.Visible = true;
+            mainForm.textBox1_panel8.Enabled = false;
+            mainForm.label1_panel8.Text = "Equipment ID";
+
+            mainForm.textBox2_panel8.Visible = true;
+            mainForm.label2_panel8.Text = "Equipment Name";
+
+            mainForm.textBox3_panel8.Visible = true;
+            mainForm.label3_panel8.Text = "Brand";
+
+            mainForm.textBox4_panel8.Visible = true;
+            mainForm.label4_panel8.Text = "Model";
+
+            mainForm.textBox5_panel8.Visible = true;
+            mainForm.label5_panel8.Text = "Category";
+
+            mainForm.textBox6_panel8.Visible = true;
+            mainForm.label6_panel8.Text = "Cost";
+
+            mainForm.textBox7_panel8.Visible = true;
+            mainForm.label7_panel8.Text = "Quantity";
+
+            mainForm.textBox8_panel8.Visible = true;
+            mainForm.label8_panel8.Text = "Condition";
+            // textboxes and labels
+
+            // buttons
+            mainForm.button1_panel8.Visible = true;
+            mainForm.button1_panel8.Text = "Add";
+
+            mainForm.button2_panel8.Visible = true;
+            mainForm.button2_panel8.Text = "Update";
+            // buttons
+
+
+            // datagrid
+            mainForm.dataGridView1_panel8.Visible = true;
+            //mainForm.dataGridView1_panel8.DataSource = AdminActions.GetEquipmentsTable();
+            // datagrid
+
         }
+
+        
     }
 }
