@@ -45,7 +45,6 @@ namespace GymManagementSystem
             mainForm.label1.Text = "Dashboard";
 
             mainForm.panel2.Visible = false;
-            mainForm.label2.Text = "Accounts";
 
             mainForm.panel3.Visible = false;
             mainForm.label3.Text = "Ban";
@@ -88,6 +87,9 @@ namespace GymManagementSystem
             mainForm.panel6.Visible = false;
             mainForm.panel7.Visible = false;
             mainForm.panel8.Visible = false;
+
+            mainForm.dataGridView1_panel2.Visible = true;
+            mainForm.dataGridView1_panel2.DataSource = Database.GetMembersTable();
         }
 
         public static void BanButtonClick(MainForm mainForm)
@@ -138,6 +140,9 @@ namespace GymManagementSystem
             mainForm.panel6.Visible = true;
             mainForm.panel7.Visible = false;
             mainForm.panel8.Visible = false;
+
+            mainForm.dataGridView1_panel6.Visible = true;
+            mainForm.dataGridView1_panel6.DataSource = Database.GetStaffTable();
         }
 
         public static void CostButtonClick(MainForm mainForm)

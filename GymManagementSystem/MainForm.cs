@@ -169,6 +169,42 @@ namespace GymManagementSystem
                 }
             }
         }
+        private void button2_panel8_Click(object sender, EventArgs e)
+        {
+            if (accType == "ADMIN")
+            {
+                bool isFieldsComplete = false;
+                TextBox[] requiredFields = {textBox2_panel8, textBox3_panel8, textBox4_panel8,
+                                            textBox5_panel8, textBox6_panel8, textBox7_panel8, textBox8_panel8};
+                foreach (TextBox tb in requiredFields)
+                {
+                    if (string.IsNullOrWhiteSpace(tb.Text))
+                    {
+                        MessageBox.Show("Don't leave anything empty.", "Input Required",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        isFieldsComplete = false;
+                        return;
+                    }
+                    isFieldsComplete = true;
+                }
+                if (isFieldsComplete)
+                {
+
+                    bool isSuccessful = AdminActions.UpdateEquipment(textBox2_panel8.Text, textBox3_panel8.Text, textBox4_panel8.Text, textBox5_panel8.Text,
+                                              Convert.ToInt64(textBox6_panel8.Text), Convert.ToInt32(textBox7_panel8.Text), textBox8_panel8.Text);
+                    if (isSuccessful)
+                    {
+                        MessageBox.Show("Equipment Added.", "Success");
+                        UpdateDataGridViews();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Equipment Not Added.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
+            }
+        }
 
         private void UpdateDataGridViews()
         {
@@ -176,6 +212,65 @@ namespace GymManagementSystem
             {
                 dataGridView1_panel8.DataSource = Database.GetEquipmentsTable();
                 dataGridView1_panel3.DataSource = Database.GetMembersTable();
+                dataGridView1_panel6.DataSource = Database.GetStaffTable();
+            }
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label34_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_panel8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_panel2_Click(object sender, EventArgs e)
+        {
+            if (accType == "ADMIN")
+            {
+                bool isFieldsComplete = false;
+                TextBox[] requiredFields = {textBox1_panel2, textBox2_panel2, textBox3_panel2,
+                                           textBox4_panel2, textBox5_panel2};
+                foreach (TextBox tb in requiredFields)
+                {
+                    if (string.IsNullOrWhiteSpace(tb.Text))
+                    {
+                        MessageBox.Show("Don't leave anything empty.", "Input Required",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        isFieldsComplete = false;
+                        return;
+                    }
+                    isFieldsComplete = true;
+                }
+
+                if (isFieldsComplete)
+                {
+                    string dob = dateTimePicker1_panel2.Value.ToString("yyyy-MM-dd");
+                    bool isSuccessful = AdminActions.AddStaff(textBox1_panel2.Text, textBox2_panel2.Text, comboBox1_panel2.Text, textBox3_panel2.Text, textBox4_panel2.Text,
+                                                                    dob, comboBox2_panel2.Text, textBox5_panel2.Text);
+                    if (isSuccessful)
+                    {
+                        MessageBox.Show("Equipment Added.", "Success");
+                        UpdateDataGridViews();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Equipment Not Added.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
             }
         }
     }
