@@ -313,6 +313,154 @@ namespace ClassLibrary
             }
         }
 
-        
+        public static bool AddStaff(string username,
+                                     string password,
+                                     string emailAddress,
+                                     string address,
+                                     string email,
+                                     string schedule,
+                                     string contactNumber,
+                                     string firstName,
+                                     string middleName,
+                                     string lastName,
+                                     string positionName,
+                                     float baseSalary,
+                                     double hourlyRate)
+        {
+            string accType = "RECEPTIONIST";
+
+            string checkQuery = @"SELECT COUNT(*) FROM users u
+                              LEFT JOIN staffs r ON u.UserID = r.UserID
+                              WHERE 
+                              (u.username = @username AND u.accType = @accType)
+                              OR u.emailAddress = @emailAddress
+                              OR u.contactNumber = @contactNumber";
+
+            using (MySqlCommand checkCmd = new MySqlCommand(checkQuery, connection))
+            {
+                checkCmd.Parameters.AddWithValue("@username", username);
+                checkCmd.Parameters.AddWithValue("@accType", accType);
+                checkCmd.Parameters.AddWithValue("@emailAddress", emailAddress ?? (object)DBNull.Value);
+                checkCmd.Parameters.AddWithValue("@contactNumber", contactNumber);
+
+                if (Convert.ToInt32(checkCmd.ExecuteScalar()) > 0)
+                {
+
+                    return false;
+                }
+            }
+
+            MySqlTransaction transaction = connection.BeginTransaction();
+
+            try
+            {
+
+                string userInsert = @"INSERT INTO users 
+                                  (username, password, accType)
+                                  VALUES 
+                                  (@username, @password, @accType)";
+
+                using (MySqlCommand userCmd = new MySqlCommand(userInsert, connection, transaction))
+                {
+                    userCmd.Parameters.AddWithValue("@username", username);
+                    userCmd.Parameters.AddWithValue("@password", password);
+                    userCmd.Parameters.AddWithValue("@accType", accType);
+
+                    userCmd.ExecuteNonQuery();
+                }
+
+                long positionID = GetPositionID(positionName);
+
+                string staffInsert = @"INSERT INTO staffs 
+                                          (userId, firstName, middleName, lastName,contactNumber, email, schedule, positionID)
+                                          VALUES 
+                                          (LAST_INSERT_ID(), @firstName, @middleName, @lastName, @email, @schedule, @positionID)";
+
+                using (MySqlCommand recCmd = new MySqlCommand(staffInsert, connection, transaction))
+                {
+                    recCmd.Parameters.AddWithValue("@firstName", firstName);
+                    recCmd.Parameters.AddWithValue("@middleName", middleName);
+                    recCmd.Parameters.AddWithValue("@lastName", lastName);
+                    recCmd.Parameters.AddWithValue("@contactNumber", contactNumber);
+                    recCmd.Parameters.AddWithValue("@email", string.IsNullOrWhiteSpace(emailAddress) ? (object)DBNull.Value : email);
+                    recCmd.Parameters.AddWithValue("@schedule", schedule);
+                    recCmd.ExecuteNonQuery();
+                }
+
+                transaction.Commit();
+                return true;
+            }
+            catch (Exception ex)
+            {
+
+                transaction.Rollback();
+                Console.WriteLine("Error: " + ex.Message);
+                return false;
+            }
+        }
+
+        public static long GetPositionID(string positionName)
+        {
+            string selectQuery = "SELECT positionID FROM positions WHERE positionName = @positionName";
+
+            using (MySqlCommand cmd = new MySqlCommand(selectQuery, connection))
+            {
+                cmd.Parameters.AddWithValue("@positionName", positionName);
+
+                object result = cmd.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    return Convert.ToInt64(result);
+                }
+            }
+            return 0;
+        }
+
+        public static bool UpdateStaff(long staffID,
+                                       long UserID,
+                                       string lastName,
+                                       string firstName,
+                                       string middleName,
+                                       string contactNumber,
+                                       string email,
+                                       string schedule,
+                                       string positionName)
+        {
+            string checkQuery = @"SELECT COUNT(*) 
+                                        FROM staffs
+                                        WHERE staffID = @staffID";
+
+            using (MySqlCommand checkCmd = new MySqlCommand(checkQuery, connection))
+            {
+                checkCmd.Parameters.AddWithValue("@staffID", staffID);
+                int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+                if (count > 0)
+                {
+                    return false;
+                }
+            }
+            long positionID = GetPositionID(positionName);
+            string updateQuery = @"UPDATE staffs
+                                       SET firstName = @firstName,
+                                           lastName = @lastName,
+                                           middleName = @middleName,
+                                           contactNumber = @contactNumber,
+                                           email = @email,
+                                           schedule = @schedule,
+                                           positionID = @positionID
+                                       WHERE staffID = @staffID";
+
+            using (MySqlCommand cmd = new MySqlCommand(updateQuery, connection))
+            {
+                cmd.Parameters.AddWithValue("@firstName", firstName);
+                cmd.Parameters.AddWithValue("@lastName", lastName);
+                cmd.Parameters.AddWithValue("@middleName", middleName);
+                cmd.Parameters.AddWithValue("@contactNumber", contactNumber);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@schedule", schedule);
+                cmd.Parameters.AddWithValue("@positionID", positionID);
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
     }
 }
