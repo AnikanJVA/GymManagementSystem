@@ -313,28 +313,6 @@ namespace ClassLibrary
             }
         }
 
-        public static DataTable GetEquipmentsTable()
-        {
-            DataTable table = new DataTable();
-
-            string query = @"SELECT e.equipmentID,
-                            e.equipmentName,
-                            e.brand,
-                            e.model,
-                            c.categoryName AS category,
-                            e.cost,
-                            e.quantity,
-                            e.EquipmentCondition
-                        FROM equipments e
-                        JOIN equipmentcategories c 
-                        ON e.categoryID = c.categoryID;";
-
-            using (MySqlCommand cmd = new MySqlCommand(query, connection))
-            using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
-            {
-                adapter.Fill(table);
-                return table;
-            }
-        }
+        
     }
 }

@@ -174,7 +174,7 @@ namespace GymManagementSystem
         {
             if (accType == "ADMIN")
             {
-                dataGridView1_panel8.DataSource = AdminActions.GetEquipmentsTable();
+                dataGridView1_panel8.DataSource = Database.GetEquipmentsTable();
             }
         }
     }
