@@ -64,20 +64,24 @@ namespace ClassLibrary
             DataTable table = new DataTable();
 
             string query = @"SELECT 
-                                memberID,
-                                lastName,
-                                firstName,
-                                middleName,
-                                DoB,
-                                Sex,
-                                contactNumber,
-                                email,
-                                DATE(membershipDate),
-                                membershipType,
-                                COALESCE(DATE(renewalDate), DATE('0000-00-00')) AS renewalDate,
-                                membershipStatus
+                                m.memberID,
+                                m.lastName,
+                                m.firstName,
+                                m.middleName,
+                                m.DoB,
+                                m.Sex,
+                                m.contactNumber,
+                                m.email,
+                                DATE(m.membershipDate) as membershipDate,
+                                DATE(m.renewalDate) as renewalDate,
+                                m.membershipStatus,
+                                mt.planName
                             FROM 
-                                members;";
+                                members m
+                                inner join
+                                membershiptypes mt
+                                on
+                                m.planid = mt.planID;";
 
             using (MySqlCommand cmd = new MySqlCommand(query, connection))
             using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
@@ -85,6 +89,40 @@ namespace ClassLibrary
                 adapter.Fill(table);
                 return table;
             }
+        }
+
+        public static long GetCategoryName(string categoryName)
+        {
+            string selectQuery = "SELECT categoryID FROM equipmentcategories WHERE categoryName = @categoryName";
+
+            using (MySqlCommand cmd = new MySqlCommand(selectQuery, connection))
+            {
+                cmd.Parameters.AddWithValue("@categoryName", categoryName);
+
+                object result = cmd.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    return Convert.ToInt64(result);
+                }
+            }
+            return 0;
+        }
+
+        public static long GetPositionID(string positionName)
+        {
+            string selectQuery = "SELECT positionID FROM positions WHERE positionName = @positionName";
+
+            using (MySqlCommand cmd = new MySqlCommand(selectQuery, connection))
+            {
+                cmd.Parameters.AddWithValue("@positionName", positionName);
+
+                object result = cmd.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    return Convert.ToInt64(result);
+                }
+            }
+            return 0;
         }
     }
 }

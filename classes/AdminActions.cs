@@ -34,7 +34,7 @@ namespace ClassLibrary
                 }
             }
 
-            long categoryID = GetCategoryName(category);
+            long categoryID = Database.GetCategoryName(category);
 
             string insertQuery = @"INSERT INTO equipments (equipmentName, brand, model, categoryID, cost, quantity, equipmentCondition)
                                    VALUES (@equipmentName, @brand, @model, @categoryID, @cost, @quantity, @equipmentCondition);";
@@ -59,22 +59,7 @@ namespace ClassLibrary
             }
         }
 
-        public static long GetCategoryName(string categoryName)
-        {
-            string selectQuery = "SELECT categoryID FROM equipmentcategories WHERE categoryName = @categoryName";
-
-            using (MySqlCommand cmd = new MySqlCommand(selectQuery, connection))
-            {
-                cmd.Parameters.AddWithValue("@categoryName", categoryName);
-
-                object result = cmd.ExecuteScalar();
-                if (result != null && result != DBNull.Value)
-                {
-                    return Convert.ToInt64(result);
-                }
-            }
-            return 0;
-        }
+        
          
         public bool UpdateEquipment(int equipmentID,
                                     string equipmentName,
@@ -153,6 +138,7 @@ namespace ClassLibrary
                 }
             }
         }
+
         public bool RegisterMember(string firstName, string lastName, string middleName,
                          DateTime dob, string sex, string contactNumber,
                          string email, string membershipType)
@@ -217,6 +203,7 @@ namespace ClassLibrary
                 }
             }
         }
+
         public bool UpdateMemberInfo(int memberID, string firstName, string lastName,
                              string middleName, DateTime dob, string sex,
                              string contactNumber, string email, string membershipType)
@@ -256,6 +243,7 @@ namespace ClassLibrary
                 }
             }
         }
+
         public bool RenewMember(int memberID, string currentMembershipType)
         {
             // 1. Determine the appropriate renewal membership type
@@ -369,7 +357,7 @@ namespace ClassLibrary
                     userCmd.ExecuteNonQuery();
                 }
 
-                long positionID = GetPositionID(positionName);
+                long positionID = Database.GetPositionID(positionName);
 
                 string staffInsert = @"INSERT INTO staffs 
                                           (userId, firstName, middleName, lastName,contactNumber, email, schedule, positionID)
@@ -399,23 +387,7 @@ namespace ClassLibrary
             }
         }
 
-        public static long GetPositionID(string positionName)
-        {
-            string selectQuery = "SELECT positionID FROM positions WHERE positionName = @positionName";
-
-            using (MySqlCommand cmd = new MySqlCommand(selectQuery, connection))
-            {
-                cmd.Parameters.AddWithValue("@positionName", positionName);
-
-                object result = cmd.ExecuteScalar();
-                if (result != null && result != DBNull.Value)
-                {
-                    return Convert.ToInt64(result);
-                }
-            }
-            return 0;
-        }
-
+        
         public static bool UpdateStaff(long staffID,
                                        long UserID,
                                        string lastName,
@@ -439,7 +411,7 @@ namespace ClassLibrary
                     return false;
                 }
             }
-            long positionID = GetPositionID(positionName);
+            long positionID = Database.GetPositionID(positionName);
             string updateQuery = @"UPDATE staffs
                                        SET firstName = @firstName,
                                            lastName = @lastName,

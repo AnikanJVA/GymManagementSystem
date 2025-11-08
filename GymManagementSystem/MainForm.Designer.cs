@@ -57,7 +57,7 @@
             this.textBox2_panel2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1_panel2 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1_panel2 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox4_panel1 = new System.Windows.Forms.TextBox();
@@ -94,12 +94,12 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button9_panel3 = new System.Windows.Forms.Button();
+            this.button1_panel3 = new System.Windows.Forms.Button();
             this.textBox2_panel3 = new System.Windows.Forms.TextBox();
             this.textBox1_panel3 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label2_panel3 = new System.Windows.Forms.Label();
+            this.label1_panel3 = new System.Windows.Forms.Label();
+            this.dataGridView1_panel3 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -107,7 +107,7 @@
             this.splitContainer1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_panel2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_panel8)).BeginInit();
@@ -116,7 +116,7 @@
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_panel3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -141,6 +141,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.panel3);
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Panel2.Controls.Add(this.panel8);
@@ -148,7 +149,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.panel6);
             this.splitContainer1.Panel2.Controls.Add(this.panel5);
             this.splitContainer1.Panel2.Controls.Add(this.panel4);
-            this.splitContainer1.Panel2.Controls.Add(this.panel3);
             this.splitContainer1.Size = new System.Drawing.Size(1264, 681);
             this.splitContainer1.SplitterDistance = 300;
             this.splitContainer1.TabIndex = 1;
@@ -358,7 +358,7 @@
             this.panel2.Controls.Add(this.textBox2_panel2);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.textBox1_panel2);
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dataGridView1_panel2);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -511,13 +511,13 @@
             this.textBox1_panel2.Size = new System.Drawing.Size(378, 28);
             this.textBox1_panel2.TabIndex = 2;
             // 
-            // dataGridView1
+            // dataGridView1_panel2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(921, 277);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1_panel2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1_panel2.Location = new System.Drawing.Point(17, 67);
+            this.dataGridView1_panel2.Name = "dataGridView1_panel2";
+            this.dataGridView1_panel2.Size = new System.Drawing.Size(921, 277);
+            this.dataGridView1_panel2.TabIndex = 1;
             // 
             // label2
             // 
@@ -852,12 +852,12 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button9_panel3);
+            this.panel3.Controls.Add(this.button1_panel3);
             this.panel3.Controls.Add(this.textBox2_panel3);
             this.panel3.Controls.Add(this.textBox1_panel3);
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.dataGridView2);
+            this.panel3.Controls.Add(this.label2_panel3);
+            this.panel3.Controls.Add(this.label1_panel3);
+            this.panel3.Controls.Add(this.dataGridView1_panel3);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -866,18 +866,18 @@
             this.panel3.TabIndex = 1;
             this.panel3.Visible = false;
             // 
-            // button9_panel3
+            // button1_panel3
             // 
-            this.button9_panel3.BackColor = System.Drawing.Color.Yellow;
-            this.button9_panel3.FlatAppearance.BorderSize = 0;
-            this.button9_panel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9_panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9_panel3.Location = new System.Drawing.Point(390, 614);
-            this.button9_panel3.Name = "button9_panel3";
-            this.button9_panel3.Size = new System.Drawing.Size(152, 55);
-            this.button9_panel3.TabIndex = 6;
-            this.button9_panel3.Text = "Ban Member";
-            this.button9_panel3.UseVisualStyleBackColor = false;
+            this.button1_panel3.BackColor = System.Drawing.Color.Yellow;
+            this.button1_panel3.FlatAppearance.BorderSize = 0;
+            this.button1_panel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1_panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1_panel3.Location = new System.Drawing.Point(390, 614);
+            this.button1_panel3.Name = "button1_panel3";
+            this.button1_panel3.Size = new System.Drawing.Size(152, 55);
+            this.button1_panel3.TabIndex = 6;
+            this.button1_panel3.Text = "Ban Member";
+            this.button1_panel3.UseVisualStyleBackColor = false;
             // 
             // textBox2_panel3
             // 
@@ -895,33 +895,33 @@
             this.textBox1_panel3.Size = new System.Drawing.Size(270, 29);
             this.textBox1_panel3.TabIndex = 4;
             // 
-            // label14
+            // label2_panel3
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(560, 512);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(91, 16);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Last Name*";
+            this.label2_panel3.AutoSize = true;
+            this.label2_panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2_panel3.Location = new System.Drawing.Point(560, 512);
+            this.label2_panel3.Name = "label2_panel3";
+            this.label2_panel3.Size = new System.Drawing.Size(91, 16);
+            this.label2_panel3.TabIndex = 3;
+            this.label2_panel3.Text = "Last Name*";
             // 
-            // label13
+            // label1_panel3
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(96, 512);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(92, 16);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "First Name*";
+            this.label1_panel3.AutoSize = true;
+            this.label1_panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1_panel3.Location = new System.Drawing.Point(96, 512);
+            this.label1_panel3.Name = "label1_panel3";
+            this.label1_panel3.Size = new System.Drawing.Size(92, 16);
+            this.label1_panel3.TabIndex = 2;
+            this.label1_panel3.Text = "First Name*";
             // 
-            // dataGridView2
+            // dataGridView1_panel3
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(17, 67);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(921, 430);
-            this.dataGridView2.TabIndex = 1;
+            this.dataGridView1_panel3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1_panel3.Location = new System.Drawing.Point(17, 67);
+            this.dataGridView1_panel3.Name = "dataGridView1_panel3";
+            this.dataGridView1_panel3.Size = new System.Drawing.Size(921, 430);
+            this.dataGridView1_panel3.TabIndex = 1;
             // 
             // label3
             // 
@@ -953,7 +953,7 @@
             this.flowLayoutPanel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_panel2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -969,7 +969,7 @@
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_panel3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1031,13 +1031,7 @@
         public System.Windows.Forms.Label label10;
         public System.Windows.Forms.Label label12;
         public System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1_panel3;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button9_panel3;
-        private System.Windows.Forms.TextBox textBox2_panel3;
-        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView dataGridView1_panel2;
         public System.Windows.Forms.TextBox textBox1_panel2;
         public System.Windows.Forms.TextBox textBox2_panel2;
         public System.Windows.Forms.TextBox textBox7_panel2;
@@ -1049,5 +1043,11 @@
         public System.Windows.Forms.Button button11_panel2;
         public System.Windows.Forms.Button button10_panel2;
         public System.Windows.Forms.Button button9_panel2;
+        public System.Windows.Forms.TextBox textBox1_panel3;
+        public System.Windows.Forms.Label label2_panel3;
+        public System.Windows.Forms.Label label1_panel3;
+        public System.Windows.Forms.DataGridView dataGridView1_panel3;
+        public System.Windows.Forms.Button button1_panel3;
+        public System.Windows.Forms.TextBox textBox2_panel3;
     }
 }

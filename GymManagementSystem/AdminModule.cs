@@ -100,6 +100,9 @@ namespace GymManagementSystem
             mainForm.panel6.Visible = false;
             mainForm.panel7.Visible = false;
             mainForm.panel8.Visible = false;
+
+            mainForm.dataGridView1_panel3.Visible = true;
+            mainForm.dataGridView1_panel3.DataSource = Database.GetMembersTable();
         }
 
         public static void ExpensesButtonClick(MainForm mainForm)
