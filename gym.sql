@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 04, 2025 at 03:52 AM
+-- Generation Time: Nov 08, 2025 at 01:15 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,19 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `gym`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `coachattendance`
---
-
-CREATE TABLE `coachattendance` (
-  `attendanceID` bigint(20) NOT NULL,
-  `staffID` bigint(20) DEFAULT NULL,
-  `timeIn` datetime DEFAULT NULL,
-  `timeOut` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -70,6 +57,15 @@ CREATE TABLE `equipmentcategories` (
   `categoryName` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `equipmentcategories`
+--
+
+INSERT INTO `equipmentcategories` (`categoryID`, `categoryName`) VALUES
+(1, 'Cardio'),
+(2, 'Strength'),
+(3, 'Free Weights');
+
 -- --------------------------------------------------------
 
 --
@@ -84,8 +80,19 @@ CREATE TABLE `equipments` (
   `categoryID` bigint(20) DEFAULT NULL,
   `cost` decimal(10,2) DEFAULT NULL,
   `quantity` int(11) DEFAULT NULL,
-  `condition` varchar(20) DEFAULT NULL
+  `equipmentCondition` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `equipments`
+--
+
+INSERT INTO `equipments` (`equipmentID`, `equipmentName`, `brand`, `model`, `categoryID`, `cost`, `quantity`, `equipmentCondition`) VALUES
+(1, 'Treadmill X10', 'LifeFit', 'X10 Pro', 1, 1500.50, 5, 'Excellent'),
+(2, 'Power Rack XL', 'IronForce', 'PR-XL', 2, 850.00, 3, 'Good'),
+(3, 'Hex Dumbbell Set', 'HeavyLift', 'HD-300', 3, 250.75, 10, 'Fair'),
+(4, 'asdf', 'cell', '2982938', 3, 299.00, 24, 'Good'),
+(5, 'Dumbell 15 pounds', 'Duracell', 'DB-100', 3, 300.00, 4, 'Good');
 
 -- --------------------------------------------------------
 
@@ -142,10 +149,13 @@ CREATE TABLE `members` (
   `lastName` varchar(50) DEFAULT NULL,
   `firstName` varchar(50) DEFAULT NULL,
   `middleName` varchar(50) DEFAULT NULL,
-  `contactNumber` varchar(20) NOT NULL,
-  `email` varchar(100) NOT NULL,
+  `DoB` date DEFAULT NULL,
+  `Sex` varchar(10) DEFAULT NULL,
+  `contactNumber` varchar(20) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
   `membershipDate` datetime DEFAULT NULL,
   `membershipType` varchar(50) DEFAULT NULL,
+  `renewalDate` datetime DEFAULT NULL,
   `membershipStatus` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -223,6 +233,19 @@ CREATE TABLE `sessions` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `staffattendance`
+--
+
+CREATE TABLE `staffattendance` (
+  `attendanceID` bigint(20) NOT NULL,
+  `staffID` bigint(20) DEFAULT NULL,
+  `timeIn` datetime DEFAULT NULL,
+  `timeOut` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `staffs`
 --
 
@@ -232,8 +255,10 @@ CREATE TABLE `staffs` (
   `lastName` varchar(50) DEFAULT NULL,
   `firstName` varchar(50) DEFAULT NULL,
   `middleName` varchar(50) DEFAULT NULL,
-  `contactNumber` varchar(20) NOT NULL,
-  `email` varchar(100) NOT NULL,
+  `DoB` date DEFAULT NULL,
+  `Sex` varchar(10) DEFAULT NULL,
+  `contactNumber` varchar(20) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
   `schedule` varchar(20) DEFAULT NULL,
   `positionID` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -264,13 +289,6 @@ INSERT INTO `users` (`UserID`, `username`, `password`, `accType`, `status`) VALU
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `coachattendance`
---
-ALTER TABLE `coachattendance`
-  ADD PRIMARY KEY (`attendanceID`),
-  ADD KEY `staffID` (`staffID`);
 
 --
 -- Indexes for table `deductions`
@@ -362,6 +380,13 @@ ALTER TABLE `sessions`
   ADD KEY `staffID` (`staffID`);
 
 --
+-- Indexes for table `staffattendance`
+--
+ALTER TABLE `staffattendance`
+  ADD PRIMARY KEY (`attendanceID`),
+  ADD KEY `staffID` (`staffID`);
+
+--
 -- Indexes for table `staffs`
 --
 ALTER TABLE `staffs`
@@ -380,12 +405,6 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `coachattendance`
---
-ALTER TABLE `coachattendance`
-  MODIFY `attendanceID` bigint(20) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `deductions`
 --
 ALTER TABLE `deductions`
@@ -401,13 +420,13 @@ ALTER TABLE `discounts`
 -- AUTO_INCREMENT for table `equipmentcategories`
 --
 ALTER TABLE `equipmentcategories`
-  MODIFY `categoryID` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `categoryID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `equipments`
 --
 ALTER TABLE `equipments`
-  MODIFY `equipmentID` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `equipmentID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `expenses`
@@ -464,6 +483,12 @@ ALTER TABLE `sessions`
   MODIFY `sesssionID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `staffattendance`
+--
+ALTER TABLE `staffattendance`
+  MODIFY `attendanceID` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `staffs`
 --
 ALTER TABLE `staffs`
@@ -478,12 +503,6 @@ ALTER TABLE `users`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `coachattendance`
---
-ALTER TABLE `coachattendance`
-  ADD CONSTRAINT `coachattendance_ibfk_1` FOREIGN KEY (`staffID`) REFERENCES `staffs` (`staffID`);
 
 --
 -- Constraints for table `deductions`
@@ -535,6 +554,12 @@ ALTER TABLE `sales`
 ALTER TABLE `sessions`
   ADD CONSTRAINT `sessions_ibfk_1` FOREIGN KEY (`memberID`) REFERENCES `members` (`memberID`),
   ADD CONSTRAINT `sessions_ibfk_2` FOREIGN KEY (`staffID`) REFERENCES `staffs` (`staffID`);
+
+--
+-- Constraints for table `staffattendance`
+--
+ALTER TABLE `staffattendance`
+  ADD CONSTRAINT `staffattendance_ibfk_1` FOREIGN KEY (`staffID`) REFERENCES `staffs` (`staffID`);
 
 --
 -- Constraints for table `staffs`
