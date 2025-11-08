@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 08, 2025 at 01:15 PM
+-- Generation Time: Nov 08, 2025 at 03:55 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -154,10 +154,46 @@ CREATE TABLE `members` (
   `contactNumber` varchar(20) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `membershipDate` datetime DEFAULT NULL,
-  `membershipType` varchar(50) DEFAULT NULL,
   `renewalDate` datetime DEFAULT NULL,
+  `planID` bigint(20) DEFAULT NULL,
   `membershipStatus` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `members`
+--
+
+INSERT INTO `members` (`memberID`, `lastName`, `firstName`, `middleName`, `DoB`, `Sex`, `contactNumber`, `email`, `membershipDate`, `renewalDate`, `planID`, `membershipStatus`) VALUES
+(1, 'Dela Cruz', 'Juan', 'M', '1995-03-15', 'MALE', '09171234567', 'juan.delacruz@example.com', '2025-11-01 10:00:00', '2025-12-01 10:00:00', 1, 'ACTIVE'),
+(2, 'Reyes', 'Maria', 'C', '1988-11-20', 'FEMALE', '09998765432', 'maria.reyes@example.com', '2025-01-10 12:30:00', '2026-01-10 12:30:00', 2, 'ACTIVE'),
+(3, 'Santos', 'Cris', 'D', '2005-07-25', 'MALE', '09001112222', 'cris.santos@school.edu', '2024-10-01 09:00:00', '2024-11-01 09:00:00', 5, 'EXPIRED');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `membershiptypes`
+--
+
+CREATE TABLE `membershiptypes` (
+  `planID` bigint(20) NOT NULL,
+  `planName` varchar(50) NOT NULL,
+  `planDurationDays` int(11) DEFAULT NULL,
+  `planFee` decimal(10,2) DEFAULT NULL,
+  `status` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `membershiptypes`
+--
+
+INSERT INTO `membershiptypes` (`planID`, `planName`, `planDurationDays`, `planFee`, `status`) VALUES
+(1, 'Solo Monthly', 30, 1000.00, 'ACTIVE'),
+(2, 'Solo Annual', 365, 10800.00, 'ACTIVE'),
+(3, 'Group Monthly', 30, 850.00, 'ACTIVE'),
+(4, 'Group Annual', 365, 9180.00, 'ACTIVE'),
+(5, 'Student Monthly', 30, 850.00, 'ACTIVE'),
+(6, 'Student Annual', 365, 9180.00, 'ACTIVE'),
+(7, 'Day Pass', 1, 100.00, 'ACTIVE');
 
 -- --------------------------------------------------------
 
@@ -341,7 +377,14 @@ ALTER TABLE `memberattendance`
 -- Indexes for table `members`
 --
 ALTER TABLE `members`
-  ADD PRIMARY KEY (`memberID`);
+  ADD PRIMARY KEY (`memberID`),
+  ADD KEY `fk_member_plan` (`planID`);
+
+--
+-- Indexes for table `membershiptypes`
+--
+ALTER TABLE `membershiptypes`
+  ADD PRIMARY KEY (`planID`);
 
 --
 -- Indexes for table `payroll`
@@ -450,7 +493,13 @@ ALTER TABLE `memberattendance`
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `memberID` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `memberID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `membershiptypes`
+--
+ALTER TABLE `membershiptypes`
+  MODIFY `planID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `payroll`
@@ -533,6 +582,12 @@ ALTER TABLE `maintenancerecords`
 --
 ALTER TABLE `memberattendance`
   ADD CONSTRAINT `memberattendance_ibfk_1` FOREIGN KEY (`memberID`) REFERENCES `members` (`memberID`);
+
+--
+-- Constraints for table `members`
+--
+ALTER TABLE `members`
+  ADD CONSTRAINT `fk_member_plan` FOREIGN KEY (`planID`) REFERENCES `membershiptypes` (`planID`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `payroll`
