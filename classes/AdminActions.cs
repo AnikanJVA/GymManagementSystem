@@ -1,7 +1,10 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
 using System.Linq;
+using System.Management.Instrumentation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,44 +13,70 @@ namespace ClassLibrary
     public class AdminActions
     {
         private static MySqlConnection connection = Database.Instance.Connection;
-        public bool addEquipment(int equipmentID,
-                                        string eqiupmentName,
+
+        public static bool AddEquipment(string eqiupmentName,
                                         string brand,
                                         string model,
-                                        int categoryID,
+                                        string category,
                                         double cost,
                                         int quantity,
-                                        string condition)
+                                        string equipmentCondition)
         {
             string checkQuery = @"SELECT COUNT(*) AS DuplicateCount
-                                 FROM eqiupments
+                                 FROM equipments
                                  WHERE EquipmentName = @equipmentName";
             using (MySqlCommand checkCmd = new MySqlCommand(checkQuery, connection))
             {
-                checkCmd.Parameters.AddWithValue("@equipmentID", equipmentID);
                 checkCmd.Parameters.AddWithValue("@equipmentName", eqiupmentName);
                 if (Convert.ToInt32(checkCmd.ExecuteScalar()) > 0)
                 {
                     return false;
                 }
             }
-            string insertQuery = @"INSERT INTO equipments (equipmentID, equipmentName, brand, model, categoryID, cost, quantity, condition)
-                                   VALUES (@equipmentID, @equipmentName, @brand, @model, @categoryID, @cost, @quantity, @condition);";
+
+            long categoryID = GetCategoryName(category);
+
+            string insertQuery = @"INSERT INTO equipments (equipmentName, brand, model, categoryID, cost, quantity, equipmentCondition)
+                                   VALUES (@equipmentName, @brand, @model, @categoryID, @cost, @quantity, @equipmentCondition);";
             using (MySqlCommand cmd = new MySqlCommand(insertQuery, connection))
             {
-                cmd.Parameters.AddWithValue("@equipmentID", equipmentID);
                 cmd.Parameters.AddWithValue("@equipmentName", eqiupmentName);
                 cmd.Parameters.AddWithValue("@brand", brand);
                 cmd.Parameters.AddWithValue("@model", model);
                 cmd.Parameters.AddWithValue("@categoryID", categoryID);
                 cmd.Parameters.AddWithValue("@cost", cost);
                 cmd.Parameters.AddWithValue("@quantity", quantity);
-                cmd.Parameters.AddWithValue("@condition", condition);
-
-                return cmd.ExecuteNonQuery() > 0;
+                cmd.Parameters.AddWithValue("@equipmentCondition", equipmentCondition);
+                try
+                {
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+                catch (MySqlException ex) 
+                {
+                    Trace.WriteLine("++++++++++++ ERROR CODE: " + ex.Message);
+                }
+                return false;
             }
         }
-        public bool updateEquipment(int equipmentID,
+
+        public static long GetCategoryName(string categoryName)
+        {
+            string selectQuery = "SELECT categoryID FROM equipmentcategories WHERE categoryName = @categoryName";
+
+            using (MySqlCommand cmd = new MySqlCommand(selectQuery, connection))
+            {
+                cmd.Parameters.AddWithValue("@categoryName", categoryName);
+
+                object result = cmd.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    return Convert.ToInt64(result);
+                }
+            }
+            return 0;
+        }
+         
+        public bool UpdateEquipment(int equipmentID,
                                     string equipmentName,
                                     string brand,
                                     string model,
@@ -281,6 +310,30 @@ namespace ClassLibrary
                     Console.WriteLine("Error renewing member: " + ex.Message);
                     return false;
                 }
+            }
+        }
+
+        public static DataTable GetEquipmentsTable()
+        {
+            DataTable table = new DataTable();
+
+            string query = @"SELECT e.equipmentID,
+                            e.equipmentName,
+                            e.brand,
+                            e.model,
+                            c.categoryName AS category,
+                            e.cost,
+                            e.quantity,
+                            e.EquipmentCondition
+                        FROM equipments e
+                        JOIN equipmentcategories c 
+                        ON e.categoryID = c.categoryID;";
+
+            using (MySqlCommand cmd = new MySqlCommand(query, connection))
+            using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+            {
+                adapter.Fill(table);
+                return table;
             }
         }
     }

@@ -132,5 +132,50 @@ namespace GymManagementSystem
         {
             AdminModule.EquipmentButtonClick(this);
         }
+
+        private void button1_panel8_Click(object sender, EventArgs e)
+        {
+            if (accType == "ADMIN")
+            {
+                bool isFieldsComplete = false;
+                TextBox[] requiredFields = {textBox2_panel8, textBox3_panel8, textBox4_panel8,
+                                            textBox5_panel8, textBox6_panel8, textBox7_panel8, textBox8_panel8};
+                foreach (TextBox tb in requiredFields)
+                {
+                    if (string.IsNullOrWhiteSpace(tb.Text))
+                    {
+                        MessageBox.Show("Don't leave anything empty.", "Input Required",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        isFieldsComplete = false;
+                        break;
+                    }
+                    isFieldsComplete = true;
+                }
+
+                if (isFieldsComplete)
+                {
+                    bool isSuccessful = AdminActions.AddEquipment(textBox2_panel8.Text, textBox3_panel8.Text, textBox4_panel8.Text, textBox5_panel8.Text,
+                                              Convert.ToInt64(textBox6_panel8.Text), Convert.ToInt32(textBox7_panel8.Text), textBox8_panel8.Text);
+                    if (isSuccessful)
+                    {
+                        MessageBox.Show("Equipment Added.", "Success");
+                        UpdateDataGridViews();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Equipment Not Added.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
+            }
+        }
+
+        private void UpdateDataGridViews()
+        {
+            if (accType == "ADMIN")
+            {
+                dataGridView1_panel8.DataSource = AdminActions.GetEquipmentsTable();
+            }
+        }
     }
 }

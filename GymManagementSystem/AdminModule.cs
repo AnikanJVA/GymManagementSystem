@@ -198,7 +198,7 @@ namespace GymManagementSystem
 
             // datagrid
             mainForm.dataGridView1_panel8.Visible = true;
-            //mainForm.dataGridView1_panel8.DataSource = AdminActions.GetEquipmentsTable();
+            mainForm.dataGridView1_panel8.DataSource = AdminActions.GetEquipmentsTable();
             // datagrid
 
         }
