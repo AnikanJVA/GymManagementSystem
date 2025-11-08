@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace classes
+namespace ClassLibrary
 {
     public class Database
     {

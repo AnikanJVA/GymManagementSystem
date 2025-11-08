@@ -1,5 +1,4 @@
-﻿using ClassLibrary;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.X509;
 using System;
 using System.Collections.Generic;
@@ -10,11 +9,13 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace classes
+namespace ClassLibrary
 {
     public class Login
     {
         private User currentUser;
+
+        private MySqlConnection connection = Database.Instance.Connection;
 
         public Login()
         {
@@ -30,7 +31,7 @@ namespace classes
         public bool AuthenticateUser(string username, string password)
         {
             string query = "SELECT COUNT(*) FROM users WHERE username = @username AND password = SHA2(@password, 256) AND status = @status";
-            using (MySqlCommand cmd = new MySqlCommand(query, Database.Instance.Connection))
+            using (MySqlCommand cmd = new MySqlCommand(query, connection))
             {
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.Parameters.AddWithValue("@password", password);
@@ -52,7 +53,7 @@ namespace classes
             User user = new User();
             string query = "SELECT * FROM users WHERE username = @username";
 
-            using (MySqlCommand cmd = new MySqlCommand(query, Database.Instance.Connection))
+            using (MySqlCommand cmd = new MySqlCommand(query, connection))
             {
                 cmd.Parameters.AddWithValue("@username", username);
                 try
