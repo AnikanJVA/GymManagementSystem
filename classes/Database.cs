@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Relational;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -114,6 +115,19 @@ namespace ClassLibrary
                                 positions p
                             ON
                                 s.positionID = p.positionID";
+            using (MySqlCommand cmd = new MySqlCommand(query, connection))
+            using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+            {
+                adapter.Fill(table);
+                return table;
+            }
+        }
+
+        public static DataTable GetUsersTable()
+        {
+            DataTable table = new DataTable();
+
+            string query = @"SELECT * FROM users";
             using (MySqlCommand cmd = new MySqlCommand(query, connection))
             using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
             {

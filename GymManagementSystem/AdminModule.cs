@@ -438,6 +438,7 @@ namespace GymManagementSystem
 
             // datagrid
             mainForm.dataGridView1_panel9.Visible = true;
+            mainForm.dataGridView1_panel9.DataSource = Database.GetUsersTable();
             // datagrid
         }
 

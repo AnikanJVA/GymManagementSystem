@@ -204,6 +204,7 @@ namespace GymManagementSystem
                 dataGridView1_panel8.DataSource = Database.GetEquipmentsTable();
                 dataGridView1_panel3.DataSource = Database.GetMembersTable();
                 dataGridView1_panel6.DataSource = Database.GetStaffsTable();
+                dataGridView1_panel9.DataSource = Database.GetUsersTable();
             }
         }
 
