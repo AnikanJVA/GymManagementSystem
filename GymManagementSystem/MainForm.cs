@@ -52,7 +52,7 @@ namespace GymManagementSystem
         {
             if (accType == "ADMIN")
             {
-                AdminModule.AccountMgmtButtonClick(this);
+                AdminModule.StafftMgmtButtonClick(this);
             }
             else if (accType == "RECEPTIONIST")
             {

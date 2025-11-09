@@ -34,7 +34,7 @@ namespace GymManagementSystem
             }
 
             mainForm.button1.Text = "Dashboard";
-            mainForm.button2.Text = "Account Management";
+            mainForm.button2.Text = "Staff Management";
             mainForm.button3.Text = "Ban Member";
             mainForm.button4.Text = "Expenses Management";
             mainForm.button5.Text = "Sales Management";
@@ -80,7 +80,7 @@ namespace GymManagementSystem
             // panels
         }
 
-        public static void AccountMgmtButtonClick(MainForm mainForm)
+        public static void StafftMgmtButtonClick(MainForm mainForm)
         {
             // panels
             Panel[] panels = { mainForm.panel1,
@@ -127,7 +127,8 @@ namespace GymManagementSystem
                                mainForm.label9_panel2,
                                mainForm.label10_panel2,
                                mainForm.label11_panel2,
-                               mainForm.label12_panel2 };
+                               mainForm.label12_panel2,
+                               mainForm.label13_panel2 };
             foreach (var label in labels)
             {
                 label.Visible = true;
@@ -145,10 +146,12 @@ namespace GymManagementSystem
             mainForm.label10_panel2.Text = "Email";
             mainForm.label11_panel2.Text = "Address";
             mainForm.label12_panel2.Text = "Schedule";
+            mainForm.label13_panel2.Text = "Position";
 
             mainForm.dateTimePicker1_panel2.Visible = true;
 
             mainForm.comboBox1_panel2.Visible = true;
+            mainForm.comboBox2_panel2.Visible = true;
             // textboxes, labels, datetime picker,  combobox 
 
             // radio buttons
@@ -176,13 +179,18 @@ namespace GymManagementSystem
 
             // buttons 
             mainForm.button1_panel2.Visible = true;
+            mainForm.button1_panel2.Text = "Add Staff";
+
             mainForm.button2_panel2.Visible = true;
+            mainForm.button2_panel2.Text = "Delete Staff";
+
             mainForm.button3_panel2.Visible = true;
+            mainForm.button3_panel2.Text = "Update Staff";
             // buttons 
 
             // datagridviews
             mainForm.dataGridView1_panel2.Visible = true;
-            mainForm.dataGridView1_panel2.DataSource = Database.GetMembersTable();
+            //mainForm.dataGridView1_panel2.DataSource = Database.GetMembersTable();
             // datagridviews
         }
 
