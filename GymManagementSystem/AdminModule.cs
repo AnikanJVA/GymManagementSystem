@@ -118,8 +118,8 @@ namespace GymManagementSystem
             mainForm.textBox8_panel2.WordWrap = true;
             mainForm.textBox8_panel2.Height = 59;
 
-            mainForm.textBox9_panel2.Enabled = false;
-            mainForm.textBox10_panel2.Enabled = false;
+            mainForm.textBox9_panel2.ReadOnly = true;
+            mainForm.textBox10_panel2.ReadOnly = true;
 
             Label[] labels = { mainForm.label1_panel2,
                                mainForm.label2_panel2,
@@ -334,11 +334,11 @@ namespace GymManagementSystem
                                     mainForm.textBox6_panel8,
                                     mainForm.textBox7_panel8 };
 
-            foreach (var panel in panels)
+            foreach (var textbox in textBoxes)
             {
-                panel.Visible = false;
+                textbox.Visible = true;
             }
-            mainForm.textBox1_panel8.Enabled = false;
+            mainForm.textBox1_panel8.ReadOnly = true;
 
             mainForm.label1_panel8.Text = "Equipment ID";
             mainForm.label2_panel8.Text = "Equipment Name";

@@ -656,7 +656,7 @@
             this.button1_panel2.FlatAppearance.BorderSize = 0;
             this.button1_panel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1_panel2.Location = new System.Drawing.Point(60, 613);
+            this.button1_panel2.Location = new System.Drawing.Point(75, 613);
             this.button1_panel2.Name = "button1_panel2";
             this.button1_panel2.Size = new System.Drawing.Size(240, 56);
             this.button1_panel2.TabIndex = 14;
@@ -989,6 +989,7 @@
             this.panel8.Controls.Add(this.textBox1_panel8);
             this.panel8.Controls.Add(this.label8);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(960, 681);
@@ -1007,80 +1008,90 @@
             // label8_panel8
             // 
             this.label8_panel8.AutoSize = true;
+            this.label8_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8_panel8.Location = new System.Drawing.Point(539, 500);
             this.label8_panel8.Name = "label8_panel8";
-            this.label8_panel8.Size = new System.Drawing.Size(35, 13);
+            this.label8_panel8.Size = new System.Drawing.Size(44, 16);
             this.label8_panel8.TabIndex = 7;
             this.label8_panel8.Text = "label9";
             // 
             // label7_panel8
             // 
             this.label7_panel8.AutoSize = true;
+            this.label7_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7_panel8.Location = new System.Drawing.Point(539, 474);
             this.label7_panel8.Name = "label7_panel8";
-            this.label7_panel8.Size = new System.Drawing.Size(35, 13);
+            this.label7_panel8.Size = new System.Drawing.Size(44, 16);
             this.label7_panel8.TabIndex = 7;
             this.label7_panel8.Text = "label9";
             // 
             // label6_panel8
             // 
             this.label6_panel8.AutoSize = true;
+            this.label6_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6_panel8.Location = new System.Drawing.Point(539, 448);
             this.label6_panel8.Name = "label6_panel8";
-            this.label6_panel8.Size = new System.Drawing.Size(35, 13);
+            this.label6_panel8.Size = new System.Drawing.Size(44, 16);
             this.label6_panel8.TabIndex = 7;
             this.label6_panel8.Text = "label9";
             // 
             // label5_panel8
             // 
             this.label5_panel8.AutoSize = true;
+            this.label5_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5_panel8.Location = new System.Drawing.Point(539, 426);
             this.label5_panel8.Name = "label5_panel8";
-            this.label5_panel8.Size = new System.Drawing.Size(35, 13);
+            this.label5_panel8.Size = new System.Drawing.Size(44, 16);
             this.label5_panel8.TabIndex = 7;
             this.label5_panel8.Text = "label9";
             // 
             // label4_panel8
             // 
             this.label4_panel8.AutoSize = true;
+            this.label4_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4_panel8.Location = new System.Drawing.Point(83, 500);
             this.label4_panel8.Name = "label4_panel8";
-            this.label4_panel8.Size = new System.Drawing.Size(35, 13);
+            this.label4_panel8.Size = new System.Drawing.Size(44, 16);
             this.label4_panel8.TabIndex = 7;
             this.label4_panel8.Text = "label9";
             // 
             // label3_panel8
             // 
             this.label3_panel8.AutoSize = true;
+            this.label3_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3_panel8.Location = new System.Drawing.Point(83, 474);
             this.label3_panel8.Name = "label3_panel8";
-            this.label3_panel8.Size = new System.Drawing.Size(35, 13);
+            this.label3_panel8.Size = new System.Drawing.Size(44, 16);
             this.label3_panel8.TabIndex = 7;
             this.label3_panel8.Text = "label9";
             // 
             // label2_panel8
             // 
             this.label2_panel8.AutoSize = true;
+            this.label2_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2_panel8.Location = new System.Drawing.Point(83, 448);
             this.label2_panel8.Name = "label2_panel8";
-            this.label2_panel8.Size = new System.Drawing.Size(35, 13);
+            this.label2_panel8.Size = new System.Drawing.Size(44, 16);
             this.label2_panel8.TabIndex = 7;
             this.label2_panel8.Text = "label9";
             // 
             // label1_panel8
             // 
             this.label1_panel8.AutoSize = true;
+            this.label1_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1_panel8.Location = new System.Drawing.Point(83, 422);
             this.label1_panel8.Name = "label1_panel8";
-            this.label1_panel8.Size = new System.Drawing.Size(35, 13);
+            this.label1_panel8.Size = new System.Drawing.Size(44, 16);
             this.label1_panel8.TabIndex = 7;
             this.label1_panel8.Text = "label9";
             // 
             // button2_panel8
             // 
-            this.button2_panel8.Location = new System.Drawing.Point(217, 584);
+            this.button2_panel8.AutoSize = true;
+            this.button2_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.button2_panel8.Location = new System.Drawing.Point(468, 607);
             this.button2_panel8.Name = "button2_panel8";
-            this.button2_panel8.Size = new System.Drawing.Size(75, 23);
+            this.button2_panel8.Size = new System.Drawing.Size(142, 52);
             this.button2_panel8.TabIndex = 10;
             this.button2_panel8.Text = "button9";
             this.button2_panel8.UseVisualStyleBackColor = true;
@@ -1089,9 +1100,11 @@
             // 
             // button1_panel8
             // 
-            this.button1_panel8.Location = new System.Drawing.Point(86, 584);
+            this.button1_panel8.AutoSize = true;
+            this.button1_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.button1_panel8.Location = new System.Drawing.Point(285, 607);
             this.button1_panel8.Name = "button1_panel8";
-            this.button1_panel8.Size = new System.Drawing.Size(75, 23);
+            this.button1_panel8.Size = new System.Drawing.Size(142, 52);
             this.button1_panel8.TabIndex = 9;
             this.button1_panel8.Text = "button9";
             this.button1_panel8.UseVisualStyleBackColor = true;
@@ -1100,65 +1113,73 @@
             // 
             // textBox8_panel8
             // 
-            this.textBox8_panel8.Location = new System.Drawing.Point(621, 497);
+            this.textBox8_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8_panel8.Location = new System.Drawing.Point(664, 497);
             this.textBox8_panel8.Name = "textBox8_panel8";
-            this.textBox8_panel8.Size = new System.Drawing.Size(195, 20);
+            this.textBox8_panel8.Size = new System.Drawing.Size(195, 22);
             this.textBox8_panel8.TabIndex = 8;
             this.textBox8_panel8.Visible = false;
             // 
             // textBox7_panel8
             // 
-            this.textBox7_panel8.Location = new System.Drawing.Point(621, 471);
+            this.textBox7_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7_panel8.Location = new System.Drawing.Point(664, 471);
             this.textBox7_panel8.Name = "textBox7_panel8";
-            this.textBox7_panel8.Size = new System.Drawing.Size(195, 20);
+            this.textBox7_panel8.Size = new System.Drawing.Size(195, 22);
             this.textBox7_panel8.TabIndex = 7;
             this.textBox7_panel8.Visible = false;
             // 
             // textBox4_panel8
             // 
-            this.textBox4_panel8.Location = new System.Drawing.Point(180, 497);
+            this.textBox4_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4_panel8.Location = new System.Drawing.Point(200, 498);
             this.textBox4_panel8.Name = "textBox4_panel8";
-            this.textBox4_panel8.Size = new System.Drawing.Size(195, 20);
+            this.textBox4_panel8.Size = new System.Drawing.Size(195, 22);
             this.textBox4_panel8.TabIndex = 4;
             this.textBox4_panel8.Visible = false;
             // 
             // textBox6_panel8
             // 
-            this.textBox6_panel8.Location = new System.Drawing.Point(621, 445);
+            this.textBox6_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6_panel8.Location = new System.Drawing.Point(664, 445);
             this.textBox6_panel8.Name = "textBox6_panel8";
-            this.textBox6_panel8.Size = new System.Drawing.Size(195, 20);
+            this.textBox6_panel8.Size = new System.Drawing.Size(195, 22);
             this.textBox6_panel8.TabIndex = 6;
             this.textBox6_panel8.Visible = false;
             // 
             // textBox3_panel8
             // 
-            this.textBox3_panel8.Location = new System.Drawing.Point(180, 471);
+            this.textBox3_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3_panel8.Location = new System.Drawing.Point(200, 472);
             this.textBox3_panel8.Name = "textBox3_panel8";
-            this.textBox3_panel8.Size = new System.Drawing.Size(195, 20);
+            this.textBox3_panel8.Size = new System.Drawing.Size(195, 22);
             this.textBox3_panel8.TabIndex = 3;
             this.textBox3_panel8.Visible = false;
             // 
             // textBox5_panel8
             // 
-            this.textBox5_panel8.Location = new System.Drawing.Point(621, 419);
+            this.textBox5_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5_panel8.Location = new System.Drawing.Point(664, 419);
             this.textBox5_panel8.Name = "textBox5_panel8";
-            this.textBox5_panel8.Size = new System.Drawing.Size(195, 20);
+            this.textBox5_panel8.Size = new System.Drawing.Size(195, 22);
             this.textBox5_panel8.TabIndex = 5;
             this.textBox5_panel8.Visible = false;
             // 
             // textBox2_panel8
             // 
-            this.textBox2_panel8.Location = new System.Drawing.Point(180, 445);
+            this.textBox2_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2_panel8.Location = new System.Drawing.Point(200, 446);
             this.textBox2_panel8.Name = "textBox2_panel8";
-            this.textBox2_panel8.Size = new System.Drawing.Size(195, 20);
+            this.textBox2_panel8.Size = new System.Drawing.Size(195, 22);
             this.textBox2_panel8.TabIndex = 2;
             this.textBox2_panel8.Visible = false;
             // 
             // textBox1_panel8
             // 
-            this.textBox1_panel8.Location = new System.Drawing.Point(180, 419);
+            this.textBox1_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1_panel8.Location = new System.Drawing.Point(200, 420);
             this.textBox1_panel8.Name = "textBox1_panel8";
-            this.textBox1_panel8.Size = new System.Drawing.Size(195, 20);
+            this.textBox1_panel8.Size = new System.Drawing.Size(195, 22);
             this.textBox1_panel8.TabIndex = 1;
             this.textBox1_panel8.Visible = false;
             // 
@@ -1167,7 +1188,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(83, 48);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.Size = new System.Drawing.Size(44, 16);
             this.label8.TabIndex = 0;
             this.label8.Text = "label1";
             // 
@@ -1930,6 +1951,7 @@
             // 
             // button9
             // 
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.button9.Location = new System.Drawing.Point(396, 613);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(146, 41);
@@ -2033,7 +2055,7 @@
             // 
             this.radioButton1_panel2.AutoSize = true;
             this.radioButton1_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1_panel2.Location = new System.Drawing.Point(174, 574);
+            this.radioButton1_panel2.Location = new System.Drawing.Point(180, 575);
             this.radioButton1_panel2.Name = "radioButton1_panel2";
             this.radioButton1_panel2.Size = new System.Drawing.Size(100, 20);
             this.radioButton1_panel2.TabIndex = 19;
@@ -2046,7 +2068,7 @@
             // 
             this.radioButton2_panel2.AutoSize = true;
             this.radioButton2_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2_panel2.Location = new System.Drawing.Point(269, 574);
+            this.radioButton2_panel2.Location = new System.Drawing.Point(275, 575);
             this.radioButton2_panel2.Name = "radioButton2_panel2";
             this.radioButton2_panel2.Size = new System.Drawing.Size(100, 20);
             this.radioButton2_panel2.TabIndex = 20;
@@ -2374,7 +2396,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.SplitContainer splitContainer1;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public System.Windows.Forms.Label Label_greetings;
         public System.Windows.Forms.Button button1;
@@ -2436,99 +2457,20 @@
         public System.Windows.Forms.TextBox textBox2_panel3;
         public System.Windows.Forms.Label label13;
         public System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dataGridView1_panel5;
-        private System.Windows.Forms.Button button1_panel5;
         public System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox1_panel5;
         public System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button9_panel6;
-        private System.Windows.Forms.TextBox textBox5_panel6;
-        private System.Windows.Forms.TextBox textBox4_panel6;
-        private System.Windows.Forms.TextBox textBox3_panel6;
-        private System.Windows.Forms.TextBox textBox2_panel6;
         public System.Windows.Forms.Label label19;
         public System.Windows.Forms.Label label18;
         public System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox1_panel6;
         public System.Windows.Forms.Label label22;
         public System.Windows.Forms.Label label21;
         public System.Windows.Forms.Label label20;
         public System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox6_panel6;
         public System.Windows.Forms.Label label23;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1_panel5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2_panel5;
-        private System.Windows.Forms.Panel panel10;
         public System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.DataGridView dataGridView1_panel4;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBox1_panel4;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.TextBox textBox2_panel4;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.ComboBox comboBox1_panel4;
-        private System.Windows.Forms.Button button10_panel4;
-        private System.Windows.Forms.Label label33_panel4;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label31_panel4;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label30_panel4;
-        private System.Windows.Forms.DataGridView dataGridView1_panel7;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Button button1_panel7;
-        private System.Windows.Forms.TextBox textBox3_panel7;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox textBox2_panel7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.TextBox textBox1_panel7;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label43;
         public System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Panel panel19;
         public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel25;
         public System.Windows.Forms.DataGridView dataGridView1_panel6;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label60;
         public System.Windows.Forms.DateTimePicker dateTimePicker1_panel2;
         public System.Windows.Forms.ComboBox comboBox1_panel2;
         public System.Windows.Forms.Label label2_panel2;
@@ -2562,5 +2504,85 @@
         public System.Windows.Forms.Label label15_panel2;
         public System.Windows.Forms.TextBox textBox10_panel2;
         public System.Windows.Forms.TextBox textBox9_panel2;
+        public System.Windows.Forms.SplitContainer splitContainer1;
+        public System.Windows.Forms.DataGridView dataGridView1_panel5;
+        public System.Windows.Forms.Button button1_panel5;
+        public System.Windows.Forms.TextBox textBox1_panel5;
+        public System.Windows.Forms.Panel panel9;
+        public System.Windows.Forms.Button button9_panel6;
+        public System.Windows.Forms.TextBox textBox5_panel6;
+        public System.Windows.Forms.TextBox textBox4_panel6;
+        public System.Windows.Forms.TextBox textBox3_panel6;
+        public System.Windows.Forms.TextBox textBox2_panel6;
+        public System.Windows.Forms.TextBox textBox1_panel6;
+        public System.Windows.Forms.TextBox textBox6_panel6;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1_panel5;
+        public System.Windows.Forms.DateTimePicker dateTimePicker2_panel5;
+        public System.Windows.Forms.Panel panel10;
+        public System.Windows.Forms.Button button9;
+        public System.Windows.Forms.DataGridView dataGridView1_panel4;
+        public System.Windows.Forms.Panel panel12;
+        public System.Windows.Forms.Panel panel11;
+        public System.Windows.Forms.TextBox textBox1_panel4;
+        public System.Windows.Forms.Label label26;
+        public System.Windows.Forms.Panel panel13;
+        public System.Windows.Forms.TextBox textBox2_panel4;
+        public System.Windows.Forms.Label label29;
+        public System.Windows.Forms.Label label28;
+        public System.Windows.Forms.Label label27;
+        public System.Windows.Forms.ComboBox comboBox1_panel4;
+        public System.Windows.Forms.Button button10_panel4;
+        public System.Windows.Forms.Label label33_panel4;
+        public System.Windows.Forms.Label label34;
+        public System.Windows.Forms.Label label31_panel4;
+        public System.Windows.Forms.Label label32;
+        public System.Windows.Forms.Label label30_panel4;
+        public System.Windows.Forms.DataGridView dataGridView1_panel7;
+        public System.Windows.Forms.Panel panel17;
+        public System.Windows.Forms.Panel panel16;
+        public System.Windows.Forms.Label label36;
+        public System.Windows.Forms.Label label37;
+        public System.Windows.Forms.Panel panel15;
+        public System.Windows.Forms.Label label33;
+        public System.Windows.Forms.Label label35;
+        public System.Windows.Forms.Panel panel14;
+        public System.Windows.Forms.Label label30;
+        public System.Windows.Forms.Label label31;
+        public System.Windows.Forms.Button button1_panel7;
+        public System.Windows.Forms.TextBox textBox3_panel7;
+        public System.Windows.Forms.Panel panel18;
+        public System.Windows.Forms.Label label38;
+        public System.Windows.Forms.TextBox textBox2_panel7;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Label label42;
+        public System.Windows.Forms.Label label41;
+        public System.Windows.Forms.Label label40;
+        public System.Windows.Forms.Label label39;
+        public System.Windows.Forms.Label label48;
+        public System.Windows.Forms.Label label47;
+        public System.Windows.Forms.Label label46;
+        public System.Windows.Forms.TextBox textBox1_panel7;
+        public System.Windows.Forms.Label label45;
+        public System.Windows.Forms.Label label44;
+        public System.Windows.Forms.Label label43;
+        public System.Windows.Forms.Panel panel24;
+        public System.Windows.Forms.Panel panel21;
+        public System.Windows.Forms.Panel panel20;
+        public System.Windows.Forms.Panel panel19;
+        public System.Windows.Forms.Panel panel25;
+        public System.Windows.Forms.Label label51;
+        public System.Windows.Forms.Label label52;
+        public System.Windows.Forms.Label label55;
+        public System.Windows.Forms.Label label54;
+        public System.Windows.Forms.Label label50;
+        public System.Windows.Forms.Label label59;
+        public System.Windows.Forms.Label label58;
+        public System.Windows.Forms.Label label57;
+        public System.Windows.Forms.Label label56;
+        public System.Windows.Forms.Label label53;
+        public System.Windows.Forms.Label label49;
+        public System.Windows.Forms.Label label62;
+        public System.Windows.Forms.Label label61;
+        public System.Windows.Forms.Label label60;
     }
 }
