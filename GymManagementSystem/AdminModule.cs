@@ -27,7 +27,9 @@ namespace GymManagementSystem
                                   mainForm.button5, 
                                   mainForm.button6,
                                   mainForm.button7, 
-                                  mainForm.button8 };
+                                  mainForm.button8, 
+                                  mainForm.button9, 
+                                  mainForm.button10 };
             foreach (var button in buttons)
             {
                 button.Visible = true;
@@ -41,6 +43,8 @@ namespace GymManagementSystem
             mainForm.button6.Text = "Payroll Managemnet";
             mainForm.button7.Text = "Cost Management";
             mainForm.button8.Text = "Equipment Inventory";
+            mainForm.button9.Text = "User Accounts Management";
+            mainForm.button10.Text = "Coaching Sessions";
 
             // buttons 
 
@@ -51,7 +55,9 @@ namespace GymManagementSystem
                                mainForm.panel5,
                                mainForm.panel6,
                                mainForm.panel7,
-                               mainForm.panel8 };
+                               mainForm.panel8,
+                               mainForm.panel9,
+                               mainForm.panel10 };
 
             foreach (var panel in panels)
             {
@@ -64,13 +70,15 @@ namespace GymManagementSystem
         public static void DashboardButtonClick(MainForm mainForm)
         {
             // panels
-            Panel[] panels = { mainForm.panel2,
-                               mainForm.panel3,
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
                                mainForm.panel4,
                                mainForm.panel5,
                                mainForm.panel6,
                                mainForm.panel7,
-                               mainForm.panel8 };
+                               mainForm.panel8,
+                               mainForm.panel9,
+                               mainForm.panel10 };
 
             foreach (var panel in panels)
             {
@@ -89,7 +97,9 @@ namespace GymManagementSystem
                                mainForm.panel5,
                                mainForm.panel6,
                                mainForm.panel7,
-                               mainForm.panel8 };
+                               mainForm.panel8,
+                               mainForm.panel9,
+                               mainForm.panel10 };
 
             foreach (var panel in panels)
             {
@@ -203,7 +213,9 @@ namespace GymManagementSystem
                                mainForm.panel5,
                                mainForm.panel6,
                                mainForm.panel7,
-                               mainForm.panel8 };
+                               mainForm.panel8,
+                               mainForm.panel9,
+                               mainForm.panel10 };
 
             foreach (var panel in panels)
             {
@@ -225,7 +237,9 @@ namespace GymManagementSystem
                                mainForm.panel5,
                                mainForm.panel6,
                                mainForm.panel7,
-                               mainForm.panel8 };
+                               mainForm.panel8,
+                               mainForm.panel9,
+                               mainForm.panel10 };
 
             foreach (var panel in panels)
             {
@@ -244,7 +258,9 @@ namespace GymManagementSystem
                                mainForm.panel4,
                                mainForm.panel6,
                                mainForm.panel7,
-                               mainForm.panel8 };
+                               mainForm.panel8,
+                               mainForm.panel9,
+                               mainForm.panel10 };
 
             foreach (var panel in panels)
             {
@@ -262,7 +278,9 @@ namespace GymManagementSystem
                                mainForm.panel4,
                                mainForm.panel5,
                                mainForm.panel7,
-                               mainForm.panel8 };
+                               mainForm.panel8,
+                               mainForm.panel9,
+                               mainForm.panel10 };
 
             foreach (var panel in panels)
             {
@@ -284,7 +302,9 @@ namespace GymManagementSystem
                                mainForm.panel4,
                                mainForm.panel5,
                                mainForm.panel6,
-                               mainForm.panel8 };
+                               mainForm.panel8,
+                               mainForm.panel9,
+                               mainForm.panel10 };
 
             foreach (var panel in panels)
             {
@@ -303,7 +323,9 @@ namespace GymManagementSystem
                                mainForm.panel4, 
                                mainForm.panel5,    
                                mainForm.panel6,    
-                               mainForm.panel7 };
+                               mainForm.panel7,    
+                               mainForm.panel9,
+                               mainForm.panel10 };
 
             foreach (var panel in panels)
             {
@@ -314,12 +336,13 @@ namespace GymManagementSystem
 
             // textboxes and labels
             TextBox[] textBoxes = { mainForm.textBox1_panel8,
-                                    mainForm.textBox2_panel8,
+                                    mainForm.textBox2_panel8,   
                                     mainForm.textBox3_panel8,
                                     mainForm.textBox4_panel8,
                                     mainForm.textBox5_panel8,
                                     mainForm.textBox6_panel8,
-                                    mainForm.textBox7_panel8 };
+                                    mainForm.textBox7_panel8,
+                                    mainForm.textBox8_panel8 };
 
             foreach (var textbox in textBoxes)
             {
@@ -339,10 +362,10 @@ namespace GymManagementSystem
 
             // buttons
             mainForm.button1_panel8.Visible = true;
-            mainForm.button1_panel8.Text = "Add";
+            mainForm.button1_panel8.Text = "Add Equipment";
 
             mainForm.button2_panel8.Visible = true;
-            mainForm.button2_panel8.Text = "Update";
+            mainForm.button2_panel8.Text = "Update Equipment";
             // buttons
 
 
@@ -353,6 +376,90 @@ namespace GymManagementSystem
 
         }
 
-        
+        public static void UserAccMgmtButtonClick(MainForm mainForm)
+        {
+            // panels
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
+                               mainForm.panel3,
+                               mainForm.panel4,
+                               mainForm.panel5,
+                               mainForm.panel6,
+                               mainForm.panel7,
+                               mainForm.panel8,
+                               mainForm.panel10 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
+            mainForm.panel9.Visible = true;
+            // panels
+
+            // textboxes, labels, combobox
+            TextBox[] textBoxes = { mainForm.textBox1_panel9,
+                                    mainForm.textBox2_panel9,
+                                    mainForm.textBox3_panel9 };
+
+            foreach (var textbox in textBoxes)
+            {
+                textbox.Visible = true;
+            }
+            mainForm.textBox3_panel9.ReadOnly = true;
+
+            Label[] labels = { mainForm.label1_panel9,
+                               mainForm.label2_panel9,
+                               mainForm.label3_panel9,
+                               mainForm.label4_panel9,
+                               mainForm.label5_panel9  };
+            foreach (var label in labels)
+            {
+                label.Visible = true;
+            }
+
+            mainForm.label1_panel9.Text = "Username";
+            mainForm.label2_panel9.Text = "Password";
+            mainForm.label3_panel9.Text = "Account Type";
+            mainForm.label4_panel9.Text = "Status";
+            mainForm.label5_panel9.Text = "UserID";
+
+            mainForm.comboBox1_panel9.Visible = true;
+            mainForm.comboBox2_panel9.Visible = true;
+            // textboxes, labels, combobox
+
+            // buttons
+            mainForm.button1_panel9.Visible = true;
+            mainForm.button1_panel9.Text = "Add User";
+
+            mainForm.button2_panel9.Visible = true;
+            mainForm.button2_panel9.Text = "Update User";
+            // buttons
+
+
+            // datagrid
+            mainForm.dataGridView1_panel9.Visible = true;
+            // datagrid
+        }
+
+        public static void CoachingSessionsButtonClick(MainForm mainForm)
+        {
+            // panels
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
+                               mainForm.panel3,
+                               mainForm.panel4,
+                               mainForm.panel5,
+                               mainForm.panel6,
+                               mainForm.panel7,
+                               mainForm.panel8,
+                               mainForm.panel9 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
+            mainForm.panel10.Visible = true;
+            // panels
+        }
     }
 }

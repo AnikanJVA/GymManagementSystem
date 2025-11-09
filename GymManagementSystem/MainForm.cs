@@ -244,5 +244,26 @@ namespace GymManagementSystem
                 }
             }
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (accType == "ADMIN")
+            {
+                AdminModule.UserAccMgmtButtonClick(this);
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (accType == "ADMIN")
+            {
+                AdminModule.CoachingSessionsButtonClick(this);
+            }
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

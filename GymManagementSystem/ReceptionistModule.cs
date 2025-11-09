@@ -39,12 +39,12 @@ namespace GymManagementSystem
             mainForm.button6.Text = "Equipment Inventory";
             mainForm.button7.Text = "Damaged Equipment";
 
-            mainForm.button_logout.Margin = new System.Windows.Forms.Padding(
-                    mainForm.button_logout.Margin.Left,
-                    mainForm.button_logout.Margin.Top + 40,
-                    mainForm.button_logout.Margin.Right,
-                    mainForm.button_logout.Margin.Bottom
-            );
+            //mainForm.button_logout.Margin = new System.Windows.Forms.Padding(
+            //        mainForm.button_logout.Margin.Left,
+            //        mainForm.button_logout.Margin.Top + 40,
+            //        mainForm.button_logout.Margin.Right,
+            //        mainForm.button_logout.Margin.Bottom
+            //);
             // buttons
 
             // panel
