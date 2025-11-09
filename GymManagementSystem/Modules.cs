@@ -15,10 +15,6 @@ namespace GymManagementSystem
             {
                 return new AdminModule();
             }
-            else if (moduleType == "COACH")
-            {
-                return new CoachModule();
-            }
             else if (moduleType == "RECEPTIONIST")
             {
                 return new ReceptionistModule();

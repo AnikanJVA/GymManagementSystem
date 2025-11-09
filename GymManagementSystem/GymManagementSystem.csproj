@@ -114,7 +114,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminModule.cs" />
-    <Compile Include="CoachModule.cs" />
     <Compile Include="FormProvider.cs" />
     <Compile Include="IModules.cs" />
     <Compile Include="LoginForm.cs">

@@ -42,10 +42,6 @@ namespace GymManagementSystem
             {
                 AdminModule.DashboardButtonClick(this);
             }
-            else if(accType == "COACH")
-            {
-                CoachModule.DashboardButtonClick(this);
-            }
             else if(accType == "RECEPTIONIST")
             {
                 ReceptionistModule.DashboardButtonClick(this);
@@ -57,10 +53,6 @@ namespace GymManagementSystem
             if (accType == "ADMIN")
             {
                 AdminModule.AccountMgmtButtonClick(this);
-            }
-            else if (accType == "COACH")
-            {
-                CoachModule.SessionsButtonClick(this);
             }
             else if (accType == "RECEPTIONIST")
             {
@@ -257,19 +249,19 @@ namespace GymManagementSystem
 
                 if (isFieldsComplete)
                 {
-                    string dob = dateTimePicker1_panel2.Value.ToString("yyyy-MM-dd");
-                    bool isSuccessful = AdminActions.AddStaff(textBox1_panel2.Text, textBox2_panel2.Text, comboBox1_panel2.Text, textBox3_panel2.Text, textBox4_panel2.Text,
-                                                                    dob, comboBox2_panel2.Text, textBox5_panel2.Text);
-                    if (isSuccessful)
-                    {
-                        MessageBox.Show("Equipment Added.", "Success");
-                        UpdateDataGridViews();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Equipment Not Added.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //string dob = dateTimePicker1_panel2.Value.ToString("yyyy-MM-dd");
+                    //bool isSuccessful = AdminActions.AddStaff(textBox1_panel2.Text, textBox2_panel2.Text, comboBox1_panel2.Text, textBox3_panel2.Text, textBox4_panel2.Text,
+                    //                                                dob, comboBox2_panel2.Text, textBox5_panel2.Text);
+                    //if (isSuccessful)
+                    //{
+                    //    MessageBox.Show("Equipment Added.", "Success");
+                    //    UpdateDataGridViews();
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("Equipment Not Added.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    }
+                    //}
                 }
             }
         }

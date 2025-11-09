@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GymManagementSystem
 {
@@ -16,28 +17,27 @@ namespace GymManagementSystem
                 mainForm.Label_greetings.Padding.Top,
                 mainForm.Label_greetings.Padding.Right,
                 mainForm.Label_greetings.Padding.Bottom
-            ); 
+            );
 
+            // buttons 
+            Button[] buttons = {  mainForm.button1,
+                                  mainForm.button2,
+                                  mainForm.button3,
+                                  mainForm.button4,
+                                  mainForm.button5,
+                                  mainForm.button6,
+                                  mainForm.button7 };
+            foreach (var button in buttons)
+            {
+                button.Visible = true;
+            }
             mainForm.button1.Text = "Dashboard";
-            mainForm.button1.Visible = true;
-
             mainForm.button2.Text = "Member Management";
-            mainForm.button2.Visible = true;
-
             mainForm.button3.Text = "Check In Member";
-            mainForm.button3.Visible = true;
-
             mainForm.button4.Text = "Coaching Sessions";
-            mainForm.button4.Visible = true;
-
             mainForm.button5.Text = "Payment Transactions";
-            mainForm.button5.Visible = true;
-
             mainForm.button6.Text = "Equipment Inventory";
-            mainForm.button6.Visible = true;
-
             mainForm.button7.Text = "Damaged Equipment";
-            mainForm.button7.Visible = true;
 
             mainForm.button_logout.Margin = new System.Windows.Forms.Padding(
                     mainForm.button_logout.Margin.Left,
@@ -45,104 +45,148 @@ namespace GymManagementSystem
                     mainForm.button_logout.Margin.Right,
                     mainForm.button_logout.Margin.Bottom
             );
+            // buttons
 
+            // panel
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
+                               mainForm.panel4,
+                               mainForm.panel5,
+                               mainForm.panel6,
+                               mainForm.panel7 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel1.Visible = true;
-            mainForm.label1.Text = "Dashboard";
-
-            mainForm.panel2.Visible = false;
-            mainForm.label2.Text = "Members";
-
-            mainForm.panel3.Visible = false;
-            mainForm.label3.Text = "Check in";
-
-            mainForm.panel4.Visible = false;
-            mainForm.label4.Text = "Coaching";
-
-            mainForm.panel5.Visible = false;
-            mainForm.label5.Text = "Payment";
-
-            mainForm.panel6.Visible = false;
-            mainForm.label6.Text = "equipment";
-
-            mainForm.panel7.Visible = false;
-            mainForm.label7.Text = "damaged";
+            // panel
         }
 
         public static void DashboardButtonClick(MainForm mainForm)
         {
+            // panel
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
+                               mainForm.panel4,
+                               mainForm.panel5,
+                               mainForm.panel6,
+                               mainForm.panel7 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel1.Visible = true;
-            mainForm.panel2.Visible = false;
-            mainForm.panel3.Visible = false;
-            mainForm.panel4.Visible = false;
-            mainForm.panel5.Visible = false;
-            mainForm.panel6.Visible = false;
-            mainForm.panel7.Visible = false;
+            // panel
         }
 
         public static void MemberMgmtButtonClick(MainForm mainForm)
         {
-            mainForm.panel1.Visible = false;
+            // panel
+            Panel[] panels = { mainForm.panel2,
+                               mainForm.panel3,
+                               mainForm.panel4,
+                               mainForm.panel5,
+                               mainForm.panel6,
+                               mainForm.panel7 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel2.Visible = true;
-            mainForm.panel3.Visible = false;
-            mainForm.panel4.Visible = false;
-            mainForm.panel5.Visible = false;
-            mainForm.panel6.Visible = false;
-            mainForm.panel7.Visible = false;
+            // panel
         }
 
         public static void CheckInButtonClick(MainForm mainForm)
         {
-            mainForm.panel1.Visible = false;
-            mainForm.panel2.Visible = false;
+            // panel
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
+                               mainForm.panel4,
+                               mainForm.panel5,
+                               mainForm.panel6,
+                               mainForm.panel7 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel3.Visible = true;
-            mainForm.panel4.Visible = false;
-            mainForm.panel5.Visible = false;
-            mainForm.panel6.Visible = false;
-            mainForm.panel7.Visible = false;
+            // panel
         }
 
         public static void CoachingButtonClick(MainForm mainForm)
         {
-            mainForm.panel1.Visible = false;
-            mainForm.panel2.Visible = false;
-            mainForm.panel3.Visible = false;
+            // panel
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
+                               mainForm.panel3,
+                               mainForm.panel5,
+                               mainForm.panel6,
+                               mainForm.panel7 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel4.Visible = true;
-            mainForm.panel5.Visible = false;
-            mainForm.panel6.Visible = false;
-            mainForm.panel7.Visible = false;
+            // panel
         }
 
         public static void PaymentButtonClick(MainForm mainForm)
         {
-            mainForm.panel1.Visible = false;
-            mainForm.panel2.Visible = false;
-            mainForm.panel3.Visible = false;
-            mainForm.panel4.Visible = false;
+            // panel
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
+                               mainForm.panel3,
+                               mainForm.panel4,
+                               mainForm.panel6,
+                               mainForm.panel7 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel5.Visible = true;
-            mainForm.panel6.Visible = false;
-            mainForm.panel7.Visible = false;
+            // panel
         }
 
         public static void EquipmentButtonClick(MainForm mainForm)
         {
-            mainForm.panel1.Visible = false;
-            mainForm.panel2.Visible = false;
-            mainForm.panel3.Visible = false;
-            mainForm.panel4.Visible = false;
-            mainForm.panel5.Visible = false;
+            // panel
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
+                               mainForm.panel3,
+                               mainForm.panel4,
+                               mainForm.panel5,
+                               mainForm.panel7 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel6.Visible = true;
-            mainForm.panel7.Visible = false;
+            // panel
         }
 
         public static void DamagedButtonClick(MainForm mainForm)
         {
-            mainForm.panel1.Visible = false;
-            mainForm.panel2.Visible = false;
-            mainForm.panel3.Visible = false;
-            mainForm.panel4.Visible = false;
-            mainForm.panel5.Visible = false;
-            mainForm.panel6.Visible = false;
+            // panel
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
+                               mainForm.panel3,
+                               mainForm.panel4,
+                               mainForm.panel5,
+                               mainForm.panel6 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel7.Visible = true;
+            // panel
         }
     }
 }

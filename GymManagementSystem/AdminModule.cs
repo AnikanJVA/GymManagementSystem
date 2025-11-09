@@ -8,6 +8,7 @@ using System.Linq;
 using System.Management.Instrumentation;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GymManagementSystem
 {
@@ -15,78 +16,87 @@ namespace GymManagementSystem
     {
         public void RunModule(MainForm mainForm)
         {
+
             mainForm.Label_greetings.Text = "Welcome\nAdmin!";
 
+            // buttons 
+            Button[] buttons = {  mainForm.button1,
+                                  mainForm.button2, 
+                                  mainForm.button3,
+                                  mainForm.button4,
+                                  mainForm.button5, 
+                                  mainForm.button6,
+                                  mainForm.button7, 
+                                  mainForm.button8 };
+            foreach (var button in buttons)
+            {
+                button.Visible = true;
+            }
+
             mainForm.button1.Text = "Dashboard";
-            mainForm.button1.Visible = true;
-            
             mainForm.button2.Text = "Account Management";
-            mainForm.button2.Visible = true;
-
             mainForm.button3.Text = "Ban Member";
-            mainForm.button3.Visible = true;
-
             mainForm.button4.Text = "Expenses Management";
-            mainForm.button4.Visible = true;
-
             mainForm.button5.Text = "Sales Management";
-            mainForm.button5.Visible = true;
-
             mainForm.button6.Text = "Payroll Managemnet";
-            mainForm.button6.Visible = true;
-
             mainForm.button7.Text = "Cost Management";
-            mainForm.button7.Visible = true;
-
             mainForm.button8.Text = "Equipment Inventory";
-            mainForm.button8.Visible = true;
 
+            // buttons 
+
+            // panel
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
+                               mainForm.panel4,
+                               mainForm.panel5,
+                               mainForm.panel6,
+                               mainForm.panel7,
+                               mainForm.panel8 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel1.Visible = true;
-            mainForm.label1.Text = "Dashboard";
-
-            mainForm.panel2.Visible = false;
-
-            mainForm.panel3.Visible = false;
-            mainForm.label3.Text = "Ban";
-
-            mainForm.panel4.Visible = false;
-            mainForm.label4.Text = "Expenses";
-
-            mainForm.panel5.Visible = false;
-            mainForm.label5.Text = "Sales";
-
-            mainForm.panel6.Visible = false;
-            mainForm.label6.Text = "Payroll";
-
-            mainForm.panel7.Visible = false;
-            mainForm.label7.Text = "Cost";
-
-            mainForm.panel8.Visible = false;
-            mainForm.label8.Text = "Inventory";
+            // panel
         }
 
         public static void DashboardButtonClick(MainForm mainForm)
         {
+            // panels
+            Panel[] panels = { mainForm.panel2,
+                               mainForm.panel3,
+                               mainForm.panel4,
+                               mainForm.panel5,
+                               mainForm.panel6,
+                               mainForm.panel7,
+                               mainForm.panel8 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel1.Visible = true;
-            mainForm.panel2.Visible = false;
-            mainForm.panel3.Visible = false;
-            mainForm.panel4.Visible = false;
-            mainForm.panel5.Visible = false;
-            mainForm.panel6.Visible = false;
-            mainForm.panel7.Visible = false;
-            mainForm.panel8.Visible = false;
+            // panels
         }
 
         public static void AccountMgmtButtonClick(MainForm mainForm)
         {
-            mainForm.panel1.Visible = false;
+            // panels
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel3,
+                               mainForm.panel4,
+                               mainForm.panel5,
+                               mainForm.panel6,
+                               mainForm.panel7,
+                               mainForm.panel8 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel2.Visible = true;
-            mainForm.panel3.Visible = false;
-            mainForm.panel4.Visible = false;
-            mainForm.panel5.Visible = false;
-            mainForm.panel6.Visible = false;
-            mainForm.panel7.Visible = false;
-            mainForm.panel8.Visible = false;
+            // panels
 
             mainForm.dataGridView1_panel2.Visible = true;
             mainForm.dataGridView1_panel2.DataSource = Database.GetMembersTable();
@@ -94,14 +104,21 @@ namespace GymManagementSystem
 
         public static void BanButtonClick(MainForm mainForm)
         {
-            mainForm.panel1.Visible = false;
-            mainForm.panel2.Visible = false;
+            // panels
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
+                               mainForm.panel4,
+                               mainForm.panel5,
+                               mainForm.panel6,
+                               mainForm.panel7,
+                               mainForm.panel8 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel3.Visible = true;
-            mainForm.panel4.Visible = false;
-            mainForm.panel5.Visible = false;
-            mainForm.panel6.Visible = false;
-            mainForm.panel7.Visible = false;
-            mainForm.panel8.Visible = false;
+            // panels
 
             mainForm.dataGridView1_panel3.Visible = true;
             mainForm.dataGridView1_panel3.DataSource = Database.GetMembersTable();
@@ -109,37 +126,58 @@ namespace GymManagementSystem
 
         public static void ExpensesButtonClick(MainForm mainForm)
         {
-            mainForm.panel1.Visible = false;
-            mainForm.panel2.Visible = false;
-            mainForm.panel3.Visible = false;
+            // panels
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
+                               mainForm.panel3,
+                               mainForm.panel5,
+                               mainForm.panel6,
+                               mainForm.panel7,
+                               mainForm.panel8 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel4.Visible = true;
-            mainForm.panel5.Visible = false;
-            mainForm.panel6.Visible = false;
-            mainForm.panel7.Visible = false;
-            mainForm.panel8.Visible = false;
+            // panels
         }
 
         public static void SalesButtonClick(MainForm mainForm)
         {
-            mainForm.panel1.Visible = false;
-            mainForm.panel2.Visible = false;
-            mainForm.panel3.Visible = false;
-            mainForm.panel4.Visible = false;
+            // panels
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
+                               mainForm.panel3,
+                               mainForm.panel4,
+                               mainForm.panel6,
+                               mainForm.panel7,
+                               mainForm.panel8 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel5.Visible = true;
-            mainForm.panel6.Visible = false;
-            mainForm.panel7.Visible = false;
-            mainForm.panel8.Visible = false;
+            // panels
         }
         public static void PayrollButtonClick(MainForm mainForm)
         {
-            mainForm.panel1.Visible = false;
-            mainForm.panel2.Visible = false;
-            mainForm.panel3.Visible = false;
-            mainForm.panel4.Visible = false;
-            mainForm.panel5.Visible = false;
+            // panels
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
+                               mainForm.panel3,
+                               mainForm.panel4,
+                               mainForm.panel5,
+                               mainForm.panel7,
+                               mainForm.panel8 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel6.Visible = true;
-            mainForm.panel7.Visible = false;
-            mainForm.panel8.Visible = false;
+            // panels
 
             mainForm.dataGridView1_panel6.Visible = true;
             mainForm.dataGridView1_panel6.DataSource = Database.GetStaffTable();
@@ -147,51 +185,63 @@ namespace GymManagementSystem
 
         public static void CostButtonClick(MainForm mainForm)
         {
-            mainForm.panel1.Visible = false;
-            mainForm.panel2.Visible = false;
-            mainForm.panel3.Visible = false;
-            mainForm.panel4.Visible = false;
-            mainForm.panel5.Visible = false;
-            mainForm.panel6.Visible = false;
+            // panels
+            Panel[] panels = { mainForm.panel1,
+                               mainForm.panel2,
+                               mainForm.panel3,
+                               mainForm.panel4,
+                               mainForm.panel5,
+                               mainForm.panel6,
+                               mainForm.panel8 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel7.Visible = true;
-            mainForm.panel8.Visible = false;
+            // panels
         }
 
         public static void EquipmentButtonClick(MainForm mainForm)
         {
-            mainForm.panel1.Visible = false;
-            mainForm.panel2.Visible = false;
-            mainForm.panel3.Visible = false;
-            mainForm.panel4.Visible = false;
-            mainForm.panel5.Visible = false;
-            mainForm.panel6.Visible = false;
-            mainForm.panel7.Visible = false;
+            // panels
+            Panel[] panels = { mainForm.panel1, 
+                               mainForm.panel2,
+                               mainForm.panel3, 
+                               mainForm.panel4, 
+                               mainForm.panel5,    
+                               mainForm.panel6,    
+                               mainForm.panel7 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.panel8.Visible = true;
+            // panels
 
             // textboxes and labels
-            mainForm.textBox1_panel8.Visible = true;
+            TextBox[] textBoxes = { mainForm.textBox1_panel8,
+                                    mainForm.textBox2_panel8,
+                                    mainForm.textBox3_panel8,
+                                    mainForm.textBox4_panel8,
+                                    mainForm.textBox5_panel8,
+                                    mainForm.textBox6_panel8,
+                                    mainForm.textBox7_panel8 };
+
+            foreach (var panel in panels)
+            {
+                panel.Visible = false;
+            }
             mainForm.textBox1_panel8.Enabled = false;
+
             mainForm.label1_panel8.Text = "Equipment ID";
-
-            mainForm.textBox2_panel8.Visible = true;
             mainForm.label2_panel8.Text = "Equipment Name";
-
-            mainForm.textBox3_panel8.Visible = true;
             mainForm.label3_panel8.Text = "Brand";
-
-            mainForm.textBox4_panel8.Visible = true;
             mainForm.label4_panel8.Text = "Model";
-
-            mainForm.textBox5_panel8.Visible = true;
             mainForm.label5_panel8.Text = "Category";
-
-            mainForm.textBox6_panel8.Visible = true;
             mainForm.label6_panel8.Text = "Cost";
-
-            mainForm.textBox7_panel8.Visible = true;
             mainForm.label7_panel8.Text = "Quantity";
-
-            mainForm.textBox8_panel8.Visible = true;
             mainForm.label8_panel8.Text = "Condition";
             // textboxes and labels
 
