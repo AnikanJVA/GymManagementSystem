@@ -23,6 +23,8 @@ namespace GymManagementSystem
             view.RunModule(this);
 
             currentEquipment = new Equipment();
+
+            FormatDataGrids();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -133,23 +135,26 @@ namespace GymManagementSystem
             {
                 bool isFieldsComplete = false;
                 TextBox[] requiredFields = {Equipments_textBox_name, Equipments_textBox_brand, Equipments_textBox_model,
-                                            Equipments_textBox_category, Equipments_textBox_cost, Equipments_textBox_quantity, Equipments_textBox_condition};
+                                            Equipments_textBox_cost, Equipments_textBox_quantity };
                 foreach (TextBox tb in requiredFields)
                 {
                     if (string.IsNullOrWhiteSpace(tb.Text))
                     {
-                        MessageBox.Show("Don't leave anything empty.", "Input Required",
-                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        
                         isFieldsComplete = false;
                         break;
                     }
                     isFieldsComplete = true;
                 }
+                if (Equipments_comboBox_category.SelectedIndex == 0 || Equipments_comboBox_condition.SelectedIndex == 0)
+                {
+                    isFieldsComplete = false;
+                }
 
                 if (isFieldsComplete)
                 {
-                    bool isSuccessful = AdminActions.AddEquipment(Equipments_textBox_name.Text, Equipments_textBox_brand.Text, Equipments_textBox_model.Text, Equipments_textBox_category.Text,
-                                              Convert.ToInt64(Equipments_textBox_cost.Text), Convert.ToInt32(Equipments_textBox_quantity.Text), Equipments_textBox_condition.Text);
+                    bool isSuccessful = AdminActions.AddEquipment(Equipments_textBox_name.Text, Equipments_textBox_brand.Text, Equipments_textBox_model.Text, Equipments_comboBox_category.Text,
+                                              Convert.ToInt64(Equipments_textBox_cost.Text), Convert.ToInt32(Equipments_textBox_quantity.Text), Equipments_comboBox_condition.Text);
                     if (isSuccessful)
                     {
                         MessageBox.Show("Equipment Added.", "Success");
@@ -161,6 +166,11 @@ namespace GymManagementSystem
 
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Don't leave anything empty.", "Input Required",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private void button2_panel8_Click(object sender, EventArgs e)
@@ -169,23 +179,23 @@ namespace GymManagementSystem
             {
                 bool isFieldsComplete = false;
                 TextBox[] requiredFields = {Equipments_textBox_name, Equipments_textBox_brand, Equipments_textBox_model,
-                                            Equipments_textBox_category, Equipments_textBox_cost, Equipments_textBox_quantity, Equipments_textBox_condition};
+                                            Equipments_textBox_cost, Equipments_textBox_quantity };
                 foreach (TextBox tb in requiredFields)
                 {
                     if (string.IsNullOrWhiteSpace(tb.Text))
                     {
-                        MessageBox.Show("Don't leave anything empty.", "Input Required",
-                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                         isFieldsComplete = false;
                         break;
                     }
                     isFieldsComplete = true;
                 }
+                
                 if (isFieldsComplete)
                 {
 
-                    bool isSuccessful = AdminActions.UpdateEquipment(Convert.ToInt64(Equipments_textBox_id.Text), Equipments_textBox_name.Text, Equipments_textBox_brand.Text, Equipments_textBox_model.Text, Equipments_textBox_category.Text,
-                                              Convert.ToInt64(Equipments_textBox_cost.Text), Convert.ToInt32(Equipments_textBox_quantity.Text), Equipments_textBox_condition.Text);
+                    bool isSuccessful = AdminActions.UpdateEquipment(Convert.ToInt64(Equipments_textBox_id.Text), Equipments_textBox_name.Text, Equipments_textBox_brand.Text, Equipments_textBox_model.Text, Equipments_comboBox_category.Text,
+                                              Convert.ToInt64(Equipments_textBox_cost.Text), Convert.ToInt32(Equipments_textBox_quantity.Text), Equipments_comboBox_condition.Text);
                     if (isSuccessful)
                     {
                         MessageBox.Show("Equipment updated.", "Success");
@@ -294,6 +304,10 @@ namespace GymManagementSystem
                 }
             }
         }
+        private void Equipments_button_clear_Click(object sender, EventArgs e)
+        {
+            Equipment_ClearFill();
+        }
 
         public void Equipment_AutoFill()
         {
@@ -301,10 +315,10 @@ namespace GymManagementSystem
             Equipments_textBox_name.Text = currentEquipment.EquipmentName;
             Equipments_textBox_brand.Text = currentEquipment.Brand;
             Equipments_textBox_model.Text = currentEquipment.Model;
-            Equipments_textBox_category.Text = Database.GetEquipmentCategoryName(currentEquipment.CategoryID);
+            Equipments_comboBox_category.Text = Database.GetEquipmentCategoryName(currentEquipment.CategoryID);
             Equipments_textBox_cost.Text = currentEquipment.Cost.ToString();
             Equipments_textBox_quantity.Text = currentEquipment.Quantity.ToString();
-            Equipments_textBox_condition.Text = currentEquipment.EquipmentCondition;
+            Equipments_comboBox_condition.Text = currentEquipment.EquipmentCondition;
         }
 
         public void Equipment_ClearFill()
@@ -313,12 +327,25 @@ namespace GymManagementSystem
             Equipments_textBox_name.Clear();
             Equipments_textBox_brand.Clear();
             Equipments_textBox_model.Clear();
-            Equipments_textBox_category.Clear();
+            Equipments_comboBox_category.SelectedIndex = -1;
             Equipments_textBox_cost.Clear();
             Equipments_textBox_quantity.Clear();
-            Equipments_textBox_condition.Clear();
+            Equipments_comboBox_condition.SelectedIndex = -1;
         }
 
+        public void FormatDataGrids()
+        {
+            Equipments_dataGridView.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+        }
 
+        private void button2_panel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_panel2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

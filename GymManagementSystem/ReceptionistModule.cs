@@ -48,8 +48,8 @@ namespace GymManagementSystem
             // buttons
 
             // panel
-            Panel[] panels = { mainForm.admin_panel1,
-                               mainForm.admin_panel2,
+            Panel[] panels = { mainForm.Admin_panel_dashboard,
+                               mainForm.Admin_panel_staff,
                                mainForm.admin_panel4,
                                mainForm.admin_panel5,
                                mainForm.admin_panel6,
@@ -59,15 +59,15 @@ namespace GymManagementSystem
             {
                 panel.Visible = false;
             }
-            mainForm.admin_panel1.Visible = true;
+            mainForm.Admin_panel_dashboard.Visible = true;
             // panel
         }
 
         public static void DashboardButtonClick(MainForm mainForm)
         {
             // panel
-            Panel[] panels = { mainForm.admin_panel1,
-                               mainForm.admin_panel2,
+            Panel[] panels = { mainForm.Admin_panel_dashboard,
+                               mainForm.Admin_panel_staff,
                                mainForm.admin_panel4,
                                mainForm.admin_panel5,
                                mainForm.admin_panel6,
@@ -77,15 +77,15 @@ namespace GymManagementSystem
             {
                 panel.Visible = false;
             }
-            mainForm.admin_panel1.Visible = true;
+            mainForm.Admin_panel_dashboard.Visible = true;
             // panel
         }
 
         public static void MemberMgmtButtonClick(MainForm mainForm)
         {
             // panel
-            Panel[] panels = { mainForm.admin_panel2,
-                               mainForm.admin_panel3,
+            Panel[] panels = { mainForm.Admin_panel_staff,
+                               mainForm.Admin_panel_ban,
                                mainForm.admin_panel4,
                                mainForm.admin_panel5,
                                mainForm.admin_panel6,
@@ -95,15 +95,15 @@ namespace GymManagementSystem
             {
                 panel.Visible = false;
             }
-            mainForm.admin_panel2.Visible = true;
+            mainForm.Admin_panel_staff.Visible = true;
             // panel
         }
 
         public static void CheckInButtonClick(MainForm mainForm)
         {
             // panel
-            Panel[] panels = { mainForm.admin_panel1,
-                               mainForm.admin_panel2,
+            Panel[] panels = { mainForm.Admin_panel_dashboard,
+                               mainForm.Admin_panel_staff,
                                mainForm.admin_panel4,
                                mainForm.admin_panel5,
                                mainForm.admin_panel6,
@@ -113,16 +113,16 @@ namespace GymManagementSystem
             {
                 panel.Visible = false;
             }
-            mainForm.admin_panel3.Visible = true;
+            mainForm.Admin_panel_ban.Visible = true;
             // panel
         }
 
         public static void CoachingButtonClick(MainForm mainForm)
         {
             // panel
-            Panel[] panels = { mainForm.admin_panel1,
-                               mainForm.admin_panel2,
-                               mainForm.admin_panel3,
+            Panel[] panels = { mainForm.Admin_panel_dashboard,
+                               mainForm.Admin_panel_staff,
+                               mainForm.Admin_panel_ban,
                                mainForm.admin_panel5,
                                mainForm.admin_panel6,
                                mainForm.admin_panel7 };
@@ -138,9 +138,9 @@ namespace GymManagementSystem
         public static void PaymentButtonClick(MainForm mainForm)
         {
             // panel
-            Panel[] panels = { mainForm.admin_panel1,
-                               mainForm.admin_panel2,
-                               mainForm.admin_panel3,
+            Panel[] panels = { mainForm.Admin_panel_dashboard,
+                               mainForm.Admin_panel_staff,
+                               mainForm.Admin_panel_ban,
                                mainForm.admin_panel4,
                                mainForm.admin_panel6,
                                mainForm.admin_panel7 };
@@ -156,9 +156,9 @@ namespace GymManagementSystem
         public static void EquipmentButtonClick(MainForm mainForm)
         {
             // panel
-            Panel[] panels = { mainForm.admin_panel1,
-                               mainForm.admin_panel2,
-                               mainForm.admin_panel3,
+            Panel[] panels = { mainForm.Admin_panel_dashboard,
+                               mainForm.Admin_panel_staff,
+                               mainForm.Admin_panel_ban,
                                mainForm.admin_panel4,
                                mainForm.admin_panel5,
                                mainForm.admin_panel7 };
@@ -174,9 +174,9 @@ namespace GymManagementSystem
         public static void DamagedButtonClick(MainForm mainForm)
         {
             // panel
-            Panel[] panels = { mainForm.admin_panel1,
-                               mainForm.admin_panel2,
-                               mainForm.admin_panel3,
+            Panel[] panels = { mainForm.Admin_panel_dashboard,
+                               mainForm.Admin_panel_staff,
+                               mainForm.Admin_panel_ban,
                                mainForm.admin_panel4,
                                mainForm.admin_panel5,
                                mainForm.admin_panel6 };

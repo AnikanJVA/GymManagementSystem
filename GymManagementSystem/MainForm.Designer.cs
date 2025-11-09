@@ -44,24 +44,8 @@
             this.button_logout = new System.Windows.Forms.Button();
             this.admin_panel8 = new System.Windows.Forms.Panel();
             this.Equipments_dataGridView = new System.Windows.Forms.DataGridView();
-            this.label8_panel8 = new System.Windows.Forms.Label();
-            this.label7_panel8 = new System.Windows.Forms.Label();
-            this.label6_panel8 = new System.Windows.Forms.Label();
-            this.label5_panel8 = new System.Windows.Forms.Label();
-            this.label4_panel8 = new System.Windows.Forms.Label();
-            this.label3_panel8 = new System.Windows.Forms.Label();
-            this.label2_panel8 = new System.Windows.Forms.Label();
-            this.label1_panel8 = new System.Windows.Forms.Label();
             this.Equipments_button_update = new System.Windows.Forms.Button();
             this.Equipments_button_add = new System.Windows.Forms.Button();
-            this.Equipments_textBox_condition = new System.Windows.Forms.TextBox();
-            this.Equipments_textBox_quantity = new System.Windows.Forms.TextBox();
-            this.Equipments_textBox_model = new System.Windows.Forms.TextBox();
-            this.Equipments_textBox_cost = new System.Windows.Forms.TextBox();
-            this.Equipments_textBox_brand = new System.Windows.Forms.TextBox();
-            this.Equipments_textBox_category = new System.Windows.Forms.TextBox();
-            this.Equipments_textBox_name = new System.Windows.Forms.TextBox();
-            this.Equipments_textBox_id = new System.Windows.Forms.TextBox();
             this.admin_panel7 = new System.Windows.Forms.Panel();
             this.label48 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
@@ -73,7 +57,6 @@
             this.textBox3_panel7 = new System.Windows.Forms.TextBox();
             this.textBox2_panel7 = new System.Windows.Forms.TextBox();
             this.dataGridView1_panel7 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
@@ -160,14 +143,14 @@
             this.panel10_panel4 = new System.Windows.Forms.Panel();
             this.label30_panel4 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.admin_panel3 = new System.Windows.Forms.Panel();
+            this.Admin_panel_ban = new System.Windows.Forms.Panel();
             this.button1_panel3 = new System.Windows.Forms.Button();
             this.textBox2_panel3 = new System.Windows.Forms.TextBox();
             this.textBox1_panel3 = new System.Windows.Forms.TextBox();
             this.label2_panel3 = new System.Windows.Forms.Label();
             this.label1_panel3 = new System.Windows.Forms.Label();
             this.dataGridView1_panel3 = new System.Windows.Forms.DataGridView();
-            this.admin_panel2 = new System.Windows.Forms.Panel();
+            this.Admin_panel_staff = new System.Windows.Forms.Panel();
             this.checkBox6_panel2 = new System.Windows.Forms.CheckBox();
             this.checkBox5_panel2 = new System.Windows.Forms.CheckBox();
             this.checkBox7_panel2 = new System.Windows.Forms.CheckBox();
@@ -180,9 +163,9 @@
             this.comboBox2_panel2 = new System.Windows.Forms.ComboBox();
             this.comboBox1_panel2 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1_panel2 = new System.Windows.Forms.DateTimePicker();
-            this.button3_panel2 = new System.Windows.Forms.Button();
-            this.button2_panel2 = new System.Windows.Forms.Button();
-            this.button1_panel2 = new System.Windows.Forms.Button();
+            this.Staff_button_update = new System.Windows.Forms.Button();
+            this.Staff_button_delete = new System.Windows.Forms.Button();
+            this.Staff_button_add = new System.Windows.Forms.Button();
             this.textBox4_panel2 = new System.Windows.Forms.TextBox();
             this.textBox6_panel2 = new System.Windows.Forms.TextBox();
             this.textBox5_panel2 = new System.Windows.Forms.TextBox();
@@ -203,7 +186,7 @@
             this.textBox7_panel2 = new System.Windows.Forms.TextBox();
             this.textBox1_panel2 = new System.Windows.Forms.TextBox();
             this.dataGridView1_panel2 = new System.Windows.Forms.DataGridView();
-            this.admin_panel1 = new System.Windows.Forms.Panel();
+            this.Admin_panel_dashboard = new System.Windows.Forms.Panel();
             this.panel25_panel1 = new System.Windows.Forms.Panel();
             this.label51 = new System.Windows.Forms.Label();
             this.panel24_panel1 = new System.Windows.Forms.Panel();
@@ -223,7 +206,24 @@
             this.label53 = new System.Windows.Forms.Label();
             this.panel19_panel1 = new System.Windows.Forms.Panel();
             this.label49 = new System.Windows.Forms.Label();
+            this.Equipments_textBox_id = new System.Windows.Forms.TextBox();
+            this.Equipments_textBox_name = new System.Windows.Forms.TextBox();
+            this.Equipments_textBox_brand = new System.Windows.Forms.TextBox();
+            this.Equipments_textBox_cost = new System.Windows.Forms.TextBox();
+            this.Equipments_textBox_model = new System.Windows.Forms.TextBox();
+            this.Equipments_textBox_quantity = new System.Windows.Forms.TextBox();
             this.Equipments_button_clear = new System.Windows.Forms.Button();
+            this.label1_panel8 = new System.Windows.Forms.Label();
+            this.label2_panel8 = new System.Windows.Forms.Label();
+            this.label3_panel8 = new System.Windows.Forms.Label();
+            this.label4_panel8 = new System.Windows.Forms.Label();
+            this.label5_panel8 = new System.Windows.Forms.Label();
+            this.label6_panel8 = new System.Windows.Forms.Label();
+            this.label7_panel8 = new System.Windows.Forms.Label();
+            this.label8_panel8 = new System.Windows.Forms.Label();
+            this.Equipments_comboBox_condition = new System.Windows.Forms.ComboBox();
+            this.Equipments_comboBox_category = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -253,16 +253,17 @@
             this.panel11_panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_panel4)).BeginInit();
             this.panel10_panel4.SuspendLayout();
-            this.admin_panel3.SuspendLayout();
+            this.Admin_panel_ban.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_panel3)).BeginInit();
-            this.admin_panel2.SuspendLayout();
+            this.Admin_panel_staff.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_panel2)).BeginInit();
-            this.admin_panel1.SuspendLayout();
+            this.Admin_panel_dashboard.SuspendLayout();
             this.panel25_panel1.SuspendLayout();
             this.panel24_panel1.SuspendLayout();
             this.panel21_panel1.SuspendLayout();
             this.panel20_panel1.SuspendLayout();
             this.panel19_panel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -277,6 +278,8 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_staff);
+            this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_dashboard);
             this.splitContainer1.Panel2.Controls.Add(this.admin_panel8);
             this.splitContainer1.Panel2.Controls.Add(this.admin_panel7);
             this.splitContainer1.Panel2.Controls.Add(this.admin_panel6);
@@ -284,9 +287,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.admin_panel10);
             this.splitContainer1.Panel2.Controls.Add(this.admin_panel9);
             this.splitContainer1.Panel2.Controls.Add(this.admin_panel4);
-            this.splitContainer1.Panel2.Controls.Add(this.admin_panel3);
-            this.splitContainer1.Panel2.Controls.Add(this.admin_panel2);
-            this.splitContainer1.Panel2.Controls.Add(this.admin_panel1);
+            this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_ban);
             this.splitContainer1.Size = new System.Drawing.Size(1264, 681);
             this.splitContainer1.SplitterDistance = 300;
             this.splitContainer1.TabIndex = 1;
@@ -516,26 +517,10 @@
             // 
             // admin_panel8
             // 
+            this.admin_panel8.Controls.Add(this.panel1);
             this.admin_panel8.Controls.Add(this.Equipments_dataGridView);
-            this.admin_panel8.Controls.Add(this.label8_panel8);
-            this.admin_panel8.Controls.Add(this.label7_panel8);
-            this.admin_panel8.Controls.Add(this.label6_panel8);
-            this.admin_panel8.Controls.Add(this.label5_panel8);
-            this.admin_panel8.Controls.Add(this.label4_panel8);
-            this.admin_panel8.Controls.Add(this.label3_panel8);
-            this.admin_panel8.Controls.Add(this.label2_panel8);
-            this.admin_panel8.Controls.Add(this.label1_panel8);
-            this.admin_panel8.Controls.Add(this.Equipments_button_clear);
             this.admin_panel8.Controls.Add(this.Equipments_button_update);
             this.admin_panel8.Controls.Add(this.Equipments_button_add);
-            this.admin_panel8.Controls.Add(this.Equipments_textBox_condition);
-            this.admin_panel8.Controls.Add(this.Equipments_textBox_quantity);
-            this.admin_panel8.Controls.Add(this.Equipments_textBox_model);
-            this.admin_panel8.Controls.Add(this.Equipments_textBox_cost);
-            this.admin_panel8.Controls.Add(this.Equipments_textBox_brand);
-            this.admin_panel8.Controls.Add(this.Equipments_textBox_category);
-            this.admin_panel8.Controls.Add(this.Equipments_textBox_name);
-            this.admin_panel8.Controls.Add(this.Equipments_textBox_id);
             this.admin_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admin_panel8.Location = new System.Drawing.Point(0, 0);
             this.admin_panel8.Name = "admin_panel8";
@@ -550,202 +535,52 @@
             this.Equipments_dataGridView.AllowUserToResizeColumns = false;
             this.Equipments_dataGridView.AllowUserToResizeRows = false;
             this.Equipments_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Equipments_dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.Equipments_dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Equipments_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Equipments_dataGridView.Location = new System.Drawing.Point(55, 78);
+            this.Equipments_dataGridView.Location = new System.Drawing.Point(14, 15);
             this.Equipments_dataGridView.MultiSelect = false;
             this.Equipments_dataGridView.Name = "Equipments_dataGridView";
             this.Equipments_dataGridView.ReadOnly = true;
             this.Equipments_dataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.Equipments_dataGridView.Size = new System.Drawing.Size(874, 322);
+            this.Equipments_dataGridView.Size = new System.Drawing.Size(931, 394);
             this.Equipments_dataGridView.TabIndex = 8;
-            this.Equipments_dataGridView.Visible = false;
             this.Equipments_dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Equipments_dataGridView_CellClick);
-            // 
-            // label8_panel8
-            // 
-            this.label8_panel8.AutoSize = true;
-            this.label8_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8_panel8.Location = new System.Drawing.Point(545, 535);
-            this.label8_panel8.Name = "label8_panel8";
-            this.label8_panel8.Size = new System.Drawing.Size(44, 16);
-            this.label8_panel8.TabIndex = 7;
-            this.label8_panel8.Text = "label9";
-            // 
-            // label7_panel8
-            // 
-            this.label7_panel8.AutoSize = true;
-            this.label7_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7_panel8.Location = new System.Drawing.Point(545, 509);
-            this.label7_panel8.Name = "label7_panel8";
-            this.label7_panel8.Size = new System.Drawing.Size(44, 16);
-            this.label7_panel8.TabIndex = 7;
-            this.label7_panel8.Text = "label9";
-            // 
-            // label6_panel8
-            // 
-            this.label6_panel8.AutoSize = true;
-            this.label6_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6_panel8.Location = new System.Drawing.Point(545, 483);
-            this.label6_panel8.Name = "label6_panel8";
-            this.label6_panel8.Size = new System.Drawing.Size(44, 16);
-            this.label6_panel8.TabIndex = 7;
-            this.label6_panel8.Text = "label9";
-            // 
-            // label5_panel8
-            // 
-            this.label5_panel8.AutoSize = true;
-            this.label5_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5_panel8.Location = new System.Drawing.Point(545, 461);
-            this.label5_panel8.Name = "label5_panel8";
-            this.label5_panel8.Size = new System.Drawing.Size(44, 16);
-            this.label5_panel8.TabIndex = 7;
-            this.label5_panel8.Text = "label9";
-            // 
-            // label4_panel8
-            // 
-            this.label4_panel8.AutoSize = true;
-            this.label4_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4_panel8.Location = new System.Drawing.Point(89, 535);
-            this.label4_panel8.Name = "label4_panel8";
-            this.label4_panel8.Size = new System.Drawing.Size(44, 16);
-            this.label4_panel8.TabIndex = 7;
-            this.label4_panel8.Text = "label9";
-            // 
-            // label3_panel8
-            // 
-            this.label3_panel8.AutoSize = true;
-            this.label3_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3_panel8.Location = new System.Drawing.Point(89, 509);
-            this.label3_panel8.Name = "label3_panel8";
-            this.label3_panel8.Size = new System.Drawing.Size(44, 16);
-            this.label3_panel8.TabIndex = 7;
-            this.label3_panel8.Text = "label9";
-            // 
-            // label2_panel8
-            // 
-            this.label2_panel8.AutoSize = true;
-            this.label2_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2_panel8.Location = new System.Drawing.Point(89, 483);
-            this.label2_panel8.Name = "label2_panel8";
-            this.label2_panel8.Size = new System.Drawing.Size(44, 16);
-            this.label2_panel8.TabIndex = 7;
-            this.label2_panel8.Text = "label9";
-            // 
-            // label1_panel8
-            // 
-            this.label1_panel8.AutoSize = true;
-            this.label1_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1_panel8.Location = new System.Drawing.Point(89, 457);
-            this.label1_panel8.Name = "label1_panel8";
-            this.label1_panel8.Size = new System.Drawing.Size(44, 16);
-            this.label1_panel8.TabIndex = 7;
-            this.label1_panel8.Text = "label9";
             // 
             // Equipments_button_update
             // 
             this.Equipments_button_update.AutoSize = true;
+            this.Equipments_button_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
+            this.Equipments_button_update.FlatAppearance.BorderSize = 0;
+            this.Equipments_button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Equipments_button_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.Equipments_button_update.Location = new System.Drawing.Point(468, 607);
             this.Equipments_button_update.Name = "Equipments_button_update";
             this.Equipments_button_update.Size = new System.Drawing.Size(142, 52);
             this.Equipments_button_update.TabIndex = 10;
             this.Equipments_button_update.Text = "button9";
-            this.Equipments_button_update.UseVisualStyleBackColor = true;
-            this.Equipments_button_update.Visible = false;
+            this.Equipments_button_update.UseVisualStyleBackColor = false;
             this.Equipments_button_update.Click += new System.EventHandler(this.button2_panel8_Click);
             // 
             // Equipments_button_add
             // 
             this.Equipments_button_add.AutoSize = true;
+            this.Equipments_button_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
+            this.Equipments_button_add.FlatAppearance.BorderSize = 0;
+            this.Equipments_button_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Equipments_button_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.Equipments_button_add.Location = new System.Drawing.Point(285, 607);
             this.Equipments_button_add.Name = "Equipments_button_add";
             this.Equipments_button_add.Size = new System.Drawing.Size(142, 52);
             this.Equipments_button_add.TabIndex = 9;
             this.Equipments_button_add.Text = "button9";
-            this.Equipments_button_add.UseVisualStyleBackColor = true;
-            this.Equipments_button_add.Visible = false;
+            this.Equipments_button_add.UseVisualStyleBackColor = false;
             this.Equipments_button_add.Click += new System.EventHandler(this.button1_panel8_Click);
-            // 
-            // Equipments_textBox_condition
-            // 
-            this.Equipments_textBox_condition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Equipments_textBox_condition.Location = new System.Drawing.Point(670, 532);
-            this.Equipments_textBox_condition.Name = "Equipments_textBox_condition";
-            this.Equipments_textBox_condition.Size = new System.Drawing.Size(195, 22);
-            this.Equipments_textBox_condition.TabIndex = 8;
-            this.Equipments_textBox_condition.Visible = false;
-            // 
-            // Equipments_textBox_quantity
-            // 
-            this.Equipments_textBox_quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Equipments_textBox_quantity.Location = new System.Drawing.Point(670, 506);
-            this.Equipments_textBox_quantity.Name = "Equipments_textBox_quantity";
-            this.Equipments_textBox_quantity.Size = new System.Drawing.Size(195, 22);
-            this.Equipments_textBox_quantity.TabIndex = 7;
-            this.Equipments_textBox_quantity.Visible = false;
-            // 
-            // Equipments_textBox_model
-            // 
-            this.Equipments_textBox_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Equipments_textBox_model.Location = new System.Drawing.Point(206, 533);
-            this.Equipments_textBox_model.Name = "Equipments_textBox_model";
-            this.Equipments_textBox_model.Size = new System.Drawing.Size(195, 22);
-            this.Equipments_textBox_model.TabIndex = 4;
-            this.Equipments_textBox_model.Visible = false;
-            // 
-            // Equipments_textBox_cost
-            // 
-            this.Equipments_textBox_cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Equipments_textBox_cost.Location = new System.Drawing.Point(670, 480);
-            this.Equipments_textBox_cost.Name = "Equipments_textBox_cost";
-            this.Equipments_textBox_cost.Size = new System.Drawing.Size(195, 22);
-            this.Equipments_textBox_cost.TabIndex = 6;
-            this.Equipments_textBox_cost.Visible = false;
-            // 
-            // Equipments_textBox_brand
-            // 
-            this.Equipments_textBox_brand.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Equipments_textBox_brand.Location = new System.Drawing.Point(206, 507);
-            this.Equipments_textBox_brand.Name = "Equipments_textBox_brand";
-            this.Equipments_textBox_brand.Size = new System.Drawing.Size(195, 22);
-            this.Equipments_textBox_brand.TabIndex = 3;
-            this.Equipments_textBox_brand.Visible = false;
-            // 
-            // Equipments_textBox_category
-            // 
-            this.Equipments_textBox_category.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Equipments_textBox_category.Location = new System.Drawing.Point(670, 454);
-            this.Equipments_textBox_category.Name = "Equipments_textBox_category";
-            this.Equipments_textBox_category.Size = new System.Drawing.Size(195, 22);
-            this.Equipments_textBox_category.TabIndex = 5;
-            this.Equipments_textBox_category.Visible = false;
-            // 
-            // Equipments_textBox_name
-            // 
-            this.Equipments_textBox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Equipments_textBox_name.Location = new System.Drawing.Point(206, 481);
-            this.Equipments_textBox_name.Name = "Equipments_textBox_name";
-            this.Equipments_textBox_name.Size = new System.Drawing.Size(195, 22);
-            this.Equipments_textBox_name.TabIndex = 2;
-            this.Equipments_textBox_name.Visible = false;
-            // 
-            // Equipments_textBox_id
-            // 
-            this.Equipments_textBox_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Equipments_textBox_id.Location = new System.Drawing.Point(206, 455);
-            this.Equipments_textBox_id.Name = "Equipments_textBox_id";
-            this.Equipments_textBox_id.Size = new System.Drawing.Size(195, 22);
-            this.Equipments_textBox_id.TabIndex = 1;
-            this.Equipments_textBox_id.Visible = false;
             // 
             // admin_panel7
             // 
             this.admin_panel7.Controls.Add(this.label48);
             this.admin_panel7.Controls.Add(this.panel18);
             this.admin_panel7.Controls.Add(this.dataGridView1_panel7);
-            this.admin_panel7.Controls.Add(this.textBox1);
             this.admin_panel7.Controls.Add(this.panel17);
             this.admin_panel7.Controls.Add(this.panel16);
             this.admin_panel7.Controls.Add(this.panel15);
@@ -840,17 +675,10 @@
             // dataGridView1_panel7
             // 
             this.dataGridView1_panel7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1_panel7.Location = new System.Drawing.Point(17, 273);
+            this.dataGridView1_panel7.Location = new System.Drawing.Point(27, 275);
             this.dataGridView1_panel7.Name = "dataGridView1_panel7";
             this.dataGridView1_panel7.Size = new System.Drawing.Size(671, 314);
             this.dataGridView1_panel7.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(564, 306);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 20);
-            this.textBox1.TabIndex = 0;
             // 
             // panel17
             // 
@@ -1168,11 +996,11 @@
             // 
             // button9_panel6
             // 
-            this.button9_panel6.BackColor = System.Drawing.Color.Yellow;
+            this.button9_panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
             this.button9_panel6.FlatAppearance.BorderSize = 0;
             this.button9_panel6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9_panel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9_panel6.Location = new System.Drawing.Point(432, 603);
+            this.button9_panel6.Location = new System.Drawing.Point(398, 594);
             this.button9_panel6.Name = "button9_panel6";
             this.button9_panel6.Size = new System.Drawing.Size(142, 52);
             this.button9_panel6.TabIndex = 2;
@@ -1186,7 +1014,6 @@
             this.dataGridView1_panel6.Name = "dataGridView1_panel6";
             this.dataGridView1_panel6.Size = new System.Drawing.Size(931, 239);
             this.dataGridView1_panel6.TabIndex = 1;
-            this.dataGridView1_panel6.Visible = false;
             // 
             // admin_panel5
             // 
@@ -1272,7 +1099,7 @@
             // 
             // button1_panel5
             // 
-            this.button1_panel5.BackColor = System.Drawing.Color.Yellow;
+            this.button1_panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
             this.button1_panel5.FlatAppearance.BorderSize = 0;
             this.button1_panel5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1_panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1323,7 +1150,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(279, 24);
             this.comboBox1.TabIndex = 44;
-            this.comboBox1.Visible = false;
             // 
             // button12
             // 
@@ -1337,21 +1163,19 @@
             this.button12.TabIndex = 43;
             this.button12.Text = "button";
             this.button12.UseVisualStyleBackColor = false;
-            this.button12.Visible = false;
             // 
             // button11
             // 
-            this.button11.BackColor = System.Drawing.Color.Yellow;
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(494, 604);
+            this.button11.Location = new System.Drawing.Point(364, 605);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(240, 56);
             this.button11.TabIndex = 43;
             this.button11.Text = "button";
             this.button11.UseVisualStyleBackColor = false;
-            this.button11.Visible = false;
             // 
             // label1
             // 
@@ -1362,7 +1186,6 @@
             this.label1.Size = new System.Drawing.Size(37, 16);
             this.label1.TabIndex = 42;
             this.label1.Text = "label";
-            this.label1.Visible = false;
             // 
             // dataGridView1_panel10
             // 
@@ -1371,7 +1194,6 @@
             this.dataGridView1_panel10.Name = "dataGridView1_panel10";
             this.dataGridView1_panel10.Size = new System.Drawing.Size(931, 394);
             this.dataGridView1_panel10.TabIndex = 41;
-            this.dataGridView1_panel10.Visible = false;
             // 
             // admin_panel9
             // 
@@ -1403,7 +1225,6 @@
             this.comboBox2_panel9.Name = "comboBox2_panel9";
             this.comboBox2_panel9.Size = new System.Drawing.Size(279, 24);
             this.comboBox2_panel9.TabIndex = 39;
-            this.comboBox2_panel9.Visible = false;
             // 
             // comboBox1_panel9
             // 
@@ -1413,11 +1234,10 @@
             this.comboBox1_panel9.Name = "comboBox1_panel9";
             this.comboBox1_panel9.Size = new System.Drawing.Size(279, 24);
             this.comboBox1_panel9.TabIndex = 40;
-            this.comboBox1_panel9.Visible = false;
             // 
             // button2_panel9
             // 
-            this.button2_panel9.BackColor = System.Drawing.Color.Yellow;
+            this.button2_panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
             this.button2_panel9.FlatAppearance.BorderSize = 0;
             this.button2_panel9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2_panel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1427,11 +1247,10 @@
             this.button2_panel9.TabIndex = 38;
             this.button2_panel9.Text = "button";
             this.button2_panel9.UseVisualStyleBackColor = false;
-            this.button2_panel9.Visible = false;
             // 
             // button1_panel9
             // 
-            this.button1_panel9.BackColor = System.Drawing.Color.Yellow;
+            this.button1_panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
             this.button1_panel9.FlatAppearance.BorderSize = 0;
             this.button1_panel9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1_panel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1441,7 +1260,6 @@
             this.button1_panel9.TabIndex = 37;
             this.button1_panel9.Text = "button";
             this.button1_panel9.UseVisualStyleBackColor = false;
-            this.button1_panel9.Visible = false;
             // 
             // label5_panel9
             // 
@@ -1452,7 +1270,6 @@
             this.label5_panel9.Size = new System.Drawing.Size(37, 16);
             this.label5_panel9.TabIndex = 32;
             this.label5_panel9.Text = "label";
-            this.label5_panel9.Visible = false;
             // 
             // label1_panel9
             // 
@@ -1463,7 +1280,6 @@
             this.label1_panel9.Size = new System.Drawing.Size(37, 16);
             this.label1_panel9.TabIndex = 33;
             this.label1_panel9.Text = "label";
-            this.label1_panel9.Visible = false;
             // 
             // label4_panel9
             // 
@@ -1474,7 +1290,6 @@
             this.label4_panel9.Size = new System.Drawing.Size(37, 16);
             this.label4_panel9.TabIndex = 35;
             this.label4_panel9.Text = "label";
-            this.label4_panel9.Visible = false;
             // 
             // label2_panel9
             // 
@@ -1485,7 +1300,6 @@
             this.label2_panel9.Size = new System.Drawing.Size(37, 16);
             this.label2_panel9.TabIndex = 34;
             this.label2_panel9.Text = "label";
-            this.label2_panel9.Visible = false;
             // 
             // label3_panel9
             // 
@@ -1496,7 +1310,6 @@
             this.label3_panel9.Size = new System.Drawing.Size(37, 16);
             this.label3_panel9.TabIndex = 36;
             this.label3_panel9.Text = "label";
-            this.label3_panel9.Visible = false;
             // 
             // textBox3_panel9
             // 
@@ -1506,7 +1319,6 @@
             this.textBox3_panel9.Name = "textBox3_panel9";
             this.textBox3_panel9.Size = new System.Drawing.Size(279, 28);
             this.textBox3_panel9.TabIndex = 29;
-            this.textBox3_panel9.Visible = false;
             // 
             // textBox1_panel9
             // 
@@ -1516,7 +1328,6 @@
             this.textBox1_panel9.Name = "textBox1_panel9";
             this.textBox1_panel9.Size = new System.Drawing.Size(279, 28);
             this.textBox1_panel9.TabIndex = 30;
-            this.textBox1_panel9.Visible = false;
             // 
             // textBox2_panel9
             // 
@@ -1526,7 +1337,6 @@
             this.textBox2_panel9.Name = "textBox2_panel9";
             this.textBox2_panel9.Size = new System.Drawing.Size(281, 28);
             this.textBox2_panel9.TabIndex = 31;
-            this.textBox2_panel9.Visible = false;
             // 
             // dataGridView1_panel9
             // 
@@ -1535,7 +1345,6 @@
             this.dataGridView1_panel9.Name = "dataGridView1_panel9";
             this.dataGridView1_panel9.Size = new System.Drawing.Size(931, 394);
             this.dataGridView1_panel9.TabIndex = 28;
-            this.dataGridView1_panel9.Visible = false;
             // 
             // admin_panel4
             // 
@@ -1700,13 +1509,16 @@
             // 
             // button1_panel4
             // 
+            this.button1_panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
+            this.button1_panel4.FlatAppearance.BorderSize = 0;
+            this.button1_panel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1_panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.button1_panel4.Location = new System.Drawing.Point(396, 613);
             this.button1_panel4.Name = "button1_panel4";
             this.button1_panel4.Size = new System.Drawing.Size(146, 41);
             this.button1_panel4.TabIndex = 7;
             this.button1_panel4.Text = "Search";
-            this.button1_panel4.UseVisualStyleBackColor = true;
+            this.button1_panel4.UseVisualStyleBackColor = false;
             // 
             // panel10_panel4
             // 
@@ -1736,23 +1548,23 @@
             this.label26.TabIndex = 0;
             this.label26.Text = "Total Expenses (MTD)";
             // 
-            // admin_panel3
+            // Admin_panel_ban
             // 
-            this.admin_panel3.Controls.Add(this.button1_panel3);
-            this.admin_panel3.Controls.Add(this.textBox2_panel3);
-            this.admin_panel3.Controls.Add(this.textBox1_panel3);
-            this.admin_panel3.Controls.Add(this.label2_panel3);
-            this.admin_panel3.Controls.Add(this.label1_panel3);
-            this.admin_panel3.Controls.Add(this.dataGridView1_panel3);
-            this.admin_panel3.Location = new System.Drawing.Point(0, 0);
-            this.admin_panel3.Name = "admin_panel3";
-            this.admin_panel3.Size = new System.Drawing.Size(960, 681);
-            this.admin_panel3.TabIndex = 1;
-            this.admin_panel3.Visible = false;
+            this.Admin_panel_ban.Controls.Add(this.button1_panel3);
+            this.Admin_panel_ban.Controls.Add(this.textBox2_panel3);
+            this.Admin_panel_ban.Controls.Add(this.textBox1_panel3);
+            this.Admin_panel_ban.Controls.Add(this.label2_panel3);
+            this.Admin_panel_ban.Controls.Add(this.label1_panel3);
+            this.Admin_panel_ban.Controls.Add(this.dataGridView1_panel3);
+            this.Admin_panel_ban.Location = new System.Drawing.Point(0, 0);
+            this.Admin_panel_ban.Name = "Admin_panel_ban";
+            this.Admin_panel_ban.Size = new System.Drawing.Size(960, 681);
+            this.Admin_panel_ban.TabIndex = 1;
+            this.Admin_panel_ban.Visible = false;
             // 
             // button1_panel3
             // 
-            this.button1_panel3.BackColor = System.Drawing.Color.Yellow;
+            this.button1_panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
             this.button1_panel3.FlatAppearance.BorderSize = 0;
             this.button1_panel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1_panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1807,48 +1619,48 @@
             this.dataGridView1_panel3.Size = new System.Drawing.Size(921, 430);
             this.dataGridView1_panel3.TabIndex = 1;
             // 
-            // admin_panel2
+            // Admin_panel_staff
             // 
-            this.admin_panel2.Controls.Add(this.checkBox6_panel2);
-            this.admin_panel2.Controls.Add(this.checkBox5_panel2);
-            this.admin_panel2.Controls.Add(this.checkBox7_panel2);
-            this.admin_panel2.Controls.Add(this.checkBox4_panel2);
-            this.admin_panel2.Controls.Add(this.checkBox3_panel2);
-            this.admin_panel2.Controls.Add(this.checkBox2_panel2);
-            this.admin_panel2.Controls.Add(this.checkBox1_panel2);
-            this.admin_panel2.Controls.Add(this.radioButton2_panel2);
-            this.admin_panel2.Controls.Add(this.radioButton1_panel2);
-            this.admin_panel2.Controls.Add(this.comboBox2_panel2);
-            this.admin_panel2.Controls.Add(this.comboBox1_panel2);
-            this.admin_panel2.Controls.Add(this.dateTimePicker1_panel2);
-            this.admin_panel2.Controls.Add(this.button3_panel2);
-            this.admin_panel2.Controls.Add(this.button2_panel2);
-            this.admin_panel2.Controls.Add(this.button1_panel2);
-            this.admin_panel2.Controls.Add(this.textBox4_panel2);
-            this.admin_panel2.Controls.Add(this.textBox6_panel2);
-            this.admin_panel2.Controls.Add(this.textBox5_panel2);
-            this.admin_panel2.Controls.Add(this.textBox3_panel2);
-            this.admin_panel2.Controls.Add(this.textBox2_panel2);
-            this.admin_panel2.Controls.Add(this.label12_panel2);
-            this.admin_panel2.Controls.Add(this.label11_panel2);
-            this.admin_panel2.Controls.Add(this.label10_panel2);
-            this.admin_panel2.Controls.Add(this.label9_panel2);
-            this.admin_panel2.Controls.Add(this.label8_panel2);
-            this.admin_panel2.Controls.Add(this.label7_panel2);
-            this.admin_panel2.Controls.Add(this.label6_panel2);
-            this.admin_panel2.Controls.Add(this.label5_panel2);
-            this.admin_panel2.Controls.Add(this.label4_panel2);
-            this.admin_panel2.Controls.Add(this.label3_panel2);
-            this.admin_panel2.Controls.Add(this.label2_panel2);
-            this.admin_panel2.Controls.Add(this.label1_panel2);
-            this.admin_panel2.Controls.Add(this.textBox7_panel2);
-            this.admin_panel2.Controls.Add(this.textBox1_panel2);
-            this.admin_panel2.Controls.Add(this.dataGridView1_panel2);
-            this.admin_panel2.Location = new System.Drawing.Point(0, 0);
-            this.admin_panel2.Name = "admin_panel2";
-            this.admin_panel2.Size = new System.Drawing.Size(960, 681);
-            this.admin_panel2.TabIndex = 1;
-            this.admin_panel2.Visible = false;
+            this.Admin_panel_staff.Controls.Add(this.checkBox6_panel2);
+            this.Admin_panel_staff.Controls.Add(this.checkBox5_panel2);
+            this.Admin_panel_staff.Controls.Add(this.checkBox7_panel2);
+            this.Admin_panel_staff.Controls.Add(this.checkBox4_panel2);
+            this.Admin_panel_staff.Controls.Add(this.checkBox3_panel2);
+            this.Admin_panel_staff.Controls.Add(this.checkBox2_panel2);
+            this.Admin_panel_staff.Controls.Add(this.checkBox1_panel2);
+            this.Admin_panel_staff.Controls.Add(this.radioButton2_panel2);
+            this.Admin_panel_staff.Controls.Add(this.radioButton1_panel2);
+            this.Admin_panel_staff.Controls.Add(this.comboBox2_panel2);
+            this.Admin_panel_staff.Controls.Add(this.comboBox1_panel2);
+            this.Admin_panel_staff.Controls.Add(this.dateTimePicker1_panel2);
+            this.Admin_panel_staff.Controls.Add(this.Staff_button_update);
+            this.Admin_panel_staff.Controls.Add(this.Staff_button_delete);
+            this.Admin_panel_staff.Controls.Add(this.Staff_button_add);
+            this.Admin_panel_staff.Controls.Add(this.textBox4_panel2);
+            this.Admin_panel_staff.Controls.Add(this.textBox6_panel2);
+            this.Admin_panel_staff.Controls.Add(this.textBox5_panel2);
+            this.Admin_panel_staff.Controls.Add(this.textBox3_panel2);
+            this.Admin_panel_staff.Controls.Add(this.textBox2_panel2);
+            this.Admin_panel_staff.Controls.Add(this.label12_panel2);
+            this.Admin_panel_staff.Controls.Add(this.label11_panel2);
+            this.Admin_panel_staff.Controls.Add(this.label10_panel2);
+            this.Admin_panel_staff.Controls.Add(this.label9_panel2);
+            this.Admin_panel_staff.Controls.Add(this.label8_panel2);
+            this.Admin_panel_staff.Controls.Add(this.label7_panel2);
+            this.Admin_panel_staff.Controls.Add(this.label6_panel2);
+            this.Admin_panel_staff.Controls.Add(this.label5_panel2);
+            this.Admin_panel_staff.Controls.Add(this.label4_panel2);
+            this.Admin_panel_staff.Controls.Add(this.label3_panel2);
+            this.Admin_panel_staff.Controls.Add(this.label2_panel2);
+            this.Admin_panel_staff.Controls.Add(this.label1_panel2);
+            this.Admin_panel_staff.Controls.Add(this.textBox7_panel2);
+            this.Admin_panel_staff.Controls.Add(this.textBox1_panel2);
+            this.Admin_panel_staff.Controls.Add(this.dataGridView1_panel2);
+            this.Admin_panel_staff.Location = new System.Drawing.Point(0, 0);
+            this.Admin_panel_staff.Name = "Admin_panel_staff";
+            this.Admin_panel_staff.Size = new System.Drawing.Size(960, 681);
+            this.Admin_panel_staff.TabIndex = 1;
+            this.Admin_panel_staff.Visible = false;
             // 
             // checkBox6_panel2
             // 
@@ -1991,49 +1803,51 @@
             this.dateTimePicker1_panel2.TabIndex = 17;
             this.dateTimePicker1_panel2.Visible = false;
             // 
-            // button3_panel2
+            // Staff_button_update
             // 
-            this.button3_panel2.BackColor = System.Drawing.Color.Yellow;
-            this.button3_panel2.FlatAppearance.BorderSize = 0;
-            this.button3_panel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3_panel2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3_panel2.Location = new System.Drawing.Point(682, 613);
-            this.button3_panel2.Name = "button3_panel2";
-            this.button3_panel2.Size = new System.Drawing.Size(240, 56);
-            this.button3_panel2.TabIndex = 16;
-            this.button3_panel2.Text = "button";
-            this.button3_panel2.UseVisualStyleBackColor = false;
-            this.button3_panel2.Visible = false;
+            this.Staff_button_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
+            this.Staff_button_update.FlatAppearance.BorderSize = 0;
+            this.Staff_button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Staff_button_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Staff_button_update.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Staff_button_update.Location = new System.Drawing.Point(682, 613);
+            this.Staff_button_update.Name = "Staff_button_update";
+            this.Staff_button_update.Size = new System.Drawing.Size(240, 56);
+            this.Staff_button_update.TabIndex = 16;
+            this.Staff_button_update.Text = "Update Staff";
+            this.Staff_button_update.UseVisualStyleBackColor = false;
+            this.Staff_button_update.Visible = false;
+            this.Staff_button_update.Click += new System.EventHandler(this.button3_panel2_Click);
             // 
-            // button2_panel2
+            // Staff_button_delete
             // 
-            this.button2_panel2.BackColor = System.Drawing.Color.Yellow;
-            this.button2_panel2.FlatAppearance.BorderSize = 0;
-            this.button2_panel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2_panel2.Location = new System.Drawing.Point(371, 613);
-            this.button2_panel2.Name = "button2_panel2";
-            this.button2_panel2.Size = new System.Drawing.Size(240, 56);
-            this.button2_panel2.TabIndex = 15;
-            this.button2_panel2.Text = "button";
-            this.button2_panel2.UseVisualStyleBackColor = false;
-            this.button2_panel2.Visible = false;
+            this.Staff_button_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
+            this.Staff_button_delete.FlatAppearance.BorderSize = 0;
+            this.Staff_button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Staff_button_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Staff_button_delete.Location = new System.Drawing.Point(371, 613);
+            this.Staff_button_delete.Name = "Staff_button_delete";
+            this.Staff_button_delete.Size = new System.Drawing.Size(240, 56);
+            this.Staff_button_delete.TabIndex = 15;
+            this.Staff_button_delete.Text = "Delete Staff";
+            this.Staff_button_delete.UseVisualStyleBackColor = false;
+            this.Staff_button_delete.Visible = false;
+            this.Staff_button_delete.Click += new System.EventHandler(this.button2_panel2_Click);
             // 
-            // button1_panel2
+            // Staff_button_add
             // 
-            this.button1_panel2.BackColor = System.Drawing.Color.Yellow;
-            this.button1_panel2.FlatAppearance.BorderSize = 0;
-            this.button1_panel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1_panel2.Location = new System.Drawing.Point(75, 613);
-            this.button1_panel2.Name = "button1_panel2";
-            this.button1_panel2.Size = new System.Drawing.Size(240, 56);
-            this.button1_panel2.TabIndex = 14;
-            this.button1_panel2.Text = "button";
-            this.button1_panel2.UseVisualStyleBackColor = false;
-            this.button1_panel2.Visible = false;
-            this.button1_panel2.Click += new System.EventHandler(this.button1_panel2_Click);
+            this.Staff_button_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
+            this.Staff_button_add.FlatAppearance.BorderSize = 0;
+            this.Staff_button_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Staff_button_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Staff_button_add.Location = new System.Drawing.Point(75, 613);
+            this.Staff_button_add.Name = "Staff_button_add";
+            this.Staff_button_add.Size = new System.Drawing.Size(240, 56);
+            this.Staff_button_add.TabIndex = 14;
+            this.Staff_button_add.Text = "Add Staff";
+            this.Staff_button_add.UseVisualStyleBackColor = false;
+            this.Staff_button_add.Visible = false;
+            this.Staff_button_add.Click += new System.EventHandler(this.button1_panel2_Click);
             // 
             // textBox4_panel2
             // 
@@ -2091,9 +1905,9 @@
             this.label12_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12_panel2.Location = new System.Drawing.Point(38, 329);
             this.label12_panel2.Name = "label12_panel2";
-            this.label12_panel2.Size = new System.Drawing.Size(37, 16);
+            this.label12_panel2.Size = new System.Drawing.Size(44, 16);
             this.label12_panel2.TabIndex = 3;
-            this.label12_panel2.Text = "label";
+            this.label12_panel2.Text = "label4";
             this.label12_panel2.Visible = false;
             // 
             // label11_panel2
@@ -2246,18 +2060,18 @@
             this.dataGridView1_panel2.TabIndex = 1;
             this.dataGridView1_panel2.Visible = false;
             // 
-            // admin_panel1
+            // Admin_panel_dashboard
             // 
-            this.admin_panel1.Controls.Add(this.panel25_panel1);
-            this.admin_panel1.Controls.Add(this.panel24_panel1);
-            this.admin_panel1.Controls.Add(this.panel21_panel1);
-            this.admin_panel1.Controls.Add(this.panel20_panel1);
-            this.admin_panel1.Controls.Add(this.panel19_panel1);
-            this.admin_panel1.Location = new System.Drawing.Point(0, 0);
-            this.admin_panel1.Name = "admin_panel1";
-            this.admin_panel1.Size = new System.Drawing.Size(960, 681);
-            this.admin_panel1.TabIndex = 1;
-            this.admin_panel1.Visible = false;
+            this.Admin_panel_dashboard.Controls.Add(this.panel25_panel1);
+            this.Admin_panel_dashboard.Controls.Add(this.panel24_panel1);
+            this.Admin_panel_dashboard.Controls.Add(this.panel21_panel1);
+            this.Admin_panel_dashboard.Controls.Add(this.panel20_panel1);
+            this.Admin_panel_dashboard.Controls.Add(this.panel19_panel1);
+            this.Admin_panel_dashboard.Location = new System.Drawing.Point(0, 0);
+            this.Admin_panel_dashboard.Name = "Admin_panel_dashboard";
+            this.Admin_panel_dashboard.Size = new System.Drawing.Size(960, 681);
+            this.Admin_panel_dashboard.TabIndex = 1;
+            this.Admin_panel_dashboard.Visible = false;
             // 
             // panel25_panel1
             // 
@@ -2444,18 +2258,201 @@
             this.label49.TabIndex = 0;
             this.label49.Text = "Coaches";
             // 
+            // Equipments_textBox_id
+            // 
+            this.Equipments_textBox_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Equipments_textBox_id.Location = new System.Drawing.Point(220, 40);
+            this.Equipments_textBox_id.Name = "Equipments_textBox_id";
+            this.Equipments_textBox_id.Size = new System.Drawing.Size(229, 22);
+            this.Equipments_textBox_id.TabIndex = 1;
+            // 
+            // Equipments_textBox_name
+            // 
+            this.Equipments_textBox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Equipments_textBox_name.Location = new System.Drawing.Point(220, 66);
+            this.Equipments_textBox_name.Name = "Equipments_textBox_name";
+            this.Equipments_textBox_name.Size = new System.Drawing.Size(229, 22);
+            this.Equipments_textBox_name.TabIndex = 2;
+            // 
+            // Equipments_textBox_brand
+            // 
+            this.Equipments_textBox_brand.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Equipments_textBox_brand.Location = new System.Drawing.Point(220, 92);
+            this.Equipments_textBox_brand.Name = "Equipments_textBox_brand";
+            this.Equipments_textBox_brand.Size = new System.Drawing.Size(229, 22);
+            this.Equipments_textBox_brand.TabIndex = 3;
+            // 
+            // Equipments_textBox_cost
+            // 
+            this.Equipments_textBox_cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Equipments_textBox_cost.Location = new System.Drawing.Point(660, 72);
+            this.Equipments_textBox_cost.Name = "Equipments_textBox_cost";
+            this.Equipments_textBox_cost.Size = new System.Drawing.Size(229, 22);
+            this.Equipments_textBox_cost.TabIndex = 6;
+            // 
+            // Equipments_textBox_model
+            // 
+            this.Equipments_textBox_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Equipments_textBox_model.Location = new System.Drawing.Point(220, 118);
+            this.Equipments_textBox_model.Name = "Equipments_textBox_model";
+            this.Equipments_textBox_model.Size = new System.Drawing.Size(229, 22);
+            this.Equipments_textBox_model.TabIndex = 4;
+            // 
+            // Equipments_textBox_quantity
+            // 
+            this.Equipments_textBox_quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Equipments_textBox_quantity.Location = new System.Drawing.Point(660, 98);
+            this.Equipments_textBox_quantity.Name = "Equipments_textBox_quantity";
+            this.Equipments_textBox_quantity.Size = new System.Drawing.Size(229, 22);
+            this.Equipments_textBox_quantity.TabIndex = 7;
+            // 
             // Equipments_button_clear
             // 
             this.Equipments_button_clear.AutoSize = true;
+            this.Equipments_button_clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
+            this.Equipments_button_clear.FlatAppearance.BorderSize = 0;
+            this.Equipments_button_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Equipments_button_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.Equipments_button_clear.Location = new System.Drawing.Point(92, 418);
+            this.Equipments_button_clear.Location = new System.Drawing.Point(5, 6);
             this.Equipments_button_clear.Name = "Equipments_button_clear";
-            this.Equipments_button_clear.Size = new System.Drawing.Size(92, 26);
+            this.Equipments_button_clear.Size = new System.Drawing.Size(92, 28);
             this.Equipments_button_clear.TabIndex = 10;
-            this.Equipments_button_clear.Text = "clear textbox";
-            this.Equipments_button_clear.UseVisualStyleBackColor = true;
-            this.Equipments_button_clear.Visible = false;
-            this.Equipments_button_clear.Click += new System.EventHandler(this.button2_panel8_Click);
+            this.Equipments_button_clear.Text = "Clear Fields";
+            this.Equipments_button_clear.UseVisualStyleBackColor = false;
+            this.Equipments_button_clear.Click += new System.EventHandler(this.Equipments_button_clear_Click);
+            // 
+            // label1_panel8
+            // 
+            this.label1_panel8.AutoSize = true;
+            this.label1_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1_panel8.Location = new System.Drawing.Point(79, 43);
+            this.label1_panel8.Name = "label1_panel8";
+            this.label1_panel8.Size = new System.Drawing.Size(87, 16);
+            this.label1_panel8.TabIndex = 7;
+            this.label1_panel8.Text = "Equipment ID";
+            // 
+            // label2_panel8
+            // 
+            this.label2_panel8.AutoSize = true;
+            this.label2_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2_panel8.Location = new System.Drawing.Point(79, 69);
+            this.label2_panel8.Name = "label2_panel8";
+            this.label2_panel8.Size = new System.Drawing.Size(111, 16);
+            this.label2_panel8.TabIndex = 7;
+            this.label2_panel8.Text = "Equipment Name";
+            // 
+            // label3_panel8
+            // 
+            this.label3_panel8.AutoSize = true;
+            this.label3_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3_panel8.Location = new System.Drawing.Point(79, 95);
+            this.label3_panel8.Name = "label3_panel8";
+            this.label3_panel8.Size = new System.Drawing.Size(43, 16);
+            this.label3_panel8.TabIndex = 7;
+            this.label3_panel8.Text = "Brand";
+            // 
+            // label4_panel8
+            // 
+            this.label4_panel8.AutoSize = true;
+            this.label4_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4_panel8.Location = new System.Drawing.Point(79, 121);
+            this.label4_panel8.Name = "label4_panel8";
+            this.label4_panel8.Size = new System.Drawing.Size(45, 16);
+            this.label4_panel8.TabIndex = 7;
+            this.label4_panel8.Text = "Model";
+            // 
+            // label5_panel8
+            // 
+            this.label5_panel8.AutoSize = true;
+            this.label5_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5_panel8.Location = new System.Drawing.Point(539, 47);
+            this.label5_panel8.Name = "label5_panel8";
+            this.label5_panel8.Size = new System.Drawing.Size(62, 16);
+            this.label5_panel8.TabIndex = 7;
+            this.label5_panel8.Text = "Category";
+            // 
+            // label6_panel8
+            // 
+            this.label6_panel8.AutoSize = true;
+            this.label6_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6_panel8.Location = new System.Drawing.Point(539, 78);
+            this.label6_panel8.Name = "label6_panel8";
+            this.label6_panel8.Size = new System.Drawing.Size(34, 16);
+            this.label6_panel8.TabIndex = 7;
+            this.label6_panel8.Text = "Cost";
+            // 
+            // label7_panel8
+            // 
+            this.label7_panel8.AutoSize = true;
+            this.label7_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7_panel8.Location = new System.Drawing.Point(539, 104);
+            this.label7_panel8.Name = "label7_panel8";
+            this.label7_panel8.Size = new System.Drawing.Size(55, 16);
+            this.label7_panel8.TabIndex = 7;
+            this.label7_panel8.Text = "Quantity";
+            // 
+            // label8_panel8
+            // 
+            this.label8_panel8.AutoSize = true;
+            this.label8_panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8_panel8.Location = new System.Drawing.Point(539, 130);
+            this.label8_panel8.Name = "label8_panel8";
+            this.label8_panel8.Size = new System.Drawing.Size(63, 16);
+            this.label8_panel8.TabIndex = 7;
+            this.label8_panel8.Text = "Condition";
+            // 
+            // Equipments_comboBox_condition
+            // 
+            this.Equipments_comboBox_condition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Equipments_comboBox_condition.FormattingEnabled = true;
+            this.Equipments_comboBox_condition.Items.AddRange(new object[] {
+            "Good",
+            "Damaged",
+            "Under Maintenance",
+            "Disposed"});
+            this.Equipments_comboBox_condition.Location = new System.Drawing.Point(660, 126);
+            this.Equipments_comboBox_condition.Name = "Equipments_comboBox_condition";
+            this.Equipments_comboBox_condition.Size = new System.Drawing.Size(229, 24);
+            this.Equipments_comboBox_condition.TabIndex = 11;
+            // 
+            // Equipments_comboBox_category
+            // 
+            this.Equipments_comboBox_category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Equipments_comboBox_category.FormattingEnabled = true;
+            this.Equipments_comboBox_category.Items.AddRange(new object[] {
+            "Cardio",
+            "Machines",
+            "Free Weights",
+            "Flexibility"});
+            this.Equipments_comboBox_category.Location = new System.Drawing.Point(660, 41);
+            this.Equipments_comboBox_category.Name = "Equipments_comboBox_category";
+            this.Equipments_comboBox_category.Size = new System.Drawing.Size(229, 24);
+            this.Equipments_comboBox_category.TabIndex = 11;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(144)))));
+            this.panel1.Controls.Add(this.Equipments_comboBox_category);
+            this.panel1.Controls.Add(this.Equipments_comboBox_condition);
+            this.panel1.Controls.Add(this.label8_panel8);
+            this.panel1.Controls.Add(this.label7_panel8);
+            this.panel1.Controls.Add(this.label6_panel8);
+            this.panel1.Controls.Add(this.label5_panel8);
+            this.panel1.Controls.Add(this.label4_panel8);
+            this.panel1.Controls.Add(this.label3_panel8);
+            this.panel1.Controls.Add(this.label2_panel8);
+            this.panel1.Controls.Add(this.label1_panel8);
+            this.panel1.Controls.Add(this.Equipments_button_clear);
+            this.panel1.Controls.Add(this.Equipments_textBox_quantity);
+            this.panel1.Controls.Add(this.Equipments_textBox_model);
+            this.panel1.Controls.Add(this.Equipments_textBox_cost);
+            this.panel1.Controls.Add(this.Equipments_textBox_brand);
+            this.panel1.Controls.Add(this.Equipments_textBox_name);
+            this.panel1.Controls.Add(this.Equipments_textBox_id);
+            this.panel1.Location = new System.Drawing.Point(14, 415);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(931, 170);
+            this.panel1.TabIndex = 12;
             // 
             // MainForm
             // 
@@ -2517,13 +2514,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_panel4)).EndInit();
             this.panel10_panel4.ResumeLayout(false);
             this.panel10_panel4.PerformLayout();
-            this.admin_panel3.ResumeLayout(false);
-            this.admin_panel3.PerformLayout();
+            this.Admin_panel_ban.ResumeLayout(false);
+            this.Admin_panel_ban.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_panel3)).EndInit();
-            this.admin_panel2.ResumeLayout(false);
-            this.admin_panel2.PerformLayout();
+            this.Admin_panel_staff.ResumeLayout(false);
+            this.Admin_panel_staff.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_panel2)).EndInit();
-            this.admin_panel1.ResumeLayout(false);
+            this.Admin_panel_dashboard.ResumeLayout(false);
             this.panel25_panel1.ResumeLayout(false);
             this.panel25_panel1.PerformLayout();
             this.panel24_panel1.ResumeLayout(false);
@@ -2534,6 +2531,8 @@
             this.panel20_panel1.PerformLayout();
             this.panel19_panel1.ResumeLayout(false);
             this.panel19_panel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2555,26 +2554,10 @@
         public System.Windows.Forms.Panel admin_panel6;
         public System.Windows.Forms.Panel admin_panel5;
         public System.Windows.Forms.Panel admin_panel4;
-        public System.Windows.Forms.Panel admin_panel3;
-        public System.Windows.Forms.Panel admin_panel2;
-        public System.Windows.Forms.TextBox Equipments_textBox_quantity;
-        public System.Windows.Forms.TextBox Equipments_textBox_model;
-        public System.Windows.Forms.TextBox Equipments_textBox_cost;
-        public System.Windows.Forms.TextBox Equipments_textBox_brand;
-        public System.Windows.Forms.TextBox Equipments_textBox_category;
-        public System.Windows.Forms.TextBox Equipments_textBox_name;
-        public System.Windows.Forms.TextBox Equipments_textBox_id;
+        public System.Windows.Forms.Panel Admin_panel_ban;
+        public System.Windows.Forms.Panel Admin_panel_staff;
         public System.Windows.Forms.Button Equipments_button_update;
         public System.Windows.Forms.Button Equipments_button_add;
-        public System.Windows.Forms.TextBox Equipments_textBox_condition;
-        public System.Windows.Forms.Label label1_panel8;
-        public System.Windows.Forms.Label label2_panel8;
-        public System.Windows.Forms.Label label7_panel8;
-        public System.Windows.Forms.Label label6_panel8;
-        public System.Windows.Forms.Label label5_panel8;
-        public System.Windows.Forms.Label label4_panel8;
-        public System.Windows.Forms.Label label3_panel8;
-        public System.Windows.Forms.Label label8_panel8;
         public System.Windows.Forms.DataGridView Equipments_dataGridView;
         public System.Windows.Forms.Label label1_panel2;
         public System.Windows.Forms.DataGridView dataGridView1_panel2;
@@ -2583,9 +2566,9 @@
         public System.Windows.Forms.TextBox textBox4_panel2;
         public System.Windows.Forms.TextBox textBox5_panel2;
         public System.Windows.Forms.TextBox textBox3_panel2;
-        public System.Windows.Forms.Button button3_panel2;
-        public System.Windows.Forms.Button button2_panel2;
-        public System.Windows.Forms.Button button1_panel2;
+        public System.Windows.Forms.Button Staff_button_update;
+        public System.Windows.Forms.Button Staff_button_delete;
+        public System.Windows.Forms.Button Staff_button_add;
         public System.Windows.Forms.TextBox textBox1_panel3;
         public System.Windows.Forms.Label label2_panel3;
         public System.Windows.Forms.Label label1_panel3;
@@ -2605,7 +2588,7 @@
         public System.Windows.Forms.Label label24;
         public System.Windows.Forms.Label label23;
         public System.Windows.Forms.Label label25;
-        public System.Windows.Forms.Panel admin_panel1;
+        public System.Windows.Forms.Panel Admin_panel_dashboard;
         public System.Windows.Forms.DataGridView dataGridView1_panel6;
         public System.Windows.Forms.DateTimePicker dateTimePicker1_panel2;
         public System.Windows.Forms.ComboBox comboBox1_panel2;
@@ -2680,7 +2663,6 @@
         public System.Windows.Forms.Panel panel18;
         public System.Windows.Forms.Label label38;
         public System.Windows.Forms.TextBox textBox2_panel7;
-        public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.Label label42;
         public System.Windows.Forms.Label label41;
         public System.Windows.Forms.Label label40;
@@ -2734,6 +2716,23 @@
         public System.Windows.Forms.Button button11;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView dataGridView1_panel10;
+        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.ComboBox Equipments_comboBox_category;
+        public System.Windows.Forms.ComboBox Equipments_comboBox_condition;
+        public System.Windows.Forms.Label label8_panel8;
+        public System.Windows.Forms.Label label7_panel8;
+        public System.Windows.Forms.Label label6_panel8;
+        public System.Windows.Forms.Label label5_panel8;
+        public System.Windows.Forms.Label label4_panel8;
+        public System.Windows.Forms.Label label3_panel8;
+        public System.Windows.Forms.Label label2_panel8;
+        public System.Windows.Forms.Label label1_panel8;
         public System.Windows.Forms.Button Equipments_button_clear;
+        public System.Windows.Forms.TextBox Equipments_textBox_quantity;
+        public System.Windows.Forms.TextBox Equipments_textBox_model;
+        public System.Windows.Forms.TextBox Equipments_textBox_cost;
+        public System.Windows.Forms.TextBox Equipments_textBox_brand;
+        public System.Windows.Forms.TextBox Equipments_textBox_name;
+        public System.Windows.Forms.TextBox Equipments_textBox_id;
     }
 }
