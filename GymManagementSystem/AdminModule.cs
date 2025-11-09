@@ -98,8 +98,92 @@ namespace GymManagementSystem
             mainForm.panel2.Visible = true;
             // panels
 
+            // textboxes, labels, datetime picker,  combobox 
+            TextBox[] textBoxes = { mainForm.textBox1_panel2,
+                                    mainForm.textBox2_panel2,
+                                    mainForm.textBox3_panel2,
+                                    mainForm.textBox4_panel2,
+                                    mainForm.textBox5_panel2,
+                                    mainForm.textBox6_panel2,
+                                    mainForm.textBox7_panel2,
+                                    mainForm.textBox8_panel2 };
+            foreach (var textBox in textBoxes)
+            {
+                textBox.Visible = true;
+            }
+
+            mainForm.textBox8_panel2.Multiline = true;
+            mainForm.textBox8_panel2.WordWrap = true;
+            mainForm.textBox8_panel2.Height = 59;
+
+            Label[] labels = { mainForm.label1_panel2,
+                               mainForm.label2_panel2,
+                               mainForm.label3_panel2,
+                               mainForm.label4_panel2,
+                               mainForm.label5_panel2,
+                               mainForm.label6_panel2,
+                               mainForm.label7_panel2,
+                               mainForm.label8_panel2,
+                               mainForm.label9_panel2,
+                               mainForm.label10_panel2,
+                               mainForm.label11_panel2,
+                               mainForm.label12_panel2 };
+            foreach (var label in labels)
+            {
+                label.Visible = true;
+            }
+
+            mainForm.label1_panel2.Text = "Username";
+            mainForm.label2_panel2.Text = "Password";
+            mainForm.label3_panel2.Text = "Account Type";
+            mainForm.label4_panel2.Text = "First Name";
+            mainForm.label5_panel2.Text = "Middle Name";
+            mainForm.label6_panel2.Text = "Last Name";
+            mainForm.label7_panel2.Text = "Date Of Birth";
+            mainForm.label8_panel2.Text = "Sex";
+            mainForm.label9_panel2.Text = "Contact No.";
+            mainForm.label10_panel2.Text = "Email";
+            mainForm.label11_panel2.Text = "Address";
+            mainForm.label12_panel2.Text = "Schedule";
+
+            mainForm.dateTimePicker1_panel2.Visible = true;
+
+            mainForm.comboBox1_panel2.Visible = true;
+            // textboxes, labels, datetime picker,  combobox 
+
+            // radio buttons
+            mainForm.radioButton1_panel2.Visible = true;
+            mainForm.radioButton1_panel2.Text = "Male";
+
+            mainForm.radioButton2_panel2.Visible = true;
+            mainForm.radioButton2_panel2.Text = "Female";
+            // radio buttons
+
+            //checkboxes
+            CheckBox[] checkBoxes = { mainForm.checkBox1_panel2,
+                                      mainForm.checkBox2_panel2,
+                                      mainForm.checkBox3_panel2,
+                                      mainForm.checkBox4_panel2,
+                                      mainForm.checkBox5_panel2,
+                                      mainForm.checkBox6_panel2,
+                                      mainForm.checkBox7_panel2 };
+            foreach (var checkBox in checkBoxes) 
+            {
+                checkBox.Visible = true;
+            }
+
+            //checkboxes
+
+            // buttons 
+            mainForm.button1_panel2.Visible = true;
+            mainForm.button2_panel2.Visible = true;
+            mainForm.button3_panel2.Visible = true;
+            // buttons 
+
+            // datagridviews
             mainForm.dataGridView1_panel2.Visible = true;
             mainForm.dataGridView1_panel2.DataSource = Database.GetMembersTable();
+            // datagridviews
         }
 
         public static void BanButtonClick(MainForm mainForm)
