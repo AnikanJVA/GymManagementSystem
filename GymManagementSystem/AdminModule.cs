@@ -105,21 +105,17 @@ namespace GymManagementSystem
                                     mainForm.textBox4_panel2,
                                     mainForm.textBox5_panel2,
                                     mainForm.textBox6_panel2,
-                                    mainForm.textBox7_panel2,
-                                    mainForm.textBox8_panel2,
-                                    mainForm.textBox9_panel2,
-                                    mainForm.textBox10_panel2 };
+                                    mainForm.textBox7_panel2 };
             foreach (var textBox in textBoxes)
             {
                 textBox.Visible = true;
             }
 
-            mainForm.textBox8_panel2.Multiline = true;
-            mainForm.textBox8_panel2.WordWrap = true;
-            mainForm.textBox8_panel2.Height = 59;
+            mainForm.textBox6_panel2.Multiline = true;
+            mainForm.textBox6_panel2.WordWrap = true;
+            mainForm.textBox6_panel2.Height = 59;
 
-            mainForm.textBox9_panel2.ReadOnly = true;
-            mainForm.textBox10_panel2.ReadOnly = true;
+            mainForm.textBox7_panel2.ReadOnly = true;
 
             Label[] labels = { mainForm.label1_panel2,
                                mainForm.label2_panel2,
@@ -133,38 +129,29 @@ namespace GymManagementSystem
                                mainForm.label10_panel2,
                                mainForm.label11_panel2,
                                mainForm.label12_panel2,
-                               mainForm.label13_panel2,
-                               mainForm.label14_panel2,
-                               mainForm.label15_panel2,
-                               mainForm.label16_panel2 };
+                               mainForm.label12_panel2 };
             foreach (var label in labels)
             {
                 label.Visible = true;
             }
 
-            mainForm.label1_panel2.Text = "Username";
-            mainForm.label2_panel2.Text = "Password";
-            mainForm.label3_panel2.Text = "Account Type";
-            mainForm.label4_panel2.Text = "First Name";
-            mainForm.label5_panel2.Text = "Middle Name";
-            mainForm.label6_panel2.Text = "Last Name";
-            mainForm.label7_panel2.Text = "Date Of Birth";
-            mainForm.label8_panel2.Text = "Sex";
-            mainForm.label9_panel2.Text = "Contact No.";
-            mainForm.label10_panel2.Text = "Email";
-            mainForm.label11_panel2.Text = "Address";
-            mainForm.label12_panel2.Text = "Schedule";
-            mainForm.label13_panel2.Text = "Position";
-            mainForm.label13_panel2.Text = "Position";
-            mainForm.label14_panel2.Text = "Status";
-            mainForm.label15_panel2.Text = "UserID";
-            mainForm.label16_panel2.Text = "StaffID";
+            mainForm.label1_panel2.Text = "First Name";
+            mainForm.label2_panel2.Text = "Middle Name";
+            mainForm.label3_panel2.Text = "Last Name";
+            mainForm.label4_panel2.Text = "Date Of Birth";
+            mainForm.label5_panel2.Text = "Sex";
+            mainForm.label6_panel2.Text = "Contact No.";
+            mainForm.label7_panel2.Text = "Email";
+            mainForm.label8_panel2.Text = "Address";
+            mainForm.label9_panel2.Text = "Schedule";
+            mainForm.label10_panel2.Text = "Position";
+            mainForm.label11_panel2.Text = "Status";
+            mainForm.label12_panel2.Text = "StaffID";
 
             mainForm.dateTimePicker1_panel2.Visible = true;
 
             mainForm.comboBox1_panel2.Visible = true;
             mainForm.comboBox2_panel2.Visible = true;
-            mainForm.comboBox3_panel2.Visible = true;
             // textboxes, labels, datetime picker,  combobox 
 
             // radio buttons

@@ -107,16 +107,9 @@ namespace ClassLibrary
                                 s.email,
                                 s.schedule,
                                 p.positionName,
-                                s.UserID,
-                                u.username,
-                                u.accType,
-                                u.status
+                                s.status
                             FROM
                                 staffs s
-                            INNER JOIN
-                                users u 
-                            ON 
-                                s.userID = u.userID
                             INNER JOIN
                                 positions p
                             ON

@@ -174,7 +174,7 @@ namespace GymManagementSystem
                         MessageBox.Show("Don't leave anything empty.", "Input Required",
                                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                         isFieldsComplete = false;
-                        return;
+                        break;
                     }
                     isFieldsComplete = true;
                 }
@@ -221,7 +221,7 @@ namespace GymManagementSystem
                         MessageBox.Show("Don't leave anything empty.", "Input Required",
                                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                         isFieldsComplete = false;
-                        return;
+                        break;
                     }
                     isFieldsComplete = true;
                 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2025 at 12:29 AM
+-- Generation Time: Nov 09, 2025 at 04:48 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -234,7 +234,8 @@ CREATE TABLE `positions` (
 --
 
 INSERT INTO `positions` (`positionID`, `positionName`, `baseSalary`, `hourlyRate`) VALUES
-(1, 'Receptionist', 22240.00, 110.00);
+(1, 'Receptionist', 22240.00, 110.00),
+(2, 'Coach', 33340.00, 420.00);
 
 -- --------------------------------------------------------
 
@@ -297,7 +298,6 @@ CREATE TABLE `staffattendance` (
 
 CREATE TABLE `staffs` (
   `staffID` bigint(20) NOT NULL,
-  `UserID` bigint(20) DEFAULT NULL,
   `lastName` varchar(50) DEFAULT NULL,
   `firstName` varchar(50) DEFAULT NULL,
   `middleName` varchar(50) DEFAULT NULL,
@@ -307,15 +307,17 @@ CREATE TABLE `staffs` (
   `email` varchar(100) DEFAULT NULL,
   `address` text DEFAULT NULL,
   `schedule` varchar(20) DEFAULT NULL,
-  `positionID` bigint(20) DEFAULT NULL
+  `positionID` bigint(20) DEFAULT NULL,
+  `status` varchar(10) NOT NULL DEFAULT 'ACTIVE'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `staffs`
 --
 
-INSERT INTO `staffs` (`staffID`, `UserID`, `lastName`, `firstName`, `middleName`, `DoB`, `Sex`, `contactNumber`, `email`, `address`, `schedule`, `positionID`) VALUES
-(2, 4, 'Smith', 'John', 'A.', '1990-05-15', 'Male', '09123456789', 'john.smith@gym.com', 'davao city', 'M, T, W, Th, F,', 1);
+INSERT INTO `staffs` (`staffID`, `lastName`, `firstName`, `middleName`, `DoB`, `Sex`, `contactNumber`, `email`, `address`, `schedule`, `positionID`, `status`) VALUES
+(2, 'Smith', 'John', 'A.', '1990-05-15', 'Male', '09123456789', 'john.smith@gym.com', 'davao city', 'M, T, W, Th, F,', 1, 'ACTIVE'),
+(4, 'Doe', 'Mark', 'Raulos', '2000-01-30', 'Male', '09012345678', 'mark.doe@coaching.com', 'davao city', 'M, W, F,', 2, 'ACTIVE');
 
 -- --------------------------------------------------------
 
@@ -338,8 +340,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`UserID`, `username`, `password`, `accType`, `status`) VALUES
 (1, 'admin', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'ADMIN', 'ACTIVE'),
 (2, 're', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'RECEPTIONIST', 'ACTIVE'),
-(3, 'co', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'COACH', 'ACTIVE'),
-(4, 'tryRE', '123', 'RECEPTIONIST', 'ACTIVE');
+(4, 'tryRE', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'RECEPTIONIST', 'ACTIVE');
 
 --
 -- Indexes for dumped tables
@@ -453,7 +454,6 @@ ALTER TABLE `staffattendance`
 --
 ALTER TABLE `staffs`
   ADD PRIMARY KEY (`staffID`),
-  ADD KEY `UserID` (`UserID`),
   ADD KEY `positionID` (`positionID`);
 
 --
@@ -530,7 +530,7 @@ ALTER TABLE `payroll`
 -- AUTO_INCREMENT for table `positions`
 --
 ALTER TABLE `positions`
-  MODIFY `positionID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `positionID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `sales`
@@ -560,7 +560,7 @@ ALTER TABLE `staffattendance`
 -- AUTO_INCREMENT for table `staffs`
 --
 ALTER TABLE `staffs`
-  MODIFY `staffID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `staffID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -639,7 +639,6 @@ ALTER TABLE `staffattendance`
 -- Constraints for table `staffs`
 --
 ALTER TABLE `staffs`
-  ADD CONSTRAINT `staffs_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`),
   ADD CONSTRAINT `staffs_ibfk_2` FOREIGN KEY (`positionID`) REFERENCES `positions` (`positionID`);
 COMMIT;
 
