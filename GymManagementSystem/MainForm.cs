@@ -12,7 +12,8 @@ namespace GymManagementSystem
 {
     public partial class MainForm : Form
     {
-        public string accType;
+        private string accType;
+        private Equipment currentEquipment;
 
         public MainForm(string accType)
         {
@@ -20,6 +21,8 @@ namespace GymManagementSystem
             this.accType = accType;
             var view = Modules.CreateView(accType);
             view.RunModule(this);
+
+            currentEquipment = new Equipment();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -129,8 +132,8 @@ namespace GymManagementSystem
             if (accType == "ADMIN")
             {
                 bool isFieldsComplete = false;
-                TextBox[] requiredFields = {textBox2_panel8, textBox3_panel8, textBox4_panel8,
-                                            textBox5_panel8, textBox6_panel8, textBox7_panel8, textBox8_panel8};
+                TextBox[] requiredFields = {Equipments_textBox_name, Equipments_textBox_brand, Equipments_textBox_model,
+                                            Equipments_textBox_category, Equipments_textBox_cost, Equipments_textBox_quantity, Equipments_textBox_condition};
                 foreach (TextBox tb in requiredFields)
                 {
                     if (string.IsNullOrWhiteSpace(tb.Text))
@@ -145,8 +148,8 @@ namespace GymManagementSystem
 
                 if (isFieldsComplete)
                 {
-                    bool isSuccessful = AdminActions.AddEquipment(textBox2_panel8.Text, textBox3_panel8.Text, textBox4_panel8.Text, textBox5_panel8.Text,
-                                              Convert.ToInt64(textBox6_panel8.Text), Convert.ToInt32(textBox7_panel8.Text), textBox8_panel8.Text);
+                    bool isSuccessful = AdminActions.AddEquipment(Equipments_textBox_name.Text, Equipments_textBox_brand.Text, Equipments_textBox_model.Text, Equipments_textBox_category.Text,
+                                              Convert.ToInt64(Equipments_textBox_cost.Text), Convert.ToInt32(Equipments_textBox_quantity.Text), Equipments_textBox_condition.Text);
                     if (isSuccessful)
                     {
                         MessageBox.Show("Equipment Added.", "Success");
@@ -154,7 +157,7 @@ namespace GymManagementSystem
                     }
                     else
                     {
-                        MessageBox.Show("Equipment Not Added.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Equipment Not Added. Equipment is duplicate.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
                 }
@@ -165,8 +168,8 @@ namespace GymManagementSystem
             if (accType == "ADMIN")
             {
                 bool isFieldsComplete = false;
-                TextBox[] requiredFields = {textBox2_panel8, textBox3_panel8, textBox4_panel8,
-                                            textBox5_panel8, textBox6_panel8, textBox7_panel8, textBox8_panel8};
+                TextBox[] requiredFields = {Equipments_textBox_name, Equipments_textBox_brand, Equipments_textBox_model,
+                                            Equipments_textBox_category, Equipments_textBox_cost, Equipments_textBox_quantity, Equipments_textBox_condition};
                 foreach (TextBox tb in requiredFields)
                 {
                     if (string.IsNullOrWhiteSpace(tb.Text))
@@ -181,16 +184,16 @@ namespace GymManagementSystem
                 if (isFieldsComplete)
                 {
 
-                    bool isSuccessful = AdminActions.UpdateEquipment(textBox2_panel8.Text, textBox3_panel8.Text, textBox4_panel8.Text, textBox5_panel8.Text,
-                                              Convert.ToInt64(textBox6_panel8.Text), Convert.ToInt32(textBox7_panel8.Text), textBox8_panel8.Text);
+                    bool isSuccessful = AdminActions.UpdateEquipment(Convert.ToInt64(Equipments_textBox_id.Text), Equipments_textBox_name.Text, Equipments_textBox_brand.Text, Equipments_textBox_model.Text, Equipments_textBox_category.Text,
+                                              Convert.ToInt64(Equipments_textBox_cost.Text), Convert.ToInt32(Equipments_textBox_quantity.Text), Equipments_textBox_condition.Text);
                     if (isSuccessful)
                     {
-                        MessageBox.Show("Equipment Added.", "Success");
+                        MessageBox.Show("Equipment updated.", "Success");
                         UpdateDataGridViews();
                     }
                     else
                     {
-                        MessageBox.Show("Equipment Not Added.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Equipment not updated.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
                 }
@@ -201,7 +204,7 @@ namespace GymManagementSystem
         {
             if (accType == "ADMIN")
             {
-                dataGridView1_panel8.DataSource = Database.GetEquipmentsTable();
+                Equipments_dataGridView.DataSource = Database.GetEquipmentsTable();
                 dataGridView1_panel3.DataSource = Database.GetMembersTable();
                 dataGridView1_panel6.DataSource = Database.GetStaffsTable();
                 dataGridView1_panel9.DataSource = Database.GetUsersTable();
@@ -262,9 +265,60 @@ namespace GymManagementSystem
             }
         }
 
-        private void panel9_Paint(object sender, PaintEventArgs e)
+        private void Equipments_dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            long equipmentID = 0;
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                var cell = Equipments_dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                if (cell.Value != null)
+                {
+                    if (e.RowIndex >= 0)
+                    {
+                        DataGridViewRow row = Equipments_dataGridView.Rows[e.RowIndex];
+                        try
+                        {
+                            equipmentID = Convert.ToInt64(row.Cells["EquipmentID"].Value.ToString());
+                            currentEquipment = Database.RetriveEquipment(equipmentID);
+                        }
+                        catch (Exception ex)
+                        {
 
+                        }
+                        Equipment_AutoFill();
+                    }
+                    else
+                    {
+                        Equipment_ClearFill();
+                    }
+                }
+            }
         }
+
+        public void Equipment_AutoFill()
+        {
+            Equipments_textBox_id.Text = currentEquipment.EquipmentID.ToString();
+            Equipments_textBox_name.Text = currentEquipment.EquipmentName;
+            Equipments_textBox_brand.Text = currentEquipment.Brand;
+            Equipments_textBox_model.Text = currentEquipment.Model;
+            Equipments_textBox_category.Text = Database.GetEquipmentCategoryName(currentEquipment.CategoryID);
+            Equipments_textBox_cost.Text = currentEquipment.Cost.ToString();
+            Equipments_textBox_quantity.Text = currentEquipment.Quantity.ToString();
+            Equipments_textBox_condition.Text = currentEquipment.EquipmentCondition;
+        }
+
+        public void Equipment_ClearFill()
+        {
+            Equipments_textBox_id.Clear();
+            Equipments_textBox_name.Clear();
+            Equipments_textBox_brand.Clear();
+            Equipments_textBox_model.Clear();
+            Equipments_textBox_category.Clear();
+            Equipments_textBox_cost.Clear();
+            Equipments_textBox_quantity.Clear();
+            Equipments_textBox_condition.Clear();
+        }
+
+
     }
 }
