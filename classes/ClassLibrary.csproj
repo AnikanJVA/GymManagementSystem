@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminActions.cs" />
+    <Compile Include="Equipment.cs" />
     <Compile Include="ReceptionistActions.cs" />
     <Compile Include="Staff.cs" />
     <Compile Include="Database.cs" />

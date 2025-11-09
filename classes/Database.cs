@@ -4,7 +4,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
+using System.Management;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,6 +23,7 @@ namespace ClassLibrary
             string connectionString = "server=localhost;database=gym;user=root;password=;";
             connection = new MySqlConnection(connectionString);
             connection.Open();
+
         }
 
         public static Database Instance => instance.Value;
@@ -40,13 +44,13 @@ namespace ClassLibrary
         {
             DataTable table = new DataTable();
 
-            string query = @"SELECT e.equipmentID,
-                            e.equipmentName,
-                            e.brand,
-                            e.model,
-                            c.categoryName AS category,
-                            e.cost,
-                            e.quantity,
+            string query = @"SELECT e.EquipmentID,
+                            e.EquipmentName,
+                            e.Brand,
+                            e.Model,
+                            c.categoryName AS Category,
+                            e.Cost,
+                            e.Quantity,
                             e.EquipmentCondition
                         FROM equipments e
                         JOIN equipmentcategories c 
@@ -136,7 +140,7 @@ namespace ClassLibrary
             }
         }
 
-        public static long GetCategoryName(string categoryName)
+        public static long GetEquipmentCategoryID(string categoryName)
         {
             string selectQuery = "SELECT categoryID FROM equipmentcategories WHERE categoryName = @categoryName";
 
@@ -151,6 +155,22 @@ namespace ClassLibrary
                 }
             }
             return 0;
+        }
+
+        public static string GetEquipmentCategoryName(long categoryID)
+        {
+            string selectQuery = "SELECT categoryName FROM equipmentCategories WHERE categoryID = @categoryID";
+            using (MySqlCommand cmd = new MySqlCommand(selectQuery, connection))
+            {
+                cmd.Parameters.AddWithValue("@categoryID", categoryID);
+
+                object result = cmd.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    return result.ToString();
+                }
+            }
+            return null;
         }
 
         public static long GetPositionID(string positionName)
@@ -168,6 +188,42 @@ namespace ClassLibrary
                 }
             }
             return 0;
+        }
+
+        public static Equipment RetriveEquipment(long equipmentID)
+        {
+            Equipment equipment = new Equipment();
+
+            string query = "SELECT * FROM Equipments WHERE equipmentID = @equipmentID";
+            using (MySqlCommand cmd = new MySqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@equipmentID", equipmentID);
+                try
+                {
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        equipment.EquipmentID = Convert.ToInt64(reader["EquipmentID"]);
+                        equipment.EquipmentName = reader["EquipmentName"].ToString();
+                        equipment.Brand = reader["Brand"].ToString();
+                        equipment.Model = reader["Model"].ToString();
+                        equipment.CategoryID = Convert.ToInt64(reader["CategoryID"]);
+                        equipment.Cost = Convert.ToInt64(reader["Cost"]);
+                        equipment.Quantity = Convert.ToInt32(reader["Quantity"]);
+                        equipment.EquipmentCondition = reader["EquipmentCondition"].ToString();
+                        reader.Close();
+                        return equipment;
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    Trace.WriteLine("+++++++ Error retriveing Equipment: " + ex.Message);
+                    return null;
+                }
+            }
+            return null;
         }
     }
 }

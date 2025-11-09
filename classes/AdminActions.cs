@@ -34,7 +34,7 @@ namespace ClassLibrary
                 }
             }
 
-            long categoryID = Database.GetCategoryName(category);
+            long categoryID = Database.GetEquipmentCategoryID(category);
 
             string insertQuery = @"INSERT INTO equipments (equipmentName, brand, model, categoryID, cost, quantity, equipmentCondition)
                                    VALUES (@equipmentName, @brand, @model, @categoryID, @cost, @quantity, @equipmentCondition);";
@@ -61,23 +61,25 @@ namespace ClassLibrary
 
 
         
-            public static bool UpdateEquipment(
-                                    string equipmentName,
-                                    string brand,
-                                    string model,
-                                    string category,
-                                    double cost,
-                                    int quantity,
-                                    string equipmentCondition)
+            public static bool UpdateEquipment(long equipmentID,
+                                                string equipmentName,
+                                                string brand,
+                                                string model,
+                                                string category,
+                                                double cost,
+                                                int quantity,
+                                                string equipmentCondition)
 
         
         {
-            string checkQuery = @"SELECT COUNT(*) AS DuplicateCount
-                          FROM equipments
-                          WHERE EquipmentName = @equipmentName "; 
+            string checkQuery = @"SELECT COUNT(*)
+                                  FROM equipments
+                                  WHERE EquipmentID <> @equipmentID
+                                  AND EquipmentName = @equipmentName "; 
 
             using (MySqlCommand checkCmd = new MySqlCommand(checkQuery, connection))
             {
+                checkCmd.Parameters.AddWithValue("@equipmentID", equipmentID);
                 checkCmd.Parameters.AddWithValue("@equipmentName", equipmentName);
 
                 if (Convert.ToInt32(checkCmd.ExecuteScalar()) > 0)
@@ -85,7 +87,7 @@ namespace ClassLibrary
                     return false;
                 }
             }
-            long categoryID = Database.GetCategoryName(category);
+            long categoryID = Database.GetEquipmentCategoryID(category);
 
             string updateQuery = @"UPDATE equipments SET 
                            equipmentName = @equipmentName,
@@ -95,7 +97,7 @@ namespace ClassLibrary
                            cost = @cost,
                            quantity = @quantity,
                            equipmentCondition = @equipmentCondition
-                           WHERE equipmentName = @equipmentName";
+                           WHERE equipmentID = @equipmentID";
 
             using (MySqlCommand updateCmd = new MySqlCommand(updateQuery, connection))
             {
@@ -106,6 +108,7 @@ namespace ClassLibrary
                 updateCmd.Parameters.AddWithValue("@cost", cost);
                 updateCmd.Parameters.AddWithValue("@quantity", quantity);
                 updateCmd.Parameters.AddWithValue("@equipmentCondition", equipmentCondition);
+                updateCmd.Parameters.AddWithValue("@equipmentID", equipmentID);
                 try
                 {
                     return updateCmd.ExecuteNonQuery() > 0;
