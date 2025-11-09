@@ -78,9 +78,9 @@ namespace ClassLibrary
                                 mt.planName
                             FROM 
                                 members m
-                                inner join
+                            INNER JOIN
                                 membershiptypes mt
-                                on
+                            ON
                                 m.planid = mt.planID;";
 
             using (MySqlCommand cmd = new MySqlCommand(query, connection))
@@ -92,24 +92,35 @@ namespace ClassLibrary
         }
 
         
-        public static DataTable GetStaffTable() // to fix: include record from users table 
+        public static DataTable GetStaffsTable()
         {
             DataTable table = new DataTable();
 
             string query = @"SELECT
                                 s.staffID,
-                                s.UserID,
-                                s.lastName,
                                 s.firstName,
                                 s.middleName,
+                                s.lastName,
                                 s.DoB,
                                 s.Sex,
                                 s.contactNumber,
                                 s.email,
                                 s.schedule,
-                                s.positionID
+                                p.positionName,
+                                s.UserID,
+                                u.username,
+                                u.accType,
+                                u.status
                             FROM
-                                staffs s";
+                                staffs s
+                            INNER JOIN
+                                users u 
+                            ON 
+                                s.userID = u.userID
+                            INNER JOIN
+                                positions p
+                            ON
+                                s.positionID = p.positionID";
             using (MySqlCommand cmd = new MySqlCommand(query, connection))
             using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
             {

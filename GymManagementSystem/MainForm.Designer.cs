@@ -210,6 +210,12 @@
             this.checkBox7_panel2 = new System.Windows.Forms.CheckBox();
             this.comboBox2_panel2 = new System.Windows.Forms.ComboBox();
             this.label13_panel2 = new System.Windows.Forms.Label();
+            this.label14_panel2 = new System.Windows.Forms.Label();
+            this.comboBox3_panel2 = new System.Windows.Forms.ComboBox();
+            this.label15_panel2 = new System.Windows.Forms.Label();
+            this.label16_panel2 = new System.Windows.Forms.Label();
+            this.textBox9_panel2 = new System.Windows.Forms.TextBox();
+            this.textBox10_panel2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -553,6 +559,7 @@
             this.panel2.Controls.Add(this.checkBox1_panel2);
             this.panel2.Controls.Add(this.radioButton2_panel2);
             this.panel2.Controls.Add(this.radioButton1_panel2);
+            this.panel2.Controls.Add(this.comboBox3_panel2);
             this.panel2.Controls.Add(this.comboBox2_panel2);
             this.panel2.Controls.Add(this.comboBox1_panel2);
             this.panel2.Controls.Add(this.dateTimePicker1_panel2);
@@ -566,6 +573,9 @@
             this.panel2.Controls.Add(this.textBox5_panel2);
             this.panel2.Controls.Add(this.textBox3_panel2);
             this.panel2.Controls.Add(this.textBox2_panel2);
+            this.panel2.Controls.Add(this.label16_panel2);
+            this.panel2.Controls.Add(this.label15_panel2);
+            this.panel2.Controls.Add(this.label14_panel2);
             this.panel2.Controls.Add(this.label13_panel2);
             this.panel2.Controls.Add(this.label12_panel2);
             this.panel2.Controls.Add(this.label11_panel2);
@@ -579,6 +589,8 @@
             this.panel2.Controls.Add(this.label3_panel2);
             this.panel2.Controls.Add(this.label2_panel2);
             this.panel2.Controls.Add(this.label1_panel2);
+            this.panel2.Controls.Add(this.textBox10_panel2);
+            this.panel2.Controls.Add(this.textBox9_panel2);
             this.panel2.Controls.Add(this.textBox1_panel2);
             this.panel2.Controls.Add(this.dataGridView1_panel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -741,7 +753,7 @@
             this.dataGridView1_panel2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1_panel2.Location = new System.Drawing.Point(17, 10);
             this.dataGridView1_panel2.Name = "dataGridView1_panel2";
-            this.dataGridView1_panel2.Size = new System.Drawing.Size(931, 271);
+            this.dataGridView1_panel2.Size = new System.Drawing.Size(931, 251);
             this.dataGridView1_panel2.TabIndex = 1;
             this.dataGridView1_panel2.Visible = false;
             // 
@@ -1149,7 +1161,6 @@
             this.textBox1_panel8.Size = new System.Drawing.Size(195, 20);
             this.textBox1_panel8.TabIndex = 1;
             this.textBox1_panel8.Visible = false;
-            this.textBox1_panel8.TextChanged += new System.EventHandler(this.textBox1_panel8_TextChanged);
             // 
             // label8
             // 
@@ -1508,7 +1519,6 @@
             this.label22.Size = new System.Drawing.Size(90, 16);
             this.label22.TabIndex = 13;
             this.label22.Text = "Pay Period*";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // label21
             // 
@@ -1704,7 +1714,6 @@
             this.label14.Size = new System.Drawing.Size(85, 16);
             this.label14.TabIndex = 5;
             this.label14.Text = "From Date*";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label15
             // 
@@ -1873,7 +1882,6 @@
             this.label34.Size = new System.Drawing.Size(87, 13);
             this.label34.TabIndex = 4;
             this.label34.Text = "Largest Category";
-            this.label34.Click += new System.EventHandler(this.label34_Click);
             // 
             // panel11
             // 
@@ -2014,7 +2022,7 @@
             // 
             this.label8_panel2.AutoSize = true;
             this.label8_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8_panel2.Location = new System.Drawing.Point(501, 308);
+            this.label8_panel2.Location = new System.Drawing.Point(32, 579);
             this.label8_panel2.Name = "label8_panel2";
             this.label8_panel2.Size = new System.Drawing.Size(37, 16);
             this.label8_panel2.TabIndex = 3;
@@ -2025,7 +2033,7 @@
             // 
             this.radioButton1_panel2.AutoSize = true;
             this.radioButton1_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1_panel2.Location = new System.Drawing.Point(643, 303);
+            this.radioButton1_panel2.Location = new System.Drawing.Point(174, 574);
             this.radioButton1_panel2.Name = "radioButton1_panel2";
             this.radioButton1_panel2.Size = new System.Drawing.Size(100, 20);
             this.radioButton1_panel2.TabIndex = 19;
@@ -2038,7 +2046,7 @@
             // 
             this.radioButton2_panel2.AutoSize = true;
             this.radioButton2_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2_panel2.Location = new System.Drawing.Point(738, 303);
+            this.radioButton2_panel2.Location = new System.Drawing.Point(269, 574);
             this.radioButton2_panel2.Name = "radioButton2_panel2";
             this.radioButton2_panel2.Size = new System.Drawing.Size(100, 20);
             this.radioButton2_panel2.TabIndex = 20;
@@ -2051,7 +2059,7 @@
             // 
             this.label9_panel2.AutoSize = true;
             this.label9_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9_panel2.Location = new System.Drawing.Point(501, 340);
+            this.label9_panel2.Location = new System.Drawing.Point(500, 310);
             this.label9_panel2.Name = "label9_panel2";
             this.label9_panel2.Size = new System.Drawing.Size(37, 16);
             this.label9_panel2.TabIndex = 3;
@@ -2061,7 +2069,7 @@
             // textBox6_panel2
             // 
             this.textBox6_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6_panel2.Location = new System.Drawing.Point(641, 335);
+            this.textBox6_panel2.Location = new System.Drawing.Point(640, 305);
             this.textBox6_panel2.Multiline = true;
             this.textBox6_panel2.Name = "textBox6_panel2";
             this.textBox6_panel2.Size = new System.Drawing.Size(281, 29);
@@ -2072,7 +2080,7 @@
             // 
             this.label10_panel2.AutoSize = true;
             this.label10_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10_panel2.Location = new System.Drawing.Point(501, 388);
+            this.label10_panel2.Location = new System.Drawing.Point(500, 358);
             this.label10_panel2.Name = "label10_panel2";
             this.label10_panel2.Size = new System.Drawing.Size(37, 16);
             this.label10_panel2.TabIndex = 3;
@@ -2082,7 +2090,7 @@
             // textBox7_panel2
             // 
             this.textBox7_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7_panel2.Location = new System.Drawing.Point(641, 380);
+            this.textBox7_panel2.Location = new System.Drawing.Point(640, 350);
             this.textBox7_panel2.Multiline = true;
             this.textBox7_panel2.Name = "textBox7_panel2";
             this.textBox7_panel2.Size = new System.Drawing.Size(281, 29);
@@ -2093,7 +2101,7 @@
             // 
             this.label11_panel2.AutoSize = true;
             this.label11_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11_panel2.Location = new System.Drawing.Point(501, 428);
+            this.label11_panel2.Location = new System.Drawing.Point(500, 398);
             this.label11_panel2.Name = "label11_panel2";
             this.label11_panel2.Size = new System.Drawing.Size(37, 16);
             this.label11_panel2.TabIndex = 3;
@@ -2103,7 +2111,7 @@
             // textBox8_panel2
             // 
             this.textBox8_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8_panel2.Location = new System.Drawing.Point(641, 419);
+            this.textBox8_panel2.Location = new System.Drawing.Point(640, 389);
             this.textBox8_panel2.Multiline = true;
             this.textBox8_panel2.Name = "textBox8_panel2";
             this.textBox8_panel2.Size = new System.Drawing.Size(281, 59);
@@ -2114,7 +2122,7 @@
             // 
             this.label12_panel2.AutoSize = true;
             this.label12_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12_panel2.Location = new System.Drawing.Point(501, 493);
+            this.label12_panel2.Location = new System.Drawing.Point(500, 463);
             this.label12_panel2.Name = "label12_panel2";
             this.label12_panel2.Size = new System.Drawing.Size(37, 16);
             this.label12_panel2.TabIndex = 3;
@@ -2125,7 +2133,7 @@
             // 
             this.checkBox1_panel2.AutoSize = true;
             this.checkBox1_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1_panel2.Location = new System.Drawing.Point(587, 495);
+            this.checkBox1_panel2.Location = new System.Drawing.Point(586, 465);
             this.checkBox1_panel2.Name = "checkBox1_panel2";
             this.checkBox1_panel2.Size = new System.Drawing.Size(72, 20);
             this.checkBox1_panel2.TabIndex = 21;
@@ -2137,7 +2145,7 @@
             // 
             this.checkBox2_panel2.AutoSize = true;
             this.checkBox2_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2_panel2.Location = new System.Drawing.Point(673, 495);
+            this.checkBox2_panel2.Location = new System.Drawing.Point(672, 465);
             this.checkBox2_panel2.Name = "checkBox2_panel2";
             this.checkBox2_panel2.Size = new System.Drawing.Size(75, 20);
             this.checkBox2_panel2.TabIndex = 21;
@@ -2149,7 +2157,7 @@
             // 
             this.checkBox3_panel2.AutoSize = true;
             this.checkBox3_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3_panel2.Location = new System.Drawing.Point(754, 495);
+            this.checkBox3_panel2.Location = new System.Drawing.Point(753, 465);
             this.checkBox3_panel2.Name = "checkBox3_panel2";
             this.checkBox3_panel2.Size = new System.Drawing.Size(73, 20);
             this.checkBox3_panel2.TabIndex = 21;
@@ -2161,7 +2169,7 @@
             // 
             this.checkBox5_panel2.AutoSize = true;
             this.checkBox5_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5_panel2.Location = new System.Drawing.Point(586, 521);
+            this.checkBox5_panel2.Location = new System.Drawing.Point(585, 491);
             this.checkBox5_panel2.Name = "checkBox5_panel2";
             this.checkBox5_panel2.Size = new System.Drawing.Size(83, 20);
             this.checkBox5_panel2.TabIndex = 21;
@@ -2173,7 +2181,7 @@
             // 
             this.checkBox4_panel2.AutoSize = true;
             this.checkBox4_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4_panel2.Location = new System.Drawing.Point(838, 495);
+            this.checkBox4_panel2.Location = new System.Drawing.Point(837, 465);
             this.checkBox4_panel2.Name = "checkBox4_panel2";
             this.checkBox4_panel2.Size = new System.Drawing.Size(100, 20);
             this.checkBox4_panel2.TabIndex = 21;
@@ -2185,7 +2193,7 @@
             // 
             this.checkBox6_panel2.AutoSize = true;
             this.checkBox6_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6_panel2.Location = new System.Drawing.Point(673, 521);
+            this.checkBox6_panel2.Location = new System.Drawing.Point(672, 491);
             this.checkBox6_panel2.Name = "checkBox6_panel2";
             this.checkBox6_panel2.Size = new System.Drawing.Size(64, 20);
             this.checkBox6_panel2.TabIndex = 21;
@@ -2197,7 +2205,7 @@
             // 
             this.checkBox7_panel2.AutoSize = true;
             this.checkBox7_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox7_panel2.Location = new System.Drawing.Point(754, 521);
+            this.checkBox7_panel2.Location = new System.Drawing.Point(753, 491);
             this.checkBox7_panel2.Name = "checkBox7_panel2";
             this.checkBox7_panel2.Size = new System.Drawing.Size(80, 20);
             this.checkBox7_panel2.TabIndex = 21;
@@ -2209,7 +2217,7 @@
             // 
             this.comboBox2_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2_panel2.FormattingEnabled = true;
-            this.comboBox2_panel2.Location = new System.Drawing.Point(642, 558);
+            this.comboBox2_panel2.Location = new System.Drawing.Point(641, 528);
             this.comboBox2_panel2.Name = "comboBox2_panel2";
             this.comboBox2_panel2.Size = new System.Drawing.Size(279, 24);
             this.comboBox2_panel2.TabIndex = 18;
@@ -2219,12 +2227,75 @@
             // 
             this.label13_panel2.AutoSize = true;
             this.label13_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13_panel2.Location = new System.Drawing.Point(501, 556);
+            this.label13_panel2.Location = new System.Drawing.Point(500, 526);
             this.label13_panel2.Name = "label13_panel2";
             this.label13_panel2.Size = new System.Drawing.Size(37, 16);
             this.label13_panel2.TabIndex = 3;
             this.label13_panel2.Text = "label";
             this.label13_panel2.Visible = false;
+            // 
+            // label14_panel2
+            // 
+            this.label14_panel2.AutoSize = true;
+            this.label14_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14_panel2.Location = new System.Drawing.Point(500, 574);
+            this.label14_panel2.Name = "label14_panel2";
+            this.label14_panel2.Size = new System.Drawing.Size(37, 16);
+            this.label14_panel2.TabIndex = 3;
+            this.label14_panel2.Text = "label";
+            this.label14_panel2.Visible = false;
+            // 
+            // comboBox3_panel2
+            // 
+            this.comboBox3_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3_panel2.FormattingEnabled = true;
+            this.comboBox3_panel2.Location = new System.Drawing.Point(641, 570);
+            this.comboBox3_panel2.Name = "comboBox3_panel2";
+            this.comboBox3_panel2.Size = new System.Drawing.Size(279, 24);
+            this.comboBox3_panel2.TabIndex = 18;
+            this.comboBox3_panel2.Visible = false;
+            // 
+            // label15_panel2
+            // 
+            this.label15_panel2.AutoSize = true;
+            this.label15_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15_panel2.Location = new System.Drawing.Point(36, 271);
+            this.label15_panel2.Name = "label15_panel2";
+            this.label15_panel2.Size = new System.Drawing.Size(37, 16);
+            this.label15_panel2.TabIndex = 3;
+            this.label15_panel2.Text = "label";
+            this.label15_panel2.Visible = false;
+            // 
+            // label16_panel2
+            // 
+            this.label16_panel2.AutoSize = true;
+            this.label16_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16_panel2.Location = new System.Drawing.Point(197, 271);
+            this.label16_panel2.Name = "label16_panel2";
+            this.label16_panel2.Size = new System.Drawing.Size(37, 16);
+            this.label16_panel2.TabIndex = 3;
+            this.label16_panel2.Text = "label";
+            this.label16_panel2.Visible = false;
+            // 
+            // textBox9_panel2
+            // 
+            this.textBox9_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9_panel2.Location = new System.Drawing.Point(87, 265);
+            this.textBox9_panel2.Multiline = true;
+            this.textBox9_panel2.Name = "textBox9_panel2";
+            this.textBox9_panel2.Size = new System.Drawing.Size(97, 28);
+            this.textBox9_panel2.TabIndex = 2;
+            this.textBox9_panel2.Visible = false;
+            // 
+            // textBox10_panel2
+            // 
+            this.textBox10_panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10_panel2.Location = new System.Drawing.Point(249, 265);
+            this.textBox10_panel2.Multiline = true;
+            this.textBox10_panel2.Name = "textBox10_panel2";
+            this.textBox10_panel2.Size = new System.Drawing.Size(97, 28);
+            this.textBox10_panel2.TabIndex = 2;
+            this.textBox10_panel2.Visible = false;
             // 
             // MainForm
             // 
@@ -2485,5 +2556,11 @@
         public System.Windows.Forms.CheckBox checkBox1_panel2;
         public System.Windows.Forms.ComboBox comboBox2_panel2;
         public System.Windows.Forms.Label label13_panel2;
+        public System.Windows.Forms.Label label14_panel2;
+        public System.Windows.Forms.ComboBox comboBox3_panel2;
+        public System.Windows.Forms.Label label16_panel2;
+        public System.Windows.Forms.Label label15_panel2;
+        public System.Windows.Forms.TextBox textBox10_panel2;
+        public System.Windows.Forms.TextBox textBox9_panel2;
     }
 }

@@ -106,7 +106,9 @@ namespace GymManagementSystem
                                     mainForm.textBox5_panel2,
                                     mainForm.textBox6_panel2,
                                     mainForm.textBox7_panel2,
-                                    mainForm.textBox8_panel2 };
+                                    mainForm.textBox8_panel2,
+                                    mainForm.textBox9_panel2,
+                                    mainForm.textBox10_panel2 };
             foreach (var textBox in textBoxes)
             {
                 textBox.Visible = true;
@@ -115,6 +117,9 @@ namespace GymManagementSystem
             mainForm.textBox8_panel2.Multiline = true;
             mainForm.textBox8_panel2.WordWrap = true;
             mainForm.textBox8_panel2.Height = 59;
+
+            mainForm.textBox9_panel2.Enabled = false;
+            mainForm.textBox10_panel2.Enabled = false;
 
             Label[] labels = { mainForm.label1_panel2,
                                mainForm.label2_panel2,
@@ -128,7 +133,10 @@ namespace GymManagementSystem
                                mainForm.label10_panel2,
                                mainForm.label11_panel2,
                                mainForm.label12_panel2,
-                               mainForm.label13_panel2 };
+                               mainForm.label13_panel2,
+                               mainForm.label14_panel2,
+                               mainForm.label15_panel2,
+                               mainForm.label16_panel2 };
             foreach (var label in labels)
             {
                 label.Visible = true;
@@ -147,11 +155,16 @@ namespace GymManagementSystem
             mainForm.label11_panel2.Text = "Address";
             mainForm.label12_panel2.Text = "Schedule";
             mainForm.label13_panel2.Text = "Position";
+            mainForm.label13_panel2.Text = "Position";
+            mainForm.label14_panel2.Text = "Status";
+            mainForm.label15_panel2.Text = "UserID";
+            mainForm.label16_panel2.Text = "StaffID";
 
             mainForm.dateTimePicker1_panel2.Visible = true;
 
             mainForm.comboBox1_panel2.Visible = true;
             mainForm.comboBox2_panel2.Visible = true;
+            mainForm.comboBox3_panel2.Visible = true;
             // textboxes, labels, datetime picker,  combobox 
 
             // radio buttons
@@ -190,7 +203,7 @@ namespace GymManagementSystem
 
             // datagridviews
             mainForm.dataGridView1_panel2.Visible = true;
-            //mainForm.dataGridView1_panel2.DataSource = Database.GetMembersTable();
+            mainForm.dataGridView1_panel2.DataSource = Database.GetStaffsTable();
             // datagridviews
         }
 
@@ -272,7 +285,7 @@ namespace GymManagementSystem
             // panels
 
             mainForm.dataGridView1_panel6.Visible = true;
-            mainForm.dataGridView1_panel6.DataSource = Database.GetStaffTable();
+            mainForm.dataGridView1_panel6.DataSource = Database.GetStaffsTable();
         }
 
         public static void CostButtonClick(MainForm mainForm)
