@@ -17,45 +17,52 @@ namespace GymManagementSystem
         public void RunModule(MainForm mainForm)
         {
 
-            mainForm.Label_greetings.Text = "Welcome\nAdmin!";
+            mainForm.Sidebar_label_greetings.Text = "Welcome\nAdmin!";
 
             // buttons 
-            Button[] buttons = {  mainForm.button1,
-                                  mainForm.button2, 
-                                  mainForm.button3,
-                                  mainForm.button4,
-                                  mainForm.button5, 
-                                  mainForm.button6,
-                                  mainForm.button7, 
-                                  mainForm.button8, 
-                                  mainForm.button9, 
-                                  mainForm.button10 };
+            Button[] buttons = {  mainForm.Sidebar_button1,
+                                  mainForm.Sidebar_button2, 
+                                  mainForm.Sidebar_button3,
+                                  mainForm.Sidebar_button4,
+                                  mainForm.Sidebar_button5, 
+                                  mainForm.Sidebar_button6,
+                                  mainForm.Sidebar_button7, 
+                                  mainForm.Sidebar_button8, 
+                                  mainForm.Sidebar_button9, 
+                                  mainForm.Sidebar_button10 };
             foreach (var button in buttons)
             {
                 button.Visible = true;
             }
 
-            mainForm.button1.Text = "Dashboard";
-            mainForm.button2.Text = "Staff Management";
-            mainForm.button3.Text = "Ban Member";
-            mainForm.button4.Text = "Expenses Management";
-            mainForm.button5.Text = "Sales Management";
-            mainForm.button6.Text = "Payroll Managemnet";
-            mainForm.button7.Text = "Cost Management";
-            mainForm.button8.Text = "Equipment Inventory";
-            mainForm.button9.Text = "User Accounts Management";
-            mainForm.button10.Text = "Coaching Sessions";
+            mainForm.Sidebar_button1.Text = "Dashboard";
+            mainForm.Sidebar_button2.Text = "Staff Management";
+            mainForm.Sidebar_button3.Text = "Ban Member";
+            mainForm.Sidebar_button4.Text = "Expenses Management";
+            mainForm.Sidebar_button5.Text = "Sales Management";
+            mainForm.Sidebar_button6.Text = "Payroll Managemnet";
+            mainForm.Sidebar_button7.Text = "Cost Management";
+            mainForm.Sidebar_button8.Text = "Equipment Inventory";
+            mainForm.Sidebar_button9.Text = "User Accounts Management";
+            mainForm.Sidebar_button10.Text = "Coaching Sessions";
 
             // buttons 
 
             // panel
+            HidePanels(mainForm);
+            mainForm.Admin_panel_dashboard.Visible = true;
+            // panel
+        }
+
+        public static void HidePanels(MainForm mainForm)
+        {
             Panel[] panels = { mainForm.Admin_panel_dashboard,
                                mainForm.Admin_panel_staff,
                                mainForm.admin_panel4,
                                mainForm.admin_panel5,
                                mainForm.admin_panel6,
                                mainForm.admin_panel7,
-                               mainForm.admin_panel8,
+                               mainForm.Admin_panel_equipment,
                                mainForm.admin_panel9,
                                mainForm.admin_panel10 };
 
@@ -63,27 +70,12 @@ namespace GymManagementSystem
             {
                 panel.Visible = false;
             }
-            mainForm.Admin_panel_dashboard.Visible = true;
-            // panel
         }
 
         public static void DashboardButtonClick(MainForm mainForm)
         {
             // panels
-            Panel[] panels = { mainForm.Admin_panel_dashboard,
-                               mainForm.Admin_panel_staff,
-                               mainForm.admin_panel4,
-                               mainForm.admin_panel5,
-                               mainForm.admin_panel6,
-                               mainForm.admin_panel7,
-                               mainForm.admin_panel8,
-                               mainForm.admin_panel9,
-                               mainForm.admin_panel10 };
-
-            foreach (var panel in panels)
-            {
-                panel.Visible = false;
-            }
+            HidePanels(mainForm);
             mainForm.Admin_panel_dashboard.Visible = true;
             // panels
         }
@@ -91,20 +83,7 @@ namespace GymManagementSystem
         public static void StafftMgmtButtonClick(MainForm mainForm)
         {
             // panels
-            Panel[] panels = { mainForm.Admin_panel_dashboard,
-                               mainForm.Admin_panel_ban,
-                               mainForm.admin_panel4,
-                               mainForm.admin_panel5,
-                               mainForm.admin_panel6,
-                               mainForm.admin_panel7,
-                               mainForm.admin_panel8,
-                               mainForm.admin_panel9,
-                               mainForm.admin_panel10 };
-
-            foreach (var panel in panels)
-            {
-                panel.Visible = false;
-            }
+            HidePanels(mainForm);
             mainForm.Admin_panel_staff.Visible = true;
             // panels
 
@@ -207,20 +186,7 @@ namespace GymManagementSystem
         public static void BanButtonClick(MainForm mainForm)
         {
             // panels
-            Panel[] panels = { mainForm.Admin_panel_dashboard,
-                               mainForm.Admin_panel_staff,
-                               mainForm.admin_panel4,
-                               mainForm.admin_panel5,
-                               mainForm.admin_panel6,
-                               mainForm.admin_panel7,
-                               mainForm.admin_panel8,
-                               mainForm.admin_panel9,
-                               mainForm.admin_panel10 };
-
-            foreach (var panel in panels)
-            {
-                panel.Visible = false;
-            }
+            HidePanels(mainForm);
             mainForm.Admin_panel_ban.Visible = true;
             // panels
 
@@ -231,20 +197,7 @@ namespace GymManagementSystem
         public static void ExpensesButtonClick(MainForm mainForm)
         {
             // panels
-            Panel[] panels = { mainForm.Admin_panel_dashboard,
-                               mainForm.Admin_panel_staff,
-                               mainForm.Admin_panel_ban,
-                               mainForm.admin_panel5,
-                               mainForm.admin_panel6,
-                               mainForm.admin_panel7,
-                               mainForm.admin_panel8,
-                               mainForm.admin_panel9,
-                               mainForm.admin_panel10 };
-
-            foreach (var panel in panels)
-            {
-                panel.Visible = false;
-            }
+            HidePanels(mainForm);
             mainForm.admin_panel4.Visible = true;
             // panels
         }
@@ -252,40 +205,14 @@ namespace GymManagementSystem
         public static void SalesButtonClick(MainForm mainForm)
         {
             // panels
-            Panel[] panels = { mainForm.Admin_panel_dashboard,
-                               mainForm.Admin_panel_staff,
-                               mainForm.Admin_panel_ban,
-                               mainForm.admin_panel4,
-                               mainForm.admin_panel6,
-                               mainForm.admin_panel7,
-                               mainForm.admin_panel8,
-                               mainForm.admin_panel9,
-                               mainForm.admin_panel10 };
-
-            foreach (var panel in panels)
-            {
-                panel.Visible = false;
-            }
+            HidePanels(mainForm);
             mainForm.admin_panel5.Visible = true;
             // panels
         }
         public static void PayrollButtonClick(MainForm mainForm)
         {
             // panels
-            Panel[] panels = { mainForm.Admin_panel_dashboard,
-                               mainForm.Admin_panel_staff,
-                               mainForm.Admin_panel_ban,
-                               mainForm.admin_panel4,
-                               mainForm.admin_panel5,
-                               mainForm.admin_panel7,
-                               mainForm.admin_panel8,
-                               mainForm.admin_panel9,
-                               mainForm.admin_panel10 };
-
-            foreach (var panel in panels)
-            {
-                panel.Visible = false;
-            }
+            HidePanels(mainForm);
             mainForm.admin_panel6.Visible = true;
             // panels
 
@@ -296,20 +223,7 @@ namespace GymManagementSystem
         public static void CostButtonClick(MainForm mainForm)
         {
             // panels
-            Panel[] panels = { mainForm.Admin_panel_dashboard,
-                               mainForm.Admin_panel_staff,
-                               mainForm.Admin_panel_ban,
-                               mainForm.admin_panel4,
-                               mainForm.admin_panel5,
-                               mainForm.admin_panel6,
-                               mainForm.admin_panel8,
-                               mainForm.admin_panel9,
-                               mainForm.admin_panel10 };
-
-            foreach (var panel in panels)
-            {
-                panel.Visible = false;
-            }
+            HidePanels(mainForm);
             mainForm.admin_panel7.Visible = true;
             // panels
         }
@@ -317,21 +231,8 @@ namespace GymManagementSystem
         public static void EquipmentButtonClick(MainForm mainForm)
         {
             // panels
-            Panel[] panels = { mainForm.Admin_panel_dashboard, 
-                               mainForm.Admin_panel_staff,
-                               mainForm.Admin_panel_ban, 
-                               mainForm.admin_panel4, 
-                               mainForm.admin_panel5,    
-                               mainForm.admin_panel6,    
-                               mainForm.admin_panel7,    
-                               mainForm.admin_panel9,
-                               mainForm.admin_panel10 };
-
-            foreach (var panel in panels)
-            {
-                panel.Visible = false;
-            }
-            mainForm.admin_panel8.Visible = true;
+            HidePanels(mainForm);
+            mainForm.Admin_panel_equipment.Visible = true;
             // panels
 
             // textboxes and labels
@@ -368,8 +269,8 @@ namespace GymManagementSystem
 
 
             // datagrid
-            mainForm.Equipments_dataGridView.Visible = true;
-            mainForm.Equipments_dataGridView.DataSource = Database.GetEquipmentsTable();
+            mainForm.Equipments_dataGridView_equipments.Visible = true;
+            mainForm.Equipments_dataGridView_equipments.DataSource = Database.GetEquipmentsTable();
             // datagrid
 
         }
@@ -377,20 +278,7 @@ namespace GymManagementSystem
         public static void UserAccMgmtButtonClick(MainForm mainForm)
         {
             // panels
-            Panel[] panels = { mainForm.Admin_panel_dashboard,
-                               mainForm.Admin_panel_staff,
-                               mainForm.Admin_panel_ban,
-                               mainForm.admin_panel4,
-                               mainForm.admin_panel5,
-                               mainForm.admin_panel6,
-                               mainForm.admin_panel7,
-                               mainForm.admin_panel8,
-                               mainForm.admin_panel10 };
-
-            foreach (var panel in panels)
-            {
-                panel.Visible = false;
-            }
+            HidePanels(mainForm);
             mainForm.admin_panel9.Visible = true;
             // panels
 
@@ -443,20 +331,7 @@ namespace GymManagementSystem
         public static void CoachingSessionsButtonClick(MainForm mainForm)
         {
             // panels
-            Panel[] panels = { mainForm.Admin_panel_dashboard,
-                               mainForm.Admin_panel_staff,
-                               mainForm.Admin_panel_ban,
-                               mainForm.admin_panel4,
-                               mainForm.admin_panel5,
-                               mainForm.admin_panel6,
-                               mainForm.admin_panel7,
-                               mainForm.admin_panel8,
-                               mainForm.admin_panel9 };
-
-            foreach (var panel in panels)
-            {
-                panel.Visible = false;
-            }
+            HidePanels(mainForm);
             mainForm.admin_panel10.Visible = true;
             // panels
         }

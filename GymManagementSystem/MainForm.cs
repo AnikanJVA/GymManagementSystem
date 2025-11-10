@@ -40,13 +40,13 @@ namespace GymManagementSystem
             FormProvider.Login.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Sidebar_button1_Click(object sender, EventArgs e)
         {
-            if(accType == "ADMIN")
+            if (accType == "ADMIN")
             {
                 AdminModule.DashboardButtonClick(this);
             }
-            else if(accType == "RECEPTIONIST")
+            else if (accType == "RECEPTIONIST")
             {
                 ReceptionistModule.DashboardButtonClick(this);
             }
@@ -159,6 +159,7 @@ namespace GymManagementSystem
                     {
                         MessageBox.Show("Equipment Added.", "Success");
                         UpdateDataGridViews();
+                        Equipments_ClearFill();
                     }
                     else
                     {
@@ -182,9 +183,8 @@ namespace GymManagementSystem
                                             Equipments_textBox_cost, Equipments_textBox_quantity };
                 foreach (TextBox tb in requiredFields)
                 {
-                    if (string.IsNullOrWhiteSpace(tb.Text))
+                    if (string.IsNullOrWhiteSpace(tb.Text) || string.Equals(tb.Text, "0"))
                     {
-
                         isFieldsComplete = false;
                         break;
                     }
@@ -200,12 +200,18 @@ namespace GymManagementSystem
                     {
                         MessageBox.Show("Equipment updated.", "Success");
                         UpdateDataGridViews();
+                        Equipments_ClearFill();
                     }
                     else
                     {
                         MessageBox.Show("Equipment not updated.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Don't leave anything empty.", "Input Required",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -214,7 +220,7 @@ namespace GymManagementSystem
         {
             if (accType == "ADMIN")
             {
-                Equipments_dataGridView.DataSource = Database.GetEquipmentsTable();
+                Equipments_dataGridView_equipments.DataSource = Database.GetEquipmentsTable();
                 dataGridView1_panel3.DataSource = Database.GetMembersTable();
                 dataGridView1_panel6.DataSource = Database.GetStaffsTable();
                 dataGridView1_panel9.DataSource = Database.GetUsersTable();
@@ -280,12 +286,12 @@ namespace GymManagementSystem
             long equipmentID = 0;
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
-                var cell = Equipments_dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                var cell = Equipments_dataGridView_equipments.Rows[e.RowIndex].Cells[e.ColumnIndex];
                 if (cell.Value != null)
                 {
                     if (e.RowIndex >= 0)
                     {
-                        DataGridViewRow row = Equipments_dataGridView.Rows[e.RowIndex];
+                        DataGridViewRow row = Equipments_dataGridView_equipments.Rows[e.RowIndex];
                         try
                         {
                             equipmentID = Convert.ToInt64(row.Cells["EquipmentID"].Value.ToString());
@@ -299,14 +305,14 @@ namespace GymManagementSystem
                     }
                     else
                     {
-                        Equipment_ClearFill();
+                        Equipments_ClearFill();
                     }
                 }
             }
         }
         private void Equipments_button_clear_Click(object sender, EventArgs e)
         {
-            Equipment_ClearFill();
+            Equipments_ClearFill();
         }
 
         public void Equipment_AutoFill()
@@ -321,7 +327,7 @@ namespace GymManagementSystem
             Equipments_comboBox_condition.Text = currentEquipment.EquipmentCondition;
         }
 
-        public void Equipment_ClearFill()
+        public void Equipments_ClearFill()
         {
             Equipments_textBox_id.Clear();
             Equipments_textBox_name.Clear();
@@ -335,7 +341,7 @@ namespace GymManagementSystem
 
         public void FormatDataGrids()
         {
-            Equipments_dataGridView.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            Equipments_dataGridView_equipments.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
         }
 
         private void button2_panel2_Click(object sender, EventArgs e)
@@ -344,6 +350,16 @@ namespace GymManagementSystem
         }
 
         private void button3_panel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Recep_panel_checkin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button9_panel6_Click(object sender, EventArgs e)
         {
 
         }
