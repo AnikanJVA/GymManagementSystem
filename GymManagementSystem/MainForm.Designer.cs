@@ -270,6 +270,7 @@
             this.label2_panel3 = new System.Windows.Forms.Label();
             this.label1_panel3 = new System.Windows.Forms.Label();
             this.dataGridView1_panel3 = new System.Windows.Forms.DataGridView();
+            this.Logout_flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -314,6 +315,7 @@
             this.panel10_panel4.SuspendLayout();
             this.Admin_panel_ban.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_panel3)).BeginInit();
+            this.Logout_flowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -324,6 +326,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.Logout_flowLayoutPanel);
             this.splitContainer1.Panel1.Controls.Add(this.Sidebar_flowLayoutPanel);
             // 
             // splitContainer1.Panel2
@@ -348,7 +351,6 @@
             // 
             this.Sidebar_flowLayoutPanel.AutoSize = true;
             this.Sidebar_flowLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.Sidebar_flowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Sidebar_flowLayoutPanel.Controls.Add(this.Sidebar_label_greetings);
             this.Sidebar_flowLayoutPanel.Controls.Add(this.Sidebar_button1);
             this.Sidebar_flowLayoutPanel.Controls.Add(this.Sidebar_button2);
@@ -360,12 +362,12 @@
             this.Sidebar_flowLayoutPanel.Controls.Add(this.Sidebar_button8);
             this.Sidebar_flowLayoutPanel.Controls.Add(this.Sidebar_button9);
             this.Sidebar_flowLayoutPanel.Controls.Add(this.Sidebar_button10);
-            this.Sidebar_flowLayoutPanel.Controls.Add(this.Sidebar_button_logout);
+            this.Sidebar_flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Sidebar_flowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.Sidebar_flowLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.Sidebar_flowLayoutPanel.Name = "Sidebar_flowLayoutPanel";
             this.Sidebar_flowLayoutPanel.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.Sidebar_flowLayoutPanel.Size = new System.Drawing.Size(301, 681);
+            this.Sidebar_flowLayoutPanel.Size = new System.Drawing.Size(300, 681);
             this.Sidebar_flowLayoutPanel.TabIndex = 0;
             // 
             // Sidebar_label_greetings
@@ -389,9 +391,10 @@
             this.Sidebar_button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sidebar_button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sidebar_button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.Sidebar_button1.Location = new System.Drawing.Point(3, 107);
+            this.Sidebar_button1.Location = new System.Drawing.Point(0, 104);
+            this.Sidebar_button1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.Sidebar_button1.Name = "Sidebar_button1";
-            this.Sidebar_button1.Size = new System.Drawing.Size(293, 33);
+            this.Sidebar_button1.Size = new System.Drawing.Size(300, 33);
             this.Sidebar_button1.TabIndex = 0;
             this.Sidebar_button1.Text = "button";
             this.Sidebar_button1.UseVisualStyleBackColor = false;
@@ -406,9 +409,10 @@
             this.Sidebar_button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sidebar_button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sidebar_button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.Sidebar_button2.Location = new System.Drawing.Point(3, 146);
+            this.Sidebar_button2.Location = new System.Drawing.Point(0, 139);
+            this.Sidebar_button2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.Sidebar_button2.Name = "Sidebar_button2";
-            this.Sidebar_button2.Size = new System.Drawing.Size(293, 33);
+            this.Sidebar_button2.Size = new System.Drawing.Size(300, 33);
             this.Sidebar_button2.TabIndex = 0;
             this.Sidebar_button2.Text = "button";
             this.Sidebar_button2.UseVisualStyleBackColor = false;
@@ -423,9 +427,10 @@
             this.Sidebar_button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sidebar_button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sidebar_button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.Sidebar_button3.Location = new System.Drawing.Point(3, 185);
+            this.Sidebar_button3.Location = new System.Drawing.Point(0, 174);
+            this.Sidebar_button3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.Sidebar_button3.Name = "Sidebar_button3";
-            this.Sidebar_button3.Size = new System.Drawing.Size(293, 33);
+            this.Sidebar_button3.Size = new System.Drawing.Size(300, 33);
             this.Sidebar_button3.TabIndex = 0;
             this.Sidebar_button3.Text = "button";
             this.Sidebar_button3.UseVisualStyleBackColor = false;
@@ -440,9 +445,10 @@
             this.Sidebar_button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sidebar_button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sidebar_button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.Sidebar_button4.Location = new System.Drawing.Point(3, 224);
+            this.Sidebar_button4.Location = new System.Drawing.Point(0, 209);
+            this.Sidebar_button4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.Sidebar_button4.Name = "Sidebar_button4";
-            this.Sidebar_button4.Size = new System.Drawing.Size(293, 33);
+            this.Sidebar_button4.Size = new System.Drawing.Size(300, 33);
             this.Sidebar_button4.TabIndex = 0;
             this.Sidebar_button4.Text = "button";
             this.Sidebar_button4.UseVisualStyleBackColor = false;
@@ -457,9 +463,10 @@
             this.Sidebar_button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sidebar_button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sidebar_button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.Sidebar_button5.Location = new System.Drawing.Point(3, 263);
+            this.Sidebar_button5.Location = new System.Drawing.Point(0, 244);
+            this.Sidebar_button5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.Sidebar_button5.Name = "Sidebar_button5";
-            this.Sidebar_button5.Size = new System.Drawing.Size(293, 33);
+            this.Sidebar_button5.Size = new System.Drawing.Size(300, 33);
             this.Sidebar_button5.TabIndex = 0;
             this.Sidebar_button5.Text = "button";
             this.Sidebar_button5.UseVisualStyleBackColor = false;
@@ -474,9 +481,10 @@
             this.Sidebar_button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sidebar_button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sidebar_button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.Sidebar_button6.Location = new System.Drawing.Point(3, 302);
+            this.Sidebar_button6.Location = new System.Drawing.Point(0, 279);
+            this.Sidebar_button6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.Sidebar_button6.Name = "Sidebar_button6";
-            this.Sidebar_button6.Size = new System.Drawing.Size(293, 33);
+            this.Sidebar_button6.Size = new System.Drawing.Size(300, 33);
             this.Sidebar_button6.TabIndex = 0;
             this.Sidebar_button6.Text = "button";
             this.Sidebar_button6.UseVisualStyleBackColor = false;
@@ -491,9 +499,10 @@
             this.Sidebar_button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sidebar_button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sidebar_button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.Sidebar_button7.Location = new System.Drawing.Point(3, 341);
+            this.Sidebar_button7.Location = new System.Drawing.Point(0, 314);
+            this.Sidebar_button7.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.Sidebar_button7.Name = "Sidebar_button7";
-            this.Sidebar_button7.Size = new System.Drawing.Size(293, 33);
+            this.Sidebar_button7.Size = new System.Drawing.Size(300, 33);
             this.Sidebar_button7.TabIndex = 0;
             this.Sidebar_button7.Text = "button";
             this.Sidebar_button7.UseVisualStyleBackColor = false;
@@ -508,9 +517,10 @@
             this.Sidebar_button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sidebar_button8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sidebar_button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.Sidebar_button8.Location = new System.Drawing.Point(3, 380);
+            this.Sidebar_button8.Location = new System.Drawing.Point(0, 349);
+            this.Sidebar_button8.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.Sidebar_button8.Name = "Sidebar_button8";
-            this.Sidebar_button8.Size = new System.Drawing.Size(293, 33);
+            this.Sidebar_button8.Size = new System.Drawing.Size(300, 33);
             this.Sidebar_button8.TabIndex = 0;
             this.Sidebar_button8.Text = "button";
             this.Sidebar_button8.UseVisualStyleBackColor = false;
@@ -525,9 +535,10 @@
             this.Sidebar_button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sidebar_button9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sidebar_button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.Sidebar_button9.Location = new System.Drawing.Point(3, 419);
+            this.Sidebar_button9.Location = new System.Drawing.Point(0, 384);
+            this.Sidebar_button9.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.Sidebar_button9.Name = "Sidebar_button9";
-            this.Sidebar_button9.Size = new System.Drawing.Size(293, 33);
+            this.Sidebar_button9.Size = new System.Drawing.Size(300, 33);
             this.Sidebar_button9.TabIndex = 0;
             this.Sidebar_button9.Text = "button";
             this.Sidebar_button9.UseVisualStyleBackColor = false;
@@ -542,9 +553,10 @@
             this.Sidebar_button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sidebar_button10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sidebar_button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.Sidebar_button10.Location = new System.Drawing.Point(3, 458);
+            this.Sidebar_button10.Location = new System.Drawing.Point(0, 419);
+            this.Sidebar_button10.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.Sidebar_button10.Name = "Sidebar_button10";
-            this.Sidebar_button10.Size = new System.Drawing.Size(293, 33);
+            this.Sidebar_button10.Size = new System.Drawing.Size(300, 33);
             this.Sidebar_button10.TabIndex = 0;
             this.Sidebar_button10.Text = "button";
             this.Sidebar_button10.UseVisualStyleBackColor = false;
@@ -559,9 +571,10 @@
             this.Sidebar_button_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sidebar_button_logout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sidebar_button_logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.Sidebar_button_logout.Location = new System.Drawing.Point(3, 497);
+            this.Sidebar_button_logout.Location = new System.Drawing.Point(0, 0);
+            this.Sidebar_button_logout.Margin = new System.Windows.Forms.Padding(0);
             this.Sidebar_button_logout.Name = "Sidebar_button_logout";
-            this.Sidebar_button_logout.Size = new System.Drawing.Size(293, 33);
+            this.Sidebar_button_logout.Size = new System.Drawing.Size(300, 33);
             this.Sidebar_button_logout.TabIndex = 0;
             this.Sidebar_button_logout.Text = "Log out";
             this.Sidebar_button_logout.UseVisualStyleBackColor = false;
@@ -2997,6 +3010,16 @@
             this.dataGridView1_panel3.Size = new System.Drawing.Size(921, 430);
             this.dataGridView1_panel3.TabIndex = 1;
             // 
+            // Logout_flowLayoutPanel
+            // 
+            this.Logout_flowLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.Logout_flowLayoutPanel.Controls.Add(this.Sidebar_button_logout);
+            this.Logout_flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Logout_flowLayoutPanel.Location = new System.Drawing.Point(0, 633);
+            this.Logout_flowLayoutPanel.Name = "Logout_flowLayoutPanel";
+            this.Logout_flowLayoutPanel.Size = new System.Drawing.Size(300, 48);
+            this.Logout_flowLayoutPanel.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3082,6 +3105,8 @@
             this.Admin_panel_ban.ResumeLayout(false);
             this.Admin_panel_ban.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_panel3)).EndInit();
+            this.Logout_flowLayoutPanel.ResumeLayout(false);
+            this.Logout_flowLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3329,5 +3354,6 @@
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.FlowLayoutPanel Logout_flowLayoutPanel;
     }
 }
