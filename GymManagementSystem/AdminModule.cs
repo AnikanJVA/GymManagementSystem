@@ -58,12 +58,20 @@ namespace GymManagementSystem
         {
             Panel[] panels = { mainForm.Admin_panel_dashboard,
                                mainForm.Admin_panel_staff,
+                               mainForm.Admin_panel_ban,
                                mainForm.admin_panel4,
                                mainForm.admin_panel5,
                                mainForm.admin_panel6,
                                mainForm.admin_panel7,
                                mainForm.Admin_panel_equipment,
                                mainForm.admin_panel9,
+                               mainForm.recep_panel1,
+                               mainForm.Recep_panel_member,
+                               mainForm.Recep_panel_checkin,
+                               mainForm.recep_panel4,
+                               mainForm.recep_panel5,
+                               mainForm.recep_panel6,
+                               mainForm.recep_panel7,
                                mainForm.admin_panel10 };
 
             foreach (var panel in panels)

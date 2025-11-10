@@ -49,7 +49,7 @@ namespace GymManagementSystem
 
             // panel
             HidePanels(mainForm);
-            mainForm.Admin_panel_dashboard.Visible = true;
+            mainForm.recep_panel1.Visible = true;
             // panel
         }
 
@@ -61,7 +61,16 @@ namespace GymManagementSystem
                                mainForm.admin_panel5,
                                mainForm.admin_panel6,
                                mainForm.admin_panel7,
+                               mainForm.Admin_panel_ban,
+                               mainForm.admin_panel9,
+                               mainForm.admin_panel10,
+                               mainForm.Admin_panel_equipment,
                                mainForm.Recep_panel_checkin,
+                               mainForm.recep_panel1,
+                               mainForm.recep_panel4,
+                               mainForm.recep_panel5,
+                               mainForm.recep_panel6,
+                               mainForm.recep_panel7,
                                mainForm.Recep_panel_member };
 
             foreach (var panel in panels)
@@ -74,7 +83,7 @@ namespace GymManagementSystem
         {
             // panel
             HidePanels(mainForm);
-            mainForm.Admin_panel_dashboard.Visible = true;
+            mainForm.recep_panel1.Visible = true;
             // panel
         }
 
@@ -98,7 +107,7 @@ namespace GymManagementSystem
         {
             // panel
             HidePanels(mainForm);
-            mainForm.admin_panel4.Visible = true;
+            mainForm.recep_panel4.Visible = true;
             // panel
         }
 
@@ -106,7 +115,7 @@ namespace GymManagementSystem
         {
             // panel
             HidePanels(mainForm);
-            mainForm.admin_panel5.Visible = true;
+            mainForm.recep_panel5.Visible = true;
             // panel
         }
 
@@ -114,7 +123,7 @@ namespace GymManagementSystem
         {
             // panel
             HidePanels(mainForm);
-            mainForm.admin_panel6.Visible = true;
+            mainForm.recep_panel6.Visible = true;
             // panel
         }
 
@@ -122,7 +131,7 @@ namespace GymManagementSystem
         {
             // panel
             HidePanels(mainForm);
-            mainForm.admin_panel7.Visible = true;
+            mainForm.recep_panel7.Visible = true;
             // panel
         }
     }
