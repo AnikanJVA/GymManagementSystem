@@ -19,25 +19,25 @@ namespace GymManagementSystem
         public LoginForm()
         {
             InitializeComponent();
-            this.AcceptButton = BTN_login;
-            this.Controls.Add(BTN_login);
+            this.AcceptButton = Button_login;
+            this.Controls.Add(Button_login);
         }
 
-        private void BTN_login_Click(object sender, EventArgs e)
+        private void Button_login_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TB_password.Text) || string.IsNullOrWhiteSpace(TB_username.Text))
+            if (string.IsNullOrWhiteSpace(TextBox_password.Text) || string.IsNullOrWhiteSpace(TextBox_username.Text))
             {
                 MessageBox.Show("Login Failed. Please Try Again.", "Failed");
             }
             else 
             {   
                 login = new Login();
-                if (login.AuthenticateUser(TB_username.Text.Trim(), TB_password.Text.Trim()))
+                if (login.AuthenticateUser(TextBox_username.Text.Trim(), TextBox_password.Text.Trim()))
                 {
                     MessageBox.Show("Login Successful.", "Success");
                     string acctype = login.CurrentUser.AccType;
-                    TB_username.Clear();
-                    TB_password.Clear();
+                    TextBox_username.Clear();
+                    TextBox_password.Clear();
                     mainForm = new MainForm(acctype);
                     mainForm.Show();
                     FormProvider.Login.Hide();

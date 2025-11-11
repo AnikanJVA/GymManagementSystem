@@ -28,46 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.TB_username = new System.Windows.Forms.TextBox();
-            this.TB_password = new System.Windows.Forms.TextBox();
-            this.BTN_login = new System.Windows.Forms.Button();
+            this.TextBox_username = new System.Windows.Forms.TextBox();
+            this.TextBox_password = new System.Windows.Forms.TextBox();
+            this.Button_login = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // TB_username
+            // TextBox_username
             // 
-            this.TB_username.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_username.Location = new System.Drawing.Point(452, 136);
-            this.TB_username.Name = "TB_username";
-            this.TB_username.Size = new System.Drawing.Size(280, 34);
-            this.TB_username.TabIndex = 1;
+            this.TextBox_username.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox_username.Location = new System.Drawing.Point(452, 136);
+            this.TextBox_username.Name = "TB_username";
+            this.TextBox_username.Size = new System.Drawing.Size(280, 34);
+            this.TextBox_username.TabIndex = 1;
             // 
-            // TB_password
+            // TextBox_password
             // 
-            this.TB_password.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_password.Location = new System.Drawing.Point(452, 204);
-            this.TB_password.Name = "TB_password";
-            this.TB_password.PasswordChar = '•';
-            this.TB_password.Size = new System.Drawing.Size(280, 34);
-            this.TB_password.TabIndex = 2;
+            this.TextBox_password.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox_password.Location = new System.Drawing.Point(452, 204);
+            this.TextBox_password.Name = "TB_password";
+            this.TextBox_password.PasswordChar = '•';
+            this.TextBox_password.Size = new System.Drawing.Size(280, 34);
+            this.TextBox_password.TabIndex = 2;
             // 
-            // BTN_login
+            // Button_login
             // 
-            this.BTN_login.AutoSize = true;
-            this.BTN_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
-            this.BTN_login.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_login.ForeColor = System.Drawing.Color.White;
-            this.BTN_login.Location = new System.Drawing.Point(506, 264);
-            this.BTN_login.Name = "BTN_login";
-            this.BTN_login.Size = new System.Drawing.Size(177, 39);
-            this.BTN_login.TabIndex = 3;
-            this.BTN_login.Text = "Log In";
-            this.BTN_login.UseVisualStyleBackColor = false;
-            this.BTN_login.Click += new System.EventHandler(this.BTN_login_Click);
+            this.Button_login.AutoSize = true;
+            this.Button_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(52)))), ((int)(((byte)(79)))));
+            this.Button_login.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_login.ForeColor = System.Drawing.Color.White;
+            this.Button_login.Location = new System.Drawing.Point(506, 264);
+            this.Button_login.Name = "BTN_login";
+            this.Button_login.Size = new System.Drawing.Size(177, 39);
+            this.Button_login.TabIndex = 3;
+            this.Button_login.Text = "Log In";
+            this.Button_login.UseVisualStyleBackColor = false;
+            this.Button_login.Click += new System.EventHandler(this.Button_login_Click);
             // 
             // label1
             // 
@@ -91,7 +90,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::GymManagementSystem.Properties.Resources.gym_Logo;
             this.pictureBox1.Location = new System.Drawing.Point(45, 53);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(355, 348);
@@ -108,9 +107,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BTN_login);
-            this.Controls.Add(this.TB_password);
-            this.Controls.Add(this.TB_username);
+            this.Controls.Add(this.Button_login);
+            this.Controls.Add(this.TextBox_password);
+            this.Controls.Add(this.TextBox_username);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "LoginForm";
@@ -124,9 +123,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TB_username;
-        private System.Windows.Forms.TextBox TB_password;
-        private System.Windows.Forms.Button BTN_login;
+        private System.Windows.Forms.TextBox TextBox_username;
+        private System.Windows.Forms.TextBox TextBox_password;
+        private System.Windows.Forms.Button Button_login;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
