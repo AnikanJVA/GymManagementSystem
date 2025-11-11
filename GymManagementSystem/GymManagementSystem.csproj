@@ -175,9 +175,6 @@
     <None Include="Resources\Member management %28white%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="gym Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Dashboard %28dark%29.png" />
   </ItemGroup>
   <ItemGroup>
