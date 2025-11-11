@@ -10,6 +10,7 @@ namespace ClassLibrary
     {
         private long userID;
         private string username;
+        private string password;
         private string accType;
         private string status;
 
@@ -23,6 +24,12 @@ namespace ClassLibrary
         {
             get { return username; }
             set { username = value; }
+        }
+
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
         }
 
         public string AccType

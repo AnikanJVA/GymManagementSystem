@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2025 at 04:48 AM
+-- Generation Time: Nov 11, 2025 at 12:41 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -63,8 +63,9 @@ CREATE TABLE `equipmentcategories` (
 
 INSERT INTO `equipmentcategories` (`categoryID`, `categoryName`) VALUES
 (1, 'Cardio'),
-(2, 'Strength'),
-(3, 'Free Weights');
+(2, 'Machines'),
+(3, 'Free Weights'),
+(4, 'Flexibility');
 
 -- --------------------------------------------------------
 
@@ -90,12 +91,12 @@ CREATE TABLE `equipments` (
 INSERT INTO `equipments` (`equipmentID`, `equipmentName`, `brand`, `model`, `categoryID`, `cost`, `quantity`, `equipmentCondition`) VALUES
 (1, 'Treadmill X10', 'LifeFit', 'X10 Pro', 1, 1500.50, 5, 'Excellent'),
 (2, 'Power Rack XL', 'IronForce', 'PR-XL', 2, 850.00, 3, 'Good'),
-(3, 'Hex Dumbbell Set', 'HeavyLift', 'HD-300', 3, 250.75, 10, 'Fair'),
+(3, 'Hex Dumbbell Set', 'HeavyLift', 'HD-300', 3, 251.00, 10, ''),
 (4, 'asdf', 'cell', '2982938', 3, 299.00, 24, 'Good'),
 (5, 'Dumbell 15 pounds', 'Duracell', 'DB-100', 3, 300.00, 4, 'Good'),
-(6, 'james', 'bayot', '1999', 3, 150.00, 1, 'LAGTIK JAPON BISAN T'),
-(7, 'james2', 'bayot', '1999', 3, 150.00, 1, 'LAGTIK JAPON BISAN T'),
-(8, 'james3', 'bayot', '1999', 3, 150.00, 1, 'LAGTIK JAPON BISAN T');
+(6, 'james', 'bayot', '1999', 2, 150.00, 1, 'Damaged'),
+(7, 'james2', 'bayot', '1999', 2, 150.00, 1, 'Under Maintenance'),
+(8, 'james3', 'bayot', '1999', 1, 150.00, 1, 'Under Maintenance');
 
 -- --------------------------------------------------------
 
@@ -482,7 +483,7 @@ ALTER TABLE `discounts`
 -- AUTO_INCREMENT for table `equipmentcategories`
 --
 ALTER TABLE `equipmentcategories`
-  MODIFY `categoryID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `categoryID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `equipments`
