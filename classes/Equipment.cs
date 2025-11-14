@@ -15,7 +15,6 @@ namespace ClassLibrary
         private long categoryID;
         private double cost;
         private int quantity;
-        private string equipmentCondition;
 
         public Equipment()
         {
@@ -26,7 +25,6 @@ namespace ClassLibrary
             this.categoryID = 0;               
             this.cost = 0.0;                    
             this.quantity = 0;                    
-            this.equipmentCondition = string.Empty; 
         }
 
         public long EquipmentID
@@ -69,12 +67,6 @@ namespace ClassLibrary
         {
             get { return quantity; }
             set { quantity = value; }
-        }
-
-        public string EquipmentCondition
-        {
-            get { return equipmentCondition; }
-            set { equipmentCondition = value; }
         }
 
     }

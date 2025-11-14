@@ -151,27 +151,27 @@ namespace GymManagementSystem
                     isFieldsComplete = false;
                 }
 
-                if (isFieldsComplete)
-                {
-                    bool isSuccessful = AdminActions.AddEquipment(Equipments_textBox_name.Text, Equipments_textBox_brand.Text, Equipments_textBox_model.Text, Equipments_comboBox_category.Text,
-                                              Convert.ToInt64(Equipments_textBox_cost.Text), Convert.ToInt32(Equipments_textBox_quantity.Text), Equipments_comboBox_condition.Text);
-                    if (isSuccessful)
-                    {
-                        MessageBox.Show("Equipment Added.", "Success");
-                        UpdateDataGridViews();
-                        Equipments_ClearFill();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Equipment Not Added. Equipment is duplicate.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    if (isFieldsComplete)
+                //    {
+                //        bool isSuccessful = AdminActions.AddEquipment(Equipments_textBox_name.Text, Equipments_textBox_brand.Text, Equipments_textBox_model.Text, Equipments_comboBox_category.Text,
+                //                                  Convert.ToInt64(Equipments_textBox_cost.Text), Convert.ToInt32(Equipments_textBox_quantity.Text), Equipments_comboBox_condition.Text);
+                //        if (isSuccessful)
+                //        {
+                //            MessageBox.Show("Equipment Added.", "Success");
+                //            UpdateDataGridViews();
+                //            Equipments_ClearFill();
+                //        }
+                //        else
+                //        {
+                //            MessageBox.Show("Equipment Not Added. Equipment is duplicate.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Don't leave anything empty.", "Input Required",
-                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                //        }
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Don't leave anything empty.", "Input Required",
+                //                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    }
             }
         }
         private void button2_panel8_Click(object sender, EventArgs e)
@@ -191,28 +191,28 @@ namespace GymManagementSystem
                     isFieldsComplete = true;
                 }
                 
-                if (isFieldsComplete)
-                {
+                //if (isFieldsComplete)
+                //{
 
-                    bool isSuccessful = AdminActions.UpdateEquipment(Convert.ToInt64(Equipments_textBox_id.Text), Equipments_textBox_name.Text, Equipments_textBox_brand.Text, Equipments_textBox_model.Text, Equipments_comboBox_category.Text,
-                                              Convert.ToInt64(Equipments_textBox_cost.Text), Convert.ToInt32(Equipments_textBox_quantity.Text), Equipments_comboBox_condition.Text);
-                    if (isSuccessful)
-                    {
-                        MessageBox.Show("Equipment updated.", "Success");
-                        UpdateDataGridViews();
-                        Equipments_ClearFill();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Equipment not updated.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    bool isSuccessful = AdminActions.UpdateEquipment(Convert.ToInt64(Equipments_textBox_id.Text), Equipments_textBox_name.Text, Equipments_textBox_brand.Text, Equipments_textBox_model.Text, Equipments_comboBox_category.Text,
+                //                              Convert.ToInt64(Equipments_textBox_cost.Text), Convert.ToInt32(Equipments_textBox_quantity.Text), Equipments_comboBox_condition.Text);
+                //    if (isSuccessful)
+                //    {
+                //        MessageBox.Show("Equipment updated.", "Success");
+                //        UpdateDataGridViews();
+                //        Equipments_ClearFill();
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Equipment not updated.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Don't leave anything empty.", "Input Required",
-                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                //    }
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Don't leave anything empty.", "Input Required",
+                //                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
             }
         }
 
@@ -324,7 +324,6 @@ namespace GymManagementSystem
             Equipments_comboBox_category.Text = Database.GetEquipmentCategoryName(currentEquipment.CategoryID);
             Equipments_textBox_cost.Text = currentEquipment.Cost.ToString();
             Equipments_textBox_quantity.Text = currentEquipment.Quantity.ToString();
-            Equipments_comboBox_condition.Text = currentEquipment.EquipmentCondition;
         }
 
         public void Equipments_ClearFill()
@@ -342,6 +341,8 @@ namespace GymManagementSystem
         public void FormatDataGrids()
         {
             Equipments_dataGridView_equipments.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            Equipments_dataGridView_equipments.RowHeadersVisible = false;
         }
 
         private void button2_panel2_Click(object sender, EventArgs e)
@@ -360,6 +361,11 @@ namespace GymManagementSystem
         }
 
         private void button9_panel6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

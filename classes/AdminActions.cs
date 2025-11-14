@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Math.EC.Endo;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,14 +15,15 @@ namespace ClassLibrary
     {
         private static MySqlConnection connection = Database.Instance.Connection;
 
-        public static bool AddEquipment(string eqiupmentName,
-                                        string brand,
-                                        string model,
-                                        string category,
-                                        double cost,
-                                        int quantity,
-                                        string equipmentCondition)
+        public static bool AddEquipment(Equipment equipment)
         {
+            string eqiupmentName = equipment.EquipmentName;
+            string brand = equipment.Brand;
+            string model = equipment.Model;
+            long categoryID = equipment.CategoryID;
+            double cost = equipment.Cost;
+            int quantity = equipment.Quantity;
+
             string checkQuery = @"SELECT COUNT(*) AS DuplicateCount
                                  FROM equipments
                                  WHERE EquipmentName = @equipmentName";
@@ -34,7 +36,6 @@ namespace ClassLibrary
                 }
             }
 
-            long categoryID = Database.GetEquipmentCategoryID(category);
 
             string insertQuery = @"INSERT INTO equipments (equipmentName, brand, model, categoryID, cost, quantity, equipmentCondition)
                                    VALUES (@equipmentName, @brand, @model, @categoryID, @cost, @quantity, @equipmentCondition);";
@@ -46,7 +47,6 @@ namespace ClassLibrary
                 cmd.Parameters.AddWithValue("@categoryID", categoryID);
                 cmd.Parameters.AddWithValue("@cost", cost);
                 cmd.Parameters.AddWithValue("@quantity", quantity);
-                cmd.Parameters.AddWithValue("@equipmentCondition", equipmentCondition);
                 try
                 {
                     return cmd.ExecuteNonQuery() > 0;
@@ -61,17 +61,16 @@ namespace ClassLibrary
 
 
         
-            public static bool UpdateEquipment(long equipmentID,
-                                                string equipmentName,
-                                                string brand,
-                                                string model,
-                                                string category,
-                                                double cost,
-                                                int quantity,
-                                                string equipmentCondition)
-
-        
+        public static bool UpdateEquipment(Equipment equipment)       
         {
+            long equipmentID = equipment.EquipmentID;
+            string equipmentName = equipment.EquipmentName;
+            string brand = equipment.Brand;
+            string model = equipment.Model;
+            long categoryID = equipment.EquipmentID;
+            double cost = equipment.Cost;
+            int quantity = equipment.Quantity;
+
             string checkQuery = @"SELECT COUNT(*)
                                   FROM equipments
                                   WHERE EquipmentID <> @equipmentID
@@ -87,7 +86,6 @@ namespace ClassLibrary
                     return false;
                 }
             }
-            long categoryID = Database.GetEquipmentCategoryID(category);
 
             string updateQuery = @"UPDATE equipments SET 
                            equipmentName = @equipmentName,
@@ -107,7 +105,6 @@ namespace ClassLibrary
                 updateCmd.Parameters.AddWithValue("@categoryID", categoryID);
                 updateCmd.Parameters.AddWithValue("@cost", cost);
                 updateCmd.Parameters.AddWithValue("@quantity", quantity);
-                updateCmd.Parameters.AddWithValue("@equipmentCondition", equipmentCondition);
                 updateCmd.Parameters.AddWithValue("@equipmentID", equipmentID);
                 try
                 {
@@ -120,39 +117,51 @@ namespace ClassLibrary
                 return false;
             }
         }
-        public bool BanMember(int memberID)
+
+        // 
+        // pwede ra ata ni gamitan ug updateMember, i-update ra ang membershipStatus sa member into Banned
+        //
+        //public bool BanMember(int memberID)
+        //{
+        //    // SQL to update the member's status in the 'membershipStatus' column.
+        //    string banQuery = @"UPDATE member 
+        //                SET membershipStatus = 'BANNED' 
+        //                WHERE memberID = @memberID";
+
+        //    using (MySqlCommand banCmd = new MySqlCommand(banQuery, connection))
+        //    {
+        //        // Add the parameter for the memberID
+        //        banCmd.Parameters.AddWithValue("@memberID", memberID);
+
+        //        try
+        //        {
+        //            // Execute the command and get the number of rows affected
+        //            int rowsAffected = banCmd.ExecuteNonQuery();
+
+        //            // Return true if the member was found and the status was updated
+        //            return rowsAffected > 0;
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            // Handle exceptions (e.g., log the error)
+        //            Console.WriteLine("Error banning member: " + ex.Message);
+        //            return false;
+        //        }
+        //    }
+        //}
+
+        public bool RegisterMember(Member member) // to fix, renewal date and membership date fields should be read only
         {
-            // SQL to update the member's status in the 'membershipStatus' column.
-            string banQuery = @"UPDATE member 
-                        SET membershipStatus = 'BANNED' 
-                        WHERE memberID = @memberID";
+            string lastName = member.Lname;
+            string firstName = member.Fname;
+            string middleName = member.Mname;
+            DateTime dob = member.Dob;
+            string sex = member.Sex;
+            string contactNumber = member.ContactNo;
+            string email = member.Email;
+            long planID = member.PlanID;
+            string membershipStatus = member.MembershipStatus;
 
-            using (MySqlCommand banCmd = new MySqlCommand(banQuery, connection))
-            {
-                // Add the parameter for the memberID
-                banCmd.Parameters.AddWithValue("@memberID", memberID);
-
-                try
-                {
-                    // Execute the command and get the number of rows affected
-                    int rowsAffected = banCmd.ExecuteNonQuery();
-
-                    // Return true if the member was found and the status was updated
-                    return rowsAffected > 0;
-                }
-                catch (Exception ex)
-                {
-                    // Handle exceptions (e.g., log the error)
-                    Console.WriteLine("Error banning member: " + ex.Message);
-                    return false;
-                }
-            }
-        }
-
-        public bool RegisterMember(string firstName, string lastName, string middleName,
-                         DateTime dob, string sex, string contactNumber,
-                         string email, string membershipType)
-        {
             // 1. DUPLICATE CHECK: Check if the email already exists in the 'member' table.
             string checkQuery = "SELECT COUNT(*) FROM member WHERE email = @email";
 
@@ -178,14 +187,14 @@ namespace ClassLibrary
             }
             // Set initial values
             DateTime membershipDate = DateTime.Now;
-            string membershipStatus = "ACTIVE"; // Assuming new members are active
+            //DateTime renewalDate = GetRenewalDate(membershipDate, planID);
 
             string insertQuery = @"INSERT INTO member 
                            (lastName, firstName, middleName, DoB, Sex, contactNumber, email, 
-                            membershipDate, membershipType, membershipStatus)
+                            membershipDate, renewalDate, planID, membershipstatus)
                            VALUES 
                            (@lastName, @firstName, @middleName, @dob, @sex, @contactNumber, @email, 
-                            @membershipDate, @membershipType, @membershipStatus)";
+                            @membershipDate, @renewalDate, @planID, @membershipStatus)";
 
             using (MySqlCommand cmd = new MySqlCommand(insertQuery, connection))
             {
@@ -198,7 +207,7 @@ namespace ClassLibrary
                 cmd.Parameters.AddWithValue("@contactNumber", contactNumber);
                 cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@membershipDate", membershipDate);
-                cmd.Parameters.AddWithValue("@membershipType", membershipType);
+                //cmd.Parameters.AddWithValue("@membershipType", membershipType);
                 cmd.Parameters.AddWithValue("@membershipStatus", membershipStatus);
 
                 try
@@ -214,20 +223,34 @@ namespace ClassLibrary
             }
         }
 
-        public bool UpdateMemberInfo(int memberID, string firstName, string lastName,
-                             string middleName, DateTime dob, string sex,
-                             string contactNumber, string email, string membershipType)
+        public bool UpdateMember(Member member)
         {
+            long memberID = member.MemberID;
+            string lastName = member.Lname;
+            string firstName = member.Fname;
+            string middleName = member.Mname;
+            DateTime dob = member.Dob;
+            string sex = member.Sex;
+            string contactNumber = member.ContactNo;
+            string email = member.Email;
+            DateTime membershipDate = member.MembershipDate;
+            DateTime renewalDate = member.RenewalDate;
+            long planID = member.PlanID;
+            string membershipStatus = member.MembershipStatus;
+
             string updateQuery = @"UPDATE member SET 
-                           lastName = @lastName,
-                           firstName = @firstName,
-                           middleName = @middleName,
-                           DoB = @dob,
-                           Sex = @sex,
-                           contactNumber = @contactNumber,
-                           email = @email,
-                           membershipType = @membershipType
-                           WHERE memberID = @memberID";
+                                   lastName = @lastName,
+                                   firstName = @firstName,
+                                   middleName = @middleName,
+                                   DoB = @dob,
+                                   Sex = @sex,
+                                   contactNumber = @contactNumber,
+                                   email = @email,
+                                   membershipDate = @membershipDate,
+                                   renewalDate = @renewalDate,
+                                   planID = @planID
+                                   membershipStatus = @membershipStatus
+                                   WHERE memberID = @memberID";
 
             using (MySqlCommand cmd = new MySqlCommand(updateQuery, connection))
             {
@@ -240,7 +263,10 @@ namespace ClassLibrary
                 cmd.Parameters.AddWithValue("@sex", sex);
                 cmd.Parameters.AddWithValue("@contactNumber", contactNumber);
                 cmd.Parameters.AddWithValue("@email", email);
-                cmd.Parameters.AddWithValue("@membershipType", membershipType);
+                cmd.Parameters.AddWithValue("@membershipDate", membershipDate);
+                cmd.Parameters.AddWithValue("@renewalDate", renewalDate);
+                cmd.Parameters.AddWithValue("@planID", planID);
+                cmd.Parameters.AddWithValue("@membershipStatus", membershipStatus);
 
                 try
                 {
@@ -248,7 +274,7 @@ namespace ClassLibrary
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error updating member info: " + ex.Message);
+                    Trace.WriteLine("+++++++Error updating member info: " + ex.Message);
                     return false;
                 }
             }
@@ -256,6 +282,12 @@ namespace ClassLibrary
 
         public bool RenewMember(int memberID, string currentMembershipType)
         {
+
+            //
+            // gamitan ug updateMember para ma update ang membershipDate, renewalDate, 
+            // planID, membershipStatus then mag buhat ug record sa sales?
+            //
+
             // 1. Determine the appropriate renewal membership type
             string newMembershipType;
 

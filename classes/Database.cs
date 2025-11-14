@@ -209,7 +209,6 @@ namespace ClassLibrary
                         equipment.CategoryID = Convert.ToInt64(reader["CategoryID"]);
                         equipment.Cost = Convert.ToInt64(reader["Cost"]);
                         equipment.Quantity = Convert.ToInt32(reader["Quantity"]);
-                        equipment.EquipmentCondition = reader["EquipmentCondition"].ToString();
                         reader.Close();
                         return equipment;
                     }
