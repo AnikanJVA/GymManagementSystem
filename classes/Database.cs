@@ -50,8 +50,7 @@ namespace ClassLibrary
                             e.Model,
                             c.categoryName AS Category,
                             e.Cost,
-                            e.Quantity,
-                            e.EquipmentCondition
+                            e.Quantity
                         FROM equipments e
                         JOIN equipmentcategories c 
                         ON e.categoryID = c.categoryID;";

@@ -41,7 +41,7 @@
             // 
             this.TextBox_username.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox_username.Location = new System.Drawing.Point(452, 136);
-            this.TextBox_username.Name = "TB_username";
+            this.TextBox_username.Name = "TextBox_username";
             this.TextBox_username.Size = new System.Drawing.Size(280, 34);
             this.TextBox_username.TabIndex = 1;
             // 
@@ -49,7 +49,7 @@
             // 
             this.TextBox_password.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox_password.Location = new System.Drawing.Point(452, 204);
-            this.TextBox_password.Name = "TB_password";
+            this.TextBox_password.Name = "TextBox_password";
             this.TextBox_password.PasswordChar = '•';
             this.TextBox_password.Size = new System.Drawing.Size(280, 34);
             this.TextBox_password.TabIndex = 2;
@@ -61,8 +61,8 @@
             this.Button_login.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_login.ForeColor = System.Drawing.Color.White;
             this.Button_login.Location = new System.Drawing.Point(506, 264);
-            this.Button_login.Name = "BTN_login";
-            this.Button_login.Size = new System.Drawing.Size(177, 39);
+            this.Button_login.Name = "Button_login";
+            this.Button_login.Size = new System.Drawing.Size(177, 40);
             this.Button_login.TabIndex = 3;
             this.Button_login.Text = "Log In";
             this.Button_login.UseVisualStyleBackColor = false;

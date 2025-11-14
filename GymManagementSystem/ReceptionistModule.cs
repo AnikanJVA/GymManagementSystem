@@ -35,18 +35,12 @@ namespace GymManagementSystem
             mainForm.Sidebar_button2.Text = "Member Management";
             mainForm.Sidebar_button3.Text = "Check In Member";
             mainForm.Sidebar_button4.Text = "Coaching Sessions";
-            mainForm.Sidebar_button5.Text = "Payment Transactions";
+            mainForm.Sidebar_button5.Text = "Billing";
             mainForm.Sidebar_button6.Text = "Equipment Inventory";
-            mainForm.Sidebar_button7.Text = "Damaged Equipment";
+            mainForm.Sidebar_button7.Text = "Record Damaged Equipment";
 
-            //mainForm.button_logout.Margin = new System.Windows.Forms.Padding(
-            //        mainForm.button_logout.Margin.Left,
-            //        mainForm.button_logout.Margin.Top + 40,
-            //        mainForm.button_logout.Margin.Right,
-            //        mainForm.button_logout.Margin.Bottom
-            //);
             // buttons
-
+           
             // panel
             HidePanels(mainForm);
             mainForm.recep_panel1.Visible = true;
