@@ -92,6 +92,19 @@ namespace GymManagementSystem
             // datagridviews
         }
 
+        public static void MemberMgmtButtonClick(MainForm mainForm)
+        {
+            // panels
+            HidePanels(mainForm);
+            mainForm.Recep_panel_members.Visible = true;
+            // panels
+
+            // combobox, datetime picker
+            mainForm.Recep_members_comboBox_plan.Enabled = true;
+            mainForm.Recep_members_dateTimePicker_membershipDate.Enabled = true;
+            // combobox, datetime picker
+        }
+
         public static void SalesButtonClick(MainForm mainForm)
         {
             // panels
@@ -119,6 +132,25 @@ namespace GymManagementSystem
             mainForm.Equipments_dataGridView_equipments.DataSource = Database.GetEquipmentsTable();
             // datagrid
 
+            // buttons
+            mainForm.Equipments_button_add.Visible = true;
+            mainForm.Equipments_button_update.Visible = true;
+            mainForm.Equipments_button_clear.Visible = true;
+            // buttons
+
+            // textbox, combobox
+            foreach (Control control in mainForm.panel1.Controls)
+            {
+                if (control is TextBox textbox)
+                {
+                    textbox.ReadOnly = false;
+                }
+                else if (control is ComboBox comboBox)
+                {
+                    comboBox.Enabled = true;
+                }
+            }
+            // textbox, combobox
         }
 
         public static void UserAccMgmtButtonClick(MainForm mainForm)

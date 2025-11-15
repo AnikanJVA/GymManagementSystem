@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2025 at 12:09 PM
+-- Generation Time: Nov 15, 2025 at 04:00 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -153,11 +153,11 @@ CREATE TABLE `members` (
 INSERT INTO `members` (`memberID`, `lastName`, `firstName`, `middleName`, `DoB`, `Sex`, `contactNumber`, `email`, `membershipDate`, `ExpirationDate`, `planID`, `membershipStatus`) VALUES
 (1, 'Dela Cruz', 'Juan', 'Mant', '1995-03-15', 'MALE', '09171234567', 'juan.delacruz@example.com', '2025-11-01 10:00:00', '2025-12-01 10:00:00', 1, 'ACTIVE'),
 (2, 'Reyes', 'Maria', 'Cruz', '1988-11-20', 'FEMALE', '09998765432', 'maria.reyes@example.com', '2025-01-10 12:30:00', '2026-01-10 12:30:00', 2, 'ACTIVE'),
-(3, 'Santos', 'Cris', 'Diaz', '2005-07-25', 'MALE', '09001112222', 'cris.santos@school.edu', '2024-10-01 09:00:00', '2024-11-01 09:00:00', 5, 'EXPIRED'),
-(4, 'Santos', 'Maria', 'Luiza', '1998-05-22', 'Female', '09171234567', 'maria.santos@example.com', '2025-01-10 09:00:00', '2025-02-10 09:00:00', 3, 'UNACTIVATED'),
-(5, 'Reyes', 'John', 'Alva', '1995-08-10', 'Male', '09281239876', 'john.reyes@example.com', '2025-01-10 09:00:00', '2025-02-10 09:00:00', 3, 'UNACTIVATED'),
+(3, 'Santos', 'Cris', 'Diaz', '2005-07-25', 'MALE', '09001112222', 'cris.santos@school.edu', '2025-01-01 09:00:00', '2025-02-01 09:00:00', 3, 'EXPIRED'),
+(4, 'Santos', 'Maria', 'Luiza', '1998-05-22', 'Female', '09171234567', 'maria.santos@example.com', '2025-01-10 09:00:00', '2025-02-10 09:00:00', 1, 'UNACTIVATED'),
+(5, 'Reyes', 'John', 'Alva', '1995-08-10', 'Male', '09281239876', 'john.reyes@example.com', '2025-01-10 09:00:00', '2025-01-11 09:00:00', 5, 'UNACTIVATED'),
 (6, 'Cruz', 'Angela', 'Munez', '2000-03-02', 'Female', '09094561234', 'angela.cruz@example.com', '2025-01-10 09:00:00', '2025-02-10 09:00:00', 3, 'UNACTIVATED'),
-(7, 'Delos Reyes', 'Mark', 'Tado', '1999-11-18', 'Male', '09183456721', 'mark.reyes@example.com', '2025-01-10 09:00:00', '2025-02-10 09:00:00', 3, 'UNACTIVATED');
+(7, 'Delos Reyes', 'Mark', 'Tado', '1999-11-18', 'Male', '09183456721', 'mark.reyes@example.com', '2025-01-10 13:00:00', '2025-01-11 13:00:00', 5, 'UNACTIVATED');
 
 -- --------------------------------------------------------
 
@@ -180,11 +180,9 @@ CREATE TABLE `membershiptypes` (
 INSERT INTO `membershiptypes` (`planID`, `planName`, `planDurationDays`, `planFee`, `status`) VALUES
 (1, 'Solo Monthly', 30, 1000.00, 'ACTIVE'),
 (2, 'Solo Annual', 365, 10800.00, 'ACTIVE'),
-(3, 'Group Monthly', 30, 850.00, 'ACTIVE'),
-(4, 'Group Annual', 365, 9180.00, 'ACTIVE'),
-(5, 'Student Monthly', 30, 850.00, 'ACTIVE'),
-(6, 'Student Annual', 365, 9180.00, 'ACTIVE'),
-(7, 'Day Pass', 1, 100.00, 'ACTIVE');
+(3, 'Student Monthly', 30, 850.00, 'ACTIVE'),
+(4, 'Student Annual', 365, 9180.00, 'ACTIVE'),
+(5, 'Day Pass', 1, 100.00, 'ACTIVE');
 
 -- --------------------------------------------------------
 
@@ -301,7 +299,7 @@ CREATE TABLE `staffs` (
 INSERT INTO `staffs` (`staffID`, `lastName`, `firstName`, `middleName`, `DoB`, `Sex`, `contactNumber`, `email`, `address`, `schedule`, `positionID`, `status`) VALUES
 (1, 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3, 'ACTIVE'),
 (2, 'Smith', 'John', 'A.', '1990-05-15', 'Male', '09123456789', 'john.smith@gym.com', 'davao city', 'M, T, W, Th, F,', 1, 'ACTIVE'),
-(4, 'Doe', 'Mark', 'Raulos', '2000-01-30', 'Male', '09012345678', 'mark.doe@coaching.com', 'davao city', 'M, W, F,', 2, 'ACTIVE');
+(3, 'Doe', 'Mark', 'Raulos', '2000-01-30', 'Male', '09012345678', 'mark.doe@coaching.com', 'davao city', 'M, W, F,', 2, 'ACTIVE');
 
 -- --------------------------------------------------------
 

@@ -224,35 +224,26 @@
             this.Users_dataGridView_users = new System.Windows.Forms.DataGridView();
             this.Recep_panel_coaching = new System.Windows.Forms.Panel();
             this.label84 = new System.Windows.Forms.Label();
-            this.button2_panel4 = new System.Windows.Forms.Button();
+            this.Coaching_button_update = new System.Windows.Forms.Button();
             this.label85 = new System.Windows.Forms.Label();
             this.label87 = new System.Windows.Forms.Label();
-            this.Recep_coaching_dateTimePicker_date = new System.Windows.Forms.DateTimePicker();
+            this.Coaching_dateTimePicker_date = new System.Windows.Forms.DateTimePicker();
             this.label88 = new System.Windows.Forms.Label();
-            this.Recep_coaching_comboBox_status = new System.Windows.Forms.ComboBox();
-            this.Recep_coaching_comboBox_coach = new System.Windows.Forms.ComboBox();
+            this.Coaching_comboBox_status = new System.Windows.Forms.ComboBox();
+            this.Coaching_comboBox_coach = new System.Windows.Forms.ComboBox();
             this.label89 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Recep_coaching_textBox_sessionID = new System.Windows.Forms.TextBox();
+            this.Coaching_button_create = new System.Windows.Forms.Button();
+            this.Coaching_textBox_sessionID = new System.Windows.Forms.TextBox();
             this.Recep_coaching_dataGridView_coaching = new System.Windows.Forms.DataGridView();
             this.Recep_panel_damage = new System.Windows.Forms.Panel();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label121 = new System.Windows.Forms.Label();
-            this.label122 = new System.Windows.Forms.Label();
-            this.label123 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label124 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label125 = new System.Windows.Forms.Label();
+            this.Damaged_dataGridView_damaged = new System.Windows.Forms.DataGridView();
+            this.Damaged_button_record = new System.Windows.Forms.Button();
             this.label126 = new System.Windows.Forms.Label();
             this.Recep_panel_biling = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.Billing_dataGridView_sales = new System.Windows.Forms.DataGridView();
             this.Billing_button_view = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Billing_button_searchReference = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.Billing_comboBox_damagedEquipment = new System.Windows.Forms.ComboBox();
@@ -305,6 +296,22 @@
             this.label101 = new System.Windows.Forms.Label();
             this.pictureBox1_panel3 = new System.Windows.Forms.PictureBox();
             this.Recep_button_viewMemberCard = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.Damaged_comboBox_equipment = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label121 = new System.Windows.Forms.Label();
+            this.label123 = new System.Windows.Forms.Label();
+            this.Damaged_textBox_quantity = new System.Windows.Forms.TextBox();
+            this.Damaged_textbox_equipmentID = new System.Windows.Forms.TextBox();
+            this.label124 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.Users_comboBox_staffs = new System.Windows.Forms.ComboBox();
+            this.Coaching_comboBox_member = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label125 = new System.Windows.Forms.Label();
+            this.Damaged_dataGridView_equipments = new System.Windows.Forms.DataGridView();
+            this.label26 = new System.Windows.Forms.Label();
+            this.Billing_comboBox_discount = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -342,8 +349,7 @@
             this.Recep_panel_coaching.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Recep_coaching_dataGridView_coaching)).BeginInit();
             this.Recep_panel_damage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Damaged_dataGridView_damaged)).BeginInit();
             this.Recep_panel_biling.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Billing_dataGridView_sales)).BeginInit();
@@ -352,6 +358,8 @@
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_panel3)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Damaged_dataGridView_equipments)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -367,11 +375,6 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_coaching);
-            this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_users);
-            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_coaching);
-            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_damage);
-            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_biling);
             this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_dashboard);
             this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_members);
             this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_checkin);
@@ -380,6 +383,11 @@
             this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_equipment);
             this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_price);
             this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_sales);
+            this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_coaching);
+            this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_users);
+            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_coaching);
+            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_damage);
+            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_biling);
             this.splitContainer1.Size = new System.Drawing.Size(1264, 681);
             this.splitContainer1.SplitterDistance = 300;
             this.splitContainer1.TabIndex = 1;
@@ -694,6 +702,7 @@
             // 
             // Recep_members_comboBox_plan
             // 
+            this.Recep_members_comboBox_plan.Enabled = false;
             this.Recep_members_comboBox_plan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Recep_members_comboBox_plan.FormattingEnabled = true;
             this.Recep_members_comboBox_plan.Location = new System.Drawing.Point(638, 519);
@@ -2196,7 +2205,6 @@
             // Admin_panel_sales
             // 
             this.Admin_panel_sales.Controls.Add(this.panel9_panel5);
-            this.Admin_panel_sales.Controls.Add(this.Sales_button_search);
             this.Admin_panel_sales.Controls.Add(this.Sales_dataGridView_sales);
             this.Admin_panel_sales.Controls.Add(this.label13);
             this.Admin_panel_sales.Location = new System.Drawing.Point(0, 0);
@@ -2209,21 +2217,22 @@
             // 
             this.panel9_panel5.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel9_panel5.Controls.Add(this.Sales_dateTimePicker_from);
+            this.panel9_panel5.Controls.Add(this.Sales_button_search);
             this.panel9_panel5.Controls.Add(this.Sales_dateTimePicker_to);
             this.panel9_panel5.Controls.Add(this.label16);
             this.panel9_panel5.Controls.Add(this.Sales_textBox_total);
             this.panel9_panel5.Controls.Add(this.label14);
             this.panel9_panel5.Controls.Add(this.label15);
-            this.panel9_panel5.Location = new System.Drawing.Point(27, 87);
+            this.panel9_panel5.Location = new System.Drawing.Point(27, 63);
             this.panel9_panel5.Name = "panel9_panel5";
-            this.panel9_panel5.Size = new System.Drawing.Size(909, 138);
+            this.panel9_panel5.Size = new System.Drawing.Size(909, 130);
             this.panel9_panel5.TabIndex = 10;
             // 
             // Sales_dateTimePicker_from
             // 
             this.Sales_dateTimePicker_from.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sales_dateTimePicker_from.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sales_dateTimePicker_from.Location = new System.Drawing.Point(12, 71);
+            this.Sales_dateTimePicker_from.Location = new System.Drawing.Point(12, 46);
             this.Sales_dateTimePicker_from.Name = "Sales_dateTimePicker_from";
             this.Sales_dateTimePicker_from.Size = new System.Drawing.Size(276, 26);
             this.Sales_dateTimePicker_from.TabIndex = 11;
@@ -2232,7 +2241,7 @@
             // 
             this.Sales_dateTimePicker_to.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sales_dateTimePicker_to.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sales_dateTimePicker_to.Location = new System.Drawing.Point(337, 71);
+            this.Sales_dateTimePicker_to.Location = new System.Drawing.Point(337, 46);
             this.Sales_dateTimePicker_to.Name = "Sales_dateTimePicker_to";
             this.Sales_dateTimePicker_to.Size = new System.Drawing.Size(276, 26);
             this.Sales_dateTimePicker_to.TabIndex = 10;
@@ -2241,7 +2250,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(709, 48);
+            this.label16.Location = new System.Drawing.Point(644, 25);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(43, 16);
             this.label16.TabIndex = 8;
@@ -2249,17 +2258,17 @@
             // 
             // Sales_textBox_total
             // 
-            this.Sales_textBox_total.Location = new System.Drawing.Point(712, 67);
+            this.Sales_textBox_total.Location = new System.Drawing.Point(647, 44);
             this.Sales_textBox_total.Multiline = true;
             this.Sales_textBox_total.Name = "Sales_textBox_total";
-            this.Sales_textBox_total.Size = new System.Drawing.Size(144, 30);
+            this.Sales_textBox_total.Size = new System.Drawing.Size(225, 30);
             this.Sales_textBox_total.TabIndex = 7;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(9, 49);
+            this.label14.Location = new System.Drawing.Point(9, 24);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(79, 16);
             this.label14.TabIndex = 5;
@@ -2269,7 +2278,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(334, 48);
+            this.label15.Location = new System.Drawing.Point(334, 23);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(63, 16);
             this.label15.TabIndex = 6;
@@ -2281,9 +2290,9 @@
             this.Sales_button_search.FlatAppearance.BorderSize = 0;
             this.Sales_button_search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sales_button_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sales_button_search.Location = new System.Drawing.Point(408, 620);
+            this.Sales_button_search.Location = new System.Drawing.Point(12, 85);
             this.Sales_button_search.Name = "Sales_button_search";
-            this.Sales_button_search.Size = new System.Drawing.Size(134, 50);
+            this.Sales_button_search.Size = new System.Drawing.Size(110, 30);
             this.Sales_button_search.TabIndex = 9;
             this.Sales_button_search.Text = "Search";
             this.Sales_button_search.UseVisualStyleBackColor = false;
@@ -2291,16 +2300,16 @@
             // Sales_dataGridView_sales
             // 
             this.Sales_dataGridView_sales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Sales_dataGridView_sales.Location = new System.Drawing.Point(26, 275);
+            this.Sales_dataGridView_sales.Location = new System.Drawing.Point(26, 202);
             this.Sales_dataGridView_sales.Name = "Sales_dataGridView_sales";
-            this.Sales_dataGridView_sales.Size = new System.Drawing.Size(910, 282);
+            this.Sales_dataGridView_sales.Size = new System.Drawing.Size(910, 449);
             this.Sales_dataGridView_sales.TabIndex = 2;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(401, 48);
+            this.label13.Location = new System.Drawing.Point(404, 22);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(129, 24);
             this.label13.TabIndex = 1;
@@ -2333,7 +2342,7 @@
             this.Admin_coaching_button_print.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
             this.Admin_coaching_button_print.FlatAppearance.BorderSize = 0;
             this.Admin_coaching_button_print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Admin_coaching_button_print.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Admin_coaching_button_print.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Admin_coaching_button_print.Location = new System.Drawing.Point(364, 605);
             this.Admin_coaching_button_print.Name = "Admin_coaching_button_print";
             this.Admin_coaching_button_print.Size = new System.Drawing.Size(240, 56);
@@ -2363,12 +2372,14 @@
             // 
             this.Admin_panel_users.BackColor = System.Drawing.SystemColors.Control;
             this.Admin_panel_users.Controls.Add(this.Users_comboBox_status);
+            this.Admin_panel_users.Controls.Add(this.Users_comboBox_staffs);
             this.Admin_panel_users.Controls.Add(this.Users_comboBox_accType);
             this.Admin_panel_users.Controls.Add(this.Users_button_update);
             this.Admin_panel_users.Controls.Add(this.Users_button_add);
             this.Admin_panel_users.Controls.Add(this.label5_panel9);
             this.Admin_panel_users.Controls.Add(this.label1_panel9);
             this.Admin_panel_users.Controls.Add(this.label4_panel9);
+            this.Admin_panel_users.Controls.Add(this.label24);
             this.Admin_panel_users.Controls.Add(this.label2_panel9);
             this.Admin_panel_users.Controls.Add(this.label3_panel9);
             this.Admin_panel_users.Controls.Add(this.Users_textBox_userID);
@@ -2385,7 +2396,7 @@
             // 
             this.Users_comboBox_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Users_comboBox_status.FormattingEnabled = true;
-            this.Users_comboBox_status.Location = new System.Drawing.Point(636, 507);
+            this.Users_comboBox_status.Location = new System.Drawing.Point(636, 547);
             this.Users_comboBox_status.Name = "Users_comboBox_status";
             this.Users_comboBox_status.Size = new System.Drawing.Size(279, 24);
             this.Users_comboBox_status.TabIndex = 39;
@@ -2394,7 +2405,7 @@
             // 
             this.Users_comboBox_accType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Users_comboBox_accType.FormattingEnabled = true;
-            this.Users_comboBox_accType.Location = new System.Drawing.Point(636, 473);
+            this.Users_comboBox_accType.Location = new System.Drawing.Point(636, 509);
             this.Users_comboBox_accType.Name = "Users_comboBox_accType";
             this.Users_comboBox_accType.Size = new System.Drawing.Size(279, 24);
             this.Users_comboBox_accType.TabIndex = 40;
@@ -2449,7 +2460,7 @@
             // 
             this.label4_panel9.AutoSize = true;
             this.label4_panel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4_panel9.Location = new System.Drawing.Point(503, 511);
+            this.label4_panel9.Location = new System.Drawing.Point(503, 551);
             this.label4_panel9.Name = "label4_panel9";
             this.label4_panel9.Size = new System.Drawing.Size(44, 16);
             this.label4_panel9.TabIndex = 35;
@@ -2469,7 +2480,7 @@
             // 
             this.label3_panel9.AutoSize = true;
             this.label3_panel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3_panel9.Location = new System.Drawing.Point(503, 477);
+            this.label3_panel9.Location = new System.Drawing.Point(503, 513);
             this.label3_panel9.Name = "label3_panel9";
             this.label3_panel9.Size = new System.Drawing.Size(77, 16);
             this.label3_panel9.TabIndex = 36;
@@ -2513,16 +2524,18 @@
             // Recep_panel_coaching
             // 
             this.Recep_panel_coaching.Controls.Add(this.label84);
-            this.Recep_panel_coaching.Controls.Add(this.button2_panel4);
+            this.Recep_panel_coaching.Controls.Add(this.Coaching_button_update);
             this.Recep_panel_coaching.Controls.Add(this.label85);
             this.Recep_panel_coaching.Controls.Add(this.label87);
-            this.Recep_panel_coaching.Controls.Add(this.Recep_coaching_dateTimePicker_date);
+            this.Recep_panel_coaching.Controls.Add(this.Coaching_dateTimePicker_date);
+            this.Recep_panel_coaching.Controls.Add(this.label25);
             this.Recep_panel_coaching.Controls.Add(this.label88);
-            this.Recep_panel_coaching.Controls.Add(this.Recep_coaching_comboBox_status);
-            this.Recep_panel_coaching.Controls.Add(this.Recep_coaching_comboBox_coach);
+            this.Recep_panel_coaching.Controls.Add(this.Coaching_comboBox_status);
+            this.Recep_panel_coaching.Controls.Add(this.Coaching_comboBox_member);
+            this.Recep_panel_coaching.Controls.Add(this.Coaching_comboBox_coach);
             this.Recep_panel_coaching.Controls.Add(this.label89);
-            this.Recep_panel_coaching.Controls.Add(this.button1);
-            this.Recep_panel_coaching.Controls.Add(this.Recep_coaching_textBox_sessionID);
+            this.Recep_panel_coaching.Controls.Add(this.Coaching_button_create);
+            this.Recep_panel_coaching.Controls.Add(this.Coaching_textBox_sessionID);
             this.Recep_panel_coaching.Controls.Add(this.Recep_coaching_dataGridView_coaching);
             this.Recep_panel_coaching.Location = new System.Drawing.Point(0, 0);
             this.Recep_panel_coaching.Name = "Recep_panel_coaching";
@@ -2540,26 +2553,26 @@
             this.label84.TabIndex = 12;
             this.label84.Text = "Coaching Sessions";
             // 
-            // button2_panel4
+            // Coaching_button_update
             // 
-            this.button2_panel4.AutoSize = true;
-            this.button2_panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
-            this.button2_panel4.FlatAppearance.BorderSize = 0;
-            this.button2_panel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2_panel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2_panel4.ForeColor = System.Drawing.Color.Black;
-            this.button2_panel4.Location = new System.Drawing.Point(528, 607);
-            this.button2_panel4.Name = "button2_panel4";
-            this.button2_panel4.Size = new System.Drawing.Size(231, 43);
-            this.button2_panel4.TabIndex = 11;
-            this.button2_panel4.Text = "Manage Bookings";
-            this.button2_panel4.UseVisualStyleBackColor = false;
+            this.Coaching_button_update.AutoSize = true;
+            this.Coaching_button_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
+            this.Coaching_button_update.FlatAppearance.BorderSize = 0;
+            this.Coaching_button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Coaching_button_update.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Coaching_button_update.ForeColor = System.Drawing.Color.Black;
+            this.Coaching_button_update.Location = new System.Drawing.Point(528, 607);
+            this.Coaching_button_update.Name = "Coaching_button_update";
+            this.Coaching_button_update.Size = new System.Drawing.Size(231, 43);
+            this.Coaching_button_update.TabIndex = 11;
+            this.Coaching_button_update.Text = "Update Session";
+            this.Coaching_button_update.UseVisualStyleBackColor = false;
             // 
             // label85
             // 
             this.label85.AutoSize = true;
             this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label85.Location = new System.Drawing.Point(559, 528);
+            this.label85.Location = new System.Drawing.Point(502, 528);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(56, 20);
             this.label85.TabIndex = 10;
@@ -2575,41 +2588,42 @@
             this.label87.TabIndex = 6;
             this.label87.Text = "Date and Time";
             // 
-            // Recep_coaching_dateTimePicker_date
+            // Coaching_dateTimePicker_date
             // 
-            this.Recep_coaching_dateTimePicker_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Recep_coaching_dateTimePicker_date.Location = new System.Drawing.Point(654, 490);
-            this.Recep_coaching_dateTimePicker_date.Name = "Recep_coaching_dateTimePicker_date";
-            this.Recep_coaching_dateTimePicker_date.Size = new System.Drawing.Size(288, 26);
-            this.Recep_coaching_dateTimePicker_date.TabIndex = 5;
+            this.Coaching_dateTimePicker_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Coaching_dateTimePicker_date.Location = new System.Drawing.Point(654, 490);
+            this.Coaching_dateTimePicker_date.Name = "Coaching_dateTimePicker_date";
+            this.Coaching_dateTimePicker_date.Size = new System.Drawing.Size(288, 26);
+            this.Coaching_dateTimePicker_date.TabIndex = 5;
             // 
             // label88
             // 
             this.label88.AutoSize = true;
             this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label88.Location = new System.Drawing.Point(73, 528);
+            this.label88.Location = new System.Drawing.Point(54, 528);
             this.label88.Name = "label88";
             this.label88.Size = new System.Drawing.Size(55, 20);
             this.label88.TabIndex = 4;
             this.label88.Text = "Coach";
             // 
-            // Recep_coaching_comboBox_status
+            // Coaching_comboBox_status
             // 
-            this.Recep_coaching_comboBox_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Recep_coaching_comboBox_status.FormattingEnabled = true;
-            this.Recep_coaching_comboBox_status.Location = new System.Drawing.Point(655, 524);
-            this.Recep_coaching_comboBox_status.Name = "Recep_coaching_comboBox_status";
-            this.Recep_coaching_comboBox_status.Size = new System.Drawing.Size(288, 28);
-            this.Recep_coaching_comboBox_status.TabIndex = 3;
+            this.Coaching_comboBox_status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Coaching_comboBox_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Coaching_comboBox_status.FormattingEnabled = true;
+            this.Coaching_comboBox_status.Location = new System.Drawing.Point(655, 524);
+            this.Coaching_comboBox_status.Name = "Coaching_comboBox_status";
+            this.Coaching_comboBox_status.Size = new System.Drawing.Size(288, 28);
+            this.Coaching_comboBox_status.TabIndex = 3;
             // 
-            // Recep_coaching_comboBox_coach
+            // Coaching_comboBox_coach
             // 
-            this.Recep_coaching_comboBox_coach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Recep_coaching_comboBox_coach.FormattingEnabled = true;
-            this.Recep_coaching_comboBox_coach.Location = new System.Drawing.Point(172, 522);
-            this.Recep_coaching_comboBox_coach.Name = "Recep_coaching_comboBox_coach";
-            this.Recep_coaching_comboBox_coach.Size = new System.Drawing.Size(288, 28);
-            this.Recep_coaching_comboBox_coach.TabIndex = 3;
+            this.Coaching_comboBox_coach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Coaching_comboBox_coach.FormattingEnabled = true;
+            this.Coaching_comboBox_coach.Location = new System.Drawing.Point(172, 522);
+            this.Coaching_comboBox_coach.Name = "Coaching_comboBox_coach";
+            this.Coaching_comboBox_coach.Size = new System.Drawing.Size(288, 28);
+            this.Coaching_comboBox_coach.TabIndex = 3;
             // 
             // label89
             // 
@@ -2621,29 +2635,29 @@
             this.label89.TabIndex = 2;
             this.label89.Text = "Session ID";
             // 
-            // button1
+            // Coaching_button_create
             // 
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(219, 608);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(231, 43);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Create Session";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Coaching_button_create.AutoSize = true;
+            this.Coaching_button_create.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
+            this.Coaching_button_create.FlatAppearance.BorderSize = 0;
+            this.Coaching_button_create.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Coaching_button_create.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Coaching_button_create.ForeColor = System.Drawing.Color.Black;
+            this.Coaching_button_create.Location = new System.Drawing.Point(219, 608);
+            this.Coaching_button_create.Name = "Coaching_button_create";
+            this.Coaching_button_create.Size = new System.Drawing.Size(231, 43);
+            this.Coaching_button_create.TabIndex = 1;
+            this.Coaching_button_create.Text = "Create Session";
+            this.Coaching_button_create.UseVisualStyleBackColor = false;
             // 
-            // Recep_coaching_textBox_sessionID
+            // Coaching_textBox_sessionID
             // 
-            this.Recep_coaching_textBox_sessionID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Recep_coaching_textBox_sessionID.Location = new System.Drawing.Point(172, 488);
-            this.Recep_coaching_textBox_sessionID.Name = "Recep_coaching_textBox_sessionID";
-            this.Recep_coaching_textBox_sessionID.ReadOnly = true;
-            this.Recep_coaching_textBox_sessionID.Size = new System.Drawing.Size(288, 26);
-            this.Recep_coaching_textBox_sessionID.TabIndex = 1;
+            this.Coaching_textBox_sessionID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Coaching_textBox_sessionID.Location = new System.Drawing.Point(172, 488);
+            this.Coaching_textBox_sessionID.Name = "Coaching_textBox_sessionID";
+            this.Coaching_textBox_sessionID.ReadOnly = true;
+            this.Coaching_textBox_sessionID.Size = new System.Drawing.Size(288, 26);
+            this.Coaching_textBox_sessionID.TabIndex = 1;
             // 
             // Recep_coaching_dataGridView_coaching
             // 
@@ -2656,16 +2670,9 @@
             // Recep_panel_damage
             // 
             this.Recep_panel_damage.BackColor = System.Drawing.SystemColors.Control;
-            this.Recep_panel_damage.Controls.Add(this.dataGridView5);
-            this.Recep_panel_damage.Controls.Add(this.comboBox4);
-            this.Recep_panel_damage.Controls.Add(this.label121);
-            this.Recep_panel_damage.Controls.Add(this.label122);
-            this.Recep_panel_damage.Controls.Add(this.label123);
-            this.Recep_panel_damage.Controls.Add(this.textBox13);
-            this.Recep_panel_damage.Controls.Add(this.dataGridView6);
-            this.Recep_panel_damage.Controls.Add(this.button9);
-            this.Recep_panel_damage.Controls.Add(this.label124);
-            this.Recep_panel_damage.Controls.Add(this.button8);
+            this.Recep_panel_damage.Controls.Add(this.panel9);
+            this.Recep_panel_damage.Controls.Add(this.Damaged_dataGridView_equipments);
+            this.Recep_panel_damage.Controls.Add(this.Damaged_dataGridView_damaged);
             this.Recep_panel_damage.Controls.Add(this.label125);
             this.Recep_panel_damage.Controls.Add(this.label126);
             this.Recep_panel_damage.Location = new System.Drawing.Point(0, 0);
@@ -2674,109 +2681,26 @@
             this.Recep_panel_damage.TabIndex = 24;
             this.Recep_panel_damage.Visible = false;
             // 
-            // dataGridView5
+            // Damaged_dataGridView_damaged
             // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(655, 47);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(293, 411);
-            this.dataGridView5.TabIndex = 22;
+            this.Damaged_dataGridView_damaged.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Damaged_dataGridView_damaged.Location = new System.Drawing.Point(15, 46);
+            this.Damaged_dataGridView_damaged.Name = "Damaged_dataGridView_damaged";
+            this.Damaged_dataGridView_damaged.Size = new System.Drawing.Size(555, 332);
+            this.Damaged_dataGridView_damaged.TabIndex = 14;
             // 
-            // comboBox4
+            // Damaged_button_record
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "MInor",
-            "Major",
-            "Critical"});
-            this.comboBox4.Location = new System.Drawing.Point(286, 391);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 21;
-            // 
-            // label121
-            // 
-            this.label121.AutoSize = true;
-            this.label121.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label121.Location = new System.Drawing.Point(503, 365);
-            this.label121.Name = "label121";
-            this.label121.Size = new System.Drawing.Size(86, 16);
-            this.label121.TabIndex = 20;
-            this.label121.Text = "Description";
-            // 
-            // label122
-            // 
-            this.label122.AutoSize = true;
-            this.label122.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label122.Location = new System.Drawing.Point(314, 365);
-            this.label122.Name = "label122";
-            this.label122.Size = new System.Drawing.Size(64, 16);
-            this.label122.TabIndex = 18;
-            this.label122.Text = "Severity";
-            // 
-            // label123
-            // 
-            this.label123.AutoSize = true;
-            this.label123.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label123.Location = new System.Drawing.Point(52, 365);
-            this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(135, 16);
-            this.label123.TabIndex = 16;
-            this.label123.Text = "Equipment Lookup";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(7, 354);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(630, 253);
-            this.textBox13.TabIndex = 15;
-            // 
-            // dataGridView6
-            // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(7, 47);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(630, 260);
-            this.dataGridView6.TabIndex = 14;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(268, 619);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(116, 40);
-            this.button9.TabIndex = 13;
-            this.button9.Text = "Report";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // label124
-            // 
-            this.label124.AutoSize = true;
-            this.label124.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label124.Location = new System.Drawing.Point(12, 324);
-            this.label124.Name = "label124";
-            this.label124.Size = new System.Drawing.Size(160, 20);
-            this.label124.TabIndex = 12;
-            this.label124.Text = "Reporting Damage";
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(775, 469);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(116, 40);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "Update Status";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // label125
-            // 
-            this.label125.AutoSize = true;
-            this.label125.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label125.Location = new System.Drawing.Point(660, 19);
-            this.label125.Name = "label125";
-            this.label125.Size = new System.Drawing.Size(193, 20);
-            this.label125.TabIndex = 10;
-            this.label125.Text = "Damaged Tracking List";
+            this.Damaged_button_record.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
+            this.Damaged_button_record.FlatAppearance.BorderSize = 0;
+            this.Damaged_button_record.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Damaged_button_record.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Damaged_button_record.Location = new System.Drawing.Point(220, 190);
+            this.Damaged_button_record.Name = "Damaged_button_record";
+            this.Damaged_button_record.Size = new System.Drawing.Size(116, 40);
+            this.Damaged_button_record.TabIndex = 13;
+            this.Damaged_button_record.Text = "Record";
+            this.Damaged_button_record.UseVisualStyleBackColor = false;
             // 
             // label126
             // 
@@ -2795,8 +2719,10 @@
             this.Recep_panel_biling.Controls.Add(this.textBox2);
             this.Recep_panel_biling.Controls.Add(this.textBox3);
             this.Recep_panel_biling.Controls.Add(this.panel8);
+            this.Recep_panel_biling.Controls.Add(this.Billing_comboBox_discount);
             this.Recep_panel_biling.Controls.Add(this.Billing_comboBox_damagedEquipment);
             this.Recep_panel_biling.Controls.Add(this.label20);
+            this.Recep_panel_biling.Controls.Add(this.label26);
             this.Recep_panel_biling.Controls.Add(this.Billing_comboBox_sessionDate);
             this.Recep_panel_biling.Controls.Add(this.label19);
             this.Recep_panel_biling.Controls.Add(this.Billing_comboBox_transactionType);
@@ -2828,7 +2754,7 @@
             this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel8.Controls.Add(this.Billing_dataGridView_sales);
             this.panel8.Controls.Add(this.Billing_button_view);
-            this.panel8.Controls.Add(this.button2);
+            this.panel8.Controls.Add(this.Billing_button_searchReference);
             this.panel8.Controls.Add(this.textBox1);
             this.panel8.Controls.Add(this.label21);
             this.panel8.Location = new System.Drawing.Point(528, 30);
@@ -2855,16 +2781,16 @@
             this.Billing_button_view.Text = "View Receipt";
             this.Billing_button_view.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // Billing_button_searchReference
             // 
-            this.button2.AutoSize = true;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(340, 36);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 30);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Billing_button_searchReference.AutoSize = true;
+            this.Billing_button_searchReference.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Billing_button_searchReference.Location = new System.Drawing.Point(340, 36);
+            this.Billing_button_searchReference.Name = "Billing_button_searchReference";
+            this.Billing_button_searchReference.Size = new System.Drawing.Size(70, 30);
+            this.Billing_button_searchReference.TabIndex = 33;
+            this.Billing_button_searchReference.Text = "Search";
+            this.Billing_button_searchReference.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -2889,7 +2815,7 @@
             this.Billing_comboBox_damagedEquipment.Enabled = false;
             this.Billing_comboBox_damagedEquipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Billing_comboBox_damagedEquipment.FormattingEnabled = true;
-            this.Billing_comboBox_damagedEquipment.Location = new System.Drawing.Point(205, 466);
+            this.Billing_comboBox_damagedEquipment.Location = new System.Drawing.Point(217, 430);
             this.Billing_comboBox_damagedEquipment.Name = "Billing_comboBox_damagedEquipment";
             this.Billing_comboBox_damagedEquipment.Size = new System.Drawing.Size(293, 28);
             this.Billing_comboBox_damagedEquipment.TabIndex = 27;
@@ -2898,7 +2824,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(35, 421);
+            this.label20.Location = new System.Drawing.Point(26, 385);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(105, 20);
             this.label20.TabIndex = 24;
@@ -2909,7 +2835,7 @@
             this.Billing_comboBox_sessionDate.Enabled = false;
             this.Billing_comboBox_sessionDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Billing_comboBox_sessionDate.FormattingEnabled = true;
-            this.Billing_comboBox_sessionDate.Location = new System.Drawing.Point(205, 417);
+            this.Billing_comboBox_sessionDate.Location = new System.Drawing.Point(217, 381);
             this.Billing_comboBox_sessionDate.Name = "Billing_comboBox_sessionDate";
             this.Billing_comboBox_sessionDate.Size = new System.Drawing.Size(293, 28);
             this.Billing_comboBox_sessionDate.TabIndex = 28;
@@ -2918,7 +2844,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(35, 469);
+            this.label19.Location = new System.Drawing.Point(26, 433);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(160, 20);
             this.label19.TabIndex = 25;
@@ -2929,7 +2855,7 @@
             this.Billing_comboBox_membershipType.Enabled = false;
             this.Billing_comboBox_membershipType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Billing_comboBox_membershipType.FormattingEnabled = true;
-            this.Billing_comboBox_membershipType.Location = new System.Drawing.Point(205, 368);
+            this.Billing_comboBox_membershipType.Location = new System.Drawing.Point(217, 332);
             this.Billing_comboBox_membershipType.Name = "Billing_comboBox_membershipType";
             this.Billing_comboBox_membershipType.Size = new System.Drawing.Size(293, 28);
             this.Billing_comboBox_membershipType.TabIndex = 29;
@@ -2938,7 +2864,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(35, 373);
+            this.label18.Location = new System.Drawing.Point(26, 337);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(134, 20);
             this.label18.TabIndex = 26;
@@ -2948,7 +2874,7 @@
             // 
             this.Billing_button_calculate.AutoSize = true;
             this.Billing_button_calculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Billing_button_calculate.Location = new System.Drawing.Point(413, 513);
+            this.Billing_button_calculate.Location = new System.Drawing.Point(425, 513);
             this.Billing_button_calculate.Name = "Billing_button_calculate";
             this.Billing_button_calculate.Size = new System.Drawing.Size(85, 30);
             this.Billing_button_calculate.TabIndex = 23;
@@ -2959,7 +2885,7 @@
             // 
             this.Billing_button_record.AutoSize = true;
             this.Billing_button_record.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Billing_button_record.Location = new System.Drawing.Point(278, 606);
+            this.Billing_button_record.Location = new System.Drawing.Point(199, 617);
             this.Billing_button_record.Name = "Billing_button_record";
             this.Billing_button_record.Size = new System.Drawing.Size(137, 46);
             this.Billing_button_record.TabIndex = 23;
@@ -2970,7 +2896,7 @@
             // 
             this.label90.AutoSize = true;
             this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label90.Location = new System.Drawing.Point(35, 565);
+            this.label90.Location = new System.Drawing.Point(26, 565);
             this.label90.Name = "label90";
             this.label90.Size = new System.Drawing.Size(92, 20);
             this.label90.TabIndex = 22;
@@ -2980,7 +2906,7 @@
             // 
             this.Billing_textBox_reference.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Billing_textBox_reference.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Billing_textBox_reference.Location = new System.Drawing.Point(205, 562);
+            this.Billing_textBox_reference.Location = new System.Drawing.Point(217, 562);
             this.Billing_textBox_reference.Name = "Billing_textBox_reference";
             this.Billing_textBox_reference.ReadOnly = true;
             this.Billing_textBox_reference.Size = new System.Drawing.Size(293, 26);
@@ -2990,7 +2916,7 @@
             // 
             this.label92.AutoSize = true;
             this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label92.Location = new System.Drawing.Point(35, 517);
+            this.label92.Location = new System.Drawing.Point(26, 517);
             this.label92.Name = "label92";
             this.label92.Size = new System.Drawing.Size(65, 20);
             this.label92.TabIndex = 18;
@@ -3000,7 +2926,7 @@
             // 
             this.Billing_textBox_amount.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Billing_textBox_amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Billing_textBox_amount.Location = new System.Drawing.Point(205, 515);
+            this.Billing_textBox_amount.Location = new System.Drawing.Point(217, 515);
             this.Billing_textBox_amount.Name = "Billing_textBox_amount";
             this.Billing_textBox_amount.ReadOnly = true;
             this.Billing_textBox_amount.Size = new System.Drawing.Size(202, 26);
@@ -3010,7 +2936,7 @@
             // 
             this.label97.AutoSize = true;
             this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label97.Location = new System.Drawing.Point(35, 277);
+            this.label97.Location = new System.Drawing.Point(26, 241);
             this.label97.Name = "label97";
             this.label97.Size = new System.Drawing.Size(118, 20);
             this.label97.TabIndex = 11;
@@ -3020,7 +2946,7 @@
             // 
             this.label102.AutoSize = true;
             this.label102.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label102.Location = new System.Drawing.Point(35, 133);
+            this.label102.Location = new System.Drawing.Point(26, 97);
             this.label102.Name = "label102";
             this.label102.Size = new System.Drawing.Size(88, 20);
             this.label102.TabIndex = 6;
@@ -3030,7 +2956,7 @@
             // 
             this.label103.AutoSize = true;
             this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label103.Location = new System.Drawing.Point(35, 181);
+            this.label103.Location = new System.Drawing.Point(26, 145);
             this.label103.Name = "label103";
             this.label103.Size = new System.Drawing.Size(113, 20);
             this.label103.TabIndex = 5;
@@ -3040,7 +2966,7 @@
             // 
             this.Billing_button_searchMember.AutoSize = true;
             this.Billing_button_searchMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Billing_button_searchMember.Location = new System.Drawing.Point(322, 88);
+            this.Billing_button_searchMember.Location = new System.Drawing.Point(438, 53);
             this.Billing_button_searchMember.Name = "Billing_button_searchMember";
             this.Billing_button_searchMember.Size = new System.Drawing.Size(70, 30);
             this.Billing_button_searchMember.TabIndex = 4;
@@ -3050,7 +2976,7 @@
             // Billing_textBox_memberSearch
             // 
             this.Billing_textBox_memberSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Billing_textBox_memberSearch.Location = new System.Drawing.Point(39, 90);
+            this.Billing_textBox_memberSearch.Location = new System.Drawing.Point(162, 53);
             this.Billing_textBox_memberSearch.Name = "Billing_textBox_memberSearch";
             this.Billing_textBox_memberSearch.Size = new System.Drawing.Size(270, 26);
             this.Billing_textBox_memberSearch.TabIndex = 3;
@@ -3059,7 +2985,7 @@
             // 
             this.label104.AutoSize = true;
             this.label104.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label104.Location = new System.Drawing.Point(41, 62);
+            this.label104.Location = new System.Drawing.Point(26, 57);
             this.label104.Name = "label104";
             this.label104.Size = new System.Drawing.Size(122, 20);
             this.label104.TabIndex = 2;
@@ -3069,7 +2995,7 @@
             // 
             this.label105.AutoSize = true;
             this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label105.Location = new System.Drawing.Point(35, 23);
+            this.label105.Location = new System.Drawing.Point(26, 16);
             this.label105.Name = "label105";
             this.label105.Size = new System.Drawing.Size(67, 24);
             this.label105.TabIndex = 1;
@@ -3300,7 +3226,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(35, 325);
+            this.label22.Location = new System.Drawing.Point(26, 289);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(130, 20);
             this.label22.TabIndex = 26;
@@ -3310,7 +3236,7 @@
             // 
             this.Billing_comboBox_transactionType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Billing_comboBox_transactionType.FormattingEnabled = true;
-            this.Billing_comboBox_transactionType.Location = new System.Drawing.Point(205, 319);
+            this.Billing_comboBox_transactionType.Location = new System.Drawing.Point(217, 283);
             this.Billing_comboBox_transactionType.Name = "Billing_comboBox_transactionType";
             this.Billing_comboBox_transactionType.Size = new System.Drawing.Size(293, 28);
             this.Billing_comboBox_transactionType.TabIndex = 29;
@@ -3319,7 +3245,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(203, 178);
+            this.textBox2.Location = new System.Drawing.Point(215, 142);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(293, 26);
@@ -3329,7 +3255,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(203, 131);
+            this.textBox3.Location = new System.Drawing.Point(215, 95);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(293, 26);
@@ -3339,7 +3265,7 @@
             // 
             this.textBox4.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(205, 272);
+            this.textBox4.Location = new System.Drawing.Point(217, 236);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(293, 26);
@@ -3349,7 +3275,7 @@
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(205, 225);
+            this.textBox5.Location = new System.Drawing.Point(217, 189);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(293, 26);
@@ -3359,7 +3285,7 @@
             // 
             this.label101.AutoSize = true;
             this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label101.Location = new System.Drawing.Point(35, 229);
+            this.label101.Location = new System.Drawing.Point(26, 193);
             this.label101.Name = "label101";
             this.label101.Size = new System.Drawing.Size(134, 20);
             this.label101.TabIndex = 7;
@@ -3386,6 +3312,163 @@
             this.Recep_button_viewMemberCard.TabIndex = 16;
             this.Recep_button_viewMemberCard.Text = "View Member Card";
             this.Recep_button_viewMemberCard.UseVisualStyleBackColor = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Controls.Add(this.Damaged_comboBox_equipment);
+            this.panel9.Controls.Add(this.label23);
+            this.panel9.Controls.Add(this.label121);
+            this.panel9.Controls.Add(this.Damaged_button_record);
+            this.panel9.Controls.Add(this.label123);
+            this.panel9.Controls.Add(this.Damaged_textBox_quantity);
+            this.panel9.Controls.Add(this.Damaged_textbox_equipmentID);
+            this.panel9.Controls.Add(this.label124);
+            this.panel9.Location = new System.Drawing.Point(14, 398);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(556, 252);
+            this.panel9.TabIndex = 24;
+            // 
+            // Damaged_comboBox_equipment
+            // 
+            this.Damaged_comboBox_equipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.Damaged_comboBox_equipment.FormattingEnabled = true;
+            this.Damaged_comboBox_equipment.Location = new System.Drawing.Point(206, 91);
+            this.Damaged_comboBox_equipment.Name = "Damaged_comboBox_equipment";
+            this.Damaged_comboBox_equipment.Size = new System.Drawing.Size(261, 24);
+            this.Damaged_comboBox_equipment.TabIndex = 30;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(49, 138);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(63, 16);
+            this.label23.TabIndex = 28;
+            this.label23.Text = "Quantity";
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label121.Location = new System.Drawing.Point(49, 94);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(125, 16);
+            this.label121.TabIndex = 29;
+            this.label121.Text = "Equipment Name";
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label123.Location = new System.Drawing.Point(49, 50);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(95, 16);
+            this.label123.TabIndex = 27;
+            this.label123.Text = "EquipmentID";
+            // 
+            // Damaged_textBox_quantity
+            // 
+            this.Damaged_textBox_quantity.Location = new System.Drawing.Point(205, 133);
+            this.Damaged_textBox_quantity.Multiline = true;
+            this.Damaged_textBox_quantity.Name = "Damaged_textBox_quantity";
+            this.Damaged_textBox_quantity.Size = new System.Drawing.Size(261, 26);
+            this.Damaged_textBox_quantity.TabIndex = 25;
+            // 
+            // Damaged_textbox_equipmentID
+            // 
+            this.Damaged_textbox_equipmentID.Location = new System.Drawing.Point(205, 44);
+            this.Damaged_textbox_equipmentID.Multiline = true;
+            this.Damaged_textbox_equipmentID.Name = "Damaged_textbox_equipmentID";
+            this.Damaged_textbox_equipmentID.ReadOnly = true;
+            this.Damaged_textbox_equipmentID.Size = new System.Drawing.Size(261, 26);
+            this.Damaged_textbox_equipmentID.TabIndex = 26;
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label124.Location = new System.Drawing.Point(6, 6);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(160, 20);
+            this.label124.TabIndex = 24;
+            this.label124.Text = "Reporting Damage";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(503, 476);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(73, 16);
+            this.label24.TabIndex = 36;
+            this.label24.Text = "Staff Name";
+            // 
+            // Users_comboBox_staffs
+            // 
+            this.Users_comboBox_staffs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Users_comboBox_staffs.FormattingEnabled = true;
+            this.Users_comboBox_staffs.Location = new System.Drawing.Point(636, 472);
+            this.Users_comboBox_staffs.Name = "Users_comboBox_staffs";
+            this.Users_comboBox_staffs.Size = new System.Drawing.Size(279, 24);
+            this.Users_comboBox_staffs.TabIndex = 40;
+            // 
+            // Coaching_comboBox_member
+            // 
+            this.Coaching_comboBox_member.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Coaching_comboBox_member.FormattingEnabled = true;
+            this.Coaching_comboBox_member.Location = new System.Drawing.Point(173, 563);
+            this.Coaching_comboBox_member.Name = "Coaching_comboBox_member";
+            this.Coaching_comboBox_member.Size = new System.Drawing.Size(288, 28);
+            this.Coaching_comboBox_member.TabIndex = 3;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(54, 569);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(67, 20);
+            this.label25.TabIndex = 4;
+            this.label25.Text = "Member";
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label125.Location = new System.Drawing.Point(585, 19);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(104, 20);
+            this.label125.TabIndex = 10;
+            this.label125.Text = "Equipments";
+            // 
+            // Damaged_dataGridView_equipments
+            // 
+            this.Damaged_dataGridView_equipments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Damaged_dataGridView_equipments.Location = new System.Drawing.Point(582, 47);
+            this.Damaged_dataGridView_equipments.Name = "Damaged_dataGridView_equipments";
+            this.Damaged_dataGridView_equipments.Size = new System.Drawing.Size(366, 603);
+            this.Damaged_dataGridView_equipments.TabIndex = 22;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(26, 475);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(72, 20);
+            this.label26.TabIndex = 25;
+            this.label26.Text = "Discount";
+            // 
+            // Billing_comboBox_discount
+            // 
+            this.Billing_comboBox_discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Billing_comboBox_discount.FormattingEnabled = true;
+            this.Billing_comboBox_discount.Location = new System.Drawing.Point(217, 472);
+            this.Billing_comboBox_discount.Name = "Billing_comboBox_discount";
+            this.Billing_comboBox_discount.Size = new System.Drawing.Size(293, 28);
+            this.Billing_comboBox_discount.TabIndex = 27;
             // 
             // MainForm
             // 
@@ -3461,8 +3544,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Recep_coaching_dataGridView_coaching)).EndInit();
             this.Recep_panel_damage.ResumeLayout(false);
             this.Recep_panel_damage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Damaged_dataGridView_damaged)).EndInit();
             this.Recep_panel_biling.ResumeLayout(false);
             this.Recep_panel_biling.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -3477,6 +3559,9 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_panel3)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Damaged_dataGridView_equipments)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3597,7 +3682,6 @@
         public System.Windows.Forms.Button Admin_coaching_button_print;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView Admin_Coaching_dataGridView_coaching;
-        private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.ComboBox Equipments_comboBox_category;
         public System.Windows.Forms.Label label7_panel8;
         public System.Windows.Forms.Label label6_panel8;
@@ -3641,84 +3725,12 @@
         public System.Windows.Forms.TextBox Recep_members_textBox_fname;
         public System.Windows.Forms.DataGridView Recep_members_dataGridView_members;
         public System.Windows.Forms.Panel Recep_panel_checkin;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.PictureBox pictureBox1_panel3;
-        private System.Windows.Forms.Button button2_panel3;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.FlowLayoutPanel Logout_flowLayoutPanel;
         public System.Windows.Forms.Panel Recep_panel_coaching;
-        private System.Windows.Forms.Label label84;
-        public System.Windows.Forms.Button button2_panel4;
-        private System.Windows.Forms.Label label85;
-        private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.DateTimePicker Recep_coaching_dateTimePicker_date;
-        private System.Windows.Forms.Label label88;
-        private System.Windows.Forms.ComboBox Recep_coaching_comboBox_coach;
-        private System.Windows.Forms.Label label89;
-        public System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox Recep_coaching_textBox_sessionID;
-        private System.Windows.Forms.DataGridView Recep_coaching_dataGridView_coaching;
+        public System.Windows.Forms.Button Coaching_button_update;
+        public System.Windows.Forms.Button Coaching_button_create;
         public System.Windows.Forms.Panel Recep_panel_biling;
-        private System.Windows.Forms.Button Billing_button_record;
-        private System.Windows.Forms.Label label90;
-        private System.Windows.Forms.TextBox Billing_textBox_reference;
-        private System.Windows.Forms.Label label92;
-        private System.Windows.Forms.TextBox Billing_textBox_amount;
-        private System.Windows.Forms.Label label97;
-        private System.Windows.Forms.Label label102;
-        private System.Windows.Forms.Label label103;
-        private System.Windows.Forms.Button Billing_button_searchMember;
-        private System.Windows.Forms.TextBox Billing_textBox_memberSearch;
-        private System.Windows.Forms.Label label104;
-        private System.Windows.Forms.Label label105;
         public System.Windows.Forms.Panel Recep_panel_dashboard;
-        private System.Windows.Forms.Label label106;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label107;
-        private System.Windows.Forms.Label label108;
-        private System.Windows.Forms.Label label109;
-        private System.Windows.Forms.Label label110;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label111;
-        private System.Windows.Forms.Label label112;
-        private System.Windows.Forms.Label label113;
-        private System.Windows.Forms.Label label114;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label115;
-        private System.Windows.Forms.Label label116;
-        private System.Windows.Forms.Label label117;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label118;
-        private System.Windows.Forms.Label label119;
-        private System.Windows.Forms.Label label120;
-        private System.Windows.Forms.Panel panel7;
         public System.Windows.Forms.Panel Recep_panel_damage;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label121;
-        private System.Windows.Forms.Label label122;
-        private System.Windows.Forms.Label label123;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.DataGridView dataGridView6;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label124;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label125;
-        private System.Windows.Forms.Label label126;
         public System.Windows.Forms.Panel Admin_panel_users;
         public System.Windows.Forms.ComboBox Users_comboBox_status;
         public System.Windows.Forms.ComboBox Users_comboBox_accType;
@@ -3735,29 +3747,109 @@
         public System.Windows.Forms.DataGridView Users_dataGridView_users;
         public System.Windows.Forms.ComboBox Recep_members_comboBox_plan;
         public System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox Recep_coaching_comboBox_status;
-        private System.Windows.Forms.Button Billing_button_calculate;
-        private System.Windows.Forms.ComboBox Billing_comboBox_damagedEquipment;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox Billing_comboBox_sessionDate;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox Billing_comboBox_membershipType;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.DataGridView Billing_dataGridView_sales;
-        private System.Windows.Forms.Button Billing_button_view;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button Checkin_button_checkin;
-        private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.ComboBox Billing_comboBox_transactionType;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label101;
         public System.Windows.Forms.Button Recep_button_viewMemberCard;
+        public System.Windows.Forms.Panel panel9;
+        public System.Windows.Forms.ComboBox Damaged_comboBox_equipment;
+        public System.Windows.Forms.Label label23;
+        public System.Windows.Forms.Label label121;
+        public System.Windows.Forms.Label label123;
+        public System.Windows.Forms.TextBox Damaged_textBox_quantity;
+        public System.Windows.Forms.TextBox Damaged_textbox_equipmentID;
+        public System.Windows.Forms.Label label124;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label label63;
+        public System.Windows.Forms.Label label64;
+        public System.Windows.Forms.Label label65;
+        public System.Windows.Forms.Label label66;
+        public System.Windows.Forms.Label label67;
+        public System.Windows.Forms.Label label68;
+        public System.Windows.Forms.Label label69;
+        public System.Windows.Forms.Label label70;
+        public System.Windows.Forms.PictureBox pictureBox1_panel3;
+        public System.Windows.Forms.Button button2_panel3;
+        public System.Windows.Forms.Button button13;
+        public System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.TextBox textBox8;
+        public System.Windows.Forms.Label label71;
+        public System.Windows.Forms.Label label72;
+        public System.Windows.Forms.Label label73;
+        public System.Windows.Forms.Label label75;
+        public System.Windows.Forms.FlowLayoutPanel Logout_flowLayoutPanel;
+        public System.Windows.Forms.Label label84;
+        public System.Windows.Forms.Label label85;
+        public System.Windows.Forms.Label label87;
+        public System.Windows.Forms.DateTimePicker Coaching_dateTimePicker_date;
+        public System.Windows.Forms.Label label88;
+        public System.Windows.Forms.ComboBox Coaching_comboBox_coach;
+        public System.Windows.Forms.Label label89;
+        public System.Windows.Forms.TextBox Coaching_textBox_sessionID;
+        public System.Windows.Forms.DataGridView Recep_coaching_dataGridView_coaching;
+        public System.Windows.Forms.Button Billing_button_record;
+        public System.Windows.Forms.Label label90;
+        public System.Windows.Forms.TextBox Billing_textBox_reference;
+        public System.Windows.Forms.Label label92;
+        public System.Windows.Forms.TextBox Billing_textBox_amount;
+        public System.Windows.Forms.Label label97;
+        public System.Windows.Forms.Label label102;
+        public System.Windows.Forms.Label label103;
+        public System.Windows.Forms.Button Billing_button_searchMember;
+        public System.Windows.Forms.TextBox Billing_textBox_memberSearch;
+        public System.Windows.Forms.Label label104;
+        public System.Windows.Forms.Label label105;
+        public System.Windows.Forms.Label label106;
+        public System.Windows.Forms.Panel panel6;
+        public System.Windows.Forms.Label label107;
+        public System.Windows.Forms.Label label108;
+        public System.Windows.Forms.Label label109;
+        public System.Windows.Forms.Label label110;
+        public System.Windows.Forms.Panel panel5;
+        public System.Windows.Forms.Label label111;
+        public System.Windows.Forms.Label label112;
+        public System.Windows.Forms.Label label113;
+        public System.Windows.Forms.Label label114;
+        public System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Label label115;
+        public System.Windows.Forms.Label label116;
+        public System.Windows.Forms.Label label117;
+        public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Label label118;
+        public System.Windows.Forms.Label label119;
+        public System.Windows.Forms.Label label120;
+        public System.Windows.Forms.Panel panel7;
+        public System.Windows.Forms.DataGridView Damaged_dataGridView_damaged;
+        public System.Windows.Forms.Button Damaged_button_record;
+        public System.Windows.Forms.Label label126;
+        public System.Windows.Forms.ComboBox Coaching_comboBox_status;
+        public System.Windows.Forms.Button Billing_button_calculate;
+        public System.Windows.Forms.ComboBox Billing_comboBox_damagedEquipment;
+        public System.Windows.Forms.Label label20;
+        public System.Windows.Forms.ComboBox Billing_comboBox_sessionDate;
+        public System.Windows.Forms.Label label19;
+        public System.Windows.Forms.ComboBox Billing_comboBox_membershipType;
+        public System.Windows.Forms.Label label18;
+        public System.Windows.Forms.Panel panel8;
+        public System.Windows.Forms.DataGridView Billing_dataGridView_sales;
+        public System.Windows.Forms.Button Billing_button_view;
+        public System.Windows.Forms.Button Billing_button_searchReference;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Label label21;
+        public System.Windows.Forms.Button Checkin_button_checkin;
+        public System.Windows.Forms.Label label74;
+        public System.Windows.Forms.ComboBox Billing_comboBox_transactionType;
+        public System.Windows.Forms.Label label22;
+        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.Label label101;
+        public System.Windows.Forms.ComboBox Users_comboBox_staffs;
+        public System.Windows.Forms.Label label24;
+        public System.Windows.Forms.Label label25;
+        public System.Windows.Forms.ComboBox Coaching_comboBox_member;
+        public System.Windows.Forms.DataGridView Damaged_dataGridView_equipments;
+        public System.Windows.Forms.Label label125;
+        public System.Windows.Forms.ComboBox Billing_comboBox_discount;
+        public System.Windows.Forms.Label label26;
     }
 }

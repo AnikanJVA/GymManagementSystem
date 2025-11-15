@@ -70,8 +70,7 @@ namespace GymManagementSystem
         {
             if (accType == "ADMIN")
             {
-                //AdminModule.(this);
-                MessageBox.Show("TO ADD MEMBER BUTTON FUNCTION");
+                AdminModule.MemberMgmtButtonClick(this);
             }
             else if (accType == "RECEPTIONIST")
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,9 +38,10 @@ namespace GymManagementSystem
             mainForm.Sidebar_button4.Text = "Coaching Sessions";
             mainForm.Sidebar_button5.Text = "Billing";
             mainForm.Sidebar_button6.Text = "Equipment Inventory";
+            mainForm.Sidebar_button7.Text = "Report Damaged Equipment";
 
             // buttons
-           
+
             // panel
             AdminModule.HidePanels(mainForm);
             mainForm.Recep_panel_dashboard.Visible = true;
@@ -60,6 +62,15 @@ namespace GymManagementSystem
             AdminModule.HidePanels(mainForm);
             mainForm.Recep_panel_members.Visible = true;
             // panel
+
+            // datagrid
+            mainForm.Recep_members_dataGridView_members.DataSource = Database.GetMembersTable();
+            // datagrid
+
+            // combobox, datetime picker
+            mainForm.Recep_members_comboBox_plan.Enabled = false;
+            mainForm.Recep_members_dateTimePicker_membershipDate.Enabled = false;
+            // combobox, datetime picker
         }
 
         public static void CheckInButtonClick(MainForm mainForm)
@@ -91,8 +102,31 @@ namespace GymManagementSystem
             // panel
             AdminModule.HidePanels(mainForm);
             mainForm.Admin_panel_equipment.Visible = true;
-            MessageBox.Show("TO ADD RECEP EQUIPMENT PANEL");
             // panel
+            
+            // datagrid
+            mainForm.Equipments_dataGridView_equipments.DataSource = Database.GetEquipmentsTable();
+            // datagrid
+
+            // buttons
+            mainForm.Equipments_button_add.Visible = false;
+            mainForm.Equipments_button_update.Visible = false;
+            mainForm.Equipments_button_clear.Visible = false;
+            // buttons
+
+            // textbox, combobox
+            foreach(Control control in mainForm.panel1.Controls)
+            {
+                if (control is TextBox textbox)
+                {
+                    textbox.ReadOnly = true;
+                }
+                else if (control is ComboBox comboBox)
+                {
+                    comboBox.Enabled = false;
+                }
+            }
+            // textbox, combobox
         }
 
         public static void DamagedButtonClick(MainForm mainForm)
@@ -101,6 +135,11 @@ namespace GymManagementSystem
             AdminModule.HidePanels(mainForm);
             mainForm.Recep_panel_damage.Visible = true;
             // panel
+
+            // datagrid
+            mainForm.Damaged_dataGridView_equipments.DataSource = Database.GetEquipmentsTable();
+            // datagrid
+
         }
     }
 }
