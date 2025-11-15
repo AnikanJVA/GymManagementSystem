@@ -37,62 +37,35 @@ namespace GymManagementSystem
             mainForm.Sidebar_button4.Text = "Coaching Sessions";
             mainForm.Sidebar_button5.Text = "Billing";
             mainForm.Sidebar_button6.Text = "Equipment Inventory";
-            mainForm.Sidebar_button7.Text = "Record Damaged Equipment";
 
             // buttons
            
             // panel
-            HidePanels(mainForm);
-            mainForm.recep_panel1.Visible = true;
+            AdminModule.HidePanels(mainForm);
+            mainForm.Recep_panel_dashboard.Visible = true;
             // panel
-        }
-
-        public static void HidePanels(MainForm mainForm)
-        {
-            Panel[] panels = { mainForm.Admin_panel_dashboard,
-                               mainForm.Admin_panel_staff,
-                               mainForm.admin_panel4,
-                               mainForm.admin_panel5,
-                               mainForm.admin_panel6,
-                               mainForm.admin_panel7,
-                               mainForm.Admin_panel_ban,
-                               mainForm.admin_panel9,
-                               mainForm.admin_panel10,
-                               mainForm.Admin_panel_equipment,
-                               mainForm.Recep_panel_checkin,
-                               mainForm.recep_panel1,
-                               mainForm.recep_panel4,
-                               mainForm.recep_panel5,
-                               mainForm.recep_panel6,
-                               mainForm.recep_panel7,
-                               mainForm.Recep_panel_member };
-
-            foreach (var panel in panels)
-            {
-                panel.Visible = false;
-            }
         }
 
         public static void DashboardButtonClick(MainForm mainForm)
         {
             // panel
-            HidePanels(mainForm);
-            mainForm.recep_panel1.Visible = true;
+            AdminModule.HidePanels(mainForm);
+            mainForm.Recep_panel_dashboard.Visible = true;
             // panel
         }
 
         public static void MemberMgmtButtonClick(MainForm mainForm)
         {
             // panel
-            HidePanels(mainForm);
-            mainForm.Recep_panel_member.Visible = true;
+            AdminModule.HidePanels(mainForm);
+            mainForm.Recep_panel_members.Visible = true;
             // panel
         }
 
         public static void CheckInButtonClick(MainForm mainForm)
         {
             // panel
-            HidePanels(mainForm);
+            AdminModule.HidePanels(mainForm);
             mainForm.Recep_panel_checkin.Visible = true;
             // panel
         }
@@ -100,32 +73,33 @@ namespace GymManagementSystem
         public static void CoachingButtonClick(MainForm mainForm)
         {
             // panel
-            HidePanels(mainForm);
-            mainForm.recep_panel4.Visible = true;
+            AdminModule.HidePanels(mainForm);
+            mainForm.Recep_panel_coaching.Visible = true;
             // panel
         }
 
         public static void PaymentButtonClick(MainForm mainForm)
         {
             // panel
-            HidePanels(mainForm);
-            mainForm.recep_panel5.Visible = true;
+            AdminModule.HidePanels(mainForm);
+            mainForm.Recep_panel_biling.Visible = true;
             // panel
         }
 
         public static void EquipmentButtonClick(MainForm mainForm)
         {
             // panel
-            HidePanels(mainForm);
-            mainForm.recep_panel6.Visible = true;
+            AdminModule.HidePanels(mainForm);
+            mainForm.Admin_panel_equipment.Visible = true;
+            MessageBox.Show("TO ADD RECEP EQUIPMENT PANEL");
             // panel
         }
 
         public static void DamagedButtonClick(MainForm mainForm)
         {
             // panel
-            HidePanels(mainForm);
-            mainForm.recep_panel7.Visible = true;
+            AdminModule.HidePanels(mainForm);
+            mainForm.Recep_panel_damage.Visible = true;
             // panel
         }
     }

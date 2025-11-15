@@ -27,9 +27,7 @@ namespace GymManagementSystem
                                   mainForm.Sidebar_button5, 
                                   mainForm.Sidebar_button6,
                                   mainForm.Sidebar_button7, 
-                                  mainForm.Sidebar_button8, 
-                                  mainForm.Sidebar_button9, 
-                                  mainForm.Sidebar_button10 };
+                                  mainForm.Sidebar_button8 };
             foreach (var button in buttons)
             {
                 button.Visible = true;
@@ -38,13 +36,11 @@ namespace GymManagementSystem
             mainForm.Sidebar_button1.Text = "Dashboard";
             mainForm.Sidebar_button2.Text = "Staff Management";
             mainForm.Sidebar_button3.Text = "Member Management";
-            mainForm.Sidebar_button4.Text = "Expenses Management";
-            mainForm.Sidebar_button5.Text = "Sales";
-            mainForm.Sidebar_button6.Text = "Payroll Managemnet";
-            mainForm.Sidebar_button7.Text = "Price Management";
-            mainForm.Sidebar_button8.Text = "Equipment Inventory";
-            mainForm.Sidebar_button9.Text = "User Accounts Management";
-            mainForm.Sidebar_button10.Text = "Coaching Sessions";
+            mainForm.Sidebar_button4.Text = "View Sales Report";
+            mainForm.Sidebar_button5.Text = "Price Management";
+            mainForm.Sidebar_button6.Text = "Equipment Inventory";
+            mainForm.Sidebar_button7.Text = "User Accounts Management";
+            mainForm.Sidebar_button8.Text = "Coaching Sessions";
 
             // buttons 
 
@@ -57,22 +53,18 @@ namespace GymManagementSystem
         public static void HidePanels(MainForm mainForm)
         {
             Panel[] panels = { mainForm.Admin_panel_dashboard,
-                               mainForm.Admin_panel_staff,
-                               mainForm.Admin_panel_ban,
-                               mainForm.admin_panel4,
-                               mainForm.admin_panel5,
-                               mainForm.admin_panel6,
-                               mainForm.admin_panel7,
+                               mainForm.Admin_panel_staffs,
+                               mainForm.Admin_panel_sales,
+                               mainForm.Admin_panel_price,
                                mainForm.Admin_panel_equipment,
-                               mainForm.admin_panel9,
-                               mainForm.recep_panel1,
-                               mainForm.Recep_panel_member,
+                               mainForm.Admin_panel_users,
+                               mainForm.Admin_panel_coaching,
+                               mainForm.Recep_panel_dashboard,
+                               mainForm.Recep_panel_members,
                                mainForm.Recep_panel_checkin,
-                               mainForm.recep_panel4,
-                               mainForm.recep_panel5,
-                               mainForm.recep_panel6,
-                               mainForm.recep_panel7,
-                               mainForm.admin_panel10 };
+                               mainForm.Recep_panel_coaching,
+                               mainForm.Recep_panel_biling,
+                               mainForm.Recep_panel_damage };
 
             foreach (var panel in panels)
             {
@@ -92,54 +84,27 @@ namespace GymManagementSystem
         {
             // panels
             HidePanels(mainForm);
-            mainForm.Admin_panel_staff.Visible = true;
+            mainForm.Admin_panel_staffs.Visible = true;
             // panels
 
             // datagridviews
-            mainForm.dataGridView1_panel2.DataSource = Database.GetStaffsTable();
+            mainForm.Staff_dataGridView_staff.DataSource = Database.GetStaffsTable();
             // datagridviews
-        }
-
-        public static void BanButtonClick(MainForm mainForm)
-        {
-            // panels
-            HidePanels(mainForm);
-            mainForm.Admin_panel_ban.Visible = true;
-            // panels
-
-            mainForm.dataGridView1_panel3.DataSource = Database.GetMembersTable();
-        }
-
-        public static void ExpensesButtonClick(MainForm mainForm)
-        {
-            // panels
-            HidePanels(mainForm);
-            mainForm.admin_panel4.Visible = true;
-            // panels
         }
 
         public static void SalesButtonClick(MainForm mainForm)
         {
             // panels
             HidePanels(mainForm);
-            mainForm.admin_panel5.Visible = true;
+            mainForm.Admin_panel_sales.Visible = true;
             // panels
         }
-        public static void PayrollButtonClick(MainForm mainForm)
+     
+        public static void PriceButtonClick(MainForm mainForm)
         {
             // panels
             HidePanels(mainForm);
-            mainForm.admin_panel6.Visible = true;
-            // panels
-
-            mainForm.dataGridView1_panel6.DataSource = Database.GetStaffsTable();
-        }
-
-        public static void CostButtonClick(MainForm mainForm)
-        {
-            // panels
-            HidePanels(mainForm);
-            mainForm.admin_panel7.Visible = true;
+            mainForm.Admin_panel_price.Visible = true;
             // panels
         }
 
@@ -160,11 +125,11 @@ namespace GymManagementSystem
         {
             // panels
             HidePanels(mainForm);
-            mainForm.admin_panel9.Visible = true;
+            mainForm.Admin_panel_users.Visible = true;
             // panels
 
             // datagrid
-            mainForm.dataGridView1_panel9.DataSource = Database.GetUsersTable();
+            mainForm.Users_dataGridView_users.DataSource = Database.GetUsersTable();
             // datagrid
         }
 
@@ -172,7 +137,7 @@ namespace GymManagementSystem
         {
             // panels
             HidePanels(mainForm);
-            mainForm.admin_panel10.Visible = true;
+            mainForm.Admin_panel_coaching.Visible = true;
             // panels
         }
     }

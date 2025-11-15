@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Windows.Forms;
 
@@ -25,6 +26,7 @@ namespace GymManagementSystem
             currentEquipment = new Equipment();
 
             FormatDataGrids();
+            UpdateDataGridViews();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -68,7 +70,8 @@ namespace GymManagementSystem
         {
             if (accType == "ADMIN")
             {
-                AdminModule.BanButtonClick(this);
+                //AdminModule.(this);
+                MessageBox.Show("TO ADD MEMBER BUTTON FUNCTION");
             }
             else if (accType == "RECEPTIONIST")
             {
@@ -80,7 +83,7 @@ namespace GymManagementSystem
         {
             if (accType == "ADMIN")
             {
-                AdminModule.ExpensesButtonClick(this);
+                AdminModule.SalesButtonClick(this);
             }
             else if (accType == "RECEPTIONIST")
             {
@@ -92,7 +95,7 @@ namespace GymManagementSystem
         {
             if (accType == "ADMIN")
             {
-                AdminModule.SalesButtonClick(this);
+                AdminModule.PriceButtonClick(this);
             }
             else if (accType == "RECEPTIONIST")
             {
@@ -104,7 +107,7 @@ namespace GymManagementSystem
         {
             if (accType == "ADMIN")
             {
-                AdminModule.PayrollButtonClick(this);
+                AdminModule.EquipmentButtonClick(this);
             }
             else if (accType == "RECEPTIONIST")
             {
@@ -116,7 +119,7 @@ namespace GymManagementSystem
         {
             if (accType == "ADMIN")
             {
-                AdminModule.CostButtonClick(this);
+                AdminModule.UserAccMgmtButtonClick(this);
             }
             else if (accType == "RECEPTIONIST")
             {
@@ -126,10 +129,10 @@ namespace GymManagementSystem
 
         private void button8_Click(object sender, EventArgs e)
         {
-            AdminModule.EquipmentButtonClick(this);
+            AdminModule.CoachingSessionsButtonClick(this);
         }
 
-        private void button1_panel8_Click(object sender, EventArgs e)
+        private void Equipment_button_add_Click(object sender, EventArgs e)
         {
             if (accType == "ADMIN")
             {
@@ -174,7 +177,7 @@ namespace GymManagementSystem
                 //    }
             }
         }
-        private void button2_panel8_Click(object sender, EventArgs e)
+        private void Equipemnt_button_update_Click(object sender, EventArgs e)
         {
             if (accType == "ADMIN")
             {
@@ -218,22 +221,19 @@ namespace GymManagementSystem
 
         private void UpdateDataGridViews()
         {
-            if (accType == "ADMIN")
-            {
-                Equipments_dataGridView_equipments.DataSource = Database.GetEquipmentsTable();
-                dataGridView1_panel3.DataSource = Database.GetMembersTable();
-                dataGridView1_panel6.DataSource = Database.GetStaffsTable();
-                dataGridView1_panel9.DataSource = Database.GetUsersTable();
-            }
+            Equipments_dataGridView_equipments.DataSource = Database.GetEquipmentsTable();
+            Staff_dataGridView_staff.DataSource = Database.GetStaffsTable();
+            Users_dataGridView_users.DataSource = Database.GetUsersTable();
+            Recep_members_dataGridView_members.DataSource = Database.GetMembersTable();
         }
 
-        private void button1_panel2_Click(object sender, EventArgs e)
+        private void Staff_button_add_Click(object sender, EventArgs e)
         {
             if (accType == "ADMIN")
             {
                 bool isFieldsComplete = false;
-                TextBox[] requiredFields = {textBox1_panel2, textBox2_panel2, textBox3_panel2,
-                                           textBox4_panel2, textBox5_panel2};
+                TextBox[] requiredFields = {Staffs_textBox_fname, Staffs_textBox_mname, Staffs_textBox_lname,
+                                           Staffs_textBox_contactNo, Staffs_textBox_email};
                 foreach (TextBox tb in requiredFields)
                 {
                     if (string.IsNullOrWhiteSpace(tb.Text))
@@ -262,22 +262,6 @@ namespace GymManagementSystem
 
                     //}
                 }
-            }
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            if (accType == "ADMIN")
-            {
-                AdminModule.UserAccMgmtButtonClick(this);
-            }
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            if (accType == "ADMIN")
-            {
-                AdminModule.CoachingSessionsButtonClick(this);
             }
         }
 
@@ -342,31 +326,6 @@ namespace GymManagementSystem
             Equipments_dataGridView_equipments.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
             Equipments_dataGridView_equipments.RowHeadersVisible = false;
-        }
-
-        private void button2_panel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_panel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Recep_panel_checkin_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button9_panel6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

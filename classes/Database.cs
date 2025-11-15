@@ -45,15 +45,15 @@ namespace ClassLibrary
             DataTable table = new DataTable();
 
             string query = @"SELECT e.EquipmentID,
-                            e.EquipmentName,
-                            e.Brand,
-                            e.Model,
-                            c.categoryName AS Category,
-                            e.Cost,
-                            e.Quantity
-                        FROM equipments e
-                        JOIN equipmentcategories c 
-                        ON e.categoryID = c.categoryID;";
+                                e.EquipmentName,
+                                e.Brand,
+                                e.Model,
+                                c.categoryName AS Category,
+                                e.Cost,
+                                e.Quantity
+                            FROM equipments e
+                            JOIN equipmentcategories c 
+                            ON e.categoryID = c.categoryID;";
 
             using (MySqlCommand cmd = new MySqlCommand(query, connection))
             using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
@@ -68,18 +68,18 @@ namespace ClassLibrary
             DataTable table = new DataTable();
 
             string query = @"SELECT 
-                                m.memberID,
-                                m.lastName,
-                                m.firstName,
-                                m.middleName,
+                                m.MemberID,
+                                m.LastName,
+                                m.FirstName,
+                                m.MiddleName,
                                 m.DoB,
                                 m.Sex,
-                                m.contactNumber,
-                                m.email,
-                                DATE(m.membershipDate) as membershipDate,
-                                DATE(m.renewalDate) as renewalDate,
-                                m.membershipStatus,
-                                mt.planName
+                                m.ContactNumber,
+                                m.Email,
+                                DATE(m.membershipDate) as MembershipDate,
+                                DATE(m.expirationDate) as ExpiraationDate,
+                                m.MembershipStatus,
+                                mt.PlanName as Plan
                             FROM 
                                 members m
                             INNER JOIN
@@ -101,17 +101,17 @@ namespace ClassLibrary
             DataTable table = new DataTable();
 
             string query = @"SELECT
-                                s.staffID,
-                                s.firstName,
-                                s.middleName,
-                                s.lastName,
+                                s.StaffID,
+                                s.FirstName,
+                                s.MiddleName,
+                                s.LastName,
                                 s.DoB,
                                 s.Sex,
-                                s.contactNumber,
-                                s.email,
-                                s.schedule,
-                                p.positionName,
-                                s.status
+                                s.ContactNumber,
+                                s.Email,
+                                s.Schedule,
+                                p.PositionName,
+                                s.Status
                             FROM
                                 staffs s
                             INNER JOIN
