@@ -146,7 +146,7 @@ namespace GymManagementSystem
                     }
                     isFieldsComplete = true;
                 }
-                if (Equipments_comboBox_category.SelectedIndex == 0 || Equipments_comboBox_condition.SelectedIndex == 0)
+                if (Equipments_comboBox_category.SelectedIndex == 0 )
                 {
                     isFieldsComplete = false;
                 }
@@ -335,7 +335,6 @@ namespace GymManagementSystem
             Equipments_comboBox_category.SelectedIndex = -1;
             Equipments_textBox_cost.Clear();
             Equipments_textBox_quantity.Clear();
-            Equipments_comboBox_condition.SelectedIndex = -1;
         }
 
         public void FormatDataGrids()
