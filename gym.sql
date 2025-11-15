@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2025 at 12:41 PM
+-- Generation Time: Nov 15, 2025 at 03:24 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,14 +24,14 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `deductions`
+-- Table structure for table `damagedequipments`
 --
 
-CREATE TABLE `deductions` (
-  `deductionID` bigint(20) NOT NULL,
-  `payrollID` bigint(20) DEFAULT NULL,
-  `deductionName` varchar(100) DEFAULT NULL,
-  `amount` decimal(10,2) DEFAULT NULL
+CREATE TABLE `damagedequipments` (
+  `recordID` bigint(20) NOT NULL,
+  `equipmentID` bigint(20) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `dateRecorded` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -80,39 +80,22 @@ CREATE TABLE `equipments` (
   `model` varchar(100) DEFAULT NULL,
   `categoryID` bigint(20) DEFAULT NULL,
   `cost` decimal(10,2) DEFAULT NULL,
-  `quantity` int(11) DEFAULT NULL,
-  `equipmentCondition` varchar(20) DEFAULT NULL
+  `quantity` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `equipments`
 --
 
-INSERT INTO `equipments` (`equipmentID`, `equipmentName`, `brand`, `model`, `categoryID`, `cost`, `quantity`, `equipmentCondition`) VALUES
-(1, 'Treadmill X10', 'LifeFit', 'X10 Pro', 1, 1500.50, 5, 'Excellent'),
-(2, 'Power Rack XL', 'IronForce', 'PR-XL', 2, 850.00, 3, 'Good'),
-(3, 'Hex Dumbbell Set', 'HeavyLift', 'HD-300', 3, 251.00, 10, ''),
-(4, 'asdf', 'cell', '2982938', 3, 299.00, 24, 'Good'),
-(5, 'Dumbell 15 pounds', 'Duracell', 'DB-100', 3, 300.00, 4, 'Good'),
-(6, 'james', 'bayot', '1999', 2, 150.00, 1, 'Damaged'),
-(7, 'james2', 'bayot', '1999', 2, 150.00, 1, 'Under Maintenance'),
-(8, 'james3', 'bayot', '1999', 1, 150.00, 1, 'Under Maintenance');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `expenses`
---
-
-CREATE TABLE `expenses` (
-  `expenseID` bigint(20) NOT NULL,
-  `expenseType` varchar(100) DEFAULT NULL,
-  `expenseCategory` varchar(50) DEFAULT NULL,
-  `amount` decimal(10,2) DEFAULT NULL,
-  `date` datetime DEFAULT NULL,
-  `description` text DEFAULT NULL,
-  `staffID` bigint(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `equipments` (`equipmentID`, `equipmentName`, `brand`, `model`, `categoryID`, `cost`, `quantity`) VALUES
+(1, 'Treadmill X10', 'LifeFit', 'X10 Pro', 1, 1500.50, 5),
+(2, 'Power Rack XL', 'IronForce', 'PR-XL', 2, 850.00, 3),
+(3, 'Hex Dumbbell Set', 'HeavyLift', 'HD-300', 3, 251.00, 10),
+(4, 'asdf', 'cell', '2982938', 3, 299.00, 24),
+(5, 'Dumbell 15 pounds', 'Duracell', 'DB-100', 3, 300.00, 4),
+(6, 'james', 'bayot', '1999', 2, 150.00, 1),
+(7, 'james2', 'bayot', '1999', 2, 150.00, 1),
+(8, 'Rylle', 'bayot', '1999', 1, 150.00, 1);
 
 -- --------------------------------------------------------
 
@@ -202,24 +185,6 @@ INSERT INTO `membershiptypes` (`planID`, `planName`, `planDurationDays`, `planFe
 -- --------------------------------------------------------
 
 --
--- Table structure for table `payroll`
---
-
-CREATE TABLE `payroll` (
-  `payrollID` bigint(20) NOT NULL,
-  `staffID` bigint(20) NOT NULL,
-  `payPeriodStart` date DEFAULT NULL,
-  `payPeriodEnd` date DEFAULT NULL,
-  `totalHours` decimal(10,2) DEFAULT NULL,
-  `grossPay` decimal(10,2) DEFAULT NULL,
-  `totalDeductions` decimal(10,2) DEFAULT NULL,
-  `netPay` decimal(10,2) DEFAULT NULL,
-  `dateGenerated` date DEFAULT curdate()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `positions`
 --
 
@@ -263,6 +228,15 @@ CREATE TABLE `saletypes` (
   `saleTypeID` bigint(20) NOT NULL,
   `saleTypeName` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `saletypes`
+--
+
+INSERT INTO `saletypes` (`saleTypeID`, `saleTypeName`) VALUES
+(1, 'Membership'),
+(2, 'Coaching Session'),
+(3, 'Damaged Equipment');
 
 -- --------------------------------------------------------
 
@@ -348,11 +322,11 @@ INSERT INTO `users` (`UserID`, `username`, `password`, `accType`, `status`) VALU
 --
 
 --
--- Indexes for table `deductions`
+-- Indexes for table `damagedequipments`
 --
-ALTER TABLE `deductions`
-  ADD PRIMARY KEY (`deductionID`),
-  ADD KEY `payrollID` (`payrollID`);
+ALTER TABLE `damagedequipments`
+  ADD PRIMARY KEY (`recordID`),
+  ADD KEY `equipmentID` (`equipmentID`) USING BTREE;
 
 --
 -- Indexes for table `discounts`
@@ -372,13 +346,6 @@ ALTER TABLE `equipmentcategories`
 ALTER TABLE `equipments`
   ADD PRIMARY KEY (`equipmentID`),
   ADD KEY `categoryID` (`categoryID`);
-
---
--- Indexes for table `expenses`
---
-ALTER TABLE `expenses`
-  ADD PRIMARY KEY (`expenseID`),
-  ADD KEY `staffID` (`staffID`);
 
 --
 -- Indexes for table `maintenancerecords`
@@ -406,13 +373,6 @@ ALTER TABLE `members`
 --
 ALTER TABLE `membershiptypes`
   ADD PRIMARY KEY (`planID`);
-
---
--- Indexes for table `payroll`
---
-ALTER TABLE `payroll`
-  ADD PRIMARY KEY (`payrollID`),
-  ADD KEY `staffID` (`staffID`);
 
 --
 -- Indexes for table `positions`
@@ -468,12 +428,6 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `deductions`
---
-ALTER TABLE `deductions`
-  MODIFY `deductionID` bigint(20) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `discounts`
 --
 ALTER TABLE `discounts`
@@ -490,12 +444,6 @@ ALTER TABLE `equipmentcategories`
 --
 ALTER TABLE `equipments`
   MODIFY `equipmentID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `expenses`
---
-ALTER TABLE `expenses`
-  MODIFY `expenseID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `maintenancerecords`
@@ -522,12 +470,6 @@ ALTER TABLE `membershiptypes`
   MODIFY `planID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `payroll`
---
-ALTER TABLE `payroll`
-  MODIFY `payrollID` bigint(20) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `positions`
 --
 ALTER TABLE `positions`
@@ -543,7 +485,7 @@ ALTER TABLE `sales`
 -- AUTO_INCREMENT for table `saletypes`
 --
 ALTER TABLE `saletypes`
-  MODIFY `saleTypeID` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `saleTypeID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `sessions`
@@ -574,22 +516,16 @@ ALTER TABLE `users`
 --
 
 --
--- Constraints for table `deductions`
+-- Constraints for table `damagedequipments`
 --
-ALTER TABLE `deductions`
-  ADD CONSTRAINT `deductions_ibfk_1` FOREIGN KEY (`payrollID`) REFERENCES `payroll` (`payrollID`);
+ALTER TABLE `damagedequipments`
+  ADD CONSTRAINT `damagedequipments_ibfk_1` FOREIGN KEY (`equipmentID`) REFERENCES `equipments` (`equipmentID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `equipments`
 --
 ALTER TABLE `equipments`
   ADD CONSTRAINT `equipments_ibfk_1` FOREIGN KEY (`categoryID`) REFERENCES `equipmentcategories` (`categoryID`);
-
---
--- Constraints for table `expenses`
---
-ALTER TABLE `expenses`
-  ADD CONSTRAINT `expenses_ibfk_1` FOREIGN KEY (`staffID`) REFERENCES `staffs` (`staffID`);
 
 --
 -- Constraints for table `maintenancerecords`
@@ -608,12 +544,6 @@ ALTER TABLE `memberattendance`
 --
 ALTER TABLE `members`
   ADD CONSTRAINT `fk_member_plan` FOREIGN KEY (`planID`) REFERENCES `membershiptypes` (`planID`) ON UPDATE CASCADE;
-
---
--- Constraints for table `payroll`
---
-ALTER TABLE `payroll`
-  ADD CONSTRAINT `payroll_ibfk_1` FOREIGN KEY (`staffID`) REFERENCES `staffs` (`staffID`);
 
 --
 -- Constraints for table `sales`
