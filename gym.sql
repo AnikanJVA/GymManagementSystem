@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2025 at 03:24 AM
+-- Generation Time: Nov 15, 2025 at 11:51 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -141,7 +141,7 @@ CREATE TABLE `members` (
   `contactNumber` varchar(20) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `membershipDate` datetime DEFAULT NULL,
-  `renewalDate` datetime DEFAULT NULL,
+  `ExpirationDate` datetime DEFAULT NULL,
   `planID` bigint(20) DEFAULT NULL,
   `membershipStatus` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -150,10 +150,14 @@ CREATE TABLE `members` (
 -- Dumping data for table `members`
 --
 
-INSERT INTO `members` (`memberID`, `lastName`, `firstName`, `middleName`, `DoB`, `Sex`, `contactNumber`, `email`, `membershipDate`, `renewalDate`, `planID`, `membershipStatus`) VALUES
-(1, 'Dela Cruz', 'Juan', 'M', '1995-03-15', 'MALE', '09171234567', 'juan.delacruz@example.com', '2025-11-01 10:00:00', '2025-12-01 10:00:00', 1, 'ACTIVE'),
-(2, 'Reyes', 'Maria', 'C', '1988-11-20', 'FEMALE', '09998765432', 'maria.reyes@example.com', '2025-01-10 12:30:00', '2026-01-10 12:30:00', 2, 'ACTIVE'),
-(3, 'Santos', 'Cris', 'D', '2005-07-25', 'MALE', '09001112222', 'cris.santos@school.edu', '2024-10-01 09:00:00', '2024-11-01 09:00:00', 5, 'EXPIRED');
+INSERT INTO `members` (`memberID`, `lastName`, `firstName`, `middleName`, `DoB`, `Sex`, `contactNumber`, `email`, `membershipDate`, `ExpirationDate`, `planID`, `membershipStatus`) VALUES
+(1, 'Dela Cruz', 'Juan', 'Mant', '1995-03-15', 'MALE', '09171234567', 'juan.delacruz@example.com', '2025-11-01 10:00:00', '2025-12-01 10:00:00', 1, 'ACTIVE'),
+(2, 'Reyes', 'Maria', 'Cruz', '1988-11-20', 'FEMALE', '09998765432', 'maria.reyes@example.com', '2025-01-10 12:30:00', '2026-01-10 12:30:00', 2, 'ACTIVE'),
+(3, 'Santos', 'Cris', 'Diaz', '2005-07-25', 'MALE', '09001112222', 'cris.santos@school.edu', '2024-10-01 09:00:00', '2024-11-01 09:00:00', 5, 'EXPIRED'),
+(4, 'Santos', 'Maria', 'Luiza', '1998-05-22', 'Female', '09171234567', 'maria.santos@example.com', '2025-01-10 09:00:00', '2025-02-10 09:00:00', 3, 'UNACTIVATED'),
+(5, 'Reyes', 'John', 'Alva', '1995-08-10', 'Male', '09281239876', 'john.reyes@example.com', '2025-01-10 09:00:00', '2025-02-10 09:00:00', 3, 'UNACTIVATED'),
+(6, 'Cruz', 'Angela', 'Munez', '2000-03-02', 'Female', '09094561234', 'angela.cruz@example.com', '2025-01-10 09:00:00', '2025-02-10 09:00:00', 3, 'UNACTIVATED'),
+(7, 'Delos Reyes', 'Mark', 'Tado', '1999-11-18', 'Male', '09183456721', 'mark.reyes@example.com', '2025-01-10 09:00:00', '2025-02-10 09:00:00', 3, 'UNACTIVATED');
 
 -- --------------------------------------------------------
 
@@ -236,7 +240,10 @@ CREATE TABLE `saletypes` (
 INSERT INTO `saletypes` (`saleTypeID`, `saleTypeName`) VALUES
 (1, 'Membership'),
 (2, 'Coaching Session'),
-(3, 'Damaged Equipment');
+(3, 'Damaged Equipment'),
+(4, 'Membership and Session'),
+(5, 'Membership and Damaged Equipment\r\n'),
+(6, 'Session and Damaged Equipment');
 
 -- --------------------------------------------------------
 
@@ -305,6 +312,7 @@ CREATE TABLE `users` (
   `username` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `accType` varchar(50) DEFAULT NULL,
+  `staffID` bigint(20) NOT NULL,
   `status` varchar(10) NOT NULL DEFAULT 'ACTIVE'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -312,10 +320,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`UserID`, `username`, `password`, `accType`, `status`) VALUES
-(1, 'admin', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'ADMIN', 'ACTIVE'),
-(2, 're', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'RECEPTIONIST', 'ACTIVE'),
-(4, 'tryRE', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'RECEPTIONIST', 'ACTIVE');
+INSERT INTO `users` (`UserID`, `username`, `password`, `accType`, `staffID`, `status`) VALUES
+(1, 'admin', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'ADMIN', 0, 'ACTIVE'),
+(2, 're', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'RECEPTIONIST', 1, 'ACTIVE');
 
 --
 -- Indexes for dumped tables
@@ -461,7 +468,7 @@ ALTER TABLE `memberattendance`
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `memberID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `memberID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `membershiptypes`
@@ -485,7 +492,7 @@ ALTER TABLE `sales`
 -- AUTO_INCREMENT for table `saletypes`
 --
 ALTER TABLE `saletypes`
-  MODIFY `saleTypeID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `saleTypeID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `sessions`

@@ -30,12 +30,11 @@ namespace ClassLibrary
 
         public bool AuthenticateUser(string username, string password)
         {
-            string query = "SELECT COUNT(*) FROM users WHERE username = @username AND password = SHA2(@password, 256) AND status = @status";
+            string query = "SELECT COUNT(*) FROM users WHERE username = @username AND password = SHA2(@password, 256) AND status = 'ACTIVE'";
             using (MySqlCommand cmd = new MySqlCommand(query, connection))
             {
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.Parameters.AddWithValue("@password", password);
-                cmd.Parameters.AddWithValue("@status", "ACTIVE");
                 if (Convert.ToInt32(cmd.ExecuteScalar()) > 0)
                 {
                     currentUser = RetrieveUser(username);
