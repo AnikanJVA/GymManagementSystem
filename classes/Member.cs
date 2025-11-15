@@ -8,17 +8,10 @@ namespace ClassLibrary
 {
     public class Member : Person
     {
-        private long memberID;
         private DateTime membershipDate;
         private DateTime renewalDate;
         private long planID;
         private string membershipStatus;
-
-        public long MemberID
-        {
-            get { return memberID; }
-            set { memberID = value; }
-        }
 
         public DateTime MembershipDate 
         {

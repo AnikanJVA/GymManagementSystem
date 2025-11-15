@@ -8,6 +8,7 @@ namespace ClassLibrary
 {
     public class Person
     {
+        private long id;
         private string lname;
         private string fname;
         private string mname;
@@ -15,6 +16,24 @@ namespace ClassLibrary
         private string sex;
         private string contactNo;
         private string email;
+
+        public Person()
+        {
+            id = 0;
+            lname = string.Empty;
+            fname = string.Empty;
+            mname = string.Empty;
+            dob = DateTime.Now;
+            sex = string.Empty;
+            contactNo = string.Empty;
+            email = string.Empty;
+        }
+
+        public long ID
+        {
+            get { return id; }
+            set { id = value; }
+        }
 
         public string Lname
         {

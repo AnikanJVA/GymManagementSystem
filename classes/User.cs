@@ -15,6 +15,16 @@ namespace ClassLibrary
         private long staffID;
         private string status;
 
+        public User()
+        {
+            userID = 0;
+            username = string.Empty;
+            password = string.Empty;
+            accType = string.Empty;
+            staffID = 0;
+            status = string.Empty;
+        }
+
         public long UserID 
         {
             get { return userID; } 

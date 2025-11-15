@@ -167,31 +167,14 @@
             this.Admin_panel_price = new System.Windows.Forms.Panel();
             this.label48 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.button1_panel7 = new System.Windows.Forms.Button();
-            this.textBox1_panel7 = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.textBox3_panel7 = new System.Windows.Forms.TextBox();
-            this.textBox2_panel7 = new System.Windows.Forms.TextBox();
-            this.dataGridView1_panel7 = new System.Windows.Forms.DataGridView();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
+            this.Prices_label_duration = new System.Windows.Forms.Label();
+            this.Prices_label_name = new System.Windows.Forms.Label();
+            this.Price_button_update = new System.Windows.Forms.Button();
+            this.prices_textBox_id = new System.Windows.Forms.TextBox();
+            this.Prices_label_id = new System.Windows.Forms.Label();
+            this.Prices_textBox_duration = new System.Windows.Forms.TextBox();
+            this.Prices_textBox_name = new System.Windows.Forms.TextBox();
+            this.Price_dataGridView_membershipPlans = new System.Windows.Forms.DataGridView();
             this.Admin_panel_sales = new System.Windows.Forms.Panel();
             this.panel9_panel5 = new System.Windows.Forms.Panel();
             this.Sales_dateTimePicker_from = new System.Windows.Forms.DateTimePicker();
@@ -244,7 +227,7 @@
             this.Billing_dataGridView_sales = new System.Windows.Forms.DataGridView();
             this.Billing_button_view = new System.Windows.Forms.Button();
             this.Billing_button_searchReference = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Billing_textBox_referenceSearch = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.Billing_comboBox_damagedEquipment = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -258,7 +241,6 @@
             this.Billing_textBox_reference = new System.Windows.Forms.TextBox();
             this.label92 = new System.Windows.Forms.Label();
             this.Billing_textBox_amount = new System.Windows.Forms.TextBox();
-            this.label97 = new System.Windows.Forms.Label();
             this.label102 = new System.Windows.Forms.Label();
             this.label103 = new System.Windows.Forms.Label();
             this.Billing_button_searchMember = new System.Windows.Forms.Button();
@@ -271,28 +253,14 @@
             this.label107 = new System.Windows.Forms.Label();
             this.label108 = new System.Windows.Forms.Label();
             this.label109 = new System.Windows.Forms.Label();
-            this.label110 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label111 = new System.Windows.Forms.Label();
-            this.label112 = new System.Windows.Forms.Label();
-            this.label113 = new System.Windows.Forms.Label();
             this.label114 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label115 = new System.Windows.Forms.Label();
-            this.label116 = new System.Windows.Forms.Label();
-            this.label117 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label118 = new System.Windows.Forms.Label();
-            this.label119 = new System.Windows.Forms.Label();
-            this.label120 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.Billing_comboBox_transactionType = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Billing_textBox_memberName = new System.Windows.Forms.TextBox();
+            this.Billing_textBox_memberID = new System.Windows.Forms.TextBox();
             this.label101 = new System.Windows.Forms.Label();
             this.pictureBox1_panel3 = new System.Windows.Forms.PictureBox();
             this.Recep_button_viewMemberCard = new System.Windows.Forms.Button();
@@ -312,6 +280,36 @@
             this.Damaged_dataGridView_equipments = new System.Windows.Forms.DataGridView();
             this.label26 = new System.Windows.Forms.Label();
             this.Billing_comboBox_discount = new System.Windows.Forms.ComboBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.Recep_dashboard_dataGridView_checkins = new System.Windows.Forms.DataGridView();
+            this.Recep_dashboard_dataGridView_newMembers = new System.Windows.Forms.DataGridView();
+            this.Recep_dashboard_dataGridView_todaySession = new System.Windows.Forms.DataGridView();
+            this.Recep_dashboard_dataGridView_Equipment = new System.Windows.Forms.DataGridView();
+            this.Recep_dashboard_dataGridView_pendingSession = new System.Windows.Forms.DataGridView();
+            this.Billing_comboBox_sessionType = new System.Windows.Forms.ComboBox();
+            this.Coaching_comboBox_sessionType = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.Price_dataGridView_disccoutns = new System.Windows.Forms.DataGridView();
+            this.Prices_textBox_fee = new System.Windows.Forms.TextBox();
+            this.Prices_label_fee = new System.Windows.Forms.Label();
+            this.Prices_label_status = new System.Windows.Forms.Label();
+            this.Prices_comboBox_status = new System.Windows.Forms.ComboBox();
+            this.Price_button_add = new System.Windows.Forms.Button();
+            this.Price_tabControl = new System.Windows.Forms.TabControl();
+            this.Price_tabPage_memberships = new System.Windows.Forms.TabPage();
+            this.Price_tabPage_sessions = new System.Windows.Forms.TabPage();
+            this.Price_dataGridView_sessionTypes = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Discount_comboBox_status = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.Discount_button_add = new System.Windows.Forms.Button();
+            this.Discount_button_update = new System.Windows.Forms.Button();
+            this.Discount_textBox_id = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.Discount_textBox_rate = new System.Windows.Forms.TextBox();
+            this.Discount_textBox_name = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -334,11 +332,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Equipments_dataGridView_equipments)).BeginInit();
             this.Admin_panel_price.SuspendLayout();
             this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_panel7)).BeginInit();
-            this.panel17.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Price_dataGridView_membershipPlans)).BeginInit();
             this.Admin_panel_sales.SuspendLayout();
             this.panel9_panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Sales_dataGridView_sales)).BeginInit();
@@ -354,12 +348,25 @@
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Billing_dataGridView_sales)).BeginInit();
             this.Recep_panel_dashboard.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_panel3)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Damaged_dataGridView_equipments)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Recep_dashboard_dataGridView_checkins)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Recep_dashboard_dataGridView_newMembers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Recep_dashboard_dataGridView_todaySession)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Recep_dashboard_dataGridView_Equipment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Recep_dashboard_dataGridView_pendingSession)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Price_dataGridView_disccoutns)).BeginInit();
+            this.Price_tabControl.SuspendLayout();
+            this.Price_tabPage_memberships.SuspendLayout();
+            this.Price_tabPage_sessions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Price_dataGridView_sessionTypes)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -375,8 +382,6 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_dashboard);
-            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_members);
             this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_checkin);
             this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_staffs);
             this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_dashboard);
@@ -388,6 +393,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_coaching);
             this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_damage);
             this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_biling);
+            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_dashboard);
+            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_members);
             this.splitContainer1.Size = new System.Drawing.Size(1264, 681);
             this.splitContainer1.SplitterDistance = 300;
             this.splitContainer1.TabIndex = 1;
@@ -1938,13 +1945,11 @@
             // 
             // Admin_panel_price
             // 
+            this.Admin_panel_price.Controls.Add(this.panel2);
+            this.Admin_panel_price.Controls.Add(this.Price_tabControl);
             this.Admin_panel_price.Controls.Add(this.label48);
             this.Admin_panel_price.Controls.Add(this.panel18);
-            this.Admin_panel_price.Controls.Add(this.dataGridView1_panel7);
-            this.Admin_panel_price.Controls.Add(this.panel17);
-            this.Admin_panel_price.Controls.Add(this.panel16);
-            this.Admin_panel_price.Controls.Add(this.panel15);
-            this.Admin_panel_price.Controls.Add(this.panel14);
+            this.Admin_panel_price.Controls.Add(this.Price_dataGridView_disccoutns);
             this.Admin_panel_price.Location = new System.Drawing.Point(0, 0);
             this.Admin_panel_price.Name = "Admin_panel_price";
             this.Admin_panel_price.Size = new System.Drawing.Size(960, 681);
@@ -1954,253 +1959,108 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(375, 51);
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label48.Location = new System.Drawing.Point(411, 17);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(93, 13);
+            this.label48.Size = new System.Drawing.Size(176, 25);
             this.label48.TabIndex = 2;
-            this.label48.Text = "Cost Management";
+            this.label48.Text = "Price Management";
             // 
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel18.Controls.Add(this.label47);
-            this.panel18.Controls.Add(this.label46);
-            this.panel18.Controls.Add(this.button1_panel7);
-            this.panel18.Controls.Add(this.textBox1_panel7);
-            this.panel18.Controls.Add(this.label38);
-            this.panel18.Controls.Add(this.textBox3_panel7);
-            this.panel18.Controls.Add(this.textBox2_panel7);
-            this.panel18.Location = new System.Drawing.Point(728, 275);
+            this.panel18.Controls.Add(this.Prices_comboBox_status);
+            this.panel18.Controls.Add(this.Prices_label_status);
+            this.panel18.Controls.Add(this.Prices_label_fee);
+            this.panel18.Controls.Add(this.Prices_label_duration);
+            this.panel18.Controls.Add(this.Prices_label_name);
+            this.panel18.Controls.Add(this.Price_button_add);
+            this.panel18.Controls.Add(this.Price_button_update);
+            this.panel18.Controls.Add(this.prices_textBox_id);
+            this.panel18.Controls.Add(this.Prices_label_id);
+            this.panel18.Controls.Add(this.Prices_textBox_fee);
+            this.panel18.Controls.Add(this.Prices_textBox_duration);
+            this.panel18.Controls.Add(this.Prices_textBox_name);
+            this.panel18.Location = new System.Drawing.Point(17, 411);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(210, 310);
+            this.panel18.Size = new System.Drawing.Size(479, 258);
             this.panel18.TabIndex = 5;
             // 
-            // label47
+            // Prices_label_duration
             // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(8, 156);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(78, 13);
-            this.label47.TabIndex = 8;
-            this.label47.Text = "Next Due Date";
+            this.Prices_label_duration.AutoSize = true;
+            this.Prices_label_duration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Prices_label_duration.Location = new System.Drawing.Point(21, 100);
+            this.Prices_label_duration.Name = "Prices_label_duration";
+            this.Prices_label_duration.Size = new System.Drawing.Size(122, 16);
+            this.Prices_label_duration.TabIndex = 8;
+            this.Prices_label_duration.Text = "Plan Duration Days";
             // 
-            // label46
+            // Prices_label_name
             // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(8, 94);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(81, 13);
-            this.label46.TabIndex = 7;
-            this.label46.Text = "Date Performed";
+            this.Prices_label_name.AutoSize = true;
+            this.Prices_label_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Prices_label_name.Location = new System.Drawing.Point(21, 62);
+            this.Prices_label_name.Name = "Prices_label_name";
+            this.Prices_label_name.Size = new System.Drawing.Size(74, 16);
+            this.Prices_label_name.TabIndex = 7;
+            this.Prices_label_name.Text = "Plan Name";
             // 
-            // button1_panel7
+            // Price_button_update
             // 
-            this.button1_panel7.Location = new System.Drawing.Point(126, 247);
-            this.button1_panel7.Name = "button1_panel7";
-            this.button1_panel7.Size = new System.Drawing.Size(75, 23);
-            this.button1_panel7.TabIndex = 3;
-            this.button1_panel7.Text = "button10";
-            this.button1_panel7.UseVisualStyleBackColor = true;
+            this.Price_button_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Price_button_update.Location = new System.Drawing.Point(233, 214);
+            this.Price_button_update.Name = "Price_button_update";
+            this.Price_button_update.Size = new System.Drawing.Size(75, 32);
+            this.Price_button_update.TabIndex = 3;
+            this.Price_button_update.Text = "Update";
+            this.Price_button_update.UseVisualStyleBackColor = true;
             // 
-            // textBox1_panel7
+            // prices_textBox_id
             // 
-            this.textBox1_panel7.Location = new System.Drawing.Point(76, 49);
-            this.textBox1_panel7.Name = "textBox1_panel7";
-            this.textBox1_panel7.Size = new System.Drawing.Size(125, 20);
-            this.textBox1_panel7.TabIndex = 6;
+            this.prices_textBox_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prices_textBox_id.Location = new System.Drawing.Point(180, 21);
+            this.prices_textBox_id.Name = "prices_textBox_id";
+            this.prices_textBox_id.Size = new System.Drawing.Size(253, 22);
+            this.prices_textBox_id.TabIndex = 6;
             // 
-            // label38
+            // Prices_label_id
             // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(8, 35);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(104, 13);
-            this.label38.TabIndex = 2;
-            this.label38.Text = "Equipment Name/ID";
+            this.Prices_label_id.AutoSize = true;
+            this.Prices_label_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Prices_label_id.Location = new System.Drawing.Point(21, 26);
+            this.Prices_label_id.Name = "Prices_label_id";
+            this.Prices_label_id.Size = new System.Drawing.Size(120, 16);
+            this.Prices_label_id.TabIndex = 2;
+            this.Prices_label_id.Text = "Memership Plan ID";
             // 
-            // textBox3_panel7
+            // Prices_textBox_duration
             // 
-            this.textBox3_panel7.Location = new System.Drawing.Point(76, 172);
-            this.textBox3_panel7.Name = "textBox3_panel7";
-            this.textBox3_panel7.Size = new System.Drawing.Size(125, 20);
-            this.textBox3_panel7.TabIndex = 2;
+            this.Prices_textBox_duration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Prices_textBox_duration.Location = new System.Drawing.Point(180, 97);
+            this.Prices_textBox_duration.Name = "Prices_textBox_duration";
+            this.Prices_textBox_duration.Size = new System.Drawing.Size(253, 22);
+            this.Prices_textBox_duration.TabIndex = 2;
             // 
-            // textBox2_panel7
+            // Prices_textBox_name
             // 
-            this.textBox2_panel7.Location = new System.Drawing.Point(76, 110);
-            this.textBox2_panel7.Name = "textBox2_panel7";
-            this.textBox2_panel7.Size = new System.Drawing.Size(125, 20);
-            this.textBox2_panel7.TabIndex = 1;
+            this.Prices_textBox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Prices_textBox_name.Location = new System.Drawing.Point(180, 59);
+            this.Prices_textBox_name.Name = "Prices_textBox_name";
+            this.Prices_textBox_name.Size = new System.Drawing.Size(253, 22);
+            this.Prices_textBox_name.TabIndex = 1;
             // 
-            // dataGridView1_panel7
+            // Price_dataGridView_membershipPlans
             // 
-            this.dataGridView1_panel7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1_panel7.Location = new System.Drawing.Point(27, 275);
-            this.dataGridView1_panel7.Name = "dataGridView1_panel7";
-            this.dataGridView1_panel7.Size = new System.Drawing.Size(671, 314);
-            this.dataGridView1_panel7.TabIndex = 5;
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel17.Controls.Add(this.label45);
-            this.panel17.Controls.Add(this.label44);
-            this.panel17.Controls.Add(this.label43);
-            this.panel17.Controls.Add(this.label42);
-            this.panel17.Controls.Add(this.label41);
-            this.panel17.Controls.Add(this.label40);
-            this.panel17.Controls.Add(this.label39);
-            this.panel17.Location = new System.Drawing.Point(726, 87);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(210, 106);
-            this.panel17.TabIndex = 4;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(148, 80);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(41, 13);
-            this.label45.TabIndex = 8;
-            this.label45.Text = "label45";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(75, 81);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(41, 13);
-            this.label44.TabIndex = 7;
-            this.label44.Text = "label44";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(10, 81);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(41, 13);
-            this.label43.TabIndex = 2;
-            this.label43.Text = "label43";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(132, 49);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(71, 13);
-            this.label42.TabIndex = 6;
-            this.label42.Text = "out of service";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(65, 50);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(60, 13);
-            this.label41.TabIndex = 5;
-            this.label41.Text = "need repair";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(10, 48);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(31, 13);
-            this.label40.TabIndex = 2;
-            this.label40.Text = "good";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(36, 21);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(137, 13);
-            this.label39.TabIndex = 4;
-            this.label39.Text = "Equipment Condition Status";
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel16.Controls.Add(this.label36);
-            this.panel16.Controls.Add(this.label37);
-            this.panel16.Location = new System.Drawing.Point(479, 87);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(210, 106);
-            this.panel16.TabIndex = 3;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(92, 52);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(41, 13);
-            this.label36.TabIndex = 1;
-            this.label36.Text = "label36";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(46, 21);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(122, 13);
-            this.label37.TabIndex = 0;
-            this.label37.Text = "Upcoming Maintainance";
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel15.Controls.Add(this.label33);
-            this.panel15.Controls.Add(this.label35);
-            this.panel15.Location = new System.Drawing.Point(249, 87);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(210, 106);
-            this.panel15.TabIndex = 3;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(92, 52);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(41, 13);
-            this.label33.TabIndex = 1;
-            this.label33.Text = "label33";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(54, 21);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(90, 13);
-            this.label35.TabIndex = 0;
-            this.label35.Text = "Maintaince (YTD)";
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel14.Controls.Add(this.label30);
-            this.panel14.Controls.Add(this.label31);
-            this.panel14.Location = new System.Drawing.Point(17, 87);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(210, 106);
-            this.panel14.TabIndex = 2;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(92, 52);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(41, 13);
-            this.label30.TabIndex = 1;
-            this.label30.Text = "label30";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(54, 21);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(90, 13);
-            this.label31.TabIndex = 0;
-            this.label31.Text = "Total Asset Value";
+            this.Price_dataGridView_membershipPlans.AllowUserToAddRows = false;
+            this.Price_dataGridView_membershipPlans.AllowUserToDeleteRows = false;
+            this.Price_dataGridView_membershipPlans.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Price_dataGridView_membershipPlans.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Price_dataGridView_membershipPlans.Location = new System.Drawing.Point(3, 3);
+            this.Price_dataGridView_membershipPlans.Name = "Price_dataGridView_membershipPlans";
+            this.Price_dataGridView_membershipPlans.ReadOnly = true;
+            this.Price_dataGridView_membershipPlans.Size = new System.Drawing.Size(468, 310);
+            this.Price_dataGridView_membershipPlans.TabIndex = 5;
             // 
             // Admin_panel_sales
             // 
@@ -2525,11 +2385,13 @@
             // 
             this.Recep_panel_coaching.Controls.Add(this.label84);
             this.Recep_panel_coaching.Controls.Add(this.Coaching_button_update);
+            this.Recep_panel_coaching.Controls.Add(this.label27);
             this.Recep_panel_coaching.Controls.Add(this.label85);
             this.Recep_panel_coaching.Controls.Add(this.label87);
             this.Recep_panel_coaching.Controls.Add(this.Coaching_dateTimePicker_date);
             this.Recep_panel_coaching.Controls.Add(this.label25);
             this.Recep_panel_coaching.Controls.Add(this.label88);
+            this.Recep_panel_coaching.Controls.Add(this.Coaching_comboBox_sessionType);
             this.Recep_panel_coaching.Controls.Add(this.Coaching_comboBox_status);
             this.Recep_panel_coaching.Controls.Add(this.Coaching_comboBox_member);
             this.Recep_panel_coaching.Controls.Add(this.Coaching_comboBox_coach);
@@ -2561,7 +2423,7 @@
             this.Coaching_button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Coaching_button_update.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Coaching_button_update.ForeColor = System.Drawing.Color.Black;
-            this.Coaching_button_update.Location = new System.Drawing.Point(528, 607);
+            this.Coaching_button_update.Location = new System.Drawing.Point(517, 617);
             this.Coaching_button_update.Name = "Coaching_button_update";
             this.Coaching_button_update.Size = new System.Drawing.Size(231, 43);
             this.Coaching_button_update.TabIndex = 11;
@@ -2572,7 +2434,7 @@
             // 
             this.label85.AutoSize = true;
             this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label85.Location = new System.Drawing.Point(502, 528);
+            this.label85.Location = new System.Drawing.Point(479, 567);
             this.label85.Name = "label85";
             this.label85.Size = new System.Drawing.Size(56, 20);
             this.label85.TabIndex = 10;
@@ -2582,7 +2444,7 @@
             // 
             this.label87.AutoSize = true;
             this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label87.Location = new System.Drawing.Point(502, 494);
+            this.label87.Location = new System.Drawing.Point(477, 493);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(113, 20);
             this.label87.TabIndex = 6;
@@ -2591,7 +2453,7 @@
             // Coaching_dateTimePicker_date
             // 
             this.Coaching_dateTimePicker_date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Coaching_dateTimePicker_date.Location = new System.Drawing.Point(654, 490);
+            this.Coaching_dateTimePicker_date.Location = new System.Drawing.Point(632, 489);
             this.Coaching_dateTimePicker_date.Name = "Coaching_dateTimePicker_date";
             this.Coaching_dateTimePicker_date.Size = new System.Drawing.Size(288, 26);
             this.Coaching_dateTimePicker_date.TabIndex = 5;
@@ -2600,7 +2462,7 @@
             // 
             this.label88.AutoSize = true;
             this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label88.Location = new System.Drawing.Point(54, 528);
+            this.label88.Location = new System.Drawing.Point(29, 530);
             this.label88.Name = "label88";
             this.label88.Size = new System.Drawing.Size(55, 20);
             this.label88.TabIndex = 4;
@@ -2611,7 +2473,7 @@
             this.Coaching_comboBox_status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Coaching_comboBox_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Coaching_comboBox_status.FormattingEnabled = true;
-            this.Coaching_comboBox_status.Location = new System.Drawing.Point(655, 524);
+            this.Coaching_comboBox_status.Location = new System.Drawing.Point(633, 563);
             this.Coaching_comboBox_status.Name = "Coaching_comboBox_status";
             this.Coaching_comboBox_status.Size = new System.Drawing.Size(288, 28);
             this.Coaching_comboBox_status.TabIndex = 3;
@@ -2620,7 +2482,7 @@
             // 
             this.Coaching_comboBox_coach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Coaching_comboBox_coach.FormattingEnabled = true;
-            this.Coaching_comboBox_coach.Location = new System.Drawing.Point(172, 522);
+            this.Coaching_comboBox_coach.Location = new System.Drawing.Point(147, 524);
             this.Coaching_comboBox_coach.Name = "Coaching_comboBox_coach";
             this.Coaching_comboBox_coach.Size = new System.Drawing.Size(288, 28);
             this.Coaching_comboBox_coach.TabIndex = 3;
@@ -2629,7 +2491,7 @@
             // 
             this.label89.AutoSize = true;
             this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label89.Location = new System.Drawing.Point(54, 493);
+            this.label89.Location = new System.Drawing.Point(29, 492);
             this.label89.Name = "label89";
             this.label89.Size = new System.Drawing.Size(87, 20);
             this.label89.TabIndex = 2;
@@ -2643,7 +2505,7 @@
             this.Coaching_button_create.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Coaching_button_create.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Coaching_button_create.ForeColor = System.Drawing.Color.Black;
-            this.Coaching_button_create.Location = new System.Drawing.Point(219, 608);
+            this.Coaching_button_create.Location = new System.Drawing.Point(208, 618);
             this.Coaching_button_create.Name = "Coaching_button_create";
             this.Coaching_button_create.Size = new System.Drawing.Size(231, 43);
             this.Coaching_button_create.TabIndex = 1;
@@ -2653,7 +2515,7 @@
             // Coaching_textBox_sessionID
             // 
             this.Coaching_textBox_sessionID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Coaching_textBox_sessionID.Location = new System.Drawing.Point(172, 488);
+            this.Coaching_textBox_sessionID.Location = new System.Drawing.Point(147, 487);
             this.Coaching_textBox_sessionID.Name = "Coaching_textBox_sessionID";
             this.Coaching_textBox_sessionID.ReadOnly = true;
             this.Coaching_textBox_sessionID.Size = new System.Drawing.Size(288, 26);
@@ -2714,10 +2576,8 @@
             // 
             // Recep_panel_biling
             // 
-            this.Recep_panel_biling.Controls.Add(this.textBox4);
-            this.Recep_panel_biling.Controls.Add(this.textBox5);
-            this.Recep_panel_biling.Controls.Add(this.textBox2);
-            this.Recep_panel_biling.Controls.Add(this.textBox3);
+            this.Recep_panel_biling.Controls.Add(this.Billing_textBox_memberName);
+            this.Recep_panel_biling.Controls.Add(this.Billing_textBox_memberID);
             this.Recep_panel_biling.Controls.Add(this.panel8);
             this.Recep_panel_biling.Controls.Add(this.Billing_comboBox_discount);
             this.Recep_panel_biling.Controls.Add(this.Billing_comboBox_damagedEquipment);
@@ -2725,6 +2585,7 @@
             this.Recep_panel_biling.Controls.Add(this.label26);
             this.Recep_panel_biling.Controls.Add(this.Billing_comboBox_sessionDate);
             this.Recep_panel_biling.Controls.Add(this.label19);
+            this.Recep_panel_biling.Controls.Add(this.Billing_comboBox_sessionType);
             this.Recep_panel_biling.Controls.Add(this.Billing_comboBox_transactionType);
             this.Recep_panel_biling.Controls.Add(this.label22);
             this.Recep_panel_biling.Controls.Add(this.Billing_comboBox_membershipType);
@@ -2735,7 +2596,6 @@
             this.Recep_panel_biling.Controls.Add(this.Billing_textBox_reference);
             this.Recep_panel_biling.Controls.Add(this.label92);
             this.Recep_panel_biling.Controls.Add(this.Billing_textBox_amount);
-            this.Recep_panel_biling.Controls.Add(this.label97);
             this.Recep_panel_biling.Controls.Add(this.label101);
             this.Recep_panel_biling.Controls.Add(this.label102);
             this.Recep_panel_biling.Controls.Add(this.label103);
@@ -2755,7 +2615,7 @@
             this.panel8.Controls.Add(this.Billing_dataGridView_sales);
             this.panel8.Controls.Add(this.Billing_button_view);
             this.panel8.Controls.Add(this.Billing_button_searchReference);
-            this.panel8.Controls.Add(this.textBox1);
+            this.panel8.Controls.Add(this.Billing_textBox_referenceSearch);
             this.panel8.Controls.Add(this.label21);
             this.panel8.Location = new System.Drawing.Point(528, 30);
             this.panel8.Name = "panel8";
@@ -2792,13 +2652,13 @@
             this.Billing_button_searchReference.Text = "Search";
             this.Billing_button_searchReference.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // Billing_textBox_referenceSearch
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(11, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 26);
-            this.textBox1.TabIndex = 32;
+            this.Billing_textBox_referenceSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Billing_textBox_referenceSearch.Location = new System.Drawing.Point(11, 38);
+            this.Billing_textBox_referenceSearch.Name = "Billing_textBox_referenceSearch";
+            this.Billing_textBox_referenceSearch.Size = new System.Drawing.Size(312, 26);
+            this.Billing_textBox_referenceSearch.TabIndex = 32;
             // 
             // label21
             // 
@@ -2815,7 +2675,7 @@
             this.Billing_comboBox_damagedEquipment.Enabled = false;
             this.Billing_comboBox_damagedEquipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Billing_comboBox_damagedEquipment.FormattingEnabled = true;
-            this.Billing_comboBox_damagedEquipment.Location = new System.Drawing.Point(217, 430);
+            this.Billing_comboBox_damagedEquipment.Location = new System.Drawing.Point(215, 385);
             this.Billing_comboBox_damagedEquipment.Name = "Billing_comboBox_damagedEquipment";
             this.Billing_comboBox_damagedEquipment.Size = new System.Drawing.Size(293, 28);
             this.Billing_comboBox_damagedEquipment.TabIndex = 27;
@@ -2824,7 +2684,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(26, 385);
+            this.label20.Location = new System.Drawing.Point(24, 293);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(105, 20);
             this.label20.TabIndex = 24;
@@ -2835,7 +2695,7 @@
             this.Billing_comboBox_sessionDate.Enabled = false;
             this.Billing_comboBox_sessionDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Billing_comboBox_sessionDate.FormattingEnabled = true;
-            this.Billing_comboBox_sessionDate.Location = new System.Drawing.Point(217, 381);
+            this.Billing_comboBox_sessionDate.Location = new System.Drawing.Point(215, 289);
             this.Billing_comboBox_sessionDate.Name = "Billing_comboBox_sessionDate";
             this.Billing_comboBox_sessionDate.Size = new System.Drawing.Size(293, 28);
             this.Billing_comboBox_sessionDate.TabIndex = 28;
@@ -2844,7 +2704,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(26, 433);
+            this.label19.Location = new System.Drawing.Point(24, 388);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(160, 20);
             this.label19.TabIndex = 25;
@@ -2855,7 +2715,7 @@
             this.Billing_comboBox_membershipType.Enabled = false;
             this.Billing_comboBox_membershipType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Billing_comboBox_membershipType.FormattingEnabled = true;
-            this.Billing_comboBox_membershipType.Location = new System.Drawing.Point(217, 332);
+            this.Billing_comboBox_membershipType.Location = new System.Drawing.Point(215, 240);
             this.Billing_comboBox_membershipType.Name = "Billing_comboBox_membershipType";
             this.Billing_comboBox_membershipType.Size = new System.Drawing.Size(293, 28);
             this.Billing_comboBox_membershipType.TabIndex = 29;
@@ -2864,7 +2724,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(26, 337);
+            this.label18.Location = new System.Drawing.Point(24, 245);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(134, 20);
             this.label18.TabIndex = 26;
@@ -2874,7 +2734,7 @@
             // 
             this.Billing_button_calculate.AutoSize = true;
             this.Billing_button_calculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Billing_button_calculate.Location = new System.Drawing.Point(425, 513);
+            this.Billing_button_calculate.Location = new System.Drawing.Point(423, 468);
             this.Billing_button_calculate.Name = "Billing_button_calculate";
             this.Billing_button_calculate.Size = new System.Drawing.Size(85, 30);
             this.Billing_button_calculate.TabIndex = 23;
@@ -2885,7 +2745,7 @@
             // 
             this.Billing_button_record.AutoSize = true;
             this.Billing_button_record.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Billing_button_record.Location = new System.Drawing.Point(199, 617);
+            this.Billing_button_record.Location = new System.Drawing.Point(198, 579);
             this.Billing_button_record.Name = "Billing_button_record";
             this.Billing_button_record.Size = new System.Drawing.Size(137, 46);
             this.Billing_button_record.TabIndex = 23;
@@ -2896,7 +2756,7 @@
             // 
             this.label90.AutoSize = true;
             this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label90.Location = new System.Drawing.Point(26, 565);
+            this.label90.Location = new System.Drawing.Point(24, 520);
             this.label90.Name = "label90";
             this.label90.Size = new System.Drawing.Size(92, 20);
             this.label90.TabIndex = 22;
@@ -2906,7 +2766,7 @@
             // 
             this.Billing_textBox_reference.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Billing_textBox_reference.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Billing_textBox_reference.Location = new System.Drawing.Point(217, 562);
+            this.Billing_textBox_reference.Location = new System.Drawing.Point(215, 517);
             this.Billing_textBox_reference.Name = "Billing_textBox_reference";
             this.Billing_textBox_reference.ReadOnly = true;
             this.Billing_textBox_reference.Size = new System.Drawing.Size(293, 26);
@@ -2916,7 +2776,7 @@
             // 
             this.label92.AutoSize = true;
             this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label92.Location = new System.Drawing.Point(26, 517);
+            this.label92.Location = new System.Drawing.Point(24, 472);
             this.label92.Name = "label92";
             this.label92.Size = new System.Drawing.Size(65, 20);
             this.label92.TabIndex = 18;
@@ -2926,21 +2786,11 @@
             // 
             this.Billing_textBox_amount.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Billing_textBox_amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Billing_textBox_amount.Location = new System.Drawing.Point(217, 515);
+            this.Billing_textBox_amount.Location = new System.Drawing.Point(215, 470);
             this.Billing_textBox_amount.Name = "Billing_textBox_amount";
             this.Billing_textBox_amount.ReadOnly = true;
             this.Billing_textBox_amount.Size = new System.Drawing.Size(202, 26);
             this.Billing_textBox_amount.TabIndex = 17;
-            // 
-            // label97
-            // 
-            this.label97.AutoSize = true;
-            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label97.Location = new System.Drawing.Point(26, 241);
-            this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(118, 20);
-            this.label97.TabIndex = 11;
-            this.label97.Text = "Expiration Date";
             // 
             // label102
             // 
@@ -3008,12 +2858,10 @@
             this.Recep_panel_dashboard.Controls.Add(this.label107);
             this.Recep_panel_dashboard.Controls.Add(this.label108);
             this.Recep_panel_dashboard.Controls.Add(this.label109);
-            this.Recep_panel_dashboard.Controls.Add(this.label110);
             this.Recep_panel_dashboard.Controls.Add(this.panel5);
             this.Recep_panel_dashboard.Controls.Add(this.label114);
             this.Recep_panel_dashboard.Controls.Add(this.panel4);
             this.Recep_panel_dashboard.Controls.Add(this.panel3);
-            this.Recep_panel_dashboard.Controls.Add(this.panel2);
             this.Recep_panel_dashboard.Controls.Add(this.panel7);
             this.Recep_panel_dashboard.Location = new System.Drawing.Point(0, 0);
             this.Recep_panel_dashboard.Name = "Recep_panel_dashboard";
@@ -3033,16 +2881,17 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.Recep_dashboard_dataGridView_pendingSession);
             this.panel6.Location = new System.Drawing.Point(44, 533);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(801, 126);
+            this.panel6.Size = new System.Drawing.Size(893, 126);
             this.panel6.TabIndex = 6;
             // 
             // label107
             // 
             this.label107.AutoSize = true;
             this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label107.Location = new System.Drawing.Point(60, 19);
+            this.label107.Location = new System.Drawing.Point(59, 16);
             this.label107.Name = "label107";
             this.label107.Size = new System.Drawing.Size(143, 20);
             this.label107.TabIndex = 0;
@@ -3052,7 +2901,7 @@
             // 
             this.label108.AutoSize = true;
             this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label108.Location = new System.Drawing.Point(341, 19);
+            this.label108.Location = new System.Drawing.Point(490, 16);
             this.label108.Name = "label108";
             this.label108.Size = new System.Drawing.Size(209, 20);
             this.label108.TabIndex = 0;
@@ -3062,171 +2911,51 @@
             // 
             this.label109.AutoSize = true;
             this.label109.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label109.Location = new System.Drawing.Point(607, 271);
+            this.label109.Location = new System.Drawing.Point(606, 252);
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(153, 20);
+            this.label109.Size = new System.Drawing.Size(208, 20);
             this.label109.TabIndex = 3;
-            this.label109.Text = "Equipment Issues";
-            // 
-            // label110
-            // 
-            this.label110.AutoSize = true;
-            this.label110.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label110.Location = new System.Drawing.Point(607, 19);
-            this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(116, 20);
-            this.label110.TabIndex = 3;
-            this.label110.Text = "Urgent Tasks";
+            this.label109.Text = "Equipment  Maintenance";
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.label111);
-            this.panel5.Controls.Add(this.label112);
-            this.panel5.Controls.Add(this.label113);
-            this.panel5.Location = new System.Drawing.Point(589, 299);
+            this.panel5.Controls.Add(this.Recep_dashboard_dataGridView_Equipment);
+            this.panel5.Location = new System.Drawing.Point(588, 280);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(349, 217);
             this.panel5.TabIndex = 4;
-            // 
-            // label111
-            // 
-            this.label111.AutoSize = true;
-            this.label111.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label111.Location = new System.Drawing.Point(221, 11);
-            this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(119, 16);
-            this.label111.TabIndex = 9;
-            this.label111.Text = "Condition Status";
-            // 
-            // label112
-            // 
-            this.label112.AutoSize = true;
-            this.label112.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label112.Location = new System.Drawing.Point(131, 11);
-            this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(66, 16);
-            this.label112.TabIndex = 8;
-            this.label112.Text = "Location";
-            // 
-            // label113
-            // 
-            this.label113.AutoSize = true;
-            this.label113.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label113.Location = new System.Drawing.Point(14, 11);
-            this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(81, 16);
-            this.label113.TabIndex = 7;
-            this.label113.Text = "Item Name";
             // 
             // label114
             // 
             this.label114.AutoSize = true;
             this.label114.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label114.Location = new System.Drawing.Point(60, 225);
+            this.label114.Location = new System.Drawing.Point(60, 239);
             this.label114.Name = "label114";
             this.label114.Size = new System.Drawing.Size(148, 20);
             this.label114.TabIndex = 0;
             this.label114.Text = "Today\'s Sessions";
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label115);
-            this.panel4.Controls.Add(this.label116);
-            this.panel4.Controls.Add(this.label117);
-            this.panel4.Location = new System.Drawing.Point(44, 264);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(521, 226);
-            this.panel4.TabIndex = 2;
-            // 
-            // label115
-            // 
-            this.label115.AutoSize = true;
-            this.label115.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label115.Location = new System.Drawing.Point(334, 22);
-            this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(170, 16);
-            this.label115.TabIndex = 5;
-            this.label115.Text = "Time Booked/ Capacity";
-            // 
-            // label116
-            // 
-            this.label116.AutoSize = true;
-            this.label116.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label116.Location = new System.Drawing.Point(201, 22);
-            this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(68, 16);
-            this.label116.TabIndex = 4;
-            this.label116.Text = "Coaches";
-            // 
-            // label117
-            // 
-            this.label117.AutoSize = true;
-            this.label117.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label117.Location = new System.Drawing.Point(16, 22);
-            this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(108, 16);
-            this.label117.TabIndex = 3;
-            this.label117.Text = "Session Name";
-            // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(319, 49);
+            this.panel3.Controls.Add(this.Recep_dashboard_dataGridView_newMembers);
+            this.panel3.Location = new System.Drawing.Point(468, 46);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(246, 161);
+            this.panel3.Size = new System.Drawing.Size(411, 161);
             this.panel3.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label118);
-            this.panel2.Controls.Add(this.label119);
-            this.panel2.Controls.Add(this.label120);
-            this.panel2.Location = new System.Drawing.Point(589, 47);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(349, 211);
-            this.panel2.TabIndex = 2;
-            // 
-            // label118
-            // 
-            this.label118.AutoSize = true;
-            this.label118.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label118.Location = new System.Drawing.Point(241, 14);
-            this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(61, 16);
-            this.label118.TabIndex = 10;
-            this.label118.Text = "Reason";
-            // 
-            // label119
-            // 
-            this.label119.AutoSize = true;
-            this.label119.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label119.Location = new System.Drawing.Point(122, 14);
-            this.label119.Name = "label119";
-            this.label119.Size = new System.Drawing.Size(72, 16);
-            this.label119.TabIndex = 10;
-            this.label119.Text = "Due Date";
-            // 
-            // label120
-            // 
-            this.label120.AutoSize = true;
-            this.label120.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label120.Location = new System.Drawing.Point(14, 14);
-            this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(48, 16);
-            this.label120.TabIndex = 10;
-            this.label120.Text = "Name";
             // 
             // panel7
             // 
-            this.panel7.Location = new System.Drawing.Point(44, 47);
+            this.panel7.Controls.Add(this.Recep_dashboard_dataGridView_checkins);
+            this.panel7.Location = new System.Drawing.Point(43, 44);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(247, 161);
+            this.panel7.Size = new System.Drawing.Size(389, 161);
             this.panel7.TabIndex = 1;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(26, 289);
+            this.label22.Location = new System.Drawing.Point(24, 197);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(130, 20);
             this.label22.TabIndex = 26;
@@ -3236,60 +2965,40 @@
             // 
             this.Billing_comboBox_transactionType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Billing_comboBox_transactionType.FormattingEnabled = true;
-            this.Billing_comboBox_transactionType.Location = new System.Drawing.Point(217, 283);
+            this.Billing_comboBox_transactionType.Location = new System.Drawing.Point(215, 191);
             this.Billing_comboBox_transactionType.Name = "Billing_comboBox_transactionType";
             this.Billing_comboBox_transactionType.Size = new System.Drawing.Size(293, 28);
             this.Billing_comboBox_transactionType.TabIndex = 29;
             // 
-            // textBox2
+            // Billing_textBox_memberName
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(215, 142);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(293, 26);
-            this.textBox2.TabIndex = 33;
+            this.Billing_textBox_memberName.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Billing_textBox_memberName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Billing_textBox_memberName.Location = new System.Drawing.Point(215, 142);
+            this.Billing_textBox_memberName.Name = "Billing_textBox_memberName";
+            this.Billing_textBox_memberName.ReadOnly = true;
+            this.Billing_textBox_memberName.Size = new System.Drawing.Size(293, 26);
+            this.Billing_textBox_memberName.TabIndex = 33;
             // 
-            // textBox3
+            // Billing_textBox_memberID
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(215, 95);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(293, 26);
-            this.textBox3.TabIndex = 32;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(217, 236);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(293, 26);
-            this.textBox4.TabIndex = 35;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(217, 189);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(293, 26);
-            this.textBox5.TabIndex = 34;
+            this.Billing_textBox_memberID.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Billing_textBox_memberID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Billing_textBox_memberID.Location = new System.Drawing.Point(215, 95);
+            this.Billing_textBox_memberID.Name = "Billing_textBox_memberID";
+            this.Billing_textBox_memberID.ReadOnly = true;
+            this.Billing_textBox_memberID.Size = new System.Drawing.Size(293, 26);
+            this.Billing_textBox_memberID.TabIndex = 32;
             // 
             // label101
             // 
             this.label101.AutoSize = true;
             this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label101.Location = new System.Drawing.Point(26, 193);
+            this.label101.Location = new System.Drawing.Point(26, 340);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(134, 20);
+            this.label101.Size = new System.Drawing.Size(104, 20);
             this.label101.TabIndex = 7;
-            this.label101.Text = "Membership Type";
+            this.label101.Text = "Session Type";
             // 
             // pictureBox1_panel3
             // 
@@ -3418,7 +3127,7 @@
             // 
             this.Coaching_comboBox_member.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Coaching_comboBox_member.FormattingEnabled = true;
-            this.Coaching_comboBox_member.Location = new System.Drawing.Point(173, 563);
+            this.Coaching_comboBox_member.Location = new System.Drawing.Point(149, 563);
             this.Coaching_comboBox_member.Name = "Coaching_comboBox_member";
             this.Coaching_comboBox_member.Size = new System.Drawing.Size(288, 28);
             this.Coaching_comboBox_member.TabIndex = 3;
@@ -3427,7 +3136,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(54, 569);
+            this.label25.Location = new System.Drawing.Point(30, 569);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(67, 20);
             this.label25.TabIndex = 4;
@@ -3455,7 +3164,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(26, 475);
+            this.label26.Location = new System.Drawing.Point(24, 430);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(72, 20);
             this.label26.TabIndex = 25;
@@ -3465,10 +3174,319 @@
             // 
             this.Billing_comboBox_discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Billing_comboBox_discount.FormattingEnabled = true;
-            this.Billing_comboBox_discount.Location = new System.Drawing.Point(217, 472);
+            this.Billing_comboBox_discount.Location = new System.Drawing.Point(215, 427);
             this.Billing_comboBox_discount.Name = "Billing_comboBox_discount";
             this.Billing_comboBox_discount.Size = new System.Drawing.Size(293, 28);
             this.Billing_comboBox_discount.TabIndex = 27;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.Recep_dashboard_dataGridView_todaySession);
+            this.panel4.Location = new System.Drawing.Point(44, 264);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(521, 226);
+            this.panel4.TabIndex = 2;
+            // 
+            // Recep_dashboard_dataGridView_checkins
+            // 
+            this.Recep_dashboard_dataGridView_checkins.AllowUserToAddRows = false;
+            this.Recep_dashboard_dataGridView_checkins.AllowUserToDeleteRows = false;
+            this.Recep_dashboard_dataGridView_checkins.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Recep_dashboard_dataGridView_checkins.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Recep_dashboard_dataGridView_checkins.Location = new System.Drawing.Point(0, 0);
+            this.Recep_dashboard_dataGridView_checkins.Name = "Recep_dashboard_dataGridView_checkins";
+            this.Recep_dashboard_dataGridView_checkins.ReadOnly = true;
+            this.Recep_dashboard_dataGridView_checkins.Size = new System.Drawing.Size(389, 161);
+            this.Recep_dashboard_dataGridView_checkins.TabIndex = 0;
+            // 
+            // Recep_dashboard_dataGridView_newMembers
+            // 
+            this.Recep_dashboard_dataGridView_newMembers.AllowUserToAddRows = false;
+            this.Recep_dashboard_dataGridView_newMembers.AllowUserToDeleteRows = false;
+            this.Recep_dashboard_dataGridView_newMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Recep_dashboard_dataGridView_newMembers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Recep_dashboard_dataGridView_newMembers.Location = new System.Drawing.Point(0, 0);
+            this.Recep_dashboard_dataGridView_newMembers.Name = "Recep_dashboard_dataGridView_newMembers";
+            this.Recep_dashboard_dataGridView_newMembers.ReadOnly = true;
+            this.Recep_dashboard_dataGridView_newMembers.Size = new System.Drawing.Size(411, 161);
+            this.Recep_dashboard_dataGridView_newMembers.TabIndex = 0;
+            // 
+            // Recep_dashboard_dataGridView_todaySession
+            // 
+            this.Recep_dashboard_dataGridView_todaySession.AllowUserToAddRows = false;
+            this.Recep_dashboard_dataGridView_todaySession.AllowUserToDeleteRows = false;
+            this.Recep_dashboard_dataGridView_todaySession.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Recep_dashboard_dataGridView_todaySession.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Recep_dashboard_dataGridView_todaySession.Location = new System.Drawing.Point(0, 0);
+            this.Recep_dashboard_dataGridView_todaySession.Name = "Recep_dashboard_dataGridView_todaySession";
+            this.Recep_dashboard_dataGridView_todaySession.ReadOnly = true;
+            this.Recep_dashboard_dataGridView_todaySession.Size = new System.Drawing.Size(521, 226);
+            this.Recep_dashboard_dataGridView_todaySession.TabIndex = 0;
+            // 
+            // Recep_dashboard_dataGridView_Equipment
+            // 
+            this.Recep_dashboard_dataGridView_Equipment.AllowUserToAddRows = false;
+            this.Recep_dashboard_dataGridView_Equipment.AllowUserToDeleteRows = false;
+            this.Recep_dashboard_dataGridView_Equipment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Recep_dashboard_dataGridView_Equipment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Recep_dashboard_dataGridView_Equipment.Location = new System.Drawing.Point(0, 0);
+            this.Recep_dashboard_dataGridView_Equipment.Name = "Recep_dashboard_dataGridView_Equipment";
+            this.Recep_dashboard_dataGridView_Equipment.ReadOnly = true;
+            this.Recep_dashboard_dataGridView_Equipment.Size = new System.Drawing.Size(349, 217);
+            this.Recep_dashboard_dataGridView_Equipment.TabIndex = 0;
+            // 
+            // Recep_dashboard_dataGridView_pendingSession
+            // 
+            this.Recep_dashboard_dataGridView_pendingSession.AllowUserToAddRows = false;
+            this.Recep_dashboard_dataGridView_pendingSession.AllowUserToDeleteRows = false;
+            this.Recep_dashboard_dataGridView_pendingSession.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Recep_dashboard_dataGridView_pendingSession.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Recep_dashboard_dataGridView_pendingSession.Location = new System.Drawing.Point(0, 0);
+            this.Recep_dashboard_dataGridView_pendingSession.Name = "Recep_dashboard_dataGridView_pendingSession";
+            this.Recep_dashboard_dataGridView_pendingSession.ReadOnly = true;
+            this.Recep_dashboard_dataGridView_pendingSession.Size = new System.Drawing.Size(893, 126);
+            this.Recep_dashboard_dataGridView_pendingSession.TabIndex = 0;
+            // 
+            // Billing_comboBox_sessionType
+            // 
+            this.Billing_comboBox_sessionType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Billing_comboBox_sessionType.FormattingEnabled = true;
+            this.Billing_comboBox_sessionType.Location = new System.Drawing.Point(215, 336);
+            this.Billing_comboBox_sessionType.Name = "Billing_comboBox_sessionType";
+            this.Billing_comboBox_sessionType.Size = new System.Drawing.Size(293, 28);
+            this.Billing_comboBox_sessionType.TabIndex = 29;
+            // 
+            // Coaching_comboBox_sessionType
+            // 
+            this.Coaching_comboBox_sessionType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Coaching_comboBox_sessionType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Coaching_comboBox_sessionType.FormattingEnabled = true;
+            this.Coaching_comboBox_sessionType.Location = new System.Drawing.Point(632, 525);
+            this.Coaching_comboBox_sessionType.Name = "Coaching_comboBox_sessionType";
+            this.Coaching_comboBox_sessionType.Size = new System.Drawing.Size(288, 28);
+            this.Coaching_comboBox_sessionType.TabIndex = 3;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(478, 529);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(104, 20);
+            this.label27.TabIndex = 10;
+            this.label27.Text = "Session Type";
+            // 
+            // Price_dataGridView_disccoutns
+            // 
+            this.Price_dataGridView_disccoutns.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Price_dataGridView_disccoutns.Location = new System.Drawing.Point(514, 72);
+            this.Price_dataGridView_disccoutns.Name = "Price_dataGridView_disccoutns";
+            this.Price_dataGridView_disccoutns.Size = new System.Drawing.Size(432, 313);
+            this.Price_dataGridView_disccoutns.TabIndex = 5;
+            // 
+            // Prices_textBox_fee
+            // 
+            this.Prices_textBox_fee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Prices_textBox_fee.Location = new System.Drawing.Point(180, 135);
+            this.Prices_textBox_fee.Name = "Prices_textBox_fee";
+            this.Prices_textBox_fee.Size = new System.Drawing.Size(253, 22);
+            this.Prices_textBox_fee.TabIndex = 2;
+            // 
+            // Prices_label_fee
+            // 
+            this.Prices_label_fee.AutoSize = true;
+            this.Prices_label_fee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Prices_label_fee.Location = new System.Drawing.Point(21, 138);
+            this.Prices_label_fee.Name = "Prices_label_fee";
+            this.Prices_label_fee.Size = new System.Drawing.Size(61, 16);
+            this.Prices_label_fee.TabIndex = 8;
+            this.Prices_label_fee.Text = "Plan Fee";
+            // 
+            // Prices_label_status
+            // 
+            this.Prices_label_status.AutoSize = true;
+            this.Prices_label_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Prices_label_status.Location = new System.Drawing.Point(21, 177);
+            this.Prices_label_status.Name = "Prices_label_status";
+            this.Prices_label_status.Size = new System.Drawing.Size(44, 16);
+            this.Prices_label_status.TabIndex = 8;
+            this.Prices_label_status.Text = "Status";
+            // 
+            // Prices_comboBox_status
+            // 
+            this.Prices_comboBox_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Prices_comboBox_status.FormattingEnabled = true;
+            this.Prices_comboBox_status.Location = new System.Drawing.Point(180, 173);
+            this.Prices_comboBox_status.Name = "Prices_comboBox_status";
+            this.Prices_comboBox_status.Size = new System.Drawing.Size(253, 24);
+            this.Prices_comboBox_status.TabIndex = 9;
+            // 
+            // Price_button_add
+            // 
+            this.Price_button_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Price_button_add.Location = new System.Drawing.Point(138, 214);
+            this.Price_button_add.Name = "Price_button_add";
+            this.Price_button_add.Size = new System.Drawing.Size(75, 32);
+            this.Price_button_add.TabIndex = 3;
+            this.Price_button_add.Text = "Add";
+            this.Price_button_add.UseVisualStyleBackColor = true;
+            // 
+            // Price_tabControl
+            // 
+            this.Price_tabControl.Controls.Add(this.Price_tabPage_memberships);
+            this.Price_tabControl.Controls.Add(this.Price_tabPage_sessions);
+            this.Price_tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Price_tabControl.Location = new System.Drawing.Point(14, 47);
+            this.Price_tabControl.Name = "Price_tabControl";
+            this.Price_tabControl.SelectedIndex = 0;
+            this.Price_tabControl.Size = new System.Drawing.Size(485, 345);
+            this.Price_tabControl.TabIndex = 6;
+            // 
+            // Price_tabPage_memberships
+            // 
+            this.Price_tabPage_memberships.Controls.Add(this.Price_dataGridView_membershipPlans);
+            this.Price_tabPage_memberships.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Price_tabPage_memberships.Location = new System.Drawing.Point(4, 25);
+            this.Price_tabPage_memberships.Name = "Price_tabPage_memberships";
+            this.Price_tabPage_memberships.Padding = new System.Windows.Forms.Padding(3);
+            this.Price_tabPage_memberships.Size = new System.Drawing.Size(474, 316);
+            this.Price_tabPage_memberships.TabIndex = 0;
+            this.Price_tabPage_memberships.Text = "Membership Plan";
+            this.Price_tabPage_memberships.UseVisualStyleBackColor = true;
+            // 
+            // Price_tabPage_sessions
+            // 
+            this.Price_tabPage_sessions.Controls.Add(this.Price_dataGridView_sessionTypes);
+            this.Price_tabPage_sessions.Location = new System.Drawing.Point(4, 25);
+            this.Price_tabPage_sessions.Name = "Price_tabPage_sessions";
+            this.Price_tabPage_sessions.Padding = new System.Windows.Forms.Padding(3);
+            this.Price_tabPage_sessions.Size = new System.Drawing.Size(477, 316);
+            this.Price_tabPage_sessions.TabIndex = 1;
+            this.Price_tabPage_sessions.Text = "Session Types";
+            this.Price_tabPage_sessions.UseVisualStyleBackColor = true;
+            // 
+            // Price_dataGridView_sessionTypes
+            // 
+            this.Price_dataGridView_sessionTypes.AllowUserToAddRows = false;
+            this.Price_dataGridView_sessionTypes.AllowUserToDeleteRows = false;
+            this.Price_dataGridView_sessionTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Price_dataGridView_sessionTypes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Price_dataGridView_sessionTypes.Location = new System.Drawing.Point(3, 3);
+            this.Price_dataGridView_sessionTypes.Name = "Price_dataGridView_sessionTypes";
+            this.Price_dataGridView_sessionTypes.ReadOnly = true;
+            this.Price_dataGridView_sessionTypes.Size = new System.Drawing.Size(471, 310);
+            this.Price_dataGridView_sessionTypes.TabIndex = 6;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel2.Controls.Add(this.Discount_comboBox_status);
+            this.panel2.Controls.Add(this.label30);
+            this.panel2.Controls.Add(this.label32);
+            this.panel2.Controls.Add(this.label33);
+            this.panel2.Controls.Add(this.Discount_button_add);
+            this.panel2.Controls.Add(this.Discount_button_update);
+            this.panel2.Controls.Add(this.Discount_textBox_id);
+            this.panel2.Controls.Add(this.label34);
+            this.panel2.Controls.Add(this.Discount_textBox_rate);
+            this.panel2.Controls.Add(this.Discount_textBox_name);
+            this.panel2.Location = new System.Drawing.Point(514, 411);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(432, 258);
+            this.panel2.TabIndex = 10;
+            // 
+            // Discount_comboBox_status
+            // 
+            this.Discount_comboBox_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Discount_comboBox_status.FormattingEnabled = true;
+            this.Discount_comboBox_status.Location = new System.Drawing.Point(152, 156);
+            this.Discount_comboBox_status.Name = "Discount_comboBox_status";
+            this.Discount_comboBox_status.Size = new System.Drawing.Size(253, 24);
+            this.Discount_comboBox_status.TabIndex = 9;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(30, 161);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(44, 16);
+            this.label30.TabIndex = 8;
+            this.label30.Text = "Status";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(30, 123);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(91, 16);
+            this.label32.TabIndex = 8;
+            this.label32.Text = "Discount Rate";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(30, 85);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(99, 16);
+            this.label33.TabIndex = 7;
+            this.label33.Text = "Discount Name";
+            // 
+            // Discount_button_add
+            // 
+            this.Discount_button_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Discount_button_add.Location = new System.Drawing.Point(138, 214);
+            this.Discount_button_add.Name = "Discount_button_add";
+            this.Discount_button_add.Size = new System.Drawing.Size(75, 32);
+            this.Discount_button_add.TabIndex = 3;
+            this.Discount_button_add.Text = "Add";
+            this.Discount_button_add.UseVisualStyleBackColor = true;
+            // 
+            // Discount_button_update
+            // 
+            this.Discount_button_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Discount_button_update.Location = new System.Drawing.Point(233, 214);
+            this.Discount_button_update.Name = "Discount_button_update";
+            this.Discount_button_update.Size = new System.Drawing.Size(75, 32);
+            this.Discount_button_update.TabIndex = 3;
+            this.Discount_button_update.Text = "Update";
+            this.Discount_button_update.UseVisualStyleBackColor = true;
+            // 
+            // Discount_textBox_id
+            // 
+            this.Discount_textBox_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Discount_textBox_id.Location = new System.Drawing.Point(152, 43);
+            this.Discount_textBox_id.Name = "Discount_textBox_id";
+            this.Discount_textBox_id.Size = new System.Drawing.Size(253, 22);
+            this.Discount_textBox_id.TabIndex = 6;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(30, 47);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(75, 16);
+            this.label34.TabIndex = 2;
+            this.label34.Text = "Discount ID";
+            // 
+            // Discount_textBox_rate
+            // 
+            this.Discount_textBox_rate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Discount_textBox_rate.Location = new System.Drawing.Point(152, 119);
+            this.Discount_textBox_rate.Name = "Discount_textBox_rate";
+            this.Discount_textBox_rate.Size = new System.Drawing.Size(253, 22);
+            this.Discount_textBox_rate.TabIndex = 2;
+            // 
+            // Discount_textBox_name
+            // 
+            this.Discount_textBox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Discount_textBox_name.Location = new System.Drawing.Point(152, 81);
+            this.Discount_textBox_name.Name = "Discount_textBox_name";
+            this.Discount_textBox_name.Size = new System.Drawing.Size(253, 22);
+            this.Discount_textBox_name.TabIndex = 1;
             // 
             // MainForm
             // 
@@ -3519,15 +3537,7 @@
             this.Admin_panel_price.PerformLayout();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1_panel7)).EndInit();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Price_dataGridView_membershipPlans)).EndInit();
             this.Admin_panel_sales.ResumeLayout(false);
             this.Admin_panel_sales.PerformLayout();
             this.panel9_panel5.ResumeLayout(false);
@@ -3552,16 +3562,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.Billing_dataGridView_sales)).EndInit();
             this.Recep_panel_dashboard.ResumeLayout(false);
             this.Recep_panel_dashboard.PerformLayout();
+            this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_panel3)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Damaged_dataGridView_equipments)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Recep_dashboard_dataGridView_checkins)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Recep_dashboard_dataGridView_newMembers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Recep_dashboard_dataGridView_todaySession)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Recep_dashboard_dataGridView_Equipment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Recep_dashboard_dataGridView_pendingSession)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Price_dataGridView_disccoutns)).EndInit();
+            this.Price_tabControl.ResumeLayout(false);
+            this.Price_tabPage_memberships.ResumeLayout(false);
+            this.Price_tabPage_sessions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Price_dataGridView_sessionTypes)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3630,33 +3651,16 @@
         public System.Windows.Forms.Panel panel9_panel5;
         public System.Windows.Forms.DateTimePicker Sales_dateTimePicker_from;
         public System.Windows.Forms.DateTimePicker Sales_dateTimePicker_to;
-        public System.Windows.Forms.DataGridView dataGridView1_panel7;
-        public System.Windows.Forms.Panel panel17;
-        public System.Windows.Forms.Panel panel16;
-        public System.Windows.Forms.Label label36;
-        public System.Windows.Forms.Label label37;
-        public System.Windows.Forms.Panel panel15;
-        public System.Windows.Forms.Label label33;
-        public System.Windows.Forms.Label label35;
-        public System.Windows.Forms.Panel panel14;
-        public System.Windows.Forms.Label label30;
-        public System.Windows.Forms.Label label31;
-        public System.Windows.Forms.Button button1_panel7;
-        public System.Windows.Forms.TextBox textBox3_panel7;
+        public System.Windows.Forms.DataGridView Price_dataGridView_membershipPlans;
+        public System.Windows.Forms.Button Price_button_update;
+        public System.Windows.Forms.TextBox Prices_textBox_duration;
         public System.Windows.Forms.Panel panel18;
-        public System.Windows.Forms.Label label38;
-        public System.Windows.Forms.TextBox textBox2_panel7;
-        public System.Windows.Forms.Label label42;
-        public System.Windows.Forms.Label label41;
-        public System.Windows.Forms.Label label40;
-        public System.Windows.Forms.Label label39;
+        public System.Windows.Forms.Label Prices_label_id;
+        public System.Windows.Forms.TextBox Prices_textBox_name;
         public System.Windows.Forms.Label label48;
-        public System.Windows.Forms.Label label47;
-        public System.Windows.Forms.Label label46;
-        public System.Windows.Forms.TextBox textBox1_panel7;
-        public System.Windows.Forms.Label label45;
-        public System.Windows.Forms.Label label44;
-        public System.Windows.Forms.Label label43;
+        public System.Windows.Forms.Label Prices_label_duration;
+        public System.Windows.Forms.Label Prices_label_name;
+        public System.Windows.Forms.TextBox prices_textBox_id;
         public System.Windows.Forms.Panel panel24_panel1;
         public System.Windows.Forms.Panel panel21_panel1;
         public System.Windows.Forms.Panel panel20_panel1;
@@ -3789,7 +3793,6 @@
         public System.Windows.Forms.TextBox Billing_textBox_reference;
         public System.Windows.Forms.Label label92;
         public System.Windows.Forms.TextBox Billing_textBox_amount;
-        public System.Windows.Forms.Label label97;
         public System.Windows.Forms.Label label102;
         public System.Windows.Forms.Label label103;
         public System.Windows.Forms.Button Billing_button_searchMember;
@@ -3801,21 +3804,9 @@
         public System.Windows.Forms.Label label107;
         public System.Windows.Forms.Label label108;
         public System.Windows.Forms.Label label109;
-        public System.Windows.Forms.Label label110;
         public System.Windows.Forms.Panel panel5;
-        public System.Windows.Forms.Label label111;
-        public System.Windows.Forms.Label label112;
-        public System.Windows.Forms.Label label113;
         public System.Windows.Forms.Label label114;
-        public System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.Label label115;
-        public System.Windows.Forms.Label label116;
-        public System.Windows.Forms.Label label117;
         public System.Windows.Forms.Panel panel3;
-        public System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.Label label118;
-        public System.Windows.Forms.Label label119;
-        public System.Windows.Forms.Label label120;
         public System.Windows.Forms.Panel panel7;
         public System.Windows.Forms.DataGridView Damaged_dataGridView_damaged;
         public System.Windows.Forms.Button Damaged_button_record;
@@ -3832,16 +3823,14 @@
         public System.Windows.Forms.DataGridView Billing_dataGridView_sales;
         public System.Windows.Forms.Button Billing_button_view;
         public System.Windows.Forms.Button Billing_button_searchReference;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox Billing_textBox_referenceSearch;
         public System.Windows.Forms.Label label21;
         public System.Windows.Forms.Button Checkin_button_checkin;
         public System.Windows.Forms.Label label74;
         public System.Windows.Forms.ComboBox Billing_comboBox_transactionType;
         public System.Windows.Forms.Label label22;
-        public System.Windows.Forms.TextBox textBox4;
-        public System.Windows.Forms.TextBox textBox5;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox Billing_textBox_memberName;
+        public System.Windows.Forms.TextBox Billing_textBox_memberID;
         public System.Windows.Forms.Label label101;
         public System.Windows.Forms.ComboBox Users_comboBox_staffs;
         public System.Windows.Forms.Label label24;
@@ -3851,5 +3840,35 @@
         public System.Windows.Forms.Label label125;
         public System.Windows.Forms.ComboBox Billing_comboBox_discount;
         public System.Windows.Forms.Label label26;
+        public System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView Recep_dashboard_dataGridView_todaySession;
+        private System.Windows.Forms.DataGridView Recep_dashboard_dataGridView_newMembers;
+        private System.Windows.Forms.DataGridView Recep_dashboard_dataGridView_checkins;
+        private System.Windows.Forms.DataGridView Recep_dashboard_dataGridView_pendingSession;
+        private System.Windows.Forms.DataGridView Recep_dashboard_dataGridView_Equipment;
+        public System.Windows.Forms.Label label27;
+        public System.Windows.Forms.ComboBox Coaching_comboBox_sessionType;
+        public System.Windows.Forms.ComboBox Billing_comboBox_sessionType;
+        public System.Windows.Forms.DataGridView Price_dataGridView_disccoutns;
+        private System.Windows.Forms.ComboBox Prices_comboBox_status;
+        public System.Windows.Forms.Label Prices_label_status;
+        public System.Windows.Forms.Label Prices_label_fee;
+        public System.Windows.Forms.TextBox Prices_textBox_fee;
+        private System.Windows.Forms.TabControl Price_tabControl;
+        private System.Windows.Forms.TabPage Price_tabPage_memberships;
+        private System.Windows.Forms.TabPage Price_tabPage_sessions;
+        public System.Windows.Forms.Button Price_button_add;
+        public System.Windows.Forms.DataGridView Price_dataGridView_sessionTypes;
+        public System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox Discount_comboBox_status;
+        public System.Windows.Forms.Label label30;
+        public System.Windows.Forms.Label label32;
+        public System.Windows.Forms.Label label33;
+        public System.Windows.Forms.Button Discount_button_add;
+        public System.Windows.Forms.Button Discount_button_update;
+        public System.Windows.Forms.TextBox Discount_textBox_id;
+        public System.Windows.Forms.Label label34;
+        public System.Windows.Forms.TextBox Discount_textBox_rate;
+        public System.Windows.Forms.TextBox Discount_textBox_name;
     }
 }

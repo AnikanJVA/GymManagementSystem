@@ -225,7 +225,7 @@ namespace ClassLibrary
 
         public bool UpdateMember(Member member)
         {
-            long memberID = member.MemberID;
+            long memberID = member.ID;
             string lastName = member.Lname;
             string firstName = member.Fname;
             string middleName = member.Mname;

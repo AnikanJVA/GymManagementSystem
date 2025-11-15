@@ -9,16 +9,17 @@ namespace ClassLibrary
 {
     public  class Staff : Person
     {
-        private long staffID;
         private string schedule;
         private long positionID;
         private string address;
         private string status;
 
-        public long StaffID
+        public Staff()
         {
-            get { return staffID; }
-            set { staffID = value; }
+            schedule = string.Empty;
+            positionID = 0;
+            address = string.Empty;
+            status = string.Empty;
         }
 
         public string Schedule 
