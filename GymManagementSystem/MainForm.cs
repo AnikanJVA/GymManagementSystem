@@ -16,7 +16,7 @@ namespace GymManagementSystem
         private string accType;
         private Equipment currentEquipment;
 
-        public MainForm(string accType)
+        public MainForm(string accType, long staffID)
         {
             InitializeComponent();
             this.accType = accType;
@@ -326,6 +326,11 @@ namespace GymManagementSystem
             Equipments_dataGridView_equipments.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
             Equipments_dataGridView_equipments.RowHeadersVisible = false;
+        }
+
+        private void Recep_members_button_add_Click(object sender, EventArgs e)
+        {
+            new AddMemberForm().ShowDialog();
         }
     }
 }

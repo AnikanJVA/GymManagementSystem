@@ -42,7 +42,7 @@
             this.Sidebar_button7 = new System.Windows.Forms.Button();
             this.Sidebar_button8 = new System.Windows.Forms.Button();
             this.Recep_panel_members = new System.Windows.Forms.Panel();
-            this.Recep_members_dateTimePicker_renewalDate = new System.Windows.Forms.DateTimePicker();
+            this.Recep_members_dateTimePicker_rDate = new System.Windows.Forms.DateTimePicker();
             this.Recep_members_dateTimePicker_membershipDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.Recep_members_textBox_email = new System.Windows.Forms.TextBox();
@@ -79,7 +79,6 @@
             this.label68 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
-            this.pictureBox1_panel3 = new System.Windows.Forms.PictureBox();
             this.button2_panel3 = new System.Windows.Forms.Button();
             this.Checkin_button_checkin = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
@@ -104,7 +103,6 @@
             this.Staffs_comboBox_position = new System.Windows.Forms.ComboBox();
             this.Staffs_dateTimePicker_dob = new System.Windows.Forms.DateTimePicker();
             this.Staffs_button_update = new System.Windows.Forms.Button();
-            this.Staffs_button_delete = new System.Windows.Forms.Button();
             this.Staffs_button_add = new System.Windows.Forms.Button();
             this.Staffs_textBox_contactNo = new System.Windows.Forms.TextBox();
             this.Staffs_textBox_address = new System.Windows.Forms.TextBox();
@@ -305,6 +303,8 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label101 = new System.Windows.Forms.Label();
+            this.pictureBox1_panel3 = new System.Windows.Forms.PictureBox();
+            this.Recep_button_viewMemberCard = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -314,7 +314,6 @@
             this.Recep_panel_members.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Recep_members_dataGridView_members)).BeginInit();
             this.Recep_panel_checkin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_panel3)).BeginInit();
             this.Admin_panel_staffs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Staff_dataGridView_staff)).BeginInit();
             this.Admin_panel_dashboard.SuspendLayout();
@@ -352,6 +351,7 @@
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_panel3)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -367,6 +367,12 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_coaching);
+            this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_users);
+            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_coaching);
+            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_damage);
+            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_biling);
+            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_dashboard);
             this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_members);
             this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_checkin);
             this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_staffs);
@@ -374,12 +380,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_equipment);
             this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_price);
             this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_sales);
-            this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_coaching);
-            this.splitContainer1.Panel2.Controls.Add(this.Admin_panel_users);
-            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_coaching);
-            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_damage);
-            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_biling);
-            this.splitContainer1.Panel2.Controls.Add(this.Recep_panel_dashboard);
             this.splitContainer1.Size = new System.Drawing.Size(1264, 681);
             this.splitContainer1.SplitterDistance = 300;
             this.splitContainer1.TabIndex = 1;
@@ -591,7 +591,7 @@
             // 
             // Recep_panel_members
             // 
-            this.Recep_panel_members.Controls.Add(this.Recep_members_dateTimePicker_renewalDate);
+            this.Recep_panel_members.Controls.Add(this.Recep_members_dateTimePicker_rDate);
             this.Recep_panel_members.Controls.Add(this.Recep_members_dateTimePicker_membershipDate);
             this.Recep_panel_members.Controls.Add(this.label2);
             this.Recep_panel_members.Controls.Add(this.Recep_members_textBox_email);
@@ -600,6 +600,7 @@
             this.Recep_panel_members.Controls.Add(this.Recep_members_comboBox_plan);
             this.Recep_panel_members.Controls.Add(this.Recep_members_comboBox_status);
             this.Recep_panel_members.Controls.Add(this.Recep_members_dateTimePicker_dob);
+            this.Recep_panel_members.Controls.Add(this.Recep_button_viewMemberCard);
             this.Recep_panel_members.Controls.Add(this.Recep_members_button_udpate);
             this.Recep_panel_members.Controls.Add(this.Recep_members_button_add);
             this.Recep_panel_members.Controls.Add(this.Recep_members_textBox_contactNo);
@@ -626,22 +627,24 @@
             this.Recep_panel_members.TabIndex = 2;
             this.Recep_panel_members.Visible = false;
             // 
-            // Recep_members_dateTimePicker_renewalDate
+            // Recep_members_dateTimePicker_rDate
             // 
-            this.Recep_members_dateTimePicker_renewalDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Recep_members_dateTimePicker_renewalDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Recep_members_dateTimePicker_renewalDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Recep_members_dateTimePicker_renewalDate.Location = new System.Drawing.Point(638, 488);
-            this.Recep_members_dateTimePicker_renewalDate.Name = "Recep_members_dateTimePicker_renewalDate";
-            this.Recep_members_dateTimePicker_renewalDate.Size = new System.Drawing.Size(279, 22);
-            this.Recep_members_dateTimePicker_renewalDate.TabIndex = 24;
+            this.Recep_members_dateTimePicker_rDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Recep_members_dateTimePicker_rDate.Enabled = false;
+            this.Recep_members_dateTimePicker_rDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Recep_members_dateTimePicker_rDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Recep_members_dateTimePicker_rDate.Location = new System.Drawing.Point(638, 482);
+            this.Recep_members_dateTimePicker_rDate.Name = "Recep_members_dateTimePicker_rDate";
+            this.Recep_members_dateTimePicker_rDate.Size = new System.Drawing.Size(279, 22);
+            this.Recep_members_dateTimePicker_rDate.TabIndex = 24;
             // 
             // Recep_members_dateTimePicker_membershipDate
             // 
             this.Recep_members_dateTimePicker_membershipDate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Recep_members_dateTimePicker_membershipDate.Enabled = false;
             this.Recep_members_dateTimePicker_membershipDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Recep_members_dateTimePicker_membershipDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Recep_members_dateTimePicker_membershipDate.Location = new System.Drawing.Point(638, 442);
+            this.Recep_members_dateTimePicker_membershipDate.Location = new System.Drawing.Point(638, 445);
             this.Recep_members_dateTimePicker_membershipDate.Name = "Recep_members_dateTimePicker_membershipDate";
             this.Recep_members_dateTimePicker_membershipDate.Size = new System.Drawing.Size(279, 22);
             this.Recep_members_dateTimePicker_membershipDate.TabIndex = 23;
@@ -650,7 +653,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(505, 445);
+            this.label2.Location = new System.Drawing.Point(505, 448);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 16);
             this.label2.TabIndex = 22;
@@ -659,7 +662,7 @@
             // Recep_members_textBox_email
             // 
             this.Recep_members_textBox_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Recep_members_textBox_email.Location = new System.Drawing.Point(638, 395);
+            this.Recep_members_textBox_email.Location = new System.Drawing.Point(638, 401);
             this.Recep_members_textBox_email.Multiline = true;
             this.Recep_members_textBox_email.Name = "Recep_members_textBox_email";
             this.Recep_members_textBox_email.Size = new System.Drawing.Size(281, 29);
@@ -668,7 +671,6 @@
             // Recep_members_radioButton_f
             // 
             this.Recep_members_radioButton_f.AutoSize = true;
-            this.Recep_members_radioButton_f.Enabled = false;
             this.Recep_members_radioButton_f.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Recep_members_radioButton_f.Location = new System.Drawing.Point(280, 553);
             this.Recep_members_radioButton_f.Name = "Recep_members_radioButton_f";
@@ -681,7 +683,6 @@
             // Recep_members_radioButton_m
             // 
             this.Recep_members_radioButton_m.AutoSize = true;
-            this.Recep_members_radioButton_m.Enabled = false;
             this.Recep_members_radioButton_m.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Recep_members_radioButton_m.Location = new System.Drawing.Point(185, 553);
             this.Recep_members_radioButton_m.Name = "Recep_members_radioButton_m";
@@ -695,7 +696,7 @@
             // 
             this.Recep_members_comboBox_plan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Recep_members_comboBox_plan.FormattingEnabled = true;
-            this.Recep_members_comboBox_plan.Location = new System.Drawing.Point(638, 521);
+            this.Recep_members_comboBox_plan.Location = new System.Drawing.Point(638, 519);
             this.Recep_members_comboBox_plan.Name = "Recep_members_comboBox_plan";
             this.Recep_members_comboBox_plan.Size = new System.Drawing.Size(279, 24);
             this.Recep_members_comboBox_plan.TabIndex = 18;
@@ -712,7 +713,6 @@
             // Recep_members_dateTimePicker_dob
             // 
             this.Recep_members_dateTimePicker_dob.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Recep_members_dateTimePicker_dob.Enabled = false;
             this.Recep_members_dateTimePicker_dob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Recep_members_dateTimePicker_dob.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Recep_members_dateTimePicker_dob.Location = new System.Drawing.Point(182, 517);
@@ -727,7 +727,7 @@
             this.Recep_members_button_udpate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Recep_members_button_udpate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Recep_members_button_udpate.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Recep_members_button_udpate.Location = new System.Drawing.Point(548, 603);
+            this.Recep_members_button_udpate.Location = new System.Drawing.Point(357, 600);
             this.Recep_members_button_udpate.Name = "Recep_members_button_udpate";
             this.Recep_members_button_udpate.Size = new System.Drawing.Size(240, 56);
             this.Recep_members_button_udpate.TabIndex = 16;
@@ -740,12 +740,13 @@
             this.Recep_members_button_add.FlatAppearance.BorderSize = 0;
             this.Recep_members_button_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Recep_members_button_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Recep_members_button_add.Location = new System.Drawing.Point(219, 603);
+            this.Recep_members_button_add.Location = new System.Drawing.Point(35, 600);
             this.Recep_members_button_add.Name = "Recep_members_button_add";
             this.Recep_members_button_add.Size = new System.Drawing.Size(240, 56);
             this.Recep_members_button_add.TabIndex = 14;
             this.Recep_members_button_add.Text = "Add Member";
             this.Recep_members_button_add.UseVisualStyleBackColor = false;
+            this.Recep_members_button_add.Click += new System.EventHandler(this.Recep_members_button_add_Click);
             // 
             // Recep_members_textBox_contactNo
             // 
@@ -758,23 +759,19 @@
             // 
             // Recep_members_textBox_lname
             // 
-            this.Recep_members_textBox_lname.Enabled = false;
             this.Recep_members_textBox_lname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Recep_members_textBox_lname.Location = new System.Drawing.Point(182, 474);
             this.Recep_members_textBox_lname.Multiline = true;
             this.Recep_members_textBox_lname.Name = "Recep_members_textBox_lname";
-            this.Recep_members_textBox_lname.ReadOnly = true;
             this.Recep_members_textBox_lname.Size = new System.Drawing.Size(281, 29);
             this.Recep_members_textBox_lname.TabIndex = 9;
             // 
             // Recep_members_textBox_mname
             // 
-            this.Recep_members_textBox_mname.Enabled = false;
             this.Recep_members_textBox_mname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Recep_members_textBox_mname.Location = new System.Drawing.Point(182, 433);
             this.Recep_members_textBox_mname.Multiline = true;
             this.Recep_members_textBox_mname.Name = "Recep_members_textBox_mname";
-            this.Recep_members_textBox_mname.ReadOnly = true;
             this.Recep_members_textBox_mname.Size = new System.Drawing.Size(281, 30);
             this.Recep_members_textBox_mname.TabIndex = 4;
             // 
@@ -782,7 +779,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(505, 525);
+            this.label17.Location = new System.Drawing.Point(505, 523);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(112, 16);
             this.label17.TabIndex = 3;
@@ -812,7 +809,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(505, 491);
+            this.label5.Location = new System.Drawing.Point(505, 485);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 16);
             this.label5.TabIndex = 3;
@@ -822,7 +819,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(505, 401);
+            this.label6.Location = new System.Drawing.Point(505, 407);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 16);
             this.label6.TabIndex = 3;
@@ -900,12 +897,10 @@
             // 
             // Recep_members_textBox_fname
             // 
-            this.Recep_members_textBox_fname.Enabled = false;
             this.Recep_members_textBox_fname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Recep_members_textBox_fname.Location = new System.Drawing.Point(182, 396);
             this.Recep_members_textBox_fname.Multiline = true;
             this.Recep_members_textBox_fname.Name = "Recep_members_textBox_fname";
-            this.Recep_members_textBox_fname.ReadOnly = true;
             this.Recep_members_textBox_fname.Size = new System.Drawing.Size(281, 28);
             this.Recep_members_textBox_fname.TabIndex = 2;
             // 
@@ -1016,14 +1011,6 @@
             this.label70.TabIndex = 10;
             this.label70.Text = "Name:";
             // 
-            // pictureBox1_panel3
-            // 
-            this.pictureBox1_panel3.Location = new System.Drawing.Point(278, 186);
-            this.pictureBox1_panel3.Name = "pictureBox1_panel3";
-            this.pictureBox1_panel3.Size = new System.Drawing.Size(371, 231);
-            this.pictureBox1_panel3.TabIndex = 9;
-            this.pictureBox1_panel3.TabStop = false;
-            // 
             // button2_panel3
             // 
             this.button2_panel3.Location = new System.Drawing.Point(862, 78);
@@ -1132,7 +1119,6 @@
             this.Admin_panel_staffs.Controls.Add(this.Staffs_comboBox_position);
             this.Admin_panel_staffs.Controls.Add(this.Staffs_dateTimePicker_dob);
             this.Admin_panel_staffs.Controls.Add(this.Staffs_button_update);
-            this.Admin_panel_staffs.Controls.Add(this.Staffs_button_delete);
             this.Admin_panel_staffs.Controls.Add(this.Staffs_button_add);
             this.Admin_panel_staffs.Controls.Add(this.Staffs_textBox_contactNo);
             this.Admin_panel_staffs.Controls.Add(this.Staffs_textBox_address);
@@ -1298,25 +1284,12 @@
             this.Staffs_button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Staffs_button_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Staffs_button_update.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Staffs_button_update.Location = new System.Drawing.Point(670, 611);
+            this.Staffs_button_update.Location = new System.Drawing.Point(506, 610);
             this.Staffs_button_update.Name = "Staffs_button_update";
             this.Staffs_button_update.Size = new System.Drawing.Size(240, 56);
             this.Staffs_button_update.TabIndex = 16;
             this.Staffs_button_update.Text = "Update Staff";
             this.Staffs_button_update.UseVisualStyleBackColor = false;
-            // 
-            // Staffs_button_delete
-            // 
-            this.Staffs_button_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
-            this.Staffs_button_delete.FlatAppearance.BorderSize = 0;
-            this.Staffs_button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Staffs_button_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Staffs_button_delete.Location = new System.Drawing.Point(364, 614);
-            this.Staffs_button_delete.Name = "Staffs_button_delete";
-            this.Staffs_button_delete.Size = new System.Drawing.Size(240, 56);
-            this.Staffs_button_delete.TabIndex = 15;
-            this.Staffs_button_delete.Text = "Delete Staff";
-            this.Staffs_button_delete.UseVisualStyleBackColor = false;
             // 
             // Staffs_button_add
             // 
@@ -1324,7 +1297,7 @@
             this.Staffs_button_add.FlatAppearance.BorderSize = 0;
             this.Staffs_button_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Staffs_button_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Staffs_button_add.Location = new System.Drawing.Point(39, 613);
+            this.Staffs_button_add.Location = new System.Drawing.Point(219, 610);
             this.Staffs_button_add.Name = "Staffs_button_add";
             this.Staffs_button_add.Size = new System.Drawing.Size(240, 56);
             this.Staffs_button_add.TabIndex = 14;
@@ -1540,7 +1513,7 @@
             // 
             this.panel25_panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel25_panel1.Controls.Add(this.label51);
-            this.panel25_panel1.Location = new System.Drawing.Point(656, 90);
+            this.panel25_panel1.Location = new System.Drawing.Point(660, 100);
             this.panel25_panel1.Name = "panel25_panel1";
             this.panel25_panel1.Size = new System.Drawing.Size(273, 157);
             this.panel25_panel1.TabIndex = 10;
@@ -1562,7 +1535,7 @@
             this.panel24_panel1.Controls.Add(this.label61);
             this.panel24_panel1.Controls.Add(this.label60);
             this.panel24_panel1.Controls.Add(this.label52);
-            this.panel24_panel1.Location = new System.Drawing.Point(655, 253);
+            this.panel24_panel1.Location = new System.Drawing.Point(659, 263);
             this.panel24_panel1.Name = "panel24_panel1";
             this.panel24_panel1.Size = new System.Drawing.Size(274, 304);
             this.panel24_panel1.TabIndex = 2;
@@ -1931,7 +1904,7 @@
             this.Equipments_button_update.FlatAppearance.BorderSize = 0;
             this.Equipments_button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Equipments_button_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.Equipments_button_update.Location = new System.Drawing.Point(468, 607);
+            this.Equipments_button_update.Location = new System.Drawing.Point(525, 607);
             this.Equipments_button_update.Name = "Equipments_button_update";
             this.Equipments_button_update.Size = new System.Drawing.Size(142, 52);
             this.Equipments_button_update.TabIndex = 10;
@@ -1946,7 +1919,7 @@
             this.Equipments_button_add.FlatAppearance.BorderSize = 0;
             this.Equipments_button_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Equipments_button_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.Equipments_button_add.Location = new System.Drawing.Point(285, 607);
+            this.Equipments_button_add.Location = new System.Drawing.Point(342, 607);
             this.Equipments_button_add.Name = "Equipments_button_add";
             this.Equipments_button_add.Size = new System.Drawing.Size(142, 52);
             this.Equipments_button_add.TabIndex = 9;
@@ -3392,6 +3365,28 @@
             this.label101.TabIndex = 7;
             this.label101.Text = "Membership Type";
             // 
+            // pictureBox1_panel3
+            // 
+            this.pictureBox1_panel3.Location = new System.Drawing.Point(278, 186);
+            this.pictureBox1_panel3.Name = "pictureBox1_panel3";
+            this.pictureBox1_panel3.Size = new System.Drawing.Size(371, 231);
+            this.pictureBox1_panel3.TabIndex = 9;
+            this.pictureBox1_panel3.TabStop = false;
+            // 
+            // Recep_button_viewMemberCard
+            // 
+            this.Recep_button_viewMemberCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(222)))), ((int)(((byte)(89)))));
+            this.Recep_button_viewMemberCard.FlatAppearance.BorderSize = 0;
+            this.Recep_button_viewMemberCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Recep_button_viewMemberCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Recep_button_viewMemberCard.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Recep_button_viewMemberCard.Location = new System.Drawing.Point(679, 600);
+            this.Recep_button_viewMemberCard.Name = "Recep_button_viewMemberCard";
+            this.Recep_button_viewMemberCard.Size = new System.Drawing.Size(240, 56);
+            this.Recep_button_viewMemberCard.TabIndex = 16;
+            this.Recep_button_viewMemberCard.Text = "View Member Card";
+            this.Recep_button_viewMemberCard.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3418,7 +3413,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Recep_members_dataGridView_members)).EndInit();
             this.Recep_panel_checkin.ResumeLayout(false);
             this.Recep_panel_checkin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_panel3)).EndInit();
             this.Admin_panel_staffs.ResumeLayout(false);
             this.Admin_panel_staffs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Staff_dataGridView_staff)).EndInit();
@@ -3482,6 +3476,7 @@
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1_panel3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3513,7 +3508,6 @@
         public System.Windows.Forms.TextBox Staffs_textBox_email;
         public System.Windows.Forms.TextBox Staffs_textBox_lname;
         public System.Windows.Forms.Button Staffs_button_update;
-        public System.Windows.Forms.Button Staffs_button_delete;
         public System.Windows.Forms.Button Staffs_button_add;
         public System.Windows.Forms.Label label13;
         public System.Windows.Forms.Label label14;
@@ -3620,7 +3614,7 @@
         public System.Windows.Forms.TextBox Equipments_textBox_name;
         public System.Windows.Forms.TextBox Equipments_textBox_id;
         public System.Windows.Forms.Panel Recep_panel_members;
-        public System.Windows.Forms.DateTimePicker Recep_members_dateTimePicker_renewalDate;
+        public System.Windows.Forms.DateTimePicker Recep_members_dateTimePicker_rDate;
         public System.Windows.Forms.DateTimePicker Recep_members_dateTimePicker_membershipDate;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox Recep_members_textBox_email;
@@ -3764,5 +3758,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label101;
+        public System.Windows.Forms.Button Recep_button_viewMemberCard;
     }
 }

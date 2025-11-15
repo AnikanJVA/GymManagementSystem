@@ -38,7 +38,7 @@ namespace GymManagementSystem
                     string acctype = login.CurrentUser.AccType;
                     TextBox_username.Clear();
                     TextBox_password.Clear();
-                    mainForm = new MainForm(acctype);
+                    mainForm = new MainForm(acctype, login.CurrentUser.StaffID);
                     mainForm.Show();
                     FormProvider.Login.Hide();
                 }
