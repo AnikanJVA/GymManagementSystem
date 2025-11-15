@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2025 at 04:00 PM
+-- Generation Time: Nov 15, 2025 at 05:47 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -255,7 +255,22 @@ CREATE TABLE `sessions` (
   `staffID` bigint(20) DEFAULT NULL,
   `memberID` bigint(20) DEFAULT NULL,
   `sessionDate` datetime NOT NULL,
+  `sessionTypeID` bigint(20) NOT NULL,
   `status` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sessiontypes`
+--
+
+CREATE TABLE `sessiontypes` (
+  `sessionTypeID` bigint(20) NOT NULL,
+  `sessionTypeName` varchar(255) NOT NULL,
+  `sessionDuration` int(11) NOT NULL,
+  `sessionPrice` decimal(10,2) NOT NULL,
+  `status` varchar(10) NOT NULL DEFAULT 'ACTIVE'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -408,7 +423,14 @@ ALTER TABLE `saletypes`
 ALTER TABLE `sessions`
   ADD PRIMARY KEY (`sesssionID`),
   ADD KEY `memberID` (`memberID`),
-  ADD KEY `staffID` (`staffID`);
+  ADD KEY `staffID` (`staffID`),
+  ADD KEY `sessions_ibfk_3` (`sessionTypeID`);
+
+--
+-- Indexes for table `sessiontypes`
+--
+ALTER TABLE `sessiontypes`
+  ADD PRIMARY KEY (`sessionTypeID`);
 
 --
 -- Indexes for table `staffattendance`
@@ -501,6 +523,12 @@ ALTER TABLE `sessions`
   MODIFY `sesssionID` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `sessiontypes`
+--
+ALTER TABLE `sessiontypes`
+  MODIFY `sessionTypeID` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `staffattendance`
 --
 ALTER TABLE `staffattendance`
@@ -510,13 +538,13 @@ ALTER TABLE `staffattendance`
 -- AUTO_INCREMENT for table `staffs`
 --
 ALTER TABLE `staffs`
-  MODIFY `staffID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `staffID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UserID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `UserID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
@@ -565,7 +593,8 @@ ALTER TABLE `sales`
 --
 ALTER TABLE `sessions`
   ADD CONSTRAINT `sessions_ibfk_1` FOREIGN KEY (`memberID`) REFERENCES `members` (`memberID`),
-  ADD CONSTRAINT `sessions_ibfk_2` FOREIGN KEY (`staffID`) REFERENCES `staffs` (`staffID`);
+  ADD CONSTRAINT `sessions_ibfk_2` FOREIGN KEY (`staffID`) REFERENCES `staffs` (`staffID`),
+  ADD CONSTRAINT `sessions_ibfk_3` FOREIGN KEY (`sessionTypeID`) REFERENCES `sessiontypes` (`sessionTypeID`);
 
 --
 -- Constraints for table `staffattendance`
